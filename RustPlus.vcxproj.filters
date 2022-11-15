@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{06a1349a-e214-4c5d-aa0f-d546809d0315}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rustplus.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="easywsclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rustsocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rustsocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rustplus.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="easywsclient.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="draw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="map.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\airfield_display_name.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\bandit_camp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\barn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\cargo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\crate.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\dome_monument_name.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\excavator.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\explosion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\fishing.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\harbour.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\chinook.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\chinook_blades.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\junkyard.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\large_oil_rig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\launchsite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\lighthouse.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\military_tunnels.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\mining_outpost.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\outpost.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\oxums.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\power_plant.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\quarry.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\satellite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\sewer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\small_oil_rig.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\stable.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\supermarket.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\swamp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\train_yard.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\underwater_lab.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\vending_machine.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icons\water_treatment.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="marker.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="server.json" />
+    <None Include="zlib1.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="SDL2_ttf.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="SDL2_image.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="SDL2.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="libpng16-16.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="libjpeg-9.dll">
+      <Filter>lib</Filter>
+    </None>
+    <None Include="libfreetype-6.dll">
+      <Filter>lib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="rustfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libprotobufd.lib">
+      <Filter>lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
