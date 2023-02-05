@@ -8,6 +8,8 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
+#include <thread>
+#include <chrono>
 #include "rustsocket.h"
 #include "GUI.h"
 #include "main.h"
@@ -22,6 +24,13 @@ bool alertCargo = true, alertPatrol = true, alertCrate = true, alertExplosion = 
 inline float DEG2RAD(float deg)
 {
 	return deg * 0.01745329238474369049072265625f;
+}
+void listen_for_input()
+{
+	while (true)
+	{
+		std::cin >> g.input;
+	}
 }
 int main(int argc, char* argv[])
 {
@@ -109,7 +118,8 @@ int main(int argc, char* argv[])
 
 	SDL_SetRenderDrawColor(g.pRenderer, 18, 64, 77, 255);
 
-	//rs.Message("Rust+ on PC started / github.com/Bananik007/RustPlusGUI", MsgBoth | MsgIncludeTime);
+	std::thread second(listen_for_input);
+
 	//Main loop
 	while (g.bRunning)
 	{
@@ -623,9 +633,14 @@ void NetLoop()
 			else
 			{
 				if (msg.message()[0] != '[')
-					rs->Message(msg.message(), MsgLocal | MsgIncludeTime);
+					rs->Message(msg.name() + ": " + msg.message(), MsgLocal | MsgIncludeTime);
 			}
 			lastTeamChat = curTeamChat;
+		}
+		if (g.input.size())
+		{
+			rs->Message(g.input, MsgChat);
+			g.input.clear();
 		}
 #pragma endregion Commands
 		//End of loop

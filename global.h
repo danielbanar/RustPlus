@@ -58,6 +58,7 @@ public:
 	std::chrono::high_resolution_clock::time_point tNow = std::chrono::high_resolution_clock::now();
 	//Experimental
 	bool skipRender = false;
+	std::string input;
 };
 
 extern GlobalVars g;
