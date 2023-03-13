@@ -27,7 +27,7 @@ enum Relativity
 	Bottom,
 	BottomRight
 };
-namespace Color
+namespace GUIColor
 {
 	static SDL_Color Red{ 255,0,0,255 };
 	static SDL_Color Green{ 0,255,0,255 };

@@ -80,7 +80,6 @@ public:
 	void SendTeamChatMessage(const char* message);
 	AppInfo GetInfo();
 	AppMap GetMap();
-	std::string GetCameraFrame(std::string id, uint32_t frame);
 	AppMapMarkers GetMarkers();
 	AppTeamChat GetTeamChat();
 	Events GetEvents(AppMapMarkers markers);
@@ -89,6 +88,7 @@ public:
 	void PromoteToTeamLeader(uint64_t steamid);
 	AppRequest initProto();
 	void Message(const std::string& msg, int flags);
+	AppCameraInfo Subscribe(const char* camid);
 private:
 	std::string url = "ws://";
 	uint32_t iSeq;

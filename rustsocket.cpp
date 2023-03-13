@@ -121,6 +121,27 @@ void RustSocket::SendTeamChatMessage(const char* message)
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SendTeamChatMessage\n\n";
 }
+AppCameraInfo RustSocket::Subscribe(const char* camid)
+{
+	AppCameraSubscribe sub;
+	sub.set_cameraid(camid);
+	AppFlag flag;
+	flag.set_value(true);
+	auto request = initProto();
+	//request.mutable_setsubscription()->CopyFrom(flag);
+	request.mutable_camerasubscribe()->CopyFrom(sub);
+	ws->sendBinary(request.SerializeAsString());
+	std::cout << "Sent";
+	AppMessage appMessage;
+	do
+	{
+		ws->poll(-1);
+		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+	} while (!(appMessage.has_response() || appMessage.has_broadcast()));
+	if (appMessage.response().has_error() && !ignoreErrors)
+		std::cout << appMessage.response().error().DebugString() << "Subscribe\n\n";
+	return appMessage.response().camerasubscribeinfo();
+}
 AppInfo RustSocket::GetInfo()
 {
 	auto request = initProto();
@@ -135,6 +156,8 @@ AppInfo RustSocket::GetInfo()
 	} while (!appMessage.has_response() || !appMessage.response().has_info());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetInfo\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "GetInfoBroadcast";
 	return appMessage.response().info();
 }
 AppMap RustSocket::GetMap()
@@ -153,27 +176,6 @@ AppMap RustSocket::GetMap()
 		std::cout << appMessage.response().error().DebugString() << "GetMap\n\n";
 	return appMessage.response().map();
 }
-std::string RustSocket::GetCameraFrame(std::string id, uint32_t frame)
-{
-	AppCameraFrameRequest cameraPacket;
-	cameraPacket.set_identifier(id);
-	cameraPacket.set_frame(frame);
-
-	auto request = initProto();
-	request.mutable_getcameraframe()->CopyFrom(cameraPacket);
-	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
-
-	AppMessage appMessage;
-	do
-	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
-	} while ((!appMessage.has_response() || !appMessage.response().has_cameraframe()) && !(appMessage.has_response() && appMessage.response().has_error()));
-	if (appMessage.response().has_error() && !ignoreErrors)
-		std::cout << appMessage.response().error().DebugString() << "GetCameraFrame\n\n";
-	return appMessage.response().cameraframe().jpgimage();
-}
 AppMapMarkers RustSocket::GetMarkers()
 {
 	auto request = initProto();
@@ -188,6 +190,8 @@ AppMapMarkers RustSocket::GetMarkers()
 	} while (!appMessage.has_response() || !appMessage.response().has_mapmarkers());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetMarkers\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "GetMarkersBroadcast";
 	return appMessage.response().mapmarkers();
 }
 AppTeamChat RustSocket::GetTeamChat()
@@ -204,6 +208,8 @@ AppTeamChat RustSocket::GetTeamChat()
 	} while ((!appMessage.has_response() || !appMessage.response().has_teamchat()) && !(appMessage.has_response() && appMessage.response().has_error()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamChat\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "GetTeamChatBroadcast";
 	return appMessage.response().teamchat();
 }
 Events RustSocket::GetEvents(AppMapMarkers markers)
@@ -217,7 +223,7 @@ Events RustSocket::GetEvents(AppMapMarkers markers)
 			ev.cExplosion++;
 		else if (marker.type() == CH47)
 			ev.cChinook++;
-		else if (marker.type() == Patrol)
+		else if (marker.type() == PatrolHelicopter)
 			ev.cPatrol++;
 		else if (marker.type() == CargoShip)
 		{
@@ -232,6 +238,7 @@ Events RustSocket::GetEvents(AppMapMarkers markers)
 	}
 	return ev;
 }
+
 AppTime RustSocket::GetTime()
 {
 	auto request = initProto();
@@ -246,6 +253,8 @@ AppTime RustSocket::GetTime()
 	} while (!appMessage.has_response() || !appMessage.response().has_time());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTime\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "GetTimeBroadcast";
 	return appMessage.response().time();
 }
 AppTeamInfo RustSocket::GetTeamInfo()
@@ -262,6 +271,8 @@ AppTeamInfo RustSocket::GetTeamInfo()
 	} while (!appMessage.has_response() || !appMessage.response().has_teaminfo());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamInfo\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "GetTeamInfoBroadcast";
 	return appMessage.response().teaminfo();
 }
 void RustSocket::PromoteToTeamLeader(uint64_t steamid)

@@ -47,7 +47,7 @@ struct TableStruct_rustplus_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[32]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[56]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,15 +58,33 @@ namespace rustplus {
 class AppBroadcast;
 struct AppBroadcastDefaultTypeInternal;
 extern AppBroadcastDefaultTypeInternal _AppBroadcast_default_instance_;
-class AppCameraFrame;
-struct AppCameraFrameDefaultTypeInternal;
-extern AppCameraFrameDefaultTypeInternal _AppCameraFrame_default_instance_;
-class AppCameraFrameRequest;
-struct AppCameraFrameRequestDefaultTypeInternal;
-extern AppCameraFrameRequestDefaultTypeInternal _AppCameraFrameRequest_default_instance_;
-class AppChatMessage;
-struct AppChatMessageDefaultTypeInternal;
-extern AppChatMessageDefaultTypeInternal _AppChatMessage_default_instance_;
+class AppCameraInfo;
+struct AppCameraInfoDefaultTypeInternal;
+extern AppCameraInfoDefaultTypeInternal _AppCameraInfo_default_instance_;
+class AppCameraInput;
+struct AppCameraInputDefaultTypeInternal;
+extern AppCameraInputDefaultTypeInternal _AppCameraInput_default_instance_;
+class AppCameraRays;
+struct AppCameraRaysDefaultTypeInternal;
+extern AppCameraRaysDefaultTypeInternal _AppCameraRays_default_instance_;
+class AppCameraRays_Entity;
+struct AppCameraRays_EntityDefaultTypeInternal;
+extern AppCameraRays_EntityDefaultTypeInternal _AppCameraRays_Entity_default_instance_;
+class AppCameraSubscribe;
+struct AppCameraSubscribeDefaultTypeInternal;
+extern AppCameraSubscribeDefaultTypeInternal _AppCameraSubscribe_default_instance_;
+class AppClanChanged;
+struct AppClanChangedDefaultTypeInternal;
+extern AppClanChangedDefaultTypeInternal _AppClanChanged_default_instance_;
+class AppClanChat;
+struct AppClanChatDefaultTypeInternal;
+extern AppClanChatDefaultTypeInternal _AppClanChat_default_instance_;
+class AppClanInfo;
+struct AppClanInfoDefaultTypeInternal;
+extern AppClanInfoDefaultTypeInternal _AppClanInfo_default_instance_;
+class AppClanMessage;
+struct AppClanMessageDefaultTypeInternal;
+extern AppClanMessageDefaultTypeInternal _AppClanMessage_default_instance_;
 class AppEmpty;
 struct AppEmptyDefaultTypeInternal;
 extern AppEmptyDefaultTypeInternal _AppEmpty_default_instance_;
@@ -88,6 +106,9 @@ extern AppErrorDefaultTypeInternal _AppError_default_instance_;
 class AppFlag;
 struct AppFlagDefaultTypeInternal;
 extern AppFlagDefaultTypeInternal _AppFlag_default_instance_;
+class AppGetNexusAuth;
+struct AppGetNexusAuthDefaultTypeInternal;
+extern AppGetNexusAuthDefaultTypeInternal _AppGetNexusAuth_default_instance_;
 class AppInfo;
 struct AppInfoDefaultTypeInternal;
 extern AppInfoDefaultTypeInternal _AppInfo_default_instance_;
@@ -109,6 +130,15 @@ extern AppMarker_SellOrderDefaultTypeInternal _AppMarker_SellOrder_default_insta
 class AppMessage;
 struct AppMessageDefaultTypeInternal;
 extern AppMessageDefaultTypeInternal _AppMessage_default_instance_;
+class AppNewClanMessage;
+struct AppNewClanMessageDefaultTypeInternal;
+extern AppNewClanMessageDefaultTypeInternal _AppNewClanMessage_default_instance_;
+class AppNewTeamMessage;
+struct AppNewTeamMessageDefaultTypeInternal;
+extern AppNewTeamMessageDefaultTypeInternal _AppNewTeamMessage_default_instance_;
+class AppNexusAuth;
+struct AppNexusAuthDefaultTypeInternal;
+extern AppNexusAuthDefaultTypeInternal _AppNexusAuth_default_instance_;
 class AppPromoteToLeader;
 struct AppPromoteToLeaderDefaultTypeInternal;
 extern AppPromoteToLeaderDefaultTypeInternal _AppPromoteToLeader_default_instance_;
@@ -148,15 +178,63 @@ extern AppTeamMessageDefaultTypeInternal _AppTeamMessage_default_instance_;
 class AppTime;
 struct AppTimeDefaultTypeInternal;
 extern AppTimeDefaultTypeInternal _AppTime_default_instance_;
+class ClanActionResult;
+struct ClanActionResultDefaultTypeInternal;
+extern ClanActionResultDefaultTypeInternal _ClanActionResult_default_instance_;
+class ClanInfo;
+struct ClanInfoDefaultTypeInternal;
+extern ClanInfoDefaultTypeInternal _ClanInfo_default_instance_;
+class ClanInfo_Invite;
+struct ClanInfo_InviteDefaultTypeInternal;
+extern ClanInfo_InviteDefaultTypeInternal _ClanInfo_Invite_default_instance_;
+class ClanInfo_Member;
+struct ClanInfo_MemberDefaultTypeInternal;
+extern ClanInfo_MemberDefaultTypeInternal _ClanInfo_Member_default_instance_;
+class ClanInfo_Role;
+struct ClanInfo_RoleDefaultTypeInternal;
+extern ClanInfo_RoleDefaultTypeInternal _ClanInfo_Role_default_instance_;
+class ClanInvitations;
+struct ClanInvitationsDefaultTypeInternal;
+extern ClanInvitationsDefaultTypeInternal _ClanInvitations_default_instance_;
+class ClanInvitations_Invitation;
+struct ClanInvitations_InvitationDefaultTypeInternal;
+extern ClanInvitations_InvitationDefaultTypeInternal _ClanInvitations_Invitation_default_instance_;
+class ClanLog;
+struct ClanLogDefaultTypeInternal;
+extern ClanLogDefaultTypeInternal _ClanLog_default_instance_;
+class ClanLog_Entry;
+struct ClanLog_EntryDefaultTypeInternal;
+extern ClanLog_EntryDefaultTypeInternal _ClanLog_Entry_default_instance_;
+class Color;
+struct ColorDefaultTypeInternal;
+extern ColorDefaultTypeInternal _Color_default_instance_;
+class Half3;
+struct Half3DefaultTypeInternal;
+extern Half3DefaultTypeInternal _Half3_default_instance_;
+class Ray;
+struct RayDefaultTypeInternal;
+extern RayDefaultTypeInternal _Ray_default_instance_;
+class Vector2;
+struct Vector2DefaultTypeInternal;
+extern Vector2DefaultTypeInternal _Vector2_default_instance_;
+class Vector3;
+struct Vector3DefaultTypeInternal;
+extern Vector3DefaultTypeInternal _Vector3_default_instance_;
 class Vector4;
 struct Vector4DefaultTypeInternal;
 extern Vector4DefaultTypeInternal _Vector4_default_instance_;
 }  // namespace rustplus
 PROTOBUF_NAMESPACE_OPEN
 template<> ::rustplus::AppBroadcast* Arena::CreateMaybeMessage<::rustplus::AppBroadcast>(Arena*);
-template<> ::rustplus::AppCameraFrame* Arena::CreateMaybeMessage<::rustplus::AppCameraFrame>(Arena*);
-template<> ::rustplus::AppCameraFrameRequest* Arena::CreateMaybeMessage<::rustplus::AppCameraFrameRequest>(Arena*);
-template<> ::rustplus::AppChatMessage* Arena::CreateMaybeMessage<::rustplus::AppChatMessage>(Arena*);
+template<> ::rustplus::AppCameraInfo* Arena::CreateMaybeMessage<::rustplus::AppCameraInfo>(Arena*);
+template<> ::rustplus::AppCameraInput* Arena::CreateMaybeMessage<::rustplus::AppCameraInput>(Arena*);
+template<> ::rustplus::AppCameraRays* Arena::CreateMaybeMessage<::rustplus::AppCameraRays>(Arena*);
+template<> ::rustplus::AppCameraRays_Entity* Arena::CreateMaybeMessage<::rustplus::AppCameraRays_Entity>(Arena*);
+template<> ::rustplus::AppCameraSubscribe* Arena::CreateMaybeMessage<::rustplus::AppCameraSubscribe>(Arena*);
+template<> ::rustplus::AppClanChanged* Arena::CreateMaybeMessage<::rustplus::AppClanChanged>(Arena*);
+template<> ::rustplus::AppClanChat* Arena::CreateMaybeMessage<::rustplus::AppClanChat>(Arena*);
+template<> ::rustplus::AppClanInfo* Arena::CreateMaybeMessage<::rustplus::AppClanInfo>(Arena*);
+template<> ::rustplus::AppClanMessage* Arena::CreateMaybeMessage<::rustplus::AppClanMessage>(Arena*);
 template<> ::rustplus::AppEmpty* Arena::CreateMaybeMessage<::rustplus::AppEmpty>(Arena*);
 template<> ::rustplus::AppEntityChanged* Arena::CreateMaybeMessage<::rustplus::AppEntityChanged>(Arena*);
 template<> ::rustplus::AppEntityInfo* Arena::CreateMaybeMessage<::rustplus::AppEntityInfo>(Arena*);
@@ -164,6 +242,7 @@ template<> ::rustplus::AppEntityPayload* Arena::CreateMaybeMessage<::rustplus::A
 template<> ::rustplus::AppEntityPayload_Item* Arena::CreateMaybeMessage<::rustplus::AppEntityPayload_Item>(Arena*);
 template<> ::rustplus::AppError* Arena::CreateMaybeMessage<::rustplus::AppError>(Arena*);
 template<> ::rustplus::AppFlag* Arena::CreateMaybeMessage<::rustplus::AppFlag>(Arena*);
+template<> ::rustplus::AppGetNexusAuth* Arena::CreateMaybeMessage<::rustplus::AppGetNexusAuth>(Arena*);
 template<> ::rustplus::AppInfo* Arena::CreateMaybeMessage<::rustplus::AppInfo>(Arena*);
 template<> ::rustplus::AppMap* Arena::CreateMaybeMessage<::rustplus::AppMap>(Arena*);
 template<> ::rustplus::AppMapMarkers* Arena::CreateMaybeMessage<::rustplus::AppMapMarkers>(Arena*);
@@ -171,6 +250,9 @@ template<> ::rustplus::AppMap_Monument* Arena::CreateMaybeMessage<::rustplus::Ap
 template<> ::rustplus::AppMarker* Arena::CreateMaybeMessage<::rustplus::AppMarker>(Arena*);
 template<> ::rustplus::AppMarker_SellOrder* Arena::CreateMaybeMessage<::rustplus::AppMarker_SellOrder>(Arena*);
 template<> ::rustplus::AppMessage* Arena::CreateMaybeMessage<::rustplus::AppMessage>(Arena*);
+template<> ::rustplus::AppNewClanMessage* Arena::CreateMaybeMessage<::rustplus::AppNewClanMessage>(Arena*);
+template<> ::rustplus::AppNewTeamMessage* Arena::CreateMaybeMessage<::rustplus::AppNewTeamMessage>(Arena*);
+template<> ::rustplus::AppNexusAuth* Arena::CreateMaybeMessage<::rustplus::AppNexusAuth>(Arena*);
 template<> ::rustplus::AppPromoteToLeader* Arena::CreateMaybeMessage<::rustplus::AppPromoteToLeader>(Arena*);
 template<> ::rustplus::AppRequest* Arena::CreateMaybeMessage<::rustplus::AppRequest>(Arena*);
 template<> ::rustplus::AppResponse* Arena::CreateMaybeMessage<::rustplus::AppResponse>(Arena*);
@@ -184,10 +266,47 @@ template<> ::rustplus::AppTeamInfo_Member* Arena::CreateMaybeMessage<::rustplus:
 template<> ::rustplus::AppTeamInfo_Note* Arena::CreateMaybeMessage<::rustplus::AppTeamInfo_Note>(Arena*);
 template<> ::rustplus::AppTeamMessage* Arena::CreateMaybeMessage<::rustplus::AppTeamMessage>(Arena*);
 template<> ::rustplus::AppTime* Arena::CreateMaybeMessage<::rustplus::AppTime>(Arena*);
+template<> ::rustplus::ClanActionResult* Arena::CreateMaybeMessage<::rustplus::ClanActionResult>(Arena*);
+template<> ::rustplus::ClanInfo* Arena::CreateMaybeMessage<::rustplus::ClanInfo>(Arena*);
+template<> ::rustplus::ClanInfo_Invite* Arena::CreateMaybeMessage<::rustplus::ClanInfo_Invite>(Arena*);
+template<> ::rustplus::ClanInfo_Member* Arena::CreateMaybeMessage<::rustplus::ClanInfo_Member>(Arena*);
+template<> ::rustplus::ClanInfo_Role* Arena::CreateMaybeMessage<::rustplus::ClanInfo_Role>(Arena*);
+template<> ::rustplus::ClanInvitations* Arena::CreateMaybeMessage<::rustplus::ClanInvitations>(Arena*);
+template<> ::rustplus::ClanInvitations_Invitation* Arena::CreateMaybeMessage<::rustplus::ClanInvitations_Invitation>(Arena*);
+template<> ::rustplus::ClanLog* Arena::CreateMaybeMessage<::rustplus::ClanLog>(Arena*);
+template<> ::rustplus::ClanLog_Entry* Arena::CreateMaybeMessage<::rustplus::ClanLog_Entry>(Arena*);
+template<> ::rustplus::Color* Arena::CreateMaybeMessage<::rustplus::Color>(Arena*);
+template<> ::rustplus::Half3* Arena::CreateMaybeMessage<::rustplus::Half3>(Arena*);
+template<> ::rustplus::Ray* Arena::CreateMaybeMessage<::rustplus::Ray>(Arena*);
+template<> ::rustplus::Vector2* Arena::CreateMaybeMessage<::rustplus::Vector2>(Arena*);
+template<> ::rustplus::Vector3* Arena::CreateMaybeMessage<::rustplus::Vector3>(Arena*);
 template<> ::rustplus::Vector4* Arena::CreateMaybeMessage<::rustplus::Vector4>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace rustplus {
 
+enum AppCameraRays_EntityType : int {
+  AppCameraRays_EntityType_Tree = 1,
+  AppCameraRays_EntityType_Player = 2
+};
+bool AppCameraRays_EntityType_IsValid(int value);
+constexpr AppCameraRays_EntityType AppCameraRays_EntityType_EntityType_MIN = AppCameraRays_EntityType_Tree;
+constexpr AppCameraRays_EntityType AppCameraRays_EntityType_EntityType_MAX = AppCameraRays_EntityType_Player;
+constexpr int AppCameraRays_EntityType_EntityType_ARRAYSIZE = AppCameraRays_EntityType_EntityType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppCameraRays_EntityType_descriptor();
+template<typename T>
+inline const std::string& AppCameraRays_EntityType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, AppCameraRays_EntityType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function AppCameraRays_EntityType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    AppCameraRays_EntityType_descriptor(), enum_t_value);
+}
+inline bool AppCameraRays_EntityType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppCameraRays_EntityType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AppCameraRays_EntityType>(
+    AppCameraRays_EntityType_descriptor(), name, value);
+}
 enum AppEntityType : int {
   Switch = 1,
   Alarm = 2,
@@ -213,6 +332,7 @@ inline bool AppEntityType_Parse(
     AppEntityType_descriptor(), name, value);
 }
 enum AppMarkerType : int {
+  Undefined = 0,
   Player = 1,
   Explosion = 2,
   VendingMachine = 3,
@@ -220,11 +340,11 @@ enum AppMarkerType : int {
   CargoShip = 5,
   Crate = 6,
   GenericRadius = 7,
-  Patrol = 8
+  PatrolHelicopter = 8
 };
 bool AppMarkerType_IsValid(int value);
-constexpr AppMarkerType AppMarkerType_MIN = Player;
-constexpr AppMarkerType AppMarkerType_MAX = Patrol;
+constexpr AppMarkerType AppMarkerType_MIN = Undefined;
+constexpr AppMarkerType AppMarkerType_MAX = PatrolHelicopter;
 constexpr int AppMarkerType_ARRAYSIZE = AppMarkerType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMarkerType_descriptor();
@@ -243,24 +363,24 @@ inline bool AppMarkerType_Parse(
 }
 // ===================================================================
 
-class AppMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMessage) */ {
+class Vector2 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Vector2) */ {
  public:
-  inline AppMessage() : AppMessage(nullptr) {}
-  ~AppMessage() override;
-  explicit constexpr AppMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Vector2() : Vector2(nullptr) {}
+  ~Vector2() override;
+  explicit constexpr Vector2(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppMessage(const AppMessage& from);
-  AppMessage(AppMessage&& from) noexcept
-    : AppMessage() {
+  Vector2(const Vector2& from);
+  Vector2(Vector2&& from) noexcept
+    : Vector2() {
     *this = ::std::move(from);
   }
 
-  inline AppMessage& operator=(const AppMessage& from) {
+  inline Vector2& operator=(const Vector2& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppMessage& operator=(AppMessage&& from) noexcept {
+  inline Vector2& operator=(Vector2&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -286,20 +406,20 @@ class AppMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppMessage& default_instance() {
+  static const Vector2& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppMessage* internal_default_instance() {
-    return reinterpret_cast<const AppMessage*>(
-               &_AppMessage_default_instance_);
+  static inline const Vector2* internal_default_instance() {
+    return reinterpret_cast<const Vector2*>(
+               &_Vector2_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(AppMessage& a, AppMessage& b) {
+  friend void swap(Vector2& a, Vector2& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppMessage* other) {
+  inline void Swap(Vector2* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -307,7 +427,7 @@ class AppMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppMessage* other) {
+  void UnsafeArenaSwap(Vector2* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -315,17 +435,17 @@ class AppMessage final :
 
   // implements Message ----------------------------------------------
 
-  inline AppMessage* New() const final {
-    return new AppMessage();
+  inline Vector2* New() const final {
+    return new Vector2();
   }
 
-  AppMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMessage>(arena);
+  Vector2* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Vector2>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppMessage& from);
+  void CopyFrom(const Vector2& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppMessage& from);
+  void MergeFrom(const Vector2& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -342,13 +462,13 @@ class AppMessage final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppMessage* other);
+  void InternalSwap(Vector2* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppMessage";
+    return "rustplus.Vector2";
   }
   protected:
-  explicit AppMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Vector2(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -365,46 +485,36 @@ class AppMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
-    kBroadcastFieldNumber = 2,
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
   };
-  // optional .rustplus.AppResponse response = 1;
-  bool has_response() const;
+  // optional float x = 1;
+  bool has_x() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_x() const;
   public:
-  void clear_response();
-  const ::rustplus::AppResponse& response() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppResponse* release_response();
-  ::rustplus::AppResponse* mutable_response();
-  void set_allocated_response(::rustplus::AppResponse* response);
+  void clear_x();
+  float x() const;
+  void set_x(float value);
   private:
-  const ::rustplus::AppResponse& _internal_response() const;
-  ::rustplus::AppResponse* _internal_mutable_response();
+  float _internal_x() const;
+  void _internal_set_x(float value);
   public:
-  void unsafe_arena_set_allocated_response(
-      ::rustplus::AppResponse* response);
-  ::rustplus::AppResponse* unsafe_arena_release_response();
 
-  // optional .rustplus.AppBroadcast broadcast = 2;
-  bool has_broadcast() const;
+  // optional float y = 2;
+  bool has_y() const;
   private:
-  bool _internal_has_broadcast() const;
+  bool _internal_has_y() const;
   public:
-  void clear_broadcast();
-  const ::rustplus::AppBroadcast& broadcast() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppBroadcast* release_broadcast();
-  ::rustplus::AppBroadcast* mutable_broadcast();
-  void set_allocated_broadcast(::rustplus::AppBroadcast* broadcast);
+  void clear_y();
+  float y() const;
+  void set_y(float value);
   private:
-  const ::rustplus::AppBroadcast& _internal_broadcast() const;
-  ::rustplus::AppBroadcast* _internal_mutable_broadcast();
+  float _internal_y() const;
+  void _internal_set_y(float value);
   public:
-  void unsafe_arena_set_allocated_broadcast(
-      ::rustplus::AppBroadcast* broadcast);
-  ::rustplus::AppBroadcast* unsafe_arena_release_broadcast();
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppMessage)
+  // @@protoc_insertion_point(class_scope:rustplus.Vector2)
  private:
   class _Internal;
 
@@ -413,8 +523,3005 @@ class AppMessage final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::rustplus::AppResponse* response_;
-  ::rustplus::AppBroadcast* broadcast_;
+  float x_;
+  float y_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Vector3 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Vector3) */ {
+ public:
+  inline Vector3() : Vector3(nullptr) {}
+  ~Vector3() override;
+  explicit constexpr Vector3(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Vector3(const Vector3& from);
+  Vector3(Vector3&& from) noexcept
+    : Vector3() {
+    *this = ::std::move(from);
+  }
+
+  inline Vector3& operator=(const Vector3& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Vector3& operator=(Vector3&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Vector3& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Vector3* internal_default_instance() {
+    return reinterpret_cast<const Vector3*>(
+               &_Vector3_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(Vector3& a, Vector3& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Vector3* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Vector3* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Vector3* New() const final {
+    return new Vector3();
+  }
+
+  Vector3* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Vector3>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Vector3& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Vector3& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Vector3* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.Vector3";
+  }
+  protected:
+  explicit Vector3(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
+    kZFieldNumber = 3,
+  };
+  // optional float x = 1;
+  bool has_x() const;
+  private:
+  bool _internal_has_x() const;
+  public:
+  void clear_x();
+  float x() const;
+  void set_x(float value);
+  private:
+  float _internal_x() const;
+  void _internal_set_x(float value);
+  public:
+
+  // optional float y = 2;
+  bool has_y() const;
+  private:
+  bool _internal_has_y() const;
+  public:
+  void clear_y();
+  float y() const;
+  void set_y(float value);
+  private:
+  float _internal_y() const;
+  void _internal_set_y(float value);
+  public:
+
+  // optional float z = 3;
+  bool has_z() const;
+  private:
+  bool _internal_has_z() const;
+  public:
+  void clear_z();
+  float z() const;
+  void set_z(float value);
+  private:
+  float _internal_z() const;
+  void _internal_set_z(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.Vector3)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  float x_;
+  float y_;
+  float z_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Vector4 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Vector4) */ {
+ public:
+  inline Vector4() : Vector4(nullptr) {}
+  ~Vector4() override;
+  explicit constexpr Vector4(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Vector4(const Vector4& from);
+  Vector4(Vector4&& from) noexcept
+    : Vector4() {
+    *this = ::std::move(from);
+  }
+
+  inline Vector4& operator=(const Vector4& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Vector4& operator=(Vector4&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Vector4& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Vector4* internal_default_instance() {
+    return reinterpret_cast<const Vector4*>(
+               &_Vector4_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(Vector4& a, Vector4& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Vector4* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Vector4* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Vector4* New() const final {
+    return new Vector4();
+  }
+
+  Vector4* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Vector4>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Vector4& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Vector4& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Vector4* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.Vector4";
+  }
+  protected:
+  explicit Vector4(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
+    kZFieldNumber = 3,
+    kWFieldNumber = 4,
+  };
+  // optional float x = 1;
+  bool has_x() const;
+  private:
+  bool _internal_has_x() const;
+  public:
+  void clear_x();
+  float x() const;
+  void set_x(float value);
+  private:
+  float _internal_x() const;
+  void _internal_set_x(float value);
+  public:
+
+  // optional float y = 2;
+  bool has_y() const;
+  private:
+  bool _internal_has_y() const;
+  public:
+  void clear_y();
+  float y() const;
+  void set_y(float value);
+  private:
+  float _internal_y() const;
+  void _internal_set_y(float value);
+  public:
+
+  // optional float z = 3;
+  bool has_z() const;
+  private:
+  bool _internal_has_z() const;
+  public:
+  void clear_z();
+  float z() const;
+  void set_z(float value);
+  private:
+  float _internal_z() const;
+  void _internal_set_z(float value);
+  public:
+
+  // optional float w = 4;
+  bool has_w() const;
+  private:
+  bool _internal_has_w() const;
+  public:
+  void clear_w();
+  float w() const;
+  void set_w(float value);
+  private:
+  float _internal_w() const;
+  void _internal_set_w(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.Vector4)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  float x_;
+  float y_;
+  float z_;
+  float w_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Half3 final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Half3) */ {
+ public:
+  inline Half3() : Half3(nullptr) {}
+  ~Half3() override;
+  explicit constexpr Half3(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Half3(const Half3& from);
+  Half3(Half3&& from) noexcept
+    : Half3() {
+    *this = ::std::move(from);
+  }
+
+  inline Half3& operator=(const Half3& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Half3& operator=(Half3&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Half3& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Half3* internal_default_instance() {
+    return reinterpret_cast<const Half3*>(
+               &_Half3_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(Half3& a, Half3& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Half3* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Half3* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Half3* New() const final {
+    return new Half3();
+  }
+
+  Half3* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Half3>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Half3& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Half3& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Half3* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.Half3";
+  }
+  protected:
+  explicit Half3(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
+    kZFieldNumber = 3,
+  };
+  // optional float x = 1;
+  bool has_x() const;
+  private:
+  bool _internal_has_x() const;
+  public:
+  void clear_x();
+  float x() const;
+  void set_x(float value);
+  private:
+  float _internal_x() const;
+  void _internal_set_x(float value);
+  public:
+
+  // optional float y = 2;
+  bool has_y() const;
+  private:
+  bool _internal_has_y() const;
+  public:
+  void clear_y();
+  float y() const;
+  void set_y(float value);
+  private:
+  float _internal_y() const;
+  void _internal_set_y(float value);
+  public:
+
+  // optional float z = 3;
+  bool has_z() const;
+  private:
+  bool _internal_has_z() const;
+  public:
+  void clear_z();
+  float z() const;
+  void set_z(float value);
+  private:
+  float _internal_z() const;
+  void _internal_set_z(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.Half3)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  float x_;
+  float y_;
+  float z_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Color final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Color) */ {
+ public:
+  inline Color() : Color(nullptr) {}
+  ~Color() override;
+  explicit constexpr Color(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Color(const Color& from);
+  Color(Color&& from) noexcept
+    : Color() {
+    *this = ::std::move(from);
+  }
+
+  inline Color& operator=(const Color& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Color& operator=(Color&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Color& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Color* internal_default_instance() {
+    return reinterpret_cast<const Color*>(
+               &_Color_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(Color& a, Color& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Color* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Color* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Color* New() const final {
+    return new Color();
+  }
+
+  Color* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Color>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Color& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Color& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Color* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.Color";
+  }
+  protected:
+  explicit Color(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRFieldNumber = 1,
+    kGFieldNumber = 2,
+    kBFieldNumber = 3,
+    kAFieldNumber = 4,
+  };
+  // optional float r = 1;
+  bool has_r() const;
+  private:
+  bool _internal_has_r() const;
+  public:
+  void clear_r();
+  float r() const;
+  void set_r(float value);
+  private:
+  float _internal_r() const;
+  void _internal_set_r(float value);
+  public:
+
+  // optional float g = 2;
+  bool has_g() const;
+  private:
+  bool _internal_has_g() const;
+  public:
+  void clear_g();
+  float g() const;
+  void set_g(float value);
+  private:
+  float _internal_g() const;
+  void _internal_set_g(float value);
+  public:
+
+  // optional float b = 3;
+  bool has_b() const;
+  private:
+  bool _internal_has_b() const;
+  public:
+  void clear_b();
+  float b() const;
+  void set_b(float value);
+  private:
+  float _internal_b() const;
+  void _internal_set_b(float value);
+  public:
+
+  // optional float a = 4;
+  bool has_a() const;
+  private:
+  bool _internal_has_a() const;
+  public:
+  void clear_a();
+  float a() const;
+  void set_a(float value);
+  private:
+  float _internal_a() const;
+  void _internal_set_a(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.Color)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  float r_;
+  float g_;
+  float b_;
+  float a_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Ray final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Ray) */ {
+ public:
+  inline Ray() : Ray(nullptr) {}
+  ~Ray() override;
+  explicit constexpr Ray(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Ray(const Ray& from);
+  Ray(Ray&& from) noexcept
+    : Ray() {
+    *this = ::std::move(from);
+  }
+
+  inline Ray& operator=(const Ray& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Ray& operator=(Ray&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Ray& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Ray* internal_default_instance() {
+    return reinterpret_cast<const Ray*>(
+               &_Ray_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(Ray& a, Ray& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Ray* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Ray* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Ray* New() const final {
+    return new Ray();
+  }
+
+  Ray* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Ray>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const Ray& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const Ray& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Ray* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.Ray";
+  }
+  protected:
+  explicit Ray(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kOriginFieldNumber = 1,
+    kDirectionFieldNumber = 2,
+  };
+  // optional .rustplus.Vector3 origin = 1;
+  bool has_origin() const;
+  private:
+  bool _internal_has_origin() const;
+  public:
+  void clear_origin();
+  const ::rustplus::Vector3& origin() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector3* release_origin();
+  ::rustplus::Vector3* mutable_origin();
+  void set_allocated_origin(::rustplus::Vector3* origin);
+  private:
+  const ::rustplus::Vector3& _internal_origin() const;
+  ::rustplus::Vector3* _internal_mutable_origin();
+  public:
+  void unsafe_arena_set_allocated_origin(
+      ::rustplus::Vector3* origin);
+  ::rustplus::Vector3* unsafe_arena_release_origin();
+
+  // optional .rustplus.Vector3 direction = 2;
+  bool has_direction() const;
+  private:
+  bool _internal_has_direction() const;
+  public:
+  void clear_direction();
+  const ::rustplus::Vector3& direction() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector3* release_direction();
+  ::rustplus::Vector3* mutable_direction();
+  void set_allocated_direction(::rustplus::Vector3* direction);
+  private:
+  const ::rustplus::Vector3& _internal_direction() const;
+  ::rustplus::Vector3* _internal_mutable_direction();
+  public:
+  void unsafe_arena_set_allocated_direction(
+      ::rustplus::Vector3* direction);
+  ::rustplus::Vector3* unsafe_arena_release_direction();
+
+  // @@protoc_insertion_point(class_scope:rustplus.Ray)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::Vector3* origin_;
+  ::rustplus::Vector3* direction_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanActionResult final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanActionResult) */ {
+ public:
+  inline ClanActionResult() : ClanActionResult(nullptr) {}
+  ~ClanActionResult() override;
+  explicit constexpr ClanActionResult(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanActionResult(const ClanActionResult& from);
+  ClanActionResult(ClanActionResult&& from) noexcept
+    : ClanActionResult() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanActionResult& operator=(const ClanActionResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanActionResult& operator=(ClanActionResult&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanActionResult& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanActionResult* internal_default_instance() {
+    return reinterpret_cast<const ClanActionResult*>(
+               &_ClanActionResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(ClanActionResult& a, ClanActionResult& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanActionResult* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanActionResult* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanActionResult* New() const final {
+    return new ClanActionResult();
+  }
+
+  ClanActionResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanActionResult>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanActionResult& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanActionResult& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanActionResult* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanActionResult";
+  }
+  protected:
+  explicit ClanActionResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kClanInfoFieldNumber = 4,
+    kRequestIdFieldNumber = 1,
+    kResultFieldNumber = 2,
+    kHasClanInfoFieldNumber = 3,
+  };
+  // optional .rustplus.ClanInfo clanInfo = 4;
+  bool has_claninfo() const;
+  private:
+  bool _internal_has_claninfo() const;
+  public:
+  void clear_claninfo();
+  const ::rustplus::ClanInfo& claninfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::ClanInfo* release_claninfo();
+  ::rustplus::ClanInfo* mutable_claninfo();
+  void set_allocated_claninfo(::rustplus::ClanInfo* claninfo);
+  private:
+  const ::rustplus::ClanInfo& _internal_claninfo() const;
+  ::rustplus::ClanInfo* _internal_mutable_claninfo();
+  public:
+  void unsafe_arena_set_allocated_claninfo(
+      ::rustplus::ClanInfo* claninfo);
+  ::rustplus::ClanInfo* unsafe_arena_release_claninfo();
+
+  // required int32 requestId = 1;
+  bool has_requestid() const;
+  private:
+  bool _internal_has_requestid() const;
+  public:
+  void clear_requestid();
+  ::PROTOBUF_NAMESPACE_ID::int32 requestid() const;
+  void set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_requestid() const;
+  void _internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 result = 2;
+  bool has_result() const;
+  private:
+  bool _internal_has_result() const;
+  public:
+  void clear_result();
+  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
+  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
+  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required bool hasClanInfo = 3;
+  bool has_hasclaninfo() const;
+  private:
+  bool _internal_has_hasclaninfo() const;
+  public:
+  void clear_hasclaninfo();
+  bool hasclaninfo() const;
+  void set_hasclaninfo(bool value);
+  private:
+  bool _internal_hasclaninfo() const;
+  void _internal_set_hasclaninfo(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanActionResult)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::ClanInfo* claninfo_;
+  ::PROTOBUF_NAMESPACE_ID::int32 requestid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 result_;
+  bool hasclaninfo_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInfo_Role final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInfo.Role) */ {
+ public:
+  inline ClanInfo_Role() : ClanInfo_Role(nullptr) {}
+  ~ClanInfo_Role() override;
+  explicit constexpr ClanInfo_Role(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInfo_Role(const ClanInfo_Role& from);
+  ClanInfo_Role(ClanInfo_Role&& from) noexcept
+    : ClanInfo_Role() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInfo_Role& operator=(const ClanInfo_Role& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInfo_Role& operator=(ClanInfo_Role&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInfo_Role& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInfo_Role* internal_default_instance() {
+    return reinterpret_cast<const ClanInfo_Role*>(
+               &_ClanInfo_Role_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(ClanInfo_Role& a, ClanInfo_Role& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInfo_Role* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInfo_Role* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInfo_Role* New() const final {
+    return new ClanInfo_Role();
+  }
+
+  ClanInfo_Role* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInfo_Role>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInfo_Role& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInfo_Role& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInfo_Role* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInfo.Role";
+  }
+  protected:
+  explicit ClanInfo_Role(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 3,
+    kRoleIdFieldNumber = 1,
+    kRankFieldNumber = 2,
+    kCanSetMotdFieldNumber = 4,
+    kCanSetLogoFieldNumber = 5,
+    kCanInviteFieldNumber = 6,
+    kCanKickFieldNumber = 7,
+    kCanPromoteFieldNumber = 8,
+    kCanDemoteFieldNumber = 9,
+    kCanSetPlayerNotesFieldNumber = 10,
+    kCanAccessLogsFieldNumber = 11,
+  };
+  // required string name = 3;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // required int32 roleId = 1;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  ::PROTOBUF_NAMESPACE_ID::int32 roleid() const;
+  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_roleid() const;
+  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 rank = 2;
+  bool has_rank() const;
+  private:
+  bool _internal_has_rank() const;
+  public:
+  void clear_rank();
+  ::PROTOBUF_NAMESPACE_ID::int32 rank() const;
+  void set_rank(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_rank() const;
+  void _internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required bool canSetMotd = 4;
+  bool has_cansetmotd() const;
+  private:
+  bool _internal_has_cansetmotd() const;
+  public:
+  void clear_cansetmotd();
+  bool cansetmotd() const;
+  void set_cansetmotd(bool value);
+  private:
+  bool _internal_cansetmotd() const;
+  void _internal_set_cansetmotd(bool value);
+  public:
+
+  // required bool canSetLogo = 5;
+  bool has_cansetlogo() const;
+  private:
+  bool _internal_has_cansetlogo() const;
+  public:
+  void clear_cansetlogo();
+  bool cansetlogo() const;
+  void set_cansetlogo(bool value);
+  private:
+  bool _internal_cansetlogo() const;
+  void _internal_set_cansetlogo(bool value);
+  public:
+
+  // required bool canInvite = 6;
+  bool has_caninvite() const;
+  private:
+  bool _internal_has_caninvite() const;
+  public:
+  void clear_caninvite();
+  bool caninvite() const;
+  void set_caninvite(bool value);
+  private:
+  bool _internal_caninvite() const;
+  void _internal_set_caninvite(bool value);
+  public:
+
+  // required bool canKick = 7;
+  bool has_cankick() const;
+  private:
+  bool _internal_has_cankick() const;
+  public:
+  void clear_cankick();
+  bool cankick() const;
+  void set_cankick(bool value);
+  private:
+  bool _internal_cankick() const;
+  void _internal_set_cankick(bool value);
+  public:
+
+  // required bool canPromote = 8;
+  bool has_canpromote() const;
+  private:
+  bool _internal_has_canpromote() const;
+  public:
+  void clear_canpromote();
+  bool canpromote() const;
+  void set_canpromote(bool value);
+  private:
+  bool _internal_canpromote() const;
+  void _internal_set_canpromote(bool value);
+  public:
+
+  // required bool canDemote = 9;
+  bool has_candemote() const;
+  private:
+  bool _internal_has_candemote() const;
+  public:
+  void clear_candemote();
+  bool candemote() const;
+  void set_candemote(bool value);
+  private:
+  bool _internal_candemote() const;
+  void _internal_set_candemote(bool value);
+  public:
+
+  // required bool canSetPlayerNotes = 10;
+  bool has_cansetplayernotes() const;
+  private:
+  bool _internal_has_cansetplayernotes() const;
+  public:
+  void clear_cansetplayernotes();
+  bool cansetplayernotes() const;
+  void set_cansetplayernotes(bool value);
+  private:
+  bool _internal_cansetplayernotes() const;
+  void _internal_set_cansetplayernotes(bool value);
+  public:
+
+  // required bool canAccessLogs = 11;
+  bool has_canaccesslogs() const;
+  private:
+  bool _internal_has_canaccesslogs() const;
+  public:
+  void clear_canaccesslogs();
+  bool canaccesslogs() const;
+  void set_canaccesslogs(bool value);
+  private:
+  bool _internal_canaccesslogs() const;
+  void _internal_set_canaccesslogs(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Role)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::int32 roleid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 rank_;
+  bool cansetmotd_;
+  bool cansetlogo_;
+  bool caninvite_;
+  bool cankick_;
+  bool canpromote_;
+  bool candemote_;
+  bool cansetplayernotes_;
+  bool canaccesslogs_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInfo_Member final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInfo.Member) */ {
+ public:
+  inline ClanInfo_Member() : ClanInfo_Member(nullptr) {}
+  ~ClanInfo_Member() override;
+  explicit constexpr ClanInfo_Member(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInfo_Member(const ClanInfo_Member& from);
+  ClanInfo_Member(ClanInfo_Member&& from) noexcept
+    : ClanInfo_Member() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInfo_Member& operator=(const ClanInfo_Member& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInfo_Member& operator=(ClanInfo_Member&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInfo_Member& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInfo_Member* internal_default_instance() {
+    return reinterpret_cast<const ClanInfo_Member*>(
+               &_ClanInfo_Member_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(ClanInfo_Member& a, ClanInfo_Member& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInfo_Member* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInfo_Member* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInfo_Member* New() const final {
+    return new ClanInfo_Member();
+  }
+
+  ClanInfo_Member* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInfo_Member>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInfo_Member& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInfo_Member& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInfo_Member* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInfo.Member";
+  }
+  protected:
+  explicit ClanInfo_Member(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNotesFieldNumber = 5,
+    kSteamIdFieldNumber = 1,
+    kJoinedFieldNumber = 3,
+    kLastSeenFieldNumber = 4,
+    kRoleIdFieldNumber = 2,
+    kOnlineFieldNumber = 6,
+  };
+  // optional string notes = 5;
+  bool has_notes() const;
+  private:
+  bool _internal_has_notes() const;
+  public:
+  void clear_notes();
+  const std::string& notes() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_notes(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_notes();
+  PROTOBUF_MUST_USE_RESULT std::string* release_notes();
+  void set_allocated_notes(std::string* notes);
+  private:
+  const std::string& _internal_notes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_notes(const std::string& value);
+  std::string* _internal_mutable_notes();
+  public:
+
+  // required int64 steamId = 1;
+  bool has_steamid() const;
+  private:
+  bool _internal_has_steamid() const;
+  public:
+  void clear_steamid();
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 joined = 3;
+  bool has_joined() const;
+  private:
+  bool _internal_has_joined() const;
+  public:
+  void clear_joined();
+  ::PROTOBUF_NAMESPACE_ID::int64 joined() const;
+  void set_joined(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_joined() const;
+  void _internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 lastSeen = 4;
+  bool has_lastseen() const;
+  private:
+  bool _internal_has_lastseen() const;
+  public:
+  void clear_lastseen();
+  ::PROTOBUF_NAMESPACE_ID::int64 lastseen() const;
+  void set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_lastseen() const;
+  void _internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int32 roleId = 2;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  ::PROTOBUF_NAMESPACE_ID::int32 roleid() const;
+  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_roleid() const;
+  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // optional bool online = 6;
+  bool has_online() const;
+  private:
+  bool _internal_has_online() const;
+  public:
+  void clear_online();
+  bool online() const;
+  void set_online(bool value);
+  private:
+  bool _internal_online() const;
+  void _internal_set_online(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Member)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr notes_;
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid_;
+  ::PROTOBUF_NAMESPACE_ID::int64 joined_;
+  ::PROTOBUF_NAMESPACE_ID::int64 lastseen_;
+  ::PROTOBUF_NAMESPACE_ID::int32 roleid_;
+  bool online_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInfo_Invite final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInfo.Invite) */ {
+ public:
+  inline ClanInfo_Invite() : ClanInfo_Invite(nullptr) {}
+  ~ClanInfo_Invite() override;
+  explicit constexpr ClanInfo_Invite(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInfo_Invite(const ClanInfo_Invite& from);
+  ClanInfo_Invite(ClanInfo_Invite&& from) noexcept
+    : ClanInfo_Invite() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInfo_Invite& operator=(const ClanInfo_Invite& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInfo_Invite& operator=(ClanInfo_Invite&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInfo_Invite& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInfo_Invite* internal_default_instance() {
+    return reinterpret_cast<const ClanInfo_Invite*>(
+               &_ClanInfo_Invite_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(ClanInfo_Invite& a, ClanInfo_Invite& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInfo_Invite* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInfo_Invite* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInfo_Invite* New() const final {
+    return new ClanInfo_Invite();
+  }
+
+  ClanInfo_Invite* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInfo_Invite>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInfo_Invite& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInfo_Invite& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInfo_Invite* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInfo.Invite";
+  }
+  protected:
+  explicit ClanInfo_Invite(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSteamIdFieldNumber = 1,
+    kRecruiterFieldNumber = 2,
+    kTimestampFieldNumber = 3,
+  };
+  // required int64 steamId = 1;
+  bool has_steamid() const;
+  private:
+  bool _internal_has_steamid() const;
+  public:
+  void clear_steamid();
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 recruiter = 2;
+  bool has_recruiter() const;
+  private:
+  bool _internal_has_recruiter() const;
+  public:
+  void clear_recruiter();
+  ::PROTOBUF_NAMESPACE_ID::int64 recruiter() const;
+  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_recruiter() const;
+  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 timestamp = 3;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Invite)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid_;
+  ::PROTOBUF_NAMESPACE_ID::int64 recruiter_;
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInfo) */ {
+ public:
+  inline ClanInfo() : ClanInfo(nullptr) {}
+  ~ClanInfo() override;
+  explicit constexpr ClanInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInfo(const ClanInfo& from);
+  ClanInfo(ClanInfo&& from) noexcept
+    : ClanInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInfo& operator=(const ClanInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInfo& operator=(ClanInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInfo* internal_default_instance() {
+    return reinterpret_cast<const ClanInfo*>(
+               &_ClanInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(ClanInfo& a, ClanInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInfo* New() const final {
+    return new ClanInfo();
+  }
+
+  ClanInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInfo";
+  }
+  protected:
+  explicit ClanInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ClanInfo_Role Role;
+  typedef ClanInfo_Member Member;
+  typedef ClanInfo_Invite Invite;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRolesFieldNumber = 10,
+    kMembersFieldNumber = 11,
+    kInvitesFieldNumber = 12,
+    kNameFieldNumber = 2,
+    kMotdFieldNumber = 5,
+    kLogoFieldNumber = 8,
+    kClanIdFieldNumber = 1,
+    kCreatedFieldNumber = 3,
+    kCreatorFieldNumber = 4,
+    kMotdTimestampFieldNumber = 6,
+    kMotdAuthorFieldNumber = 7,
+    kColorFieldNumber = 9,
+    kMaxMemberCountFieldNumber = 13,
+  };
+  // repeated .rustplus.ClanInfo.Role roles = 10;
+  int roles_size() const;
+  private:
+  int _internal_roles_size() const;
+  public:
+  void clear_roles();
+  ::rustplus::ClanInfo_Role* mutable_roles(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Role >*
+      mutable_roles();
+  private:
+  const ::rustplus::ClanInfo_Role& _internal_roles(int index) const;
+  ::rustplus::ClanInfo_Role* _internal_add_roles();
+  public:
+  const ::rustplus::ClanInfo_Role& roles(int index) const;
+  ::rustplus::ClanInfo_Role* add_roles();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Role >&
+      roles() const;
+
+  // repeated .rustplus.ClanInfo.Member members = 11;
+  int members_size() const;
+  private:
+  int _internal_members_size() const;
+  public:
+  void clear_members();
+  ::rustplus::ClanInfo_Member* mutable_members(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Member >*
+      mutable_members();
+  private:
+  const ::rustplus::ClanInfo_Member& _internal_members(int index) const;
+  ::rustplus::ClanInfo_Member* _internal_add_members();
+  public:
+  const ::rustplus::ClanInfo_Member& members(int index) const;
+  ::rustplus::ClanInfo_Member* add_members();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Member >&
+      members() const;
+
+  // repeated .rustplus.ClanInfo.Invite invites = 12;
+  int invites_size() const;
+  private:
+  int _internal_invites_size() const;
+  public:
+  void clear_invites();
+  ::rustplus::ClanInfo_Invite* mutable_invites(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Invite >*
+      mutable_invites();
+  private:
+  const ::rustplus::ClanInfo_Invite& _internal_invites(int index) const;
+  ::rustplus::ClanInfo_Invite* _internal_add_invites();
+  public:
+  const ::rustplus::ClanInfo_Invite& invites(int index) const;
+  ::rustplus::ClanInfo_Invite* add_invites();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Invite >&
+      invites() const;
+
+  // required string name = 2;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // optional string motd = 5;
+  bool has_motd() const;
+  private:
+  bool _internal_has_motd() const;
+  public:
+  void clear_motd();
+  const std::string& motd() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_motd(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_motd();
+  PROTOBUF_MUST_USE_RESULT std::string* release_motd();
+  void set_allocated_motd(std::string* motd);
+  private:
+  const std::string& _internal_motd() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_motd(const std::string& value);
+  std::string* _internal_mutable_motd();
+  public:
+
+  // optional bytes logo = 8;
+  bool has_logo() const;
+  private:
+  bool _internal_has_logo() const;
+  public:
+  void clear_logo();
+  const std::string& logo() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_logo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_logo();
+  PROTOBUF_MUST_USE_RESULT std::string* release_logo();
+  void set_allocated_logo(std::string* logo);
+  private:
+  const std::string& _internal_logo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logo(const std::string& value);
+  std::string* _internal_mutable_logo();
+  public:
+
+  // required int64 clanId = 1;
+  bool has_clanid() const;
+  private:
+  bool _internal_has_clanid() const;
+  public:
+  void clear_clanid();
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 created = 3;
+  bool has_created() const;
+  private:
+  bool _internal_has_created() const;
+  public:
+  void clear_created();
+  ::PROTOBUF_NAMESPACE_ID::int64 created() const;
+  void set_created(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_created() const;
+  void _internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 creator = 4;
+  bool has_creator() const;
+  private:
+  bool _internal_has_creator() const;
+  public:
+  void clear_creator();
+  ::PROTOBUF_NAMESPACE_ID::int64 creator() const;
+  void set_creator(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_creator() const;
+  void _internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // optional int64 motdTimestamp = 6;
+  bool has_motdtimestamp() const;
+  private:
+  bool _internal_has_motdtimestamp() const;
+  public:
+  void clear_motdtimestamp();
+  ::PROTOBUF_NAMESPACE_ID::int64 motdtimestamp() const;
+  void set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_motdtimestamp() const;
+  void _internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // optional int64 motdAuthor = 7;
+  bool has_motdauthor() const;
+  private:
+  bool _internal_has_motdauthor() const;
+  public:
+  void clear_motdauthor();
+  ::PROTOBUF_NAMESPACE_ID::int64 motdauthor() const;
+  void set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_motdauthor() const;
+  void _internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // optional sint32 color = 9;
+  bool has_color() const;
+  private:
+  bool _internal_has_color() const;
+  public:
+  void clear_color();
+  ::PROTOBUF_NAMESPACE_ID::int32 color() const;
+  void set_color(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_color() const;
+  void _internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // optional int32 maxMemberCount = 13;
+  bool has_maxmembercount() const;
+  private:
+  bool _internal_has_maxmembercount() const;
+  public:
+  void clear_maxmembercount();
+  ::PROTOBUF_NAMESPACE_ID::int32 maxmembercount() const;
+  void set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_maxmembercount() const;
+  void _internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Role > roles_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Member > members_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Invite > invites_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr motd_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr logo_;
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid_;
+  ::PROTOBUF_NAMESPACE_ID::int64 created_;
+  ::PROTOBUF_NAMESPACE_ID::int64 creator_;
+  ::PROTOBUF_NAMESPACE_ID::int64 motdtimestamp_;
+  ::PROTOBUF_NAMESPACE_ID::int64 motdauthor_;
+  ::PROTOBUF_NAMESPACE_ID::int32 color_;
+  ::PROTOBUF_NAMESPACE_ID::int32 maxmembercount_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanLog_Entry final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanLog.Entry) */ {
+ public:
+  inline ClanLog_Entry() : ClanLog_Entry(nullptr) {}
+  ~ClanLog_Entry() override;
+  explicit constexpr ClanLog_Entry(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanLog_Entry(const ClanLog_Entry& from);
+  ClanLog_Entry(ClanLog_Entry&& from) noexcept
+    : ClanLog_Entry() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanLog_Entry& operator=(const ClanLog_Entry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanLog_Entry& operator=(ClanLog_Entry&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanLog_Entry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanLog_Entry* internal_default_instance() {
+    return reinterpret_cast<const ClanLog_Entry*>(
+               &_ClanLog_Entry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  friend void swap(ClanLog_Entry& a, ClanLog_Entry& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanLog_Entry* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanLog_Entry* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanLog_Entry* New() const final {
+    return new ClanLog_Entry();
+  }
+
+  ClanLog_Entry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanLog_Entry>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanLog_Entry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanLog_Entry& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanLog_Entry* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanLog.Entry";
+  }
+  protected:
+  explicit ClanLog_Entry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEventKeyFieldNumber = 2,
+    kArg1FieldNumber = 3,
+    kArg2FieldNumber = 4,
+    kArg3FieldNumber = 5,
+    kArg4FieldNumber = 6,
+    kTimestampFieldNumber = 1,
+  };
+  // required string eventKey = 2;
+  bool has_eventkey() const;
+  private:
+  bool _internal_has_eventkey() const;
+  public:
+  void clear_eventkey();
+  const std::string& eventkey() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_eventkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_eventkey();
+  PROTOBUF_MUST_USE_RESULT std::string* release_eventkey();
+  void set_allocated_eventkey(std::string* eventkey);
+  private:
+  const std::string& _internal_eventkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_eventkey(const std::string& value);
+  std::string* _internal_mutable_eventkey();
+  public:
+
+  // optional string arg1 = 3;
+  bool has_arg1() const;
+  private:
+  bool _internal_has_arg1() const;
+  public:
+  void clear_arg1();
+  const std::string& arg1() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_arg1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_arg1();
+  PROTOBUF_MUST_USE_RESULT std::string* release_arg1();
+  void set_allocated_arg1(std::string* arg1);
+  private:
+  const std::string& _internal_arg1() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg1(const std::string& value);
+  std::string* _internal_mutable_arg1();
+  public:
+
+  // optional string arg2 = 4;
+  bool has_arg2() const;
+  private:
+  bool _internal_has_arg2() const;
+  public:
+  void clear_arg2();
+  const std::string& arg2() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_arg2(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_arg2();
+  PROTOBUF_MUST_USE_RESULT std::string* release_arg2();
+  void set_allocated_arg2(std::string* arg2);
+  private:
+  const std::string& _internal_arg2() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg2(const std::string& value);
+  std::string* _internal_mutable_arg2();
+  public:
+
+  // optional string arg3 = 5;
+  bool has_arg3() const;
+  private:
+  bool _internal_has_arg3() const;
+  public:
+  void clear_arg3();
+  const std::string& arg3() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_arg3(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_arg3();
+  PROTOBUF_MUST_USE_RESULT std::string* release_arg3();
+  void set_allocated_arg3(std::string* arg3);
+  private:
+  const std::string& _internal_arg3() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg3(const std::string& value);
+  std::string* _internal_mutable_arg3();
+  public:
+
+  // optional string arg4 = 6;
+  bool has_arg4() const;
+  private:
+  bool _internal_has_arg4() const;
+  public:
+  void clear_arg4();
+  const std::string& arg4() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_arg4(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_arg4();
+  PROTOBUF_MUST_USE_RESULT std::string* release_arg4();
+  void set_allocated_arg4(std::string* arg4);
+  private:
+  const std::string& _internal_arg4() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg4(const std::string& value);
+  std::string* _internal_mutable_arg4();
+  public:
+
+  // required int64 timestamp = 1;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanLog.Entry)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr eventkey_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arg1_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arg2_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arg3_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arg4_;
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanLog final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanLog) */ {
+ public:
+  inline ClanLog() : ClanLog(nullptr) {}
+  ~ClanLog() override;
+  explicit constexpr ClanLog(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanLog(const ClanLog& from);
+  ClanLog(ClanLog&& from) noexcept
+    : ClanLog() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanLog& operator=(const ClanLog& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanLog& operator=(ClanLog&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanLog& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanLog* internal_default_instance() {
+    return reinterpret_cast<const ClanLog*>(
+               &_ClanLog_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(ClanLog& a, ClanLog& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanLog* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanLog* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanLog* New() const final {
+    return new ClanLog();
+  }
+
+  ClanLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanLog>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanLog& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanLog& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanLog* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanLog";
+  }
+  protected:
+  explicit ClanLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ClanLog_Entry Entry;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kLogEntriesFieldNumber = 2,
+    kClanIdFieldNumber = 1,
+  };
+  // repeated .rustplus.ClanLog.Entry logEntries = 2;
+  int logentries_size() const;
+  private:
+  int _internal_logentries_size() const;
+  public:
+  void clear_logentries();
+  ::rustplus::ClanLog_Entry* mutable_logentries(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanLog_Entry >*
+      mutable_logentries();
+  private:
+  const ::rustplus::ClanLog_Entry& _internal_logentries(int index) const;
+  ::rustplus::ClanLog_Entry* _internal_add_logentries();
+  public:
+  const ::rustplus::ClanLog_Entry& logentries(int index) const;
+  ::rustplus::ClanLog_Entry* add_logentries();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanLog_Entry >&
+      logentries() const;
+
+  // required int64 clanId = 1;
+  bool has_clanid() const;
+  private:
+  bool _internal_has_clanid() const;
+  public:
+  void clear_clanid();
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanLog)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanLog_Entry > logentries_;
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInvitations_Invitation final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInvitations.Invitation) */ {
+ public:
+  inline ClanInvitations_Invitation() : ClanInvitations_Invitation(nullptr) {}
+  ~ClanInvitations_Invitation() override;
+  explicit constexpr ClanInvitations_Invitation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInvitations_Invitation(const ClanInvitations_Invitation& from);
+  ClanInvitations_Invitation(ClanInvitations_Invitation&& from) noexcept
+    : ClanInvitations_Invitation() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInvitations_Invitation& operator=(const ClanInvitations_Invitation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInvitations_Invitation& operator=(ClanInvitations_Invitation&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInvitations_Invitation& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInvitations_Invitation* internal_default_instance() {
+    return reinterpret_cast<const ClanInvitations_Invitation*>(
+               &_ClanInvitations_Invitation_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  friend void swap(ClanInvitations_Invitation& a, ClanInvitations_Invitation& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInvitations_Invitation* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInvitations_Invitation* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInvitations_Invitation* New() const final {
+    return new ClanInvitations_Invitation();
+  }
+
+  ClanInvitations_Invitation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInvitations_Invitation>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInvitations_Invitation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInvitations_Invitation& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInvitations_Invitation* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInvitations.Invitation";
+  }
+  protected:
+  explicit ClanInvitations_Invitation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kClanIdFieldNumber = 1,
+    kRecruiterFieldNumber = 2,
+    kTimestampFieldNumber = 3,
+  };
+  // required int64 clanId = 1;
+  bool has_clanid() const;
+  private:
+  bool _internal_has_clanid() const;
+  public:
+  void clear_clanid();
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 recruiter = 2;
+  bool has_recruiter() const;
+  private:
+  bool _internal_has_recruiter() const;
+  public:
+  void clear_recruiter();
+  ::PROTOBUF_NAMESPACE_ID::int64 recruiter() const;
+  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_recruiter() const;
+  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // required int64 timestamp = 3;
+  bool has_timestamp() const;
+  private:
+  bool _internal_has_timestamp() const;
+  public:
+  void clear_timestamp();
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInvitations.Invitation)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid_;
+  ::PROTOBUF_NAMESPACE_ID::int64 recruiter_;
+  ::PROTOBUF_NAMESPACE_ID::int64 timestamp_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ClanInvitations final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.ClanInvitations) */ {
+ public:
+  inline ClanInvitations() : ClanInvitations(nullptr) {}
+  ~ClanInvitations() override;
+  explicit constexpr ClanInvitations(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ClanInvitations(const ClanInvitations& from);
+  ClanInvitations(ClanInvitations&& from) noexcept
+    : ClanInvitations() {
+    *this = ::std::move(from);
+  }
+
+  inline ClanInvitations& operator=(const ClanInvitations& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ClanInvitations& operator=(ClanInvitations&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ClanInvitations& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ClanInvitations* internal_default_instance() {
+    return reinterpret_cast<const ClanInvitations*>(
+               &_ClanInvitations_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  friend void swap(ClanInvitations& a, ClanInvitations& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ClanInvitations* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ClanInvitations* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ClanInvitations* New() const final {
+    return new ClanInvitations();
+  }
+
+  ClanInvitations* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ClanInvitations>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ClanInvitations& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ClanInvitations& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ClanInvitations* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.ClanInvitations";
+  }
+  protected:
+  explicit ClanInvitations(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ClanInvitations_Invitation Invitation;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kInvitationsFieldNumber = 1,
+  };
+  // repeated .rustplus.ClanInvitations.Invitation invitations = 1;
+  int invitations_size() const;
+  private:
+  int _internal_invitations_size() const;
+  public:
+  void clear_invitations();
+  ::rustplus::ClanInvitations_Invitation* mutable_invitations(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInvitations_Invitation >*
+      mutable_invitations();
+  private:
+  const ::rustplus::ClanInvitations_Invitation& _internal_invitations(int index) const;
+  ::rustplus::ClanInvitations_Invitation* _internal_add_invitations();
+  public:
+  const ::rustplus::ClanInvitations_Invitation& invitations(int index) const;
+  ::rustplus::ClanInvitations_Invitation* add_invitations();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInvitations_Invitation >&
+      invitations() const;
+
+  // @@protoc_insertion_point(class_scope:rustplus.ClanInvitations)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInvitations_Invitation > invitations_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -470,7 +3577,7 @@ class AppRequest final :
                &_AppRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    15;
 
   friend void swap(AppRequest& a, AppRequest& b) {
     a.Swap(&b);
@@ -552,8 +3659,15 @@ class AppRequest final :
     kCheckSubscriptionFieldNumber = 16,
     kSetSubscriptionFieldNumber = 17,
     kGetMapMarkersFieldNumber = 18,
-    kGetCameraFrameFieldNumber = 19,
     kPromoteToLeaderFieldNumber = 20,
+    kGetClanInfoFieldNumber = 21,
+    kSetClanMotdFieldNumber = 22,
+    kGetClanChatFieldNumber = 23,
+    kSendClanMessageFieldNumber = 24,
+    kGetNexusAuthFieldNumber = 25,
+    kCameraSubscribeFieldNumber = 30,
+    kCameraUnsubscribeFieldNumber = 31,
+    kCameraInputFieldNumber = 32,
     kPlayerIdFieldNumber = 2,
     kSeqFieldNumber = 1,
     kPlayerTokenFieldNumber = 3,
@@ -757,24 +3871,6 @@ class AppRequest final :
       ::rustplus::AppEmpty* getmapmarkers);
   ::rustplus::AppEmpty* unsafe_arena_release_getmapmarkers();
 
-  // optional .rustplus.AppCameraFrameRequest getCameraFrame = 19;
-  bool has_getcameraframe() const;
-  private:
-  bool _internal_has_getcameraframe() const;
-  public:
-  void clear_getcameraframe();
-  const ::rustplus::AppCameraFrameRequest& getcameraframe() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraFrameRequest* release_getcameraframe();
-  ::rustplus::AppCameraFrameRequest* mutable_getcameraframe();
-  void set_allocated_getcameraframe(::rustplus::AppCameraFrameRequest* getcameraframe);
-  private:
-  const ::rustplus::AppCameraFrameRequest& _internal_getcameraframe() const;
-  ::rustplus::AppCameraFrameRequest* _internal_mutable_getcameraframe();
-  public:
-  void unsafe_arena_set_allocated_getcameraframe(
-      ::rustplus::AppCameraFrameRequest* getcameraframe);
-  ::rustplus::AppCameraFrameRequest* unsafe_arena_release_getcameraframe();
-
   // optional .rustplus.AppPromoteToLeader promoteToLeader = 20;
   bool has_promotetoleader() const;
   private:
@@ -792,6 +3888,150 @@ class AppRequest final :
   void unsafe_arena_set_allocated_promotetoleader(
       ::rustplus::AppPromoteToLeader* promotetoleader);
   ::rustplus::AppPromoteToLeader* unsafe_arena_release_promotetoleader();
+
+  // optional .rustplus.AppEmpty getClanInfo = 21;
+  bool has_getclaninfo() const;
+  private:
+  bool _internal_has_getclaninfo() const;
+  public:
+  void clear_getclaninfo();
+  const ::rustplus::AppEmpty& getclaninfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppEmpty* release_getclaninfo();
+  ::rustplus::AppEmpty* mutable_getclaninfo();
+  void set_allocated_getclaninfo(::rustplus::AppEmpty* getclaninfo);
+  private:
+  const ::rustplus::AppEmpty& _internal_getclaninfo() const;
+  ::rustplus::AppEmpty* _internal_mutable_getclaninfo();
+  public:
+  void unsafe_arena_set_allocated_getclaninfo(
+      ::rustplus::AppEmpty* getclaninfo);
+  ::rustplus::AppEmpty* unsafe_arena_release_getclaninfo();
+
+  // optional .rustplus.AppSendMessage setClanMotd = 22;
+  bool has_setclanmotd() const;
+  private:
+  bool _internal_has_setclanmotd() const;
+  public:
+  void clear_setclanmotd();
+  const ::rustplus::AppSendMessage& setclanmotd() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppSendMessage* release_setclanmotd();
+  ::rustplus::AppSendMessage* mutable_setclanmotd();
+  void set_allocated_setclanmotd(::rustplus::AppSendMessage* setclanmotd);
+  private:
+  const ::rustplus::AppSendMessage& _internal_setclanmotd() const;
+  ::rustplus::AppSendMessage* _internal_mutable_setclanmotd();
+  public:
+  void unsafe_arena_set_allocated_setclanmotd(
+      ::rustplus::AppSendMessage* setclanmotd);
+  ::rustplus::AppSendMessage* unsafe_arena_release_setclanmotd();
+
+  // optional .rustplus.AppEmpty getClanChat = 23;
+  bool has_getclanchat() const;
+  private:
+  bool _internal_has_getclanchat() const;
+  public:
+  void clear_getclanchat();
+  const ::rustplus::AppEmpty& getclanchat() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppEmpty* release_getclanchat();
+  ::rustplus::AppEmpty* mutable_getclanchat();
+  void set_allocated_getclanchat(::rustplus::AppEmpty* getclanchat);
+  private:
+  const ::rustplus::AppEmpty& _internal_getclanchat() const;
+  ::rustplus::AppEmpty* _internal_mutable_getclanchat();
+  public:
+  void unsafe_arena_set_allocated_getclanchat(
+      ::rustplus::AppEmpty* getclanchat);
+  ::rustplus::AppEmpty* unsafe_arena_release_getclanchat();
+
+  // optional .rustplus.AppSendMessage sendClanMessage = 24;
+  bool has_sendclanmessage() const;
+  private:
+  bool _internal_has_sendclanmessage() const;
+  public:
+  void clear_sendclanmessage();
+  const ::rustplus::AppSendMessage& sendclanmessage() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppSendMessage* release_sendclanmessage();
+  ::rustplus::AppSendMessage* mutable_sendclanmessage();
+  void set_allocated_sendclanmessage(::rustplus::AppSendMessage* sendclanmessage);
+  private:
+  const ::rustplus::AppSendMessage& _internal_sendclanmessage() const;
+  ::rustplus::AppSendMessage* _internal_mutable_sendclanmessage();
+  public:
+  void unsafe_arena_set_allocated_sendclanmessage(
+      ::rustplus::AppSendMessage* sendclanmessage);
+  ::rustplus::AppSendMessage* unsafe_arena_release_sendclanmessage();
+
+  // optional .rustplus.AppGetNexusAuth getNexusAuth = 25;
+  bool has_getnexusauth() const;
+  private:
+  bool _internal_has_getnexusauth() const;
+  public:
+  void clear_getnexusauth();
+  const ::rustplus::AppGetNexusAuth& getnexusauth() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppGetNexusAuth* release_getnexusauth();
+  ::rustplus::AppGetNexusAuth* mutable_getnexusauth();
+  void set_allocated_getnexusauth(::rustplus::AppGetNexusAuth* getnexusauth);
+  private:
+  const ::rustplus::AppGetNexusAuth& _internal_getnexusauth() const;
+  ::rustplus::AppGetNexusAuth* _internal_mutable_getnexusauth();
+  public:
+  void unsafe_arena_set_allocated_getnexusauth(
+      ::rustplus::AppGetNexusAuth* getnexusauth);
+  ::rustplus::AppGetNexusAuth* unsafe_arena_release_getnexusauth();
+
+  // optional .rustplus.AppCameraSubscribe cameraSubscribe = 30;
+  bool has_camerasubscribe() const;
+  private:
+  bool _internal_has_camerasubscribe() const;
+  public:
+  void clear_camerasubscribe();
+  const ::rustplus::AppCameraSubscribe& camerasubscribe() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraSubscribe* release_camerasubscribe();
+  ::rustplus::AppCameraSubscribe* mutable_camerasubscribe();
+  void set_allocated_camerasubscribe(::rustplus::AppCameraSubscribe* camerasubscribe);
+  private:
+  const ::rustplus::AppCameraSubscribe& _internal_camerasubscribe() const;
+  ::rustplus::AppCameraSubscribe* _internal_mutable_camerasubscribe();
+  public:
+  void unsafe_arena_set_allocated_camerasubscribe(
+      ::rustplus::AppCameraSubscribe* camerasubscribe);
+  ::rustplus::AppCameraSubscribe* unsafe_arena_release_camerasubscribe();
+
+  // optional .rustplus.AppEmpty cameraUnsubscribe = 31;
+  bool has_cameraunsubscribe() const;
+  private:
+  bool _internal_has_cameraunsubscribe() const;
+  public:
+  void clear_cameraunsubscribe();
+  const ::rustplus::AppEmpty& cameraunsubscribe() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppEmpty* release_cameraunsubscribe();
+  ::rustplus::AppEmpty* mutable_cameraunsubscribe();
+  void set_allocated_cameraunsubscribe(::rustplus::AppEmpty* cameraunsubscribe);
+  private:
+  const ::rustplus::AppEmpty& _internal_cameraunsubscribe() const;
+  ::rustplus::AppEmpty* _internal_mutable_cameraunsubscribe();
+  public:
+  void unsafe_arena_set_allocated_cameraunsubscribe(
+      ::rustplus::AppEmpty* cameraunsubscribe);
+  ::rustplus::AppEmpty* unsafe_arena_release_cameraunsubscribe();
+
+  // optional .rustplus.AppCameraInput cameraInput = 32;
+  bool has_camerainput() const;
+  private:
+  bool _internal_has_camerainput() const;
+  public:
+  void clear_camerainput();
+  const ::rustplus::AppCameraInput& camerainput() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraInput* release_camerainput();
+  ::rustplus::AppCameraInput* mutable_camerainput();
+  void set_allocated_camerainput(::rustplus::AppCameraInput* camerainput);
+  private:
+  const ::rustplus::AppCameraInput& _internal_camerainput() const;
+  ::rustplus::AppCameraInput* _internal_mutable_camerainput();
+  public:
+  void unsafe_arena_set_allocated_camerainput(
+      ::rustplus::AppCameraInput* camerainput);
+  ::rustplus::AppCameraInput* unsafe_arena_release_camerainput();
 
   // required uint64 playerId = 2;
   bool has_playerid() const;
@@ -868,8 +4108,15 @@ class AppRequest final :
   ::rustplus::AppEmpty* checksubscription_;
   ::rustplus::AppFlag* setsubscription_;
   ::rustplus::AppEmpty* getmapmarkers_;
-  ::rustplus::AppCameraFrameRequest* getcameraframe_;
   ::rustplus::AppPromoteToLeader* promotetoleader_;
+  ::rustplus::AppEmpty* getclaninfo_;
+  ::rustplus::AppSendMessage* setclanmotd_;
+  ::rustplus::AppEmpty* getclanchat_;
+  ::rustplus::AppSendMessage* sendclanmessage_;
+  ::rustplus::AppGetNexusAuth* getnexusauth_;
+  ::rustplus::AppCameraSubscribe* camerasubscribe_;
+  ::rustplus::AppEmpty* cameraunsubscribe_;
+  ::rustplus::AppCameraInput* camerainput_;
   ::PROTOBUF_NAMESPACE_ID::uint64 playerid_;
   ::PROTOBUF_NAMESPACE_ID::uint32 seq_;
   ::PROTOBUF_NAMESPACE_ID::int32 playertoken_;
@@ -878,24 +4125,24 @@ class AppRequest final :
 };
 // -------------------------------------------------------------------
 
-class AppSendMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppSendMessage) */ {
+class AppMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMessage) */ {
  public:
-  inline AppSendMessage() : AppSendMessage(nullptr) {}
-  ~AppSendMessage() override;
-  explicit constexpr AppSendMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppMessage() : AppMessage(nullptr) {}
+  ~AppMessage() override;
+  explicit constexpr AppMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppSendMessage(const AppSendMessage& from);
-  AppSendMessage(AppSendMessage&& from) noexcept
-    : AppSendMessage() {
+  AppMessage(const AppMessage& from);
+  AppMessage(AppMessage&& from) noexcept
+    : AppMessage() {
     *this = ::std::move(from);
   }
 
-  inline AppSendMessage& operator=(const AppSendMessage& from) {
+  inline AppMessage& operator=(const AppMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppSendMessage& operator=(AppSendMessage&& from) noexcept {
+  inline AppMessage& operator=(AppMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -921,20 +4168,20 @@ class AppSendMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppSendMessage& default_instance() {
+  static const AppMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppSendMessage* internal_default_instance() {
-    return reinterpret_cast<const AppSendMessage*>(
-               &_AppSendMessage_default_instance_);
+  static inline const AppMessage* internal_default_instance() {
+    return reinterpret_cast<const AppMessage*>(
+               &_AppMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    16;
 
-  friend void swap(AppSendMessage& a, AppSendMessage& b) {
+  friend void swap(AppMessage& a, AppMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppSendMessage* other) {
+  inline void Swap(AppMessage* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -942,7 +4189,7 @@ class AppSendMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppSendMessage* other) {
+  void UnsafeArenaSwap(AppMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -950,17 +4197,17 @@ class AppSendMessage final :
 
   // implements Message ----------------------------------------------
 
-  inline AppSendMessage* New() const final {
-    return new AppSendMessage();
+  inline AppMessage* New() const final {
+    return new AppMessage();
   }
 
-  AppSendMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppSendMessage>(arena);
+  AppMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppSendMessage& from);
+  void CopyFrom(const AppMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppSendMessage& from);
+  void MergeFrom(const AppMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -977,13 +4224,13 @@ class AppSendMessage final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppSendMessage* other);
+  void InternalSwap(AppMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppSendMessage";
+    return "rustplus.AppMessage";
   }
   protected:
-  explicit AppSendMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1000,27 +4247,46 @@ class AppSendMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kResponseFieldNumber = 1,
+    kBroadcastFieldNumber = 2,
   };
-  // required string message = 1;
-  bool has_message() const;
+  // optional .rustplus.AppResponse response = 1;
+  bool has_response() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_response() const;
   public:
-  void clear_message();
-  const std::string& message() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_MUST_USE_RESULT std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void clear_response();
+  const ::rustplus::AppResponse& response() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppResponse* release_response();
+  ::rustplus::AppResponse* mutable_response();
+  void set_allocated_response(::rustplus::AppResponse* response);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const ::rustplus::AppResponse& _internal_response() const;
+  ::rustplus::AppResponse* _internal_mutable_response();
   public:
+  void unsafe_arena_set_allocated_response(
+      ::rustplus::AppResponse* response);
+  ::rustplus::AppResponse* unsafe_arena_release_response();
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppSendMessage)
+  // optional .rustplus.AppBroadcast broadcast = 2;
+  bool has_broadcast() const;
+  private:
+  bool _internal_has_broadcast() const;
+  public:
+  void clear_broadcast();
+  const ::rustplus::AppBroadcast& broadcast() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppBroadcast* release_broadcast();
+  ::rustplus::AppBroadcast* mutable_broadcast();
+  void set_allocated_broadcast(::rustplus::AppBroadcast* broadcast);
+  private:
+  const ::rustplus::AppBroadcast& _internal_broadcast() const;
+  ::rustplus::AppBroadcast* _internal_mutable_broadcast();
+  public:
+  void unsafe_arena_set_allocated_broadcast(
+      ::rustplus::AppBroadcast* broadcast);
+  ::rustplus::AppBroadcast* unsafe_arena_release_broadcast();
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppMessage)
  private:
   class _Internal;
 
@@ -1029,483 +4295,8 @@ class AppSendMessage final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppSetEntityValue final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppSetEntityValue) */ {
- public:
-  inline AppSetEntityValue() : AppSetEntityValue(nullptr) {}
-  ~AppSetEntityValue() override;
-  explicit constexpr AppSetEntityValue(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppSetEntityValue(const AppSetEntityValue& from);
-  AppSetEntityValue(AppSetEntityValue&& from) noexcept
-    : AppSetEntityValue() {
-    *this = ::std::move(from);
-  }
-
-  inline AppSetEntityValue& operator=(const AppSetEntityValue& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppSetEntityValue& operator=(AppSetEntityValue&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppSetEntityValue& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppSetEntityValue* internal_default_instance() {
-    return reinterpret_cast<const AppSetEntityValue*>(
-               &_AppSetEntityValue_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    3;
-
-  friend void swap(AppSetEntityValue& a, AppSetEntityValue& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppSetEntityValue* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppSetEntityValue* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppSetEntityValue* New() const final {
-    return new AppSetEntityValue();
-  }
-
-  AppSetEntityValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppSetEntityValue>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppSetEntityValue& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppSetEntityValue& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppSetEntityValue* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppSetEntityValue";
-  }
-  protected:
-  explicit AppSetEntityValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kValueFieldNumber = 1,
-  };
-  // required bool value = 1;
-  bool has_value() const;
-  private:
-  bool _internal_has_value() const;
-  public:
-  void clear_value();
-  bool value() const;
-  void set_value(bool value);
-  private:
-  bool _internal_value() const;
-  void _internal_set_value(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppSetEntityValue)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  bool value_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppCameraFrameRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraFrameRequest) */ {
- public:
-  inline AppCameraFrameRequest() : AppCameraFrameRequest(nullptr) {}
-  ~AppCameraFrameRequest() override;
-  explicit constexpr AppCameraFrameRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppCameraFrameRequest(const AppCameraFrameRequest& from);
-  AppCameraFrameRequest(AppCameraFrameRequest&& from) noexcept
-    : AppCameraFrameRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline AppCameraFrameRequest& operator=(const AppCameraFrameRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppCameraFrameRequest& operator=(AppCameraFrameRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppCameraFrameRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppCameraFrameRequest* internal_default_instance() {
-    return reinterpret_cast<const AppCameraFrameRequest*>(
-               &_AppCameraFrameRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  friend void swap(AppCameraFrameRequest& a, AppCameraFrameRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppCameraFrameRequest* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppCameraFrameRequest* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppCameraFrameRequest* New() const final {
-    return new AppCameraFrameRequest();
-  }
-
-  AppCameraFrameRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppCameraFrameRequest>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppCameraFrameRequest& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppCameraFrameRequest& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppCameraFrameRequest* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppCameraFrameRequest";
-  }
-  protected:
-  explicit AppCameraFrameRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdentifierFieldNumber = 1,
-    kFrameFieldNumber = 2,
-  };
-  // required string identifier = 1;
-  bool has_identifier() const;
-  private:
-  bool _internal_has_identifier() const;
-  public:
-  void clear_identifier();
-  const std::string& identifier() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_identifier(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_identifier();
-  PROTOBUF_MUST_USE_RESULT std::string* release_identifier();
-  void set_allocated_identifier(std::string* identifier);
-  private:
-  const std::string& _internal_identifier() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_identifier(const std::string& value);
-  std::string* _internal_mutable_identifier();
-  public:
-
-  // required uint32 frame = 2;
-  bool has_frame() const;
-  private:
-  bool _internal_has_frame() const;
-  public:
-  void clear_frame();
-  ::PROTOBUF_NAMESPACE_ID::uint32 frame() const;
-  void set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_frame() const;
-  void _internal_set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppCameraFrameRequest)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr identifier_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 frame_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppPromoteToLeader final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppPromoteToLeader) */ {
- public:
-  inline AppPromoteToLeader() : AppPromoteToLeader(nullptr) {}
-  ~AppPromoteToLeader() override;
-  explicit constexpr AppPromoteToLeader(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppPromoteToLeader(const AppPromoteToLeader& from);
-  AppPromoteToLeader(AppPromoteToLeader&& from) noexcept
-    : AppPromoteToLeader() {
-    *this = ::std::move(from);
-  }
-
-  inline AppPromoteToLeader& operator=(const AppPromoteToLeader& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppPromoteToLeader& operator=(AppPromoteToLeader&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppPromoteToLeader& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppPromoteToLeader* internal_default_instance() {
-    return reinterpret_cast<const AppPromoteToLeader*>(
-               &_AppPromoteToLeader_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    5;
-
-  friend void swap(AppPromoteToLeader& a, AppPromoteToLeader& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppPromoteToLeader* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppPromoteToLeader* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppPromoteToLeader* New() const final {
-    return new AppPromoteToLeader();
-  }
-
-  AppPromoteToLeader* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppPromoteToLeader>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppPromoteToLeader& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppPromoteToLeader& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppPromoteToLeader* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppPromoteToLeader";
-  }
-  protected:
-  explicit AppPromoteToLeader(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSteamIdFieldNumber = 1,
-  };
-  // required uint64 steamId = 1;
-  bool has_steamid() const;
-  private:
-  bool _internal_has_steamid() const;
-  public:
-  void clear_steamid();
-  ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppPromoteToLeader)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 steamid_;
+  ::rustplus::AppResponse* response_;
+  ::rustplus::AppBroadcast* broadcast_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1561,7 +4352,7 @@ class AppResponse final :
                &_AppResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    17;
 
   friend void swap(AppResponse& a, AppResponse& b) {
     a.Swap(&b);
@@ -1642,7 +4433,10 @@ class AppResponse final :
     kEntityInfoFieldNumber = 11,
     kFlagFieldNumber = 12,
     kMapMarkersFieldNumber = 13,
-    kCameraFrameFieldNumber = 14,
+    kClanInfoFieldNumber = 15,
+    kClanChatFieldNumber = 16,
+    kNexusAuthFieldNumber = 17,
+    kCameraSubscribeInfoFieldNumber = 20,
     kSeqFieldNumber = 1,
   };
   // optional .rustplus.AppSuccess success = 4;
@@ -1825,35 +4619,89 @@ class AppResponse final :
       ::rustplus::AppMapMarkers* mapmarkers);
   ::rustplus::AppMapMarkers* unsafe_arena_release_mapmarkers();
 
-  // optional .rustplus.AppCameraFrame cameraFrame = 14;
-  bool has_cameraframe() const;
+  // optional .rustplus.AppClanInfo clanInfo = 15;
+  bool has_claninfo() const;
   private:
-  bool _internal_has_cameraframe() const;
+  bool _internal_has_claninfo() const;
   public:
-  void clear_cameraframe();
-  const ::rustplus::AppCameraFrame& cameraframe() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraFrame* release_cameraframe();
-  ::rustplus::AppCameraFrame* mutable_cameraframe();
-  void set_allocated_cameraframe(::rustplus::AppCameraFrame* cameraframe);
+  void clear_claninfo();
+  const ::rustplus::AppClanInfo& claninfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppClanInfo* release_claninfo();
+  ::rustplus::AppClanInfo* mutable_claninfo();
+  void set_allocated_claninfo(::rustplus::AppClanInfo* claninfo);
   private:
-  const ::rustplus::AppCameraFrame& _internal_cameraframe() const;
-  ::rustplus::AppCameraFrame* _internal_mutable_cameraframe();
+  const ::rustplus::AppClanInfo& _internal_claninfo() const;
+  ::rustplus::AppClanInfo* _internal_mutable_claninfo();
   public:
-  void unsafe_arena_set_allocated_cameraframe(
-      ::rustplus::AppCameraFrame* cameraframe);
-  ::rustplus::AppCameraFrame* unsafe_arena_release_cameraframe();
+  void unsafe_arena_set_allocated_claninfo(
+      ::rustplus::AppClanInfo* claninfo);
+  ::rustplus::AppClanInfo* unsafe_arena_release_claninfo();
 
-  // required uint32 seq = 1;
+  // optional .rustplus.AppClanChat clanChat = 16;
+  bool has_clanchat() const;
+  private:
+  bool _internal_has_clanchat() const;
+  public:
+  void clear_clanchat();
+  const ::rustplus::AppClanChat& clanchat() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppClanChat* release_clanchat();
+  ::rustplus::AppClanChat* mutable_clanchat();
+  void set_allocated_clanchat(::rustplus::AppClanChat* clanchat);
+  private:
+  const ::rustplus::AppClanChat& _internal_clanchat() const;
+  ::rustplus::AppClanChat* _internal_mutable_clanchat();
+  public:
+  void unsafe_arena_set_allocated_clanchat(
+      ::rustplus::AppClanChat* clanchat);
+  ::rustplus::AppClanChat* unsafe_arena_release_clanchat();
+
+  // optional .rustplus.AppNexusAuth nexusAuth = 17;
+  bool has_nexusauth() const;
+  private:
+  bool _internal_has_nexusauth() const;
+  public:
+  void clear_nexusauth();
+  const ::rustplus::AppNexusAuth& nexusauth() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppNexusAuth* release_nexusauth();
+  ::rustplus::AppNexusAuth* mutable_nexusauth();
+  void set_allocated_nexusauth(::rustplus::AppNexusAuth* nexusauth);
+  private:
+  const ::rustplus::AppNexusAuth& _internal_nexusauth() const;
+  ::rustplus::AppNexusAuth* _internal_mutable_nexusauth();
+  public:
+  void unsafe_arena_set_allocated_nexusauth(
+      ::rustplus::AppNexusAuth* nexusauth);
+  ::rustplus::AppNexusAuth* unsafe_arena_release_nexusauth();
+
+  // optional .rustplus.AppCameraInfo cameraSubscribeInfo = 20;
+  bool has_camerasubscribeinfo() const;
+  private:
+  bool _internal_has_camerasubscribeinfo() const;
+  public:
+  void clear_camerasubscribeinfo();
+  const ::rustplus::AppCameraInfo& camerasubscribeinfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraInfo* release_camerasubscribeinfo();
+  ::rustplus::AppCameraInfo* mutable_camerasubscribeinfo();
+  void set_allocated_camerasubscribeinfo(::rustplus::AppCameraInfo* camerasubscribeinfo);
+  private:
+  const ::rustplus::AppCameraInfo& _internal_camerasubscribeinfo() const;
+  ::rustplus::AppCameraInfo* _internal_mutable_camerasubscribeinfo();
+  public:
+  void unsafe_arena_set_allocated_camerasubscribeinfo(
+      ::rustplus::AppCameraInfo* camerasubscribeinfo);
+  ::rustplus::AppCameraInfo* unsafe_arena_release_camerasubscribeinfo();
+
+  // required int32 seq = 1;
   bool has_seq() const;
   private:
   bool _internal_has_seq() const;
   public:
   void clear_seq();
-  ::PROTOBUF_NAMESPACE_ID::uint32 seq() const;
-  void set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 seq() const;
+  void set_seq(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_seq() const;
-  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_seq() const;
+  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppResponse)
@@ -1875,8 +4723,11 @@ class AppResponse final :
   ::rustplus::AppEntityInfo* entityinfo_;
   ::rustplus::AppFlag* flag_;
   ::rustplus::AppMapMarkers* mapmarkers_;
-  ::rustplus::AppCameraFrame* cameraframe_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 seq_;
+  ::rustplus::AppClanInfo* claninfo_;
+  ::rustplus::AppClanChat* clanchat_;
+  ::rustplus::AppNexusAuth* nexusauth_;
+  ::rustplus::AppCameraInfo* camerasubscribeinfo_;
+  ::PROTOBUF_NAMESPACE_ID::int32 seq_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1932,7 +4783,7 @@ class AppBroadcast final :
                &_AppBroadcast_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    18;
 
   friend void swap(AppBroadcast& a, AppBroadcast& b) {
     a.Swap(&b);
@@ -2004,8 +4855,11 @@ class AppBroadcast final :
 
   enum : int {
     kTeamChangedFieldNumber = 4,
-    kTeamMessageFieldNumber = 5,
+    kNewTeamMessageFieldNumber = 5,
     kEntityChangedFieldNumber = 6,
+    kClanChangedFieldNumber = 7,
+    kClanMessageFieldNumber = 8,
+    kCameraRaysFieldNumber = 10,
   };
   // optional .rustplus.AppTeamChanged teamChanged = 4;
   bool has_teamchanged() const;
@@ -2025,23 +4879,23 @@ class AppBroadcast final :
       ::rustplus::AppTeamChanged* teamchanged);
   ::rustplus::AppTeamChanged* unsafe_arena_release_teamchanged();
 
-  // optional .rustplus.AppTeamMessage teamMessage = 5;
-  bool has_teammessage() const;
+  // optional .rustplus.AppNewTeamMessage newTeamMessage = 5;
+  bool has_newteammessage() const;
   private:
-  bool _internal_has_teammessage() const;
+  bool _internal_has_newteammessage() const;
   public:
-  void clear_teammessage();
-  const ::rustplus::AppTeamMessage& teammessage() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppTeamMessage* release_teammessage();
-  ::rustplus::AppTeamMessage* mutable_teammessage();
-  void set_allocated_teammessage(::rustplus::AppTeamMessage* teammessage);
+  void clear_newteammessage();
+  const ::rustplus::AppNewTeamMessage& newteammessage() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppNewTeamMessage* release_newteammessage();
+  ::rustplus::AppNewTeamMessage* mutable_newteammessage();
+  void set_allocated_newteammessage(::rustplus::AppNewTeamMessage* newteammessage);
   private:
-  const ::rustplus::AppTeamMessage& _internal_teammessage() const;
-  ::rustplus::AppTeamMessage* _internal_mutable_teammessage();
+  const ::rustplus::AppNewTeamMessage& _internal_newteammessage() const;
+  ::rustplus::AppNewTeamMessage* _internal_mutable_newteammessage();
   public:
-  void unsafe_arena_set_allocated_teammessage(
-      ::rustplus::AppTeamMessage* teammessage);
-  ::rustplus::AppTeamMessage* unsafe_arena_release_teammessage();
+  void unsafe_arena_set_allocated_newteammessage(
+      ::rustplus::AppNewTeamMessage* newteammessage);
+  ::rustplus::AppNewTeamMessage* unsafe_arena_release_newteammessage();
 
   // optional .rustplus.AppEntityChanged entityChanged = 6;
   bool has_entitychanged() const;
@@ -2061,6 +4915,60 @@ class AppBroadcast final :
       ::rustplus::AppEntityChanged* entitychanged);
   ::rustplus::AppEntityChanged* unsafe_arena_release_entitychanged();
 
+  // optional .rustplus.AppClanChanged clanChanged = 7;
+  bool has_clanchanged() const;
+  private:
+  bool _internal_has_clanchanged() const;
+  public:
+  void clear_clanchanged();
+  const ::rustplus::AppClanChanged& clanchanged() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppClanChanged* release_clanchanged();
+  ::rustplus::AppClanChanged* mutable_clanchanged();
+  void set_allocated_clanchanged(::rustplus::AppClanChanged* clanchanged);
+  private:
+  const ::rustplus::AppClanChanged& _internal_clanchanged() const;
+  ::rustplus::AppClanChanged* _internal_mutable_clanchanged();
+  public:
+  void unsafe_arena_set_allocated_clanchanged(
+      ::rustplus::AppClanChanged* clanchanged);
+  ::rustplus::AppClanChanged* unsafe_arena_release_clanchanged();
+
+  // optional .rustplus.AppNewClanMessage clanMessage = 8;
+  bool has_clanmessage() const;
+  private:
+  bool _internal_has_clanmessage() const;
+  public:
+  void clear_clanmessage();
+  const ::rustplus::AppNewClanMessage& clanmessage() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppNewClanMessage* release_clanmessage();
+  ::rustplus::AppNewClanMessage* mutable_clanmessage();
+  void set_allocated_clanmessage(::rustplus::AppNewClanMessage* clanmessage);
+  private:
+  const ::rustplus::AppNewClanMessage& _internal_clanmessage() const;
+  ::rustplus::AppNewClanMessage* _internal_mutable_clanmessage();
+  public:
+  void unsafe_arena_set_allocated_clanmessage(
+      ::rustplus::AppNewClanMessage* clanmessage);
+  ::rustplus::AppNewClanMessage* unsafe_arena_release_clanmessage();
+
+  // optional .rustplus.AppCameraRays cameraRays = 10;
+  bool has_camerarays() const;
+  private:
+  bool _internal_has_camerarays() const;
+  public:
+  void clear_camerarays();
+  const ::rustplus::AppCameraRays& camerarays() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppCameraRays* release_camerarays();
+  ::rustplus::AppCameraRays* mutable_camerarays();
+  void set_allocated_camerarays(::rustplus::AppCameraRays* camerarays);
+  private:
+  const ::rustplus::AppCameraRays& _internal_camerarays() const;
+  ::rustplus::AppCameraRays* _internal_mutable_camerarays();
+  public:
+  void unsafe_arena_set_allocated_camerarays(
+      ::rustplus::AppCameraRays* camerarays);
+  ::rustplus::AppCameraRays* unsafe_arena_release_camerarays();
+
   // @@protoc_insertion_point(class_scope:rustplus.AppBroadcast)
  private:
   class _Internal;
@@ -2071,8 +4979,11 @@ class AppBroadcast final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::rustplus::AppTeamChanged* teamchanged_;
-  ::rustplus::AppTeamMessage* teammessage_;
+  ::rustplus::AppNewTeamMessage* newteammessage_;
   ::rustplus::AppEntityChanged* entitychanged_;
+  ::rustplus::AppClanChanged* clanchanged_;
+  ::rustplus::AppNewClanMessage* clanmessage_;
+  ::rustplus::AppCameraRays* camerarays_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2128,7 +5039,7 @@ class AppEmpty final :
                &_AppEmpty_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    19;
 
   friend void swap(AppEmpty& a, AppEmpty& b) {
     a.Swap(&b);
@@ -2210,6 +5121,620 @@ class AppEmpty final :
 };
 // -------------------------------------------------------------------
 
+class AppSendMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppSendMessage) */ {
+ public:
+  inline AppSendMessage() : AppSendMessage(nullptr) {}
+  ~AppSendMessage() override;
+  explicit constexpr AppSendMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppSendMessage(const AppSendMessage& from);
+  AppSendMessage(AppSendMessage&& from) noexcept
+    : AppSendMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline AppSendMessage& operator=(const AppSendMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppSendMessage& operator=(AppSendMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppSendMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppSendMessage* internal_default_instance() {
+    return reinterpret_cast<const AppSendMessage*>(
+               &_AppSendMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  friend void swap(AppSendMessage& a, AppSendMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppSendMessage* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppSendMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppSendMessage* New() const final {
+    return new AppSendMessage();
+  }
+
+  AppSendMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppSendMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppSendMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppSendMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppSendMessage* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppSendMessage";
+  }
+  protected:
+  explicit AppSendMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMessageFieldNumber = 1,
+  };
+  // required string message = 1;
+  bool has_message() const;
+  private:
+  bool _internal_has_message() const;
+  public:
+  void clear_message();
+  const std::string& message() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_MUST_USE_RESULT std::string* release_message();
+  void set_allocated_message(std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppSendMessage)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppSetEntityValue final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppSetEntityValue) */ {
+ public:
+  inline AppSetEntityValue() : AppSetEntityValue(nullptr) {}
+  ~AppSetEntityValue() override;
+  explicit constexpr AppSetEntityValue(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppSetEntityValue(const AppSetEntityValue& from);
+  AppSetEntityValue(AppSetEntityValue&& from) noexcept
+    : AppSetEntityValue() {
+    *this = ::std::move(from);
+  }
+
+  inline AppSetEntityValue& operator=(const AppSetEntityValue& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppSetEntityValue& operator=(AppSetEntityValue&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppSetEntityValue& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppSetEntityValue* internal_default_instance() {
+    return reinterpret_cast<const AppSetEntityValue*>(
+               &_AppSetEntityValue_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  friend void swap(AppSetEntityValue& a, AppSetEntityValue& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppSetEntityValue* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppSetEntityValue* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppSetEntityValue* New() const final {
+    return new AppSetEntityValue();
+  }
+
+  AppSetEntityValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppSetEntityValue>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppSetEntityValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppSetEntityValue& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppSetEntityValue* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppSetEntityValue";
+  }
+  protected:
+  explicit AppSetEntityValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kValueFieldNumber = 1,
+  };
+  // required bool value = 1;
+  bool has_value() const;
+  private:
+  bool _internal_has_value() const;
+  public:
+  void clear_value();
+  bool value() const;
+  void set_value(bool value);
+  private:
+  bool _internal_value() const;
+  void _internal_set_value(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppSetEntityValue)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  bool value_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppPromoteToLeader final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppPromoteToLeader) */ {
+ public:
+  inline AppPromoteToLeader() : AppPromoteToLeader(nullptr) {}
+  ~AppPromoteToLeader() override;
+  explicit constexpr AppPromoteToLeader(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppPromoteToLeader(const AppPromoteToLeader& from);
+  AppPromoteToLeader(AppPromoteToLeader&& from) noexcept
+    : AppPromoteToLeader() {
+    *this = ::std::move(from);
+  }
+
+  inline AppPromoteToLeader& operator=(const AppPromoteToLeader& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppPromoteToLeader& operator=(AppPromoteToLeader&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppPromoteToLeader& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppPromoteToLeader* internal_default_instance() {
+    return reinterpret_cast<const AppPromoteToLeader*>(
+               &_AppPromoteToLeader_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  friend void swap(AppPromoteToLeader& a, AppPromoteToLeader& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppPromoteToLeader* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppPromoteToLeader* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppPromoteToLeader* New() const final {
+    return new AppPromoteToLeader();
+  }
+
+  AppPromoteToLeader* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppPromoteToLeader>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppPromoteToLeader& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppPromoteToLeader& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppPromoteToLeader* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppPromoteToLeader";
+  }
+  protected:
+  explicit AppPromoteToLeader(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kSteamIdFieldNumber = 1,
+  };
+  // required int64 steamId = 1;
+  bool has_steamid() const;
+  private:
+  bool _internal_has_steamid() const;
+  public:
+  void clear_steamid();
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppPromoteToLeader)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::int64 steamid_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppGetNexusAuth final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppGetNexusAuth) */ {
+ public:
+  inline AppGetNexusAuth() : AppGetNexusAuth(nullptr) {}
+  ~AppGetNexusAuth() override;
+  explicit constexpr AppGetNexusAuth(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppGetNexusAuth(const AppGetNexusAuth& from);
+  AppGetNexusAuth(AppGetNexusAuth&& from) noexcept
+    : AppGetNexusAuth() {
+    *this = ::std::move(from);
+  }
+
+  inline AppGetNexusAuth& operator=(const AppGetNexusAuth& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppGetNexusAuth& operator=(AppGetNexusAuth&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppGetNexusAuth& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppGetNexusAuth* internal_default_instance() {
+    return reinterpret_cast<const AppGetNexusAuth*>(
+               &_AppGetNexusAuth_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(AppGetNexusAuth& a, AppGetNexusAuth& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppGetNexusAuth* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppGetNexusAuth* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppGetNexusAuth* New() const final {
+    return new AppGetNexusAuth();
+  }
+
+  AppGetNexusAuth* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppGetNexusAuth>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppGetNexusAuth& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppGetNexusAuth& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppGetNexusAuth* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppGetNexusAuth";
+  }
+  protected:
+  explicit AppGetNexusAuth(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAppKeyFieldNumber = 1,
+  };
+  // required string appKey = 1;
+  bool has_appkey() const;
+  private:
+  bool _internal_has_appkey() const;
+  public:
+  void clear_appkey();
+  const std::string& appkey() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_appkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_appkey();
+  PROTOBUF_MUST_USE_RESULT std::string* release_appkey();
+  void set_allocated_appkey(std::string* appkey);
+  private:
+  const std::string& _internal_appkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_appkey(const std::string& value);
+  std::string* _internal_mutable_appkey();
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppGetNexusAuth)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr appkey_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AppSuccess final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppSuccess) */ {
  public:
@@ -2261,7 +5786,7 @@ class AppSuccess final :
                &_AppSuccess_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    24;
 
   friend void swap(AppSuccess& a, AppSuccess& b) {
     a.Swap(&b);
@@ -2394,7 +5919,7 @@ class AppError final :
                &_AppError_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    25;
 
   friend void swap(AppError& a, AppError& b) {
     a.Swap(&b);
@@ -2499,6 +6024,157 @@ class AppError final :
 };
 // -------------------------------------------------------------------
 
+class AppFlag final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppFlag) */ {
+ public:
+  inline AppFlag() : AppFlag(nullptr) {}
+  ~AppFlag() override;
+  explicit constexpr AppFlag(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppFlag(const AppFlag& from);
+  AppFlag(AppFlag&& from) noexcept
+    : AppFlag() {
+    *this = ::std::move(from);
+  }
+
+  inline AppFlag& operator=(const AppFlag& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppFlag& operator=(AppFlag&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppFlag& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppFlag* internal_default_instance() {
+    return reinterpret_cast<const AppFlag*>(
+               &_AppFlag_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  friend void swap(AppFlag& a, AppFlag& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppFlag* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppFlag* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppFlag* New() const final {
+    return new AppFlag();
+  }
+
+  AppFlag* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppFlag>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppFlag& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppFlag& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppFlag* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppFlag";
+  }
+  protected:
+  explicit AppFlag(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kValueFieldNumber = 1,
+  };
+  // required bool value = 1;
+  bool has_value() const;
+  private:
+  bool _internal_has_value() const;
+  public:
+  void clear_value();
+  bool value() const;
+  void set_value(bool value);
+  private:
+  bool _internal_value() const;
+  void _internal_set_value(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppFlag)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  bool value_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AppInfo final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppInfo) */ {
  public:
@@ -2550,7 +6226,7 @@ class AppInfo final :
                &_AppInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    27;
 
   friend void swap(AppInfo& a, AppInfo& b) {
     a.Swap(&b);
@@ -2625,6 +6301,9 @@ class AppInfo final :
     kHeaderImageFieldNumber = 2,
     kUrlFieldNumber = 3,
     kMapFieldNumber = 4,
+    kLogoImageFieldNumber = 12,
+    kNexusFieldNumber = 13,
+    kNexusZoneFieldNumber = 15,
     kMapSizeFieldNumber = 5,
     kWipeTimeFieldNumber = 6,
     kPlayersFieldNumber = 7,
@@ -2632,6 +6311,7 @@ class AppInfo final :
     kQueuedPlayersFieldNumber = 9,
     kSeedFieldNumber = 10,
     kSaltFieldNumber = 11,
+    kNexusIdFieldNumber = 14,
   };
   // required string name = 1;
   bool has_name() const;
@@ -2703,6 +6383,60 @@ class AppInfo final :
   const std::string& _internal_map() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_map(const std::string& value);
   std::string* _internal_mutable_map();
+  public:
+
+  // optional string logoImage = 12;
+  bool has_logoimage() const;
+  private:
+  bool _internal_has_logoimage() const;
+  public:
+  void clear_logoimage();
+  const std::string& logoimage() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_logoimage(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_logoimage();
+  PROTOBUF_MUST_USE_RESULT std::string* release_logoimage();
+  void set_allocated_logoimage(std::string* logoimage);
+  private:
+  const std::string& _internal_logoimage() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logoimage(const std::string& value);
+  std::string* _internal_mutable_logoimage();
+  public:
+
+  // optional string nexus = 13;
+  bool has_nexus() const;
+  private:
+  bool _internal_has_nexus() const;
+  public:
+  void clear_nexus();
+  const std::string& nexus() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_nexus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_nexus();
+  PROTOBUF_MUST_USE_RESULT std::string* release_nexus();
+  void set_allocated_nexus(std::string* nexus);
+  private:
+  const std::string& _internal_nexus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexus(const std::string& value);
+  std::string* _internal_mutable_nexus();
+  public:
+
+  // optional string nexusZone = 15;
+  bool has_nexuszone() const;
+  private:
+  bool _internal_has_nexuszone() const;
+  public:
+  void clear_nexuszone();
+  const std::string& nexuszone() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_nexuszone(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_nexuszone();
+  PROTOBUF_MUST_USE_RESULT std::string* release_nexuszone();
+  void set_allocated_nexuszone(std::string* nexuszone);
+  private:
+  const std::string& _internal_nexuszone() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexuszone(const std::string& value);
+  std::string* _internal_mutable_nexuszone();
   public:
 
   // required uint32 mapSize = 5;
@@ -2796,6 +6530,19 @@ class AppInfo final :
   void _internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
+  // optional int32 nexusId = 14;
+  bool has_nexusid() const;
+  private:
+  bool _internal_has_nexusid() const;
+  public:
+  void clear_nexusid();
+  ::PROTOBUF_NAMESPACE_ID::int32 nexusid() const;
+  void set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_nexusid() const;
+  void _internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:rustplus.AppInfo)
  private:
   class _Internal;
@@ -2812,6 +6559,9 @@ class AppInfo final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr headerimage_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr map_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr logoimage_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nexus_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nexuszone_;
   ::PROTOBUF_NAMESPACE_ID::uint32 mapsize_;
   ::PROTOBUF_NAMESPACE_ID::uint32 wipetime_;
   ::PROTOBUF_NAMESPACE_ID::uint32 players_;
@@ -2819,6 +6569,7 @@ class AppInfo final :
   ::PROTOBUF_NAMESPACE_ID::uint32 queuedplayers_;
   ::PROTOBUF_NAMESPACE_ID::uint32 seed_;
   ::PROTOBUF_NAMESPACE_ID::uint32 salt_;
+  ::PROTOBUF_NAMESPACE_ID::int32 nexusid_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2874,7 +6625,7 @@ class AppTime final :
                &_AppTime_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    28;
 
   friend void swap(AppTime& a, AppTime& b) {
     a.Swap(&b);
@@ -3088,7 +6839,7 @@ class AppMap_Monument final :
                &_AppMap_Monument_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    29;
 
   friend void swap(AppMap_Monument& a, AppMap_Monument& b) {
     a.Swap(&b);
@@ -3277,7 +7028,7 @@ class AppMap final :
                &_AppMap_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    30;
 
   friend void swap(AppMap& a, AppMap& b) {
     a.Swap(&b);
@@ -3472,6 +7223,582 @@ class AppMap final :
 };
 // -------------------------------------------------------------------
 
+class AppEntityInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityInfo) */ {
+ public:
+  inline AppEntityInfo() : AppEntityInfo(nullptr) {}
+  ~AppEntityInfo() override;
+  explicit constexpr AppEntityInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppEntityInfo(const AppEntityInfo& from);
+  AppEntityInfo(AppEntityInfo&& from) noexcept
+    : AppEntityInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline AppEntityInfo& operator=(const AppEntityInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppEntityInfo& operator=(AppEntityInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppEntityInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppEntityInfo* internal_default_instance() {
+    return reinterpret_cast<const AppEntityInfo*>(
+               &_AppEntityInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    31;
+
+  friend void swap(AppEntityInfo& a, AppEntityInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppEntityInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppEntityInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppEntityInfo* New() const final {
+    return new AppEntityInfo();
+  }
+
+  AppEntityInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppEntityInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppEntityInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppEntityInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppEntityInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppEntityInfo";
+  }
+  protected:
+  explicit AppEntityInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPayloadFieldNumber = 3,
+    kTypeFieldNumber = 1,
+  };
+  // required .rustplus.AppEntityPayload payload = 3;
+  bool has_payload() const;
+  private:
+  bool _internal_has_payload() const;
+  public:
+  void clear_payload();
+  const ::rustplus::AppEntityPayload& payload() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppEntityPayload* release_payload();
+  ::rustplus::AppEntityPayload* mutable_payload();
+  void set_allocated_payload(::rustplus::AppEntityPayload* payload);
+  private:
+  const ::rustplus::AppEntityPayload& _internal_payload() const;
+  ::rustplus::AppEntityPayload* _internal_mutable_payload();
+  public:
+  void unsafe_arena_set_allocated_payload(
+      ::rustplus::AppEntityPayload* payload);
+  ::rustplus::AppEntityPayload* unsafe_arena_release_payload();
+
+  // required .rustplus.AppEntityType type = 1;
+  bool has_type() const;
+  private:
+  bool _internal_has_type() const;
+  public:
+  void clear_type();
+  ::rustplus::AppEntityType type() const;
+  void set_type(::rustplus::AppEntityType value);
+  private:
+  ::rustplus::AppEntityType _internal_type() const;
+  void _internal_set_type(::rustplus::AppEntityType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppEntityInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::AppEntityPayload* payload_;
+  int type_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppEntityPayload_Item final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityPayload.Item) */ {
+ public:
+  inline AppEntityPayload_Item() : AppEntityPayload_Item(nullptr) {}
+  ~AppEntityPayload_Item() override;
+  explicit constexpr AppEntityPayload_Item(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppEntityPayload_Item(const AppEntityPayload_Item& from);
+  AppEntityPayload_Item(AppEntityPayload_Item&& from) noexcept
+    : AppEntityPayload_Item() {
+    *this = ::std::move(from);
+  }
+
+  inline AppEntityPayload_Item& operator=(const AppEntityPayload_Item& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppEntityPayload_Item& operator=(AppEntityPayload_Item&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppEntityPayload_Item& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppEntityPayload_Item* internal_default_instance() {
+    return reinterpret_cast<const AppEntityPayload_Item*>(
+               &_AppEntityPayload_Item_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    32;
+
+  friend void swap(AppEntityPayload_Item& a, AppEntityPayload_Item& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppEntityPayload_Item* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppEntityPayload_Item* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppEntityPayload_Item* New() const final {
+    return new AppEntityPayload_Item();
+  }
+
+  AppEntityPayload_Item* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppEntityPayload_Item>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppEntityPayload_Item& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppEntityPayload_Item& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppEntityPayload_Item* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppEntityPayload.Item";
+  }
+  protected:
+  explicit AppEntityPayload_Item(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kItemIdFieldNumber = 1,
+    kQuantityFieldNumber = 2,
+    kItemIsBlueprintFieldNumber = 3,
+  };
+  // required int32 itemId = 1;
+  bool has_itemid() const;
+  private:
+  bool _internal_has_itemid() const;
+  public:
+  void clear_itemid();
+  ::PROTOBUF_NAMESPACE_ID::int32 itemid() const;
+  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_itemid() const;
+  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 quantity = 2;
+  bool has_quantity() const;
+  private:
+  bool _internal_has_quantity() const;
+  public:
+  void clear_quantity();
+  ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
+  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_quantity() const;
+  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required bool itemIsBlueprint = 3;
+  bool has_itemisblueprint() const;
+  private:
+  bool _internal_has_itemisblueprint() const;
+  public:
+  void clear_itemisblueprint();
+  bool itemisblueprint() const;
+  void set_itemisblueprint(bool value);
+  private:
+  bool _internal_itemisblueprint() const;
+  void _internal_set_itemisblueprint(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload.Item)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::int32 itemid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 quantity_;
+  bool itemisblueprint_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppEntityPayload final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityPayload) */ {
+ public:
+  inline AppEntityPayload() : AppEntityPayload(nullptr) {}
+  ~AppEntityPayload() override;
+  explicit constexpr AppEntityPayload(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppEntityPayload(const AppEntityPayload& from);
+  AppEntityPayload(AppEntityPayload&& from) noexcept
+    : AppEntityPayload() {
+    *this = ::std::move(from);
+  }
+
+  inline AppEntityPayload& operator=(const AppEntityPayload& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppEntityPayload& operator=(AppEntityPayload&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppEntityPayload& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppEntityPayload* internal_default_instance() {
+    return reinterpret_cast<const AppEntityPayload*>(
+               &_AppEntityPayload_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    33;
+
+  friend void swap(AppEntityPayload& a, AppEntityPayload& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppEntityPayload* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppEntityPayload* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppEntityPayload* New() const final {
+    return new AppEntityPayload();
+  }
+
+  AppEntityPayload* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppEntityPayload>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppEntityPayload& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppEntityPayload& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppEntityPayload* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppEntityPayload";
+  }
+  protected:
+  explicit AppEntityPayload(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef AppEntityPayload_Item Item;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kItemsFieldNumber = 2,
+    kValueFieldNumber = 1,
+    kHasProtectionFieldNumber = 4,
+    kCapacityFieldNumber = 3,
+    kProtectionExpiryFieldNumber = 5,
+  };
+  // repeated .rustplus.AppEntityPayload.Item items = 2;
+  int items_size() const;
+  private:
+  int _internal_items_size() const;
+  public:
+  void clear_items();
+  ::rustplus::AppEntityPayload_Item* mutable_items(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >*
+      mutable_items();
+  private:
+  const ::rustplus::AppEntityPayload_Item& _internal_items(int index) const;
+  ::rustplus::AppEntityPayload_Item* _internal_add_items();
+  public:
+  const ::rustplus::AppEntityPayload_Item& items(int index) const;
+  ::rustplus::AppEntityPayload_Item* add_items();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >&
+      items() const;
+
+  // optional bool value = 1;
+  bool has_value() const;
+  private:
+  bool _internal_has_value() const;
+  public:
+  void clear_value();
+  bool value() const;
+  void set_value(bool value);
+  private:
+  bool _internal_value() const;
+  void _internal_set_value(bool value);
+  public:
+
+  // optional bool hasProtection = 4;
+  bool has_hasprotection() const;
+  private:
+  bool _internal_has_hasprotection() const;
+  public:
+  void clear_hasprotection();
+  bool hasprotection() const;
+  void set_hasprotection(bool value);
+  private:
+  bool _internal_hasprotection() const;
+  void _internal_set_hasprotection(bool value);
+  public:
+
+  // optional int32 capacity = 3;
+  bool has_capacity() const;
+  private:
+  bool _internal_has_capacity() const;
+  public:
+  void clear_capacity();
+  ::PROTOBUF_NAMESPACE_ID::int32 capacity() const;
+  void set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_capacity() const;
+  void _internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // optional uint32 protectionExpiry = 5;
+  bool has_protectionexpiry() const;
+  private:
+  bool _internal_has_protectionexpiry() const;
+  public:
+  void clear_protectionexpiry();
+  ::PROTOBUF_NAMESPACE_ID::uint32 protectionexpiry() const;
+  void set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_protectionexpiry() const;
+  void _internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item > items_;
+  bool value_;
+  bool hasprotection_;
+  ::PROTOBUF_NAMESPACE_ID::int32 capacity_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 protectionexpiry_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AppTeamInfo_Member final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppTeamInfo.Member) */ {
  public:
@@ -3523,7 +7850,7 @@ class AppTeamInfo_Member final :
                &_AppTeamInfo_Member_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    34;
 
   friend void swap(AppTeamInfo_Member& a, AppTeamInfo_Member& b) {
     a.Swap(&b);
@@ -3787,7 +8114,7 @@ class AppTeamInfo_Note final :
                &_AppTeamInfo_Note_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    35;
 
   friend void swap(AppTeamInfo_Note& a, AppTeamInfo_Note& b) {
     a.Swap(&b);
@@ -3971,7 +8298,7 @@ class AppTeamInfo final :
                &_AppTeamInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    36;
 
   friend void swap(AppTeamInfo& a, AppTeamInfo& b) {
     a.Swap(&b);
@@ -4134,24 +8461,24 @@ class AppTeamInfo final :
 };
 // -------------------------------------------------------------------
 
-class AppTeamChat final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppTeamChat) */ {
+class AppTeamMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppTeamMessage) */ {
  public:
-  inline AppTeamChat() : AppTeamChat(nullptr) {}
-  ~AppTeamChat() override;
-  explicit constexpr AppTeamChat(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppTeamMessage() : AppTeamMessage(nullptr) {}
+  ~AppTeamMessage() override;
+  explicit constexpr AppTeamMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppTeamChat(const AppTeamChat& from);
-  AppTeamChat(AppTeamChat&& from) noexcept
-    : AppTeamChat() {
+  AppTeamMessage(const AppTeamMessage& from);
+  AppTeamMessage(AppTeamMessage&& from) noexcept
+    : AppTeamMessage() {
     *this = ::std::move(from);
   }
 
-  inline AppTeamChat& operator=(const AppTeamChat& from) {
+  inline AppTeamMessage& operator=(const AppTeamMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppTeamChat& operator=(AppTeamChat&& from) noexcept {
+  inline AppTeamMessage& operator=(AppTeamMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -4177,20 +8504,20 @@ class AppTeamChat final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppTeamChat& default_instance() {
+  static const AppTeamMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppTeamChat* internal_default_instance() {
-    return reinterpret_cast<const AppTeamChat*>(
-               &_AppTeamChat_default_instance_);
+  static inline const AppTeamMessage* internal_default_instance() {
+    return reinterpret_cast<const AppTeamMessage*>(
+               &_AppTeamMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    37;
 
-  friend void swap(AppTeamChat& a, AppTeamChat& b) {
+  friend void swap(AppTeamMessage& a, AppTeamMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppTeamChat* other) {
+  inline void Swap(AppTeamMessage* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -4198,7 +8525,7 @@ class AppTeamChat final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppTeamChat* other) {
+  void UnsafeArenaSwap(AppTeamMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -4206,17 +8533,17 @@ class AppTeamChat final :
 
   // implements Message ----------------------------------------------
 
-  inline AppTeamChat* New() const final {
-    return new AppTeamChat();
+  inline AppTeamMessage* New() const final {
+    return new AppTeamMessage();
   }
 
-  AppTeamChat* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppTeamChat>(arena);
+  AppTeamMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppTeamMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppTeamChat& from);
+  void CopyFrom(const AppTeamMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppTeamChat& from);
+  void MergeFrom(const AppTeamMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -4233,168 +8560,13 @@ class AppTeamChat final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppTeamChat* other);
+  void InternalSwap(AppTeamMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppTeamChat";
+    return "rustplus.AppTeamMessage";
   }
   protected:
-  explicit AppTeamChat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kMessagesFieldNumber = 1,
-  };
-  // repeated .rustplus.AppChatMessage messages = 1;
-  int messages_size() const;
-  private:
-  int _internal_messages_size() const;
-  public:
-  void clear_messages();
-  ::rustplus::AppChatMessage* mutable_messages(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppChatMessage >*
-      mutable_messages();
-  private:
-  const ::rustplus::AppChatMessage& _internal_messages(int index) const;
-  ::rustplus::AppChatMessage* _internal_add_messages();
-  public:
-  const ::rustplus::AppChatMessage& messages(int index) const;
-  ::rustplus::AppChatMessage* add_messages();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppChatMessage >&
-      messages() const;
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppTeamChat)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppChatMessage > messages_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppChatMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppChatMessage) */ {
- public:
-  inline AppChatMessage() : AppChatMessage(nullptr) {}
-  ~AppChatMessage() override;
-  explicit constexpr AppChatMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppChatMessage(const AppChatMessage& from);
-  AppChatMessage(AppChatMessage&& from) noexcept
-    : AppChatMessage() {
-    *this = ::std::move(from);
-  }
-
-  inline AppChatMessage& operator=(const AppChatMessage& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppChatMessage& operator=(AppChatMessage&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppChatMessage& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppChatMessage* internal_default_instance() {
-    return reinterpret_cast<const AppChatMessage*>(
-               &_AppChatMessage_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    19;
-
-  friend void swap(AppChatMessage& a, AppChatMessage& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppChatMessage* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppChatMessage* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppChatMessage* New() const final {
-    return new AppChatMessage();
-  }
-
-  AppChatMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppChatMessage>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppChatMessage& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppChatMessage& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppChatMessage* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppChatMessage";
-  }
-  protected:
-  explicit AppChatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppTeamMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -4497,7 +8669,7 @@ class AppChatMessage final :
   void _internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppChatMessage)
+  // @@protoc_insertion_point(class_scope:rustplus.AppTeamMessage)
  private:
   class _Internal;
 
@@ -4518,24 +8690,24 @@ class AppChatMessage final :
 };
 // -------------------------------------------------------------------
 
-class AppEntityInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityInfo) */ {
+class AppTeamChat final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppTeamChat) */ {
  public:
-  inline AppEntityInfo() : AppEntityInfo(nullptr) {}
-  ~AppEntityInfo() override;
-  explicit constexpr AppEntityInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppTeamChat() : AppTeamChat(nullptr) {}
+  ~AppTeamChat() override;
+  explicit constexpr AppTeamChat(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppEntityInfo(const AppEntityInfo& from);
-  AppEntityInfo(AppEntityInfo&& from) noexcept
-    : AppEntityInfo() {
+  AppTeamChat(const AppTeamChat& from);
+  AppTeamChat(AppTeamChat&& from) noexcept
+    : AppTeamChat() {
     *this = ::std::move(from);
   }
 
-  inline AppEntityInfo& operator=(const AppEntityInfo& from) {
+  inline AppTeamChat& operator=(const AppTeamChat& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppEntityInfo& operator=(AppEntityInfo&& from) noexcept {
+  inline AppTeamChat& operator=(AppTeamChat&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -4561,20 +8733,20 @@ class AppEntityInfo final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppEntityInfo& default_instance() {
+  static const AppTeamChat& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppEntityInfo* internal_default_instance() {
-    return reinterpret_cast<const AppEntityInfo*>(
-               &_AppEntityInfo_default_instance_);
+  static inline const AppTeamChat* internal_default_instance() {
+    return reinterpret_cast<const AppTeamChat*>(
+               &_AppTeamChat_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    38;
 
-  friend void swap(AppEntityInfo& a, AppEntityInfo& b) {
+  friend void swap(AppTeamChat& a, AppTeamChat& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppEntityInfo* other) {
+  inline void Swap(AppTeamChat* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -4582,7 +8754,7 @@ class AppEntityInfo final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppEntityInfo* other) {
+  void UnsafeArenaSwap(AppTeamChat* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -4590,17 +8762,17 @@ class AppEntityInfo final :
 
   // implements Message ----------------------------------------------
 
-  inline AppEntityInfo* New() const final {
-    return new AppEntityInfo();
+  inline AppTeamChat* New() const final {
+    return new AppTeamChat();
   }
 
-  AppEntityInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppEntityInfo>(arena);
+  AppTeamChat* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppTeamChat>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppEntityInfo& from);
+  void CopyFrom(const AppTeamChat& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppEntityInfo& from);
+  void MergeFrom(const AppTeamChat& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -4617,13 +8789,13 @@ class AppEntityInfo final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppEntityInfo* other);
+  void InternalSwap(AppTeamChat* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppEntityInfo";
+    return "rustplus.AppTeamChat";
   }
   protected:
-  explicit AppEntityInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppTeamChat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -4640,76 +8812,57 @@ class AppEntityInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPayloadFieldNumber = 3,
-    kTypeFieldNumber = 1,
+    kMessagesFieldNumber = 1,
   };
-  // required .rustplus.AppEntityPayload payload = 3;
-  bool has_payload() const;
+  // repeated .rustplus.AppTeamMessage messages = 1;
+  int messages_size() const;
   private:
-  bool _internal_has_payload() const;
+  int _internal_messages_size() const;
   public:
-  void clear_payload();
-  const ::rustplus::AppEntityPayload& payload() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppEntityPayload* release_payload();
-  ::rustplus::AppEntityPayload* mutable_payload();
-  void set_allocated_payload(::rustplus::AppEntityPayload* payload);
+  void clear_messages();
+  ::rustplus::AppTeamMessage* mutable_messages(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppTeamMessage >*
+      mutable_messages();
   private:
-  const ::rustplus::AppEntityPayload& _internal_payload() const;
-  ::rustplus::AppEntityPayload* _internal_mutable_payload();
+  const ::rustplus::AppTeamMessage& _internal_messages(int index) const;
+  ::rustplus::AppTeamMessage* _internal_add_messages();
   public:
-  void unsafe_arena_set_allocated_payload(
-      ::rustplus::AppEntityPayload* payload);
-  ::rustplus::AppEntityPayload* unsafe_arena_release_payload();
+  const ::rustplus::AppTeamMessage& messages(int index) const;
+  ::rustplus::AppTeamMessage* add_messages();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppTeamMessage >&
+      messages() const;
 
-  // required .rustplus.AppEntityType type = 1;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  ::rustplus::AppEntityType type() const;
-  void set_type(::rustplus::AppEntityType value);
-  private:
-  ::rustplus::AppEntityType _internal_type() const;
-  void _internal_set_type(::rustplus::AppEntityType value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppEntityInfo)
+  // @@protoc_insertion_point(class_scope:rustplus.AppTeamChat)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppTeamMessage > messages_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::rustplus::AppEntityPayload* payload_;
-  int type_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AppEntityPayload_Item final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityPayload.Item) */ {
+class AppMarker_SellOrder final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMarker.SellOrder) */ {
  public:
-  inline AppEntityPayload_Item() : AppEntityPayload_Item(nullptr) {}
-  ~AppEntityPayload_Item() override;
-  explicit constexpr AppEntityPayload_Item(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppMarker_SellOrder() : AppMarker_SellOrder(nullptr) {}
+  ~AppMarker_SellOrder() override;
+  explicit constexpr AppMarker_SellOrder(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppEntityPayload_Item(const AppEntityPayload_Item& from);
-  AppEntityPayload_Item(AppEntityPayload_Item&& from) noexcept
-    : AppEntityPayload_Item() {
+  AppMarker_SellOrder(const AppMarker_SellOrder& from);
+  AppMarker_SellOrder(AppMarker_SellOrder&& from) noexcept
+    : AppMarker_SellOrder() {
     *this = ::std::move(from);
   }
 
-  inline AppEntityPayload_Item& operator=(const AppEntityPayload_Item& from) {
+  inline AppMarker_SellOrder& operator=(const AppMarker_SellOrder& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppEntityPayload_Item& operator=(AppEntityPayload_Item&& from) noexcept {
+  inline AppMarker_SellOrder& operator=(AppMarker_SellOrder&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -4735,20 +8888,20 @@ class AppEntityPayload_Item final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppEntityPayload_Item& default_instance() {
+  static const AppMarker_SellOrder& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppEntityPayload_Item* internal_default_instance() {
-    return reinterpret_cast<const AppEntityPayload_Item*>(
-               &_AppEntityPayload_Item_default_instance_);
+  static inline const AppMarker_SellOrder* internal_default_instance() {
+    return reinterpret_cast<const AppMarker_SellOrder*>(
+               &_AppMarker_SellOrder_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    39;
 
-  friend void swap(AppEntityPayload_Item& a, AppEntityPayload_Item& b) {
+  friend void swap(AppMarker_SellOrder& a, AppMarker_SellOrder& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppEntityPayload_Item* other) {
+  inline void Swap(AppMarker_SellOrder* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -4756,7 +8909,7 @@ class AppEntityPayload_Item final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppEntityPayload_Item* other) {
+  void UnsafeArenaSwap(AppMarker_SellOrder* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -4764,17 +8917,17 @@ class AppEntityPayload_Item final :
 
   // implements Message ----------------------------------------------
 
-  inline AppEntityPayload_Item* New() const final {
-    return new AppEntityPayload_Item();
+  inline AppMarker_SellOrder* New() const final {
+    return new AppMarker_SellOrder();
   }
 
-  AppEntityPayload_Item* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppEntityPayload_Item>(arena);
+  AppMarker_SellOrder* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMarker_SellOrder>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppEntityPayload_Item& from);
+  void CopyFrom(const AppMarker_SellOrder& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppEntityPayload_Item& from);
+  void MergeFrom(const AppMarker_SellOrder& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -4791,13 +8944,13 @@ class AppEntityPayload_Item final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppEntityPayload_Item* other);
+  void InternalSwap(AppMarker_SellOrder* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppEntityPayload.Item";
+    return "rustplus.AppMarker.SellOrder";
   }
   protected:
-  explicit AppEntityPayload_Item(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppMarker_SellOrder(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -4816,7 +8969,13 @@ class AppEntityPayload_Item final :
   enum : int {
     kItemIdFieldNumber = 1,
     kQuantityFieldNumber = 2,
-    kItemIsBlueprintFieldNumber = 3,
+    kCurrencyIdFieldNumber = 3,
+    kCostPerItemFieldNumber = 4,
+    kAmountInStockFieldNumber = 5,
+    kItemIsBlueprintFieldNumber = 6,
+    kCurrencyIsBlueprintFieldNumber = 7,
+    kItemConditionFieldNumber = 8,
+    kItemConditionMaxFieldNumber = 9,
   };
   // required int32 itemId = 1;
   bool has_itemid() const;
@@ -4844,7 +9003,46 @@ class AppEntityPayload_Item final :
   void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // required bool itemIsBlueprint = 3;
+  // required int32 currencyId = 3;
+  bool has_currencyid() const;
+  private:
+  bool _internal_has_currencyid() const;
+  public:
+  void clear_currencyid();
+  ::PROTOBUF_NAMESPACE_ID::int32 currencyid() const;
+  void set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_currencyid() const;
+  void _internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 costPerItem = 4;
+  bool has_costperitem() const;
+  private:
+  bool _internal_has_costperitem() const;
+  public:
+  void clear_costperitem();
+  ::PROTOBUF_NAMESPACE_ID::int32 costperitem() const;
+  void set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_costperitem() const;
+  void _internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 amountInStock = 5;
+  bool has_amountinstock() const;
+  private:
+  bool _internal_has_amountinstock() const;
+  public:
+  void clear_amountinstock();
+  ::PROTOBUF_NAMESPACE_ID::int32 amountinstock() const;
+  void set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_amountinstock() const;
+  void _internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required bool itemIsBlueprint = 6;
   bool has_itemisblueprint() const;
   private:
   bool _internal_has_itemisblueprint() const;
@@ -4857,7 +9055,46 @@ class AppEntityPayload_Item final :
   void _internal_set_itemisblueprint(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload.Item)
+  // required bool currencyIsBlueprint = 7;
+  bool has_currencyisblueprint() const;
+  private:
+  bool _internal_has_currencyisblueprint() const;
+  public:
+  void clear_currencyisblueprint();
+  bool currencyisblueprint() const;
+  void set_currencyisblueprint(bool value);
+  private:
+  bool _internal_currencyisblueprint() const;
+  void _internal_set_currencyisblueprint(bool value);
+  public:
+
+  // optional float itemCondition = 8;
+  bool has_itemcondition() const;
+  private:
+  bool _internal_has_itemcondition() const;
+  public:
+  void clear_itemcondition();
+  float itemcondition() const;
+  void set_itemcondition(float value);
+  private:
+  float _internal_itemcondition() const;
+  void _internal_set_itemcondition(float value);
+  public:
+
+  // optional float itemConditionMax = 9;
+  bool has_itemconditionmax() const;
+  private:
+  bool _internal_has_itemconditionmax() const;
+  public:
+  void clear_itemconditionmax();
+  float itemconditionmax() const;
+  void set_itemconditionmax(float value);
+  private:
+  float _internal_itemconditionmax() const;
+  void _internal_set_itemconditionmax(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppMarker.SellOrder)
  private:
   class _Internal;
 
@@ -4871,29 +9108,35 @@ class AppEntityPayload_Item final :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::int32 itemid_;
   ::PROTOBUF_NAMESPACE_ID::int32 quantity_;
+  ::PROTOBUF_NAMESPACE_ID::int32 currencyid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 costperitem_;
+  ::PROTOBUF_NAMESPACE_ID::int32 amountinstock_;
   bool itemisblueprint_;
+  bool currencyisblueprint_;
+  float itemcondition_;
+  float itemconditionmax_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AppEntityPayload final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppEntityPayload) */ {
+class AppMarker final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMarker) */ {
  public:
-  inline AppEntityPayload() : AppEntityPayload(nullptr) {}
-  ~AppEntityPayload() override;
-  explicit constexpr AppEntityPayload(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppMarker() : AppMarker(nullptr) {}
+  ~AppMarker() override;
+  explicit constexpr AppMarker(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppEntityPayload(const AppEntityPayload& from);
-  AppEntityPayload(AppEntityPayload&& from) noexcept
-    : AppEntityPayload() {
+  AppMarker(const AppMarker& from);
+  AppMarker(AppMarker&& from) noexcept
+    : AppMarker() {
     *this = ::std::move(from);
   }
 
-  inline AppEntityPayload& operator=(const AppEntityPayload& from) {
+  inline AppMarker& operator=(const AppMarker& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppEntityPayload& operator=(AppEntityPayload&& from) noexcept {
+  inline AppMarker& operator=(AppMarker&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -4919,20 +9162,20 @@ class AppEntityPayload final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppEntityPayload& default_instance() {
+  static const AppMarker& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppEntityPayload* internal_default_instance() {
-    return reinterpret_cast<const AppEntityPayload*>(
-               &_AppEntityPayload_default_instance_);
+  static inline const AppMarker* internal_default_instance() {
+    return reinterpret_cast<const AppMarker*>(
+               &_AppMarker_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    40;
 
-  friend void swap(AppEntityPayload& a, AppEntityPayload& b) {
+  friend void swap(AppMarker& a, AppMarker& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppEntityPayload* other) {
+  inline void Swap(AppMarker* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -4940,7 +9183,7 @@ class AppEntityPayload final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppEntityPayload* other) {
+  void UnsafeArenaSwap(AppMarker* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -4948,17 +9191,17 @@ class AppEntityPayload final :
 
   // implements Message ----------------------------------------------
 
-  inline AppEntityPayload* New() const final {
-    return new AppEntityPayload();
+  inline AppMarker* New() const final {
+    return new AppMarker();
   }
 
-  AppEntityPayload* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppEntityPayload>(arena);
+  AppMarker* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMarker>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppEntityPayload& from);
+  void CopyFrom(const AppMarker& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppEntityPayload& from);
+  void MergeFrom(const AppMarker& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -4975,13 +9218,13 @@ class AppEntityPayload final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppEntityPayload* other);
+  void InternalSwap(AppMarker* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppEntityPayload";
+    return "rustplus.AppMarker";
   }
   protected:
-  explicit AppEntityPayload(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppMarker(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -4995,252 +9238,239 @@ class AppEntityPayload final :
 
   // nested types ----------------------------------------------------
 
-  typedef AppEntityPayload_Item Item;
+  typedef AppMarker_SellOrder SellOrder;
 
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemsFieldNumber = 2,
-    kValueFieldNumber = 1,
-    kHasProtectionFieldNumber = 4,
-    kCapacityFieldNumber = 3,
-    kProtectionExpiryFieldNumber = 5,
+    kSellOrdersFieldNumber = 13,
+    kNameFieldNumber = 11,
+    kColor1FieldNumber = 8,
+    kColor2FieldNumber = 9,
+    kIdFieldNumber = 1,
+    kTypeFieldNumber = 2,
+    kXFieldNumber = 3,
+    kYFieldNumber = 4,
+    kSteamIdFieldNumber = 5,
+    kRotationFieldNumber = 6,
+    kRadiusFieldNumber = 7,
+    kAlphaFieldNumber = 10,
+    kOutOfStockFieldNumber = 12,
   };
-  // repeated .rustplus.AppEntityPayload.Item items = 2;
-  int items_size() const;
+  // repeated .rustplus.AppMarker.SellOrder sellOrders = 13;
+  int sellorders_size() const;
   private:
-  int _internal_items_size() const;
+  int _internal_sellorders_size() const;
   public:
-  void clear_items();
-  ::rustplus::AppEntityPayload_Item* mutable_items(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >*
-      mutable_items();
+  void clear_sellorders();
+  ::rustplus::AppMarker_SellOrder* mutable_sellorders(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder >*
+      mutable_sellorders();
   private:
-  const ::rustplus::AppEntityPayload_Item& _internal_items(int index) const;
-  ::rustplus::AppEntityPayload_Item* _internal_add_items();
+  const ::rustplus::AppMarker_SellOrder& _internal_sellorders(int index) const;
+  ::rustplus::AppMarker_SellOrder* _internal_add_sellorders();
   public:
-  const ::rustplus::AppEntityPayload_Item& items(int index) const;
-  ::rustplus::AppEntityPayload_Item* add_items();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >&
-      items() const;
+  const ::rustplus::AppMarker_SellOrder& sellorders(int index) const;
+  ::rustplus::AppMarker_SellOrder* add_sellorders();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder >&
+      sellorders() const;
 
-  // optional bool value = 1;
-  bool has_value() const;
+  // optional string name = 11;
+  bool has_name() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_name() const;
   public:
-  void clear_value();
-  bool value() const;
-  void set_value(bool value);
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
   private:
-  bool _internal_value() const;
-  void _internal_set_value(bool value);
-  public:
-
-  // optional bool hasProtection = 4;
-  bool has_hasprotection() const;
-  private:
-  bool _internal_has_hasprotection() const;
-  public:
-  void clear_hasprotection();
-  bool hasprotection() const;
-  void set_hasprotection(bool value);
-  private:
-  bool _internal_hasprotection() const;
-  void _internal_set_hasprotection(bool value);
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
   public:
 
-  // optional int32 capacity = 3;
-  bool has_capacity() const;
+  // optional .rustplus.Vector4 color1 = 8;
+  bool has_color1() const;
   private:
-  bool _internal_has_capacity() const;
+  bool _internal_has_color1() const;
   public:
-  void clear_capacity();
-  ::PROTOBUF_NAMESPACE_ID::int32 capacity() const;
-  void set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void clear_color1();
+  const ::rustplus::Vector4& color1() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector4* release_color1();
+  ::rustplus::Vector4* mutable_color1();
+  void set_allocated_color1(::rustplus::Vector4* color1);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_capacity() const;
-  void _internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  const ::rustplus::Vector4& _internal_color1() const;
+  ::rustplus::Vector4* _internal_mutable_color1();
+  public:
+  void unsafe_arena_set_allocated_color1(
+      ::rustplus::Vector4* color1);
+  ::rustplus::Vector4* unsafe_arena_release_color1();
+
+  // optional .rustplus.Vector4 color2 = 9;
+  bool has_color2() const;
+  private:
+  bool _internal_has_color2() const;
+  public:
+  void clear_color2();
+  const ::rustplus::Vector4& color2() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector4* release_color2();
+  ::rustplus::Vector4* mutable_color2();
+  void set_allocated_color2(::rustplus::Vector4* color2);
+  private:
+  const ::rustplus::Vector4& _internal_color2() const;
+  ::rustplus::Vector4* _internal_mutable_color2();
+  public:
+  void unsafe_arena_set_allocated_color2(
+      ::rustplus::Vector4* color2);
+  ::rustplus::Vector4* unsafe_arena_release_color2();
+
+  // required uint32 id = 1;
+  bool has_id() const;
+  private:
+  bool _internal_has_id() const;
+  public:
+  void clear_id();
+  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
+  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id() const;
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // optional uint32 protectionExpiry = 5;
-  bool has_protectionexpiry() const;
+  // required .rustplus.AppMarkerType type = 2;
+  bool has_type() const;
   private:
-  bool _internal_has_protectionexpiry() const;
+  bool _internal_has_type() const;
   public:
-  void clear_protectionexpiry();
-  ::PROTOBUF_NAMESPACE_ID::uint32 protectionexpiry() const;
-  void set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void clear_type();
+  ::rustplus::AppMarkerType type() const;
+  void set_type(::rustplus::AppMarkerType value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_protectionexpiry() const;
-  void _internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::rustplus::AppMarkerType _internal_type() const;
+  void _internal_set_type(::rustplus::AppMarkerType value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload)
+  // required float x = 3;
+  bool has_x() const;
+  private:
+  bool _internal_has_x() const;
+  public:
+  void clear_x();
+  float x() const;
+  void set_x(float value);
+  private:
+  float _internal_x() const;
+  void _internal_set_x(float value);
+  public:
+
+  // required float y = 4;
+  bool has_y() const;
+  private:
+  bool _internal_has_y() const;
+  public:
+  void clear_y();
+  float y() const;
+  void set_y(float value);
+  private:
+  float _internal_y() const;
+  void _internal_set_y(float value);
+  public:
+
+  // optional uint64 steamId = 5;
+  bool has_steamid() const;
+  private:
+  bool _internal_has_steamid() const;
+  public:
+  void clear_steamid();
+  ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // optional float rotation = 6;
+  bool has_rotation() const;
+  private:
+  bool _internal_has_rotation() const;
+  public:
+  void clear_rotation();
+  float rotation() const;
+  void set_rotation(float value);
+  private:
+  float _internal_rotation() const;
+  void _internal_set_rotation(float value);
+  public:
+
+  // optional float radius = 7;
+  bool has_radius() const;
+  private:
+  bool _internal_has_radius() const;
+  public:
+  void clear_radius();
+  float radius() const;
+  void set_radius(float value);
+  private:
+  float _internal_radius() const;
+  void _internal_set_radius(float value);
+  public:
+
+  // optional float alpha = 10;
+  bool has_alpha() const;
+  private:
+  bool _internal_has_alpha() const;
+  public:
+  void clear_alpha();
+  float alpha() const;
+  void set_alpha(float value);
+  private:
+  float _internal_alpha() const;
+  void _internal_set_alpha(float value);
+  public:
+
+  // optional bool outOfStock = 12;
+  bool has_outofstock() const;
+  private:
+  bool _internal_has_outofstock() const;
+  public:
+  void clear_outofstock();
+  bool outofstock() const;
+  void set_outofstock(bool value);
+  private:
+  bool _internal_outofstock() const;
+  void _internal_set_outofstock(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppMarker)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item > items_;
-  bool value_;
-  bool hasprotection_;
-  ::PROTOBUF_NAMESPACE_ID::int32 capacity_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 protectionexpiry_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppFlag final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppFlag) */ {
- public:
-  inline AppFlag() : AppFlag(nullptr) {}
-  ~AppFlag() override;
-  explicit constexpr AppFlag(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppFlag(const AppFlag& from);
-  AppFlag(AppFlag&& from) noexcept
-    : AppFlag() {
-    *this = ::std::move(from);
-  }
-
-  inline AppFlag& operator=(const AppFlag& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppFlag& operator=(AppFlag&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppFlag& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppFlag* internal_default_instance() {
-    return reinterpret_cast<const AppFlag*>(
-               &_AppFlag_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    23;
-
-  friend void swap(AppFlag& a, AppFlag& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppFlag* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppFlag* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppFlag* New() const final {
-    return new AppFlag();
-  }
-
-  AppFlag* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppFlag>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppFlag& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppFlag& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppFlag* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppFlag";
-  }
-  protected:
-  explicit AppFlag(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kValueFieldNumber = 1,
-  };
-  // required bool value = 1;
-  bool has_value() const;
-  private:
-  bool _internal_has_value() const;
-  public:
-  void clear_value();
-  bool value() const;
-  void set_value(bool value);
-  private:
-  bool _internal_value() const;
-  void _internal_set_value(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppFlag)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  bool value_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder > sellorders_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::rustplus::Vector4* color1_;
+  ::rustplus::Vector4* color2_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  int type_;
+  float x_;
+  float y_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 steamid_;
+  float rotation_;
+  float radius_;
+  float alpha_;
+  bool outofstock_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -5296,7 +9526,7 @@ class AppMapMarkers final :
                &_AppMapMarkers_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    41;
 
   friend void swap(AppMapMarkers& a, AppMapMarkers& b) {
     a.Swap(&b);
@@ -5400,24 +9630,24 @@ class AppMapMarkers final :
 };
 // -------------------------------------------------------------------
 
-class Vector4 final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.Vector4) */ {
+class AppClanInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppClanInfo) */ {
  public:
-  inline Vector4() : Vector4(nullptr) {}
-  ~Vector4() override;
-  explicit constexpr Vector4(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppClanInfo() : AppClanInfo(nullptr) {}
+  ~AppClanInfo() override;
+  explicit constexpr AppClanInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Vector4(const Vector4& from);
-  Vector4(Vector4&& from) noexcept
-    : Vector4() {
+  AppClanInfo(const AppClanInfo& from);
+  AppClanInfo(AppClanInfo&& from) noexcept
+    : AppClanInfo() {
     *this = ::std::move(from);
   }
 
-  inline Vector4& operator=(const Vector4& from) {
+  inline AppClanInfo& operator=(const AppClanInfo& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Vector4& operator=(Vector4&& from) noexcept {
+  inline AppClanInfo& operator=(AppClanInfo&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -5443,20 +9673,20 @@ class Vector4 final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Vector4& default_instance() {
+  static const AppClanInfo& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Vector4* internal_default_instance() {
-    return reinterpret_cast<const Vector4*>(
-               &_Vector4_default_instance_);
+  static inline const AppClanInfo* internal_default_instance() {
+    return reinterpret_cast<const AppClanInfo*>(
+               &_AppClanInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    42;
 
-  friend void swap(Vector4& a, Vector4& b) {
+  friend void swap(AppClanInfo& a, AppClanInfo& b) {
     a.Swap(&b);
   }
-  inline void Swap(Vector4* other) {
+  inline void Swap(AppClanInfo* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -5464,7 +9694,7 @@ class Vector4 final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Vector4* other) {
+  void UnsafeArenaSwap(AppClanInfo* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -5472,17 +9702,17 @@ class Vector4 final :
 
   // implements Message ----------------------------------------------
 
-  inline Vector4* New() const final {
-    return new Vector4();
+  inline AppClanInfo* New() const final {
+    return new AppClanInfo();
   }
 
-  Vector4* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Vector4>(arena);
+  AppClanInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppClanInfo>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Vector4& from);
+  void CopyFrom(const AppClanInfo& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const Vector4& from);
+  void MergeFrom(const AppClanInfo& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -5499,13 +9729,13 @@ class Vector4 final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Vector4* other);
+  void InternalSwap(AppClanInfo* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.Vector4";
+    return "rustplus.AppClanInfo";
   }
   protected:
-  explicit Vector4(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppClanInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -5522,64 +9752,27 @@ class Vector4 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kXFieldNumber = 1,
-    kYFieldNumber = 2,
-    kZFieldNumber = 3,
-    kWFieldNumber = 4,
+    kClanInfoFieldNumber = 1,
   };
-  // optional float x = 1;
-  bool has_x() const;
+  // optional .rustplus.ClanInfo clanInfo = 1;
+  bool has_claninfo() const;
   private:
-  bool _internal_has_x() const;
+  bool _internal_has_claninfo() const;
   public:
-  void clear_x();
-  float x() const;
-  void set_x(float value);
+  void clear_claninfo();
+  const ::rustplus::ClanInfo& claninfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::ClanInfo* release_claninfo();
+  ::rustplus::ClanInfo* mutable_claninfo();
+  void set_allocated_claninfo(::rustplus::ClanInfo* claninfo);
   private:
-  float _internal_x() const;
-  void _internal_set_x(float value);
+  const ::rustplus::ClanInfo& _internal_claninfo() const;
+  ::rustplus::ClanInfo* _internal_mutable_claninfo();
   public:
+  void unsafe_arena_set_allocated_claninfo(
+      ::rustplus::ClanInfo* claninfo);
+  ::rustplus::ClanInfo* unsafe_arena_release_claninfo();
 
-  // optional float y = 2;
-  bool has_y() const;
-  private:
-  bool _internal_has_y() const;
-  public:
-  void clear_y();
-  float y() const;
-  void set_y(float value);
-  private:
-  float _internal_y() const;
-  void _internal_set_y(float value);
-  public:
-
-  // optional float z = 3;
-  bool has_z() const;
-  private:
-  bool _internal_has_z() const;
-  public:
-  void clear_z();
-  float z() const;
-  void set_z(float value);
-  private:
-  float _internal_z() const;
-  void _internal_set_z(float value);
-  public:
-
-  // optional float w = 4;
-  bool has_w() const;
-  private:
-  bool _internal_has_w() const;
-  public:
-  void clear_w();
-  float w() const;
-  void set_w(float value);
-  private:
-  float _internal_w() const;
-  void _internal_set_w(float value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.Vector4)
+  // @@protoc_insertion_point(class_scope:rustplus.AppClanInfo)
  private:
   class _Internal;
 
@@ -5588,32 +9781,29 @@ class Vector4 final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  float x_;
-  float y_;
-  float z_;
-  float w_;
+  ::rustplus::ClanInfo* claninfo_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AppMarker_SellOrder final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMarker.SellOrder) */ {
+class AppClanMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppClanMessage) */ {
  public:
-  inline AppMarker_SellOrder() : AppMarker_SellOrder(nullptr) {}
-  ~AppMarker_SellOrder() override;
-  explicit constexpr AppMarker_SellOrder(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppClanMessage() : AppClanMessage(nullptr) {}
+  ~AppClanMessage() override;
+  explicit constexpr AppClanMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppMarker_SellOrder(const AppMarker_SellOrder& from);
-  AppMarker_SellOrder(AppMarker_SellOrder&& from) noexcept
-    : AppMarker_SellOrder() {
+  AppClanMessage(const AppClanMessage& from);
+  AppClanMessage(AppClanMessage&& from) noexcept
+    : AppClanMessage() {
     *this = ::std::move(from);
   }
 
-  inline AppMarker_SellOrder& operator=(const AppMarker_SellOrder& from) {
+  inline AppClanMessage& operator=(const AppClanMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppMarker_SellOrder& operator=(AppMarker_SellOrder&& from) noexcept {
+  inline AppClanMessage& operator=(AppClanMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -5639,20 +9829,20 @@ class AppMarker_SellOrder final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppMarker_SellOrder& default_instance() {
+  static const AppClanMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppMarker_SellOrder* internal_default_instance() {
-    return reinterpret_cast<const AppMarker_SellOrder*>(
-               &_AppMarker_SellOrder_default_instance_);
+  static inline const AppClanMessage* internal_default_instance() {
+    return reinterpret_cast<const AppClanMessage*>(
+               &_AppClanMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    43;
 
-  friend void swap(AppMarker_SellOrder& a, AppMarker_SellOrder& b) {
+  friend void swap(AppClanMessage& a, AppClanMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppMarker_SellOrder* other) {
+  inline void Swap(AppClanMessage* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -5660,7 +9850,7 @@ class AppMarker_SellOrder final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppMarker_SellOrder* other) {
+  void UnsafeArenaSwap(AppClanMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -5668,17 +9858,17 @@ class AppMarker_SellOrder final :
 
   // implements Message ----------------------------------------------
 
-  inline AppMarker_SellOrder* New() const final {
-    return new AppMarker_SellOrder();
+  inline AppClanMessage* New() const final {
+    return new AppClanMessage();
   }
 
-  AppMarker_SellOrder* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMarker_SellOrder>(arena);
+  AppClanMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppClanMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppMarker_SellOrder& from);
+  void CopyFrom(const AppClanMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppMarker_SellOrder& from);
+  void MergeFrom(const AppClanMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -5695,13 +9885,13 @@ class AppMarker_SellOrder final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppMarker_SellOrder* other);
+  void InternalSwap(AppClanMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppMarker.SellOrder";
+    return "rustplus.AppClanMessage";
   }
   protected:
-  explicit AppMarker_SellOrder(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppClanMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -5718,284 +9908,12 @@ class AppMarker_SellOrder final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemIdFieldNumber = 1,
-    kQuantityFieldNumber = 2,
-    kCurrencyIdFieldNumber = 3,
-    kCostPerItemFieldNumber = 4,
-    kAmountInStockFieldNumber = 5,
-    kItemIsBlueprintFieldNumber = 6,
-    kCurrencyIsBlueprintFieldNumber = 7,
+    kNameFieldNumber = 2,
+    kMessageFieldNumber = 3,
+    kSteamIdFieldNumber = 1,
+    kTimeFieldNumber = 4,
   };
-  // required int32 itemId = 1;
-  bool has_itemid() const;
-  private:
-  bool _internal_has_itemid() const;
-  public:
-  void clear_itemid();
-  ::PROTOBUF_NAMESPACE_ID::int32 itemid() const;
-  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_itemid() const;
-  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 quantity = 2;
-  bool has_quantity() const;
-  private:
-  bool _internal_has_quantity() const;
-  public:
-  void clear_quantity();
-  ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
-  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_quantity() const;
-  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 currencyId = 3;
-  bool has_currencyid() const;
-  private:
-  bool _internal_has_currencyid() const;
-  public:
-  void clear_currencyid();
-  ::PROTOBUF_NAMESPACE_ID::int32 currencyid() const;
-  void set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_currencyid() const;
-  void _internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 costPerItem = 4;
-  bool has_costperitem() const;
-  private:
-  bool _internal_has_costperitem() const;
-  public:
-  void clear_costperitem();
-  ::PROTOBUF_NAMESPACE_ID::int32 costperitem() const;
-  void set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_costperitem() const;
-  void _internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 amountInStock = 5;
-  bool has_amountinstock() const;
-  private:
-  bool _internal_has_amountinstock() const;
-  public:
-  void clear_amountinstock();
-  ::PROTOBUF_NAMESPACE_ID::int32 amountinstock() const;
-  void set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_amountinstock() const;
-  void _internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required bool itemIsBlueprint = 6;
-  bool has_itemisblueprint() const;
-  private:
-  bool _internal_has_itemisblueprint() const;
-  public:
-  void clear_itemisblueprint();
-  bool itemisblueprint() const;
-  void set_itemisblueprint(bool value);
-  private:
-  bool _internal_itemisblueprint() const;
-  void _internal_set_itemisblueprint(bool value);
-  public:
-
-  // required bool currencyIsBlueprint = 7;
-  bool has_currencyisblueprint() const;
-  private:
-  bool _internal_has_currencyisblueprint() const;
-  public:
-  void clear_currencyisblueprint();
-  bool currencyisblueprint() const;
-  void set_currencyisblueprint(bool value);
-  private:
-  bool _internal_currencyisblueprint() const;
-  void _internal_set_currencyisblueprint(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppMarker.SellOrder)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 itemid_;
-  ::PROTOBUF_NAMESPACE_ID::int32 quantity_;
-  ::PROTOBUF_NAMESPACE_ID::int32 currencyid_;
-  ::PROTOBUF_NAMESPACE_ID::int32 costperitem_;
-  ::PROTOBUF_NAMESPACE_ID::int32 amountinstock_;
-  bool itemisblueprint_;
-  bool currencyisblueprint_;
-  friend struct ::TableStruct_rustplus_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppMarker final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppMarker) */ {
- public:
-  inline AppMarker() : AppMarker(nullptr) {}
-  ~AppMarker() override;
-  explicit constexpr AppMarker(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  AppMarker(const AppMarker& from);
-  AppMarker(AppMarker&& from) noexcept
-    : AppMarker() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMarker& operator=(const AppMarker& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMarker& operator=(AppMarker&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const AppMarker& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const AppMarker* internal_default_instance() {
-    return reinterpret_cast<const AppMarker*>(
-               &_AppMarker_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    27;
-
-  friend void swap(AppMarker& a, AppMarker& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMarker* other) {
-    if (other == this) return;
-    if (GetOwningArena() == other->GetOwningArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(AppMarker* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMarker* New() const final {
-    return new AppMarker();
-  }
-
-  AppMarker* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMarker>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppMarker& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppMarker& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMarker* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppMarker";
-  }
-  protected:
-  explicit AppMarker(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  typedef AppMarker_SellOrder SellOrder;
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSellOrdersFieldNumber = 13,
-    kNameFieldNumber = 11,
-    kColor1FieldNumber = 8,
-    kColor2FieldNumber = 9,
-    kIdFieldNumber = 1,
-    kXFieldNumber = 3,
-    kSteamIdFieldNumber = 5,
-    kYFieldNumber = 4,
-    kRotationFieldNumber = 6,
-    kRadiusFieldNumber = 7,
-    kAlphaFieldNumber = 10,
-    kTypeFieldNumber = 2,
-  };
-  // repeated .rustplus.AppMarker.SellOrder sellOrders = 13;
-  int sellorders_size() const;
-  private:
-  int _internal_sellorders_size() const;
-  public:
-  void clear_sellorders();
-  ::rustplus::AppMarker_SellOrder* mutable_sellorders(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder >*
-      mutable_sellorders();
-  private:
-  const ::rustplus::AppMarker_SellOrder& _internal_sellorders(int index) const;
-  ::rustplus::AppMarker_SellOrder* _internal_add_sellorders();
-  public:
-  const ::rustplus::AppMarker_SellOrder& sellorders(int index) const;
-  ::rustplus::AppMarker_SellOrder* add_sellorders();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder >&
-      sellorders() const;
-
-  // optional string name = 11;
+  // required string name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -6013,69 +9931,25 @@ class AppMarker final :
   std::string* _internal_mutable_name();
   public:
 
-  // optional .rustplus.Vector4 color1 = 8;
-  bool has_color1() const;
+  // required string message = 3;
+  bool has_message() const;
   private:
-  bool _internal_has_color1() const;
+  bool _internal_has_message() const;
   public:
-  void clear_color1();
-  const ::rustplus::Vector4& color1() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector4* release_color1();
-  ::rustplus::Vector4* mutable_color1();
-  void set_allocated_color1(::rustplus::Vector4* color1);
+  void clear_message();
+  const std::string& message() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_MUST_USE_RESULT std::string* release_message();
+  void set_allocated_message(std::string* message);
   private:
-  const ::rustplus::Vector4& _internal_color1() const;
-  ::rustplus::Vector4* _internal_mutable_color1();
-  public:
-  void unsafe_arena_set_allocated_color1(
-      ::rustplus::Vector4* color1);
-  ::rustplus::Vector4* unsafe_arena_release_color1();
-
-  // optional .rustplus.Vector4 color2 = 9;
-  bool has_color2() const;
-  private:
-  bool _internal_has_color2() const;
-  public:
-  void clear_color2();
-  const ::rustplus::Vector4& color2() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector4* release_color2();
-  ::rustplus::Vector4* mutable_color2();
-  void set_allocated_color2(::rustplus::Vector4* color2);
-  private:
-  const ::rustplus::Vector4& _internal_color2() const;
-  ::rustplus::Vector4* _internal_mutable_color2();
-  public:
-  void unsafe_arena_set_allocated_color2(
-      ::rustplus::Vector4* color2);
-  ::rustplus::Vector4* unsafe_arena_release_color2();
-
-  // required uint32 id = 1;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
   public:
 
-  // required float x = 3;
-  bool has_x() const;
-  private:
-  bool _internal_has_x() const;
-  public:
-  void clear_x();
-  float x() const;
-  void set_x(float value);
-  private:
-  float _internal_x() const;
-  void _internal_set_x(float value);
-  public:
-
-  // optional uint64 steamId = 5;
+  // required uint64 steamId = 1;
   bool has_steamid() const;
   private:
   bool _internal_has_steamid() const;
@@ -6088,72 +9962,20 @@ class AppMarker final :
   void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
   public:
 
-  // required float y = 4;
-  bool has_y() const;
+  // required int64 time = 4;
+  bool has_time() const;
   private:
-  bool _internal_has_y() const;
+  bool _internal_has_time() const;
   public:
-  void clear_y();
-  float y() const;
-  void set_y(float value);
+  void clear_time();
+  ::PROTOBUF_NAMESPACE_ID::int64 time() const;
+  void set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  float _internal_y() const;
-  void _internal_set_y(float value);
-  public:
-
-  // optional float rotation = 6;
-  bool has_rotation() const;
-  private:
-  bool _internal_has_rotation() const;
-  public:
-  void clear_rotation();
-  float rotation() const;
-  void set_rotation(float value);
-  private:
-  float _internal_rotation() const;
-  void _internal_set_rotation(float value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_time() const;
+  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // optional float radius = 7;
-  bool has_radius() const;
-  private:
-  bool _internal_has_radius() const;
-  public:
-  void clear_radius();
-  float radius() const;
-  void set_radius(float value);
-  private:
-  float _internal_radius() const;
-  void _internal_set_radius(float value);
-  public:
-
-  // optional float alpha = 10;
-  bool has_alpha() const;
-  private:
-  bool _internal_has_alpha() const;
-  public:
-  void clear_alpha();
-  float alpha() const;
-  void set_alpha(float value);
-  private:
-  float _internal_alpha() const;
-  void _internal_set_alpha(float value);
-  public:
-
-  // required .rustplus.AppMarkerType type = 2;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  ::rustplus::AppMarkerType type() const;
-  void set_type(::rustplus::AppMarkerType value);
-  private:
-  ::rustplus::AppMarkerType _internal_type() const;
-  void _internal_set_type(::rustplus::AppMarkerType value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:rustplus.AppMarker)
+  // @@protoc_insertion_point(class_scope:rustplus.AppClanMessage)
  private:
   class _Internal;
 
@@ -6165,40 +9987,32 @@ class AppMarker final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker_SellOrder > sellorders_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-  ::rustplus::Vector4* color1_;
-  ::rustplus::Vector4* color2_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
-  float x_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   ::PROTOBUF_NAMESPACE_ID::uint64 steamid_;
-  float y_;
-  float rotation_;
-  float radius_;
-  float alpha_;
-  int type_;
+  ::PROTOBUF_NAMESPACE_ID::int64 time_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
 
-class AppCameraFrame final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraFrame) */ {
+class AppClanChat final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppClanChat) */ {
  public:
-  inline AppCameraFrame() : AppCameraFrame(nullptr) {}
-  ~AppCameraFrame() override;
-  explicit constexpr AppCameraFrame(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppClanChat() : AppClanChat(nullptr) {}
+  ~AppClanChat() override;
+  explicit constexpr AppClanChat(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppCameraFrame(const AppCameraFrame& from);
-  AppCameraFrame(AppCameraFrame&& from) noexcept
-    : AppCameraFrame() {
+  AppClanChat(const AppClanChat& from);
+  AppClanChat(AppClanChat&& from) noexcept
+    : AppClanChat() {
     *this = ::std::move(from);
   }
 
-  inline AppCameraFrame& operator=(const AppCameraFrame& from) {
+  inline AppClanChat& operator=(const AppClanChat& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppCameraFrame& operator=(AppCameraFrame&& from) noexcept {
+  inline AppClanChat& operator=(AppClanChat&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -6224,20 +10038,20 @@ class AppCameraFrame final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppCameraFrame& default_instance() {
+  static const AppClanChat& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppCameraFrame* internal_default_instance() {
-    return reinterpret_cast<const AppCameraFrame*>(
-               &_AppCameraFrame_default_instance_);
+  static inline const AppClanChat* internal_default_instance() {
+    return reinterpret_cast<const AppClanChat*>(
+               &_AppClanChat_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    44;
 
-  friend void swap(AppCameraFrame& a, AppCameraFrame& b) {
+  friend void swap(AppClanChat& a, AppClanChat& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppCameraFrame* other) {
+  inline void Swap(AppClanChat* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -6245,7 +10059,7 @@ class AppCameraFrame final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppCameraFrame* other) {
+  void UnsafeArenaSwap(AppClanChat* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -6253,17 +10067,17 @@ class AppCameraFrame final :
 
   // implements Message ----------------------------------------------
 
-  inline AppCameraFrame* New() const final {
-    return new AppCameraFrame();
+  inline AppClanChat* New() const final {
+    return new AppClanChat();
   }
 
-  AppCameraFrame* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppCameraFrame>(arena);
+  AppClanChat* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppClanChat>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppCameraFrame& from);
+  void CopyFrom(const AppClanChat& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppCameraFrame& from);
+  void MergeFrom(const AppClanChat& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -6280,13 +10094,13 @@ class AppCameraFrame final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppCameraFrame* other);
+  void InternalSwap(AppClanChat* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppCameraFrame";
+    return "rustplus.AppClanChat";
   }
   protected:
-  explicit AppCameraFrame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppClanChat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -6303,41 +10117,196 @@ class AppCameraFrame final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kJpgImageFieldNumber = 2,
-    kFrameFieldNumber = 1,
+    kMessagesFieldNumber = 1,
   };
-  // required bytes jpgImage = 2;
-  bool has_jpgimage() const;
+  // repeated .rustplus.AppClanMessage messages = 1;
+  int messages_size() const;
   private:
-  bool _internal_has_jpgimage() const;
+  int _internal_messages_size() const;
   public:
-  void clear_jpgimage();
-  const std::string& jpgimage() const;
+  void clear_messages();
+  ::rustplus::AppClanMessage* mutable_messages(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppClanMessage >*
+      mutable_messages();
+  private:
+  const ::rustplus::AppClanMessage& _internal_messages(int index) const;
+  ::rustplus::AppClanMessage* _internal_add_messages();
+  public:
+  const ::rustplus::AppClanMessage& messages(int index) const;
+  ::rustplus::AppClanMessage* add_messages();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppClanMessage >&
+      messages() const;
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppClanChat)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppClanMessage > messages_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppNexusAuth final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppNexusAuth) */ {
+ public:
+  inline AppNexusAuth() : AppNexusAuth(nullptr) {}
+  ~AppNexusAuth() override;
+  explicit constexpr AppNexusAuth(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppNexusAuth(const AppNexusAuth& from);
+  AppNexusAuth(AppNexusAuth&& from) noexcept
+    : AppNexusAuth() {
+    *this = ::std::move(from);
+  }
+
+  inline AppNexusAuth& operator=(const AppNexusAuth& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppNexusAuth& operator=(AppNexusAuth&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppNexusAuth& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppNexusAuth* internal_default_instance() {
+    return reinterpret_cast<const AppNexusAuth*>(
+               &_AppNexusAuth_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    45;
+
+  friend void swap(AppNexusAuth& a, AppNexusAuth& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppNexusAuth* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppNexusAuth* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppNexusAuth* New() const final {
+    return new AppNexusAuth();
+  }
+
+  AppNexusAuth* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppNexusAuth>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppNexusAuth& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppNexusAuth& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppNexusAuth* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppNexusAuth";
+  }
+  protected:
+  explicit AppNexusAuth(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kServerIdFieldNumber = 1,
+    kPlayerTokenFieldNumber = 2,
+  };
+  // required string serverId = 1;
+  bool has_serverid() const;
+  private:
+  bool _internal_has_serverid() const;
+  public:
+  void clear_serverid();
+  const std::string& serverid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_jpgimage(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_jpgimage();
-  PROTOBUF_MUST_USE_RESULT std::string* release_jpgimage();
-  void set_allocated_jpgimage(std::string* jpgimage);
+  void set_serverid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_serverid();
+  PROTOBUF_MUST_USE_RESULT std::string* release_serverid();
+  void set_allocated_serverid(std::string* serverid);
   private:
-  const std::string& _internal_jpgimage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_jpgimage(const std::string& value);
-  std::string* _internal_mutable_jpgimage();
+  const std::string& _internal_serverid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_serverid(const std::string& value);
+  std::string* _internal_mutable_serverid();
   public:
 
-  // required uint32 frame = 1;
-  bool has_frame() const;
+  // required int32 playerToken = 2;
+  bool has_playertoken() const;
   private:
-  bool _internal_has_frame() const;
+  bool _internal_has_playertoken() const;
   public:
-  void clear_frame();
-  ::PROTOBUF_NAMESPACE_ID::uint32 frame() const;
-  void set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void clear_playertoken();
+  ::PROTOBUF_NAMESPACE_ID::int32 playertoken() const;
+  void set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_frame() const;
-  void _internal_set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_playertoken() const;
+  void _internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppCameraFrame)
+  // @@protoc_insertion_point(class_scope:rustplus.AppNexusAuth)
  private:
   class _Internal;
 
@@ -6349,8 +10318,8 @@ class AppCameraFrame final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr jpgimage_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 frame_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr serverid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 playertoken_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -6406,7 +10375,7 @@ class AppTeamChanged final :
                &_AppTeamChanged_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    46;
 
   friend void swap(AppTeamChanged& a, AppTeamChanged& b) {
     a.Swap(&b);
@@ -6529,24 +10498,24 @@ class AppTeamChanged final :
 };
 // -------------------------------------------------------------------
 
-class AppTeamMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppTeamMessage) */ {
+class AppNewTeamMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppNewTeamMessage) */ {
  public:
-  inline AppTeamMessage() : AppTeamMessage(nullptr) {}
-  ~AppTeamMessage() override;
-  explicit constexpr AppTeamMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AppNewTeamMessage() : AppNewTeamMessage(nullptr) {}
+  ~AppNewTeamMessage() override;
+  explicit constexpr AppNewTeamMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AppTeamMessage(const AppTeamMessage& from);
-  AppTeamMessage(AppTeamMessage&& from) noexcept
-    : AppTeamMessage() {
+  AppNewTeamMessage(const AppNewTeamMessage& from);
+  AppNewTeamMessage(AppNewTeamMessage&& from) noexcept
+    : AppNewTeamMessage() {
     *this = ::std::move(from);
   }
 
-  inline AppTeamMessage& operator=(const AppTeamMessage& from) {
+  inline AppNewTeamMessage& operator=(const AppNewTeamMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppTeamMessage& operator=(AppTeamMessage&& from) noexcept {
+  inline AppNewTeamMessage& operator=(AppNewTeamMessage&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()) {
       InternalSwap(&from);
@@ -6572,20 +10541,20 @@ class AppTeamMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AppTeamMessage& default_instance() {
+  static const AppNewTeamMessage& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AppTeamMessage* internal_default_instance() {
-    return reinterpret_cast<const AppTeamMessage*>(
-               &_AppTeamMessage_default_instance_);
+  static inline const AppNewTeamMessage* internal_default_instance() {
+    return reinterpret_cast<const AppNewTeamMessage*>(
+               &_AppNewTeamMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    47;
 
-  friend void swap(AppTeamMessage& a, AppTeamMessage& b) {
+  friend void swap(AppNewTeamMessage& a, AppNewTeamMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppTeamMessage* other) {
+  inline void Swap(AppNewTeamMessage* other) {
     if (other == this) return;
     if (GetOwningArena() == other->GetOwningArena()) {
       InternalSwap(other);
@@ -6593,7 +10562,7 @@ class AppTeamMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AppTeamMessage* other) {
+  void UnsafeArenaSwap(AppNewTeamMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -6601,17 +10570,17 @@ class AppTeamMessage final :
 
   // implements Message ----------------------------------------------
 
-  inline AppTeamMessage* New() const final {
-    return new AppTeamMessage();
+  inline AppNewTeamMessage* New() const final {
+    return new AppNewTeamMessage();
   }
 
-  AppTeamMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppTeamMessage>(arena);
+  AppNewTeamMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppNewTeamMessage>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AppTeamMessage& from);
+  void CopyFrom(const AppNewTeamMessage& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AppTeamMessage& from);
+  void MergeFrom(const AppNewTeamMessage& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
   public:
@@ -6628,13 +10597,13 @@ class AppTeamMessage final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppTeamMessage* other);
+  void InternalSwap(AppNewTeamMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rustplus.AppTeamMessage";
+    return "rustplus.AppNewTeamMessage";
   }
   protected:
-  explicit AppTeamMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AppNewTeamMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -6653,25 +10622,25 @@ class AppTeamMessage final :
   enum : int {
     kMessageFieldNumber = 1,
   };
-  // required .rustplus.AppChatMessage message = 1;
+  // required .rustplus.AppTeamMessage message = 1;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
   public:
   void clear_message();
-  const ::rustplus::AppChatMessage& message() const;
-  PROTOBUF_MUST_USE_RESULT ::rustplus::AppChatMessage* release_message();
-  ::rustplus::AppChatMessage* mutable_message();
-  void set_allocated_message(::rustplus::AppChatMessage* message);
+  const ::rustplus::AppTeamMessage& message() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppTeamMessage* release_message();
+  ::rustplus::AppTeamMessage* mutable_message();
+  void set_allocated_message(::rustplus::AppTeamMessage* message);
   private:
-  const ::rustplus::AppChatMessage& _internal_message() const;
-  ::rustplus::AppChatMessage* _internal_mutable_message();
+  const ::rustplus::AppTeamMessage& _internal_message() const;
+  ::rustplus::AppTeamMessage* _internal_mutable_message();
   public:
   void unsafe_arena_set_allocated_message(
-      ::rustplus::AppChatMessage* message);
-  ::rustplus::AppChatMessage* unsafe_arena_release_message();
+      ::rustplus::AppTeamMessage* message);
+  ::rustplus::AppTeamMessage* unsafe_arena_release_message();
 
-  // @@protoc_insertion_point(class_scope:rustplus.AppTeamMessage)
+  // @@protoc_insertion_point(class_scope:rustplus.AppNewTeamMessage)
  private:
   class _Internal;
 
@@ -6680,7 +10649,7 @@ class AppTeamMessage final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::rustplus::AppChatMessage* message_;
+  ::rustplus::AppTeamMessage* message_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
 // -------------------------------------------------------------------
@@ -6736,7 +10705,7 @@ class AppEntityChanged final :
                &_AppEntityChanged_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    48;
 
   friend void swap(AppEntityChanged& a, AppEntityChanged& b) {
     a.Swap(&b);
@@ -6857,6 +10826,1385 @@ class AppEntityChanged final :
   ::PROTOBUF_NAMESPACE_ID::uint32 entityid_;
   friend struct ::TableStruct_rustplus_2eproto;
 };
+// -------------------------------------------------------------------
+
+class AppClanChanged final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppClanChanged) */ {
+ public:
+  inline AppClanChanged() : AppClanChanged(nullptr) {}
+  ~AppClanChanged() override;
+  explicit constexpr AppClanChanged(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppClanChanged(const AppClanChanged& from);
+  AppClanChanged(AppClanChanged&& from) noexcept
+    : AppClanChanged() {
+    *this = ::std::move(from);
+  }
+
+  inline AppClanChanged& operator=(const AppClanChanged& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppClanChanged& operator=(AppClanChanged&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppClanChanged& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppClanChanged* internal_default_instance() {
+    return reinterpret_cast<const AppClanChanged*>(
+               &_AppClanChanged_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    49;
+
+  friend void swap(AppClanChanged& a, AppClanChanged& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppClanChanged* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppClanChanged* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppClanChanged* New() const final {
+    return new AppClanChanged();
+  }
+
+  AppClanChanged* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppClanChanged>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppClanChanged& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppClanChanged& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppClanChanged* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppClanChanged";
+  }
+  protected:
+  explicit AppClanChanged(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kClanInfoFieldNumber = 1,
+  };
+  // optional .rustplus.ClanInfo clanInfo = 1;
+  bool has_claninfo() const;
+  private:
+  bool _internal_has_claninfo() const;
+  public:
+  void clear_claninfo();
+  const ::rustplus::ClanInfo& claninfo() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::ClanInfo* release_claninfo();
+  ::rustplus::ClanInfo* mutable_claninfo();
+  void set_allocated_claninfo(::rustplus::ClanInfo* claninfo);
+  private:
+  const ::rustplus::ClanInfo& _internal_claninfo() const;
+  ::rustplus::ClanInfo* _internal_mutable_claninfo();
+  public:
+  void unsafe_arena_set_allocated_claninfo(
+      ::rustplus::ClanInfo* claninfo);
+  ::rustplus::ClanInfo* unsafe_arena_release_claninfo();
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppClanChanged)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::ClanInfo* claninfo_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppNewClanMessage final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppNewClanMessage) */ {
+ public:
+  inline AppNewClanMessage() : AppNewClanMessage(nullptr) {}
+  ~AppNewClanMessage() override;
+  explicit constexpr AppNewClanMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppNewClanMessage(const AppNewClanMessage& from);
+  AppNewClanMessage(AppNewClanMessage&& from) noexcept
+    : AppNewClanMessage() {
+    *this = ::std::move(from);
+  }
+
+  inline AppNewClanMessage& operator=(const AppNewClanMessage& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppNewClanMessage& operator=(AppNewClanMessage&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppNewClanMessage& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppNewClanMessage* internal_default_instance() {
+    return reinterpret_cast<const AppNewClanMessage*>(
+               &_AppNewClanMessage_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    50;
+
+  friend void swap(AppNewClanMessage& a, AppNewClanMessage& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppNewClanMessage* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppNewClanMessage* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppNewClanMessage* New() const final {
+    return new AppNewClanMessage();
+  }
+
+  AppNewClanMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppNewClanMessage>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppNewClanMessage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppNewClanMessage& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppNewClanMessage* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppNewClanMessage";
+  }
+  protected:
+  explicit AppNewClanMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMessageFieldNumber = 2,
+    kClanIdFieldNumber = 1,
+  };
+  // required .rustplus.AppClanMessage message = 2;
+  bool has_message() const;
+  private:
+  bool _internal_has_message() const;
+  public:
+  void clear_message();
+  const ::rustplus::AppClanMessage& message() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::AppClanMessage* release_message();
+  ::rustplus::AppClanMessage* mutable_message();
+  void set_allocated_message(::rustplus::AppClanMessage* message);
+  private:
+  const ::rustplus::AppClanMessage& _internal_message() const;
+  ::rustplus::AppClanMessage* _internal_mutable_message();
+  public:
+  void unsafe_arena_set_allocated_message(
+      ::rustplus::AppClanMessage* message);
+  ::rustplus::AppClanMessage* unsafe_arena_release_message();
+
+  // required int64 clanId = 1;
+  bool has_clanid() const;
+  private:
+  bool _internal_has_clanid() const;
+  public:
+  void clear_clanid();
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppNewClanMessage)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::AppClanMessage* message_;
+  ::PROTOBUF_NAMESPACE_ID::int64 clanid_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppCameraSubscribe final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraSubscribe) */ {
+ public:
+  inline AppCameraSubscribe() : AppCameraSubscribe(nullptr) {}
+  ~AppCameraSubscribe() override;
+  explicit constexpr AppCameraSubscribe(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppCameraSubscribe(const AppCameraSubscribe& from);
+  AppCameraSubscribe(AppCameraSubscribe&& from) noexcept
+    : AppCameraSubscribe() {
+    *this = ::std::move(from);
+  }
+
+  inline AppCameraSubscribe& operator=(const AppCameraSubscribe& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppCameraSubscribe& operator=(AppCameraSubscribe&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppCameraSubscribe& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppCameraSubscribe* internal_default_instance() {
+    return reinterpret_cast<const AppCameraSubscribe*>(
+               &_AppCameraSubscribe_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    51;
+
+  friend void swap(AppCameraSubscribe& a, AppCameraSubscribe& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppCameraSubscribe* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppCameraSubscribe* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppCameraSubscribe* New() const final {
+    return new AppCameraSubscribe();
+  }
+
+  AppCameraSubscribe* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppCameraSubscribe>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppCameraSubscribe& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppCameraSubscribe& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppCameraSubscribe* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppCameraSubscribe";
+  }
+  protected:
+  explicit AppCameraSubscribe(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCameraIdFieldNumber = 1,
+  };
+  // required string cameraId = 1;
+  bool has_cameraid() const;
+  private:
+  bool _internal_has_cameraid() const;
+  public:
+  void clear_cameraid();
+  const std::string& cameraid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_cameraid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_cameraid();
+  PROTOBUF_MUST_USE_RESULT std::string* release_cameraid();
+  void set_allocated_cameraid(std::string* cameraid);
+  private:
+  const std::string& _internal_cameraid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cameraid(const std::string& value);
+  std::string* _internal_mutable_cameraid();
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppCameraSubscribe)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cameraid_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppCameraInput final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraInput) */ {
+ public:
+  inline AppCameraInput() : AppCameraInput(nullptr) {}
+  ~AppCameraInput() override;
+  explicit constexpr AppCameraInput(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppCameraInput(const AppCameraInput& from);
+  AppCameraInput(AppCameraInput&& from) noexcept
+    : AppCameraInput() {
+    *this = ::std::move(from);
+  }
+
+  inline AppCameraInput& operator=(const AppCameraInput& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppCameraInput& operator=(AppCameraInput&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppCameraInput& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppCameraInput* internal_default_instance() {
+    return reinterpret_cast<const AppCameraInput*>(
+               &_AppCameraInput_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    52;
+
+  friend void swap(AppCameraInput& a, AppCameraInput& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppCameraInput* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppCameraInput* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppCameraInput* New() const final {
+    return new AppCameraInput();
+  }
+
+  AppCameraInput* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppCameraInput>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppCameraInput& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppCameraInput& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppCameraInput* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppCameraInput";
+  }
+  protected:
+  explicit AppCameraInput(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMouseDeltaFieldNumber = 2,
+    kButtonsFieldNumber = 1,
+  };
+  // required .rustplus.Vector2 mouseDelta = 2;
+  bool has_mousedelta() const;
+  private:
+  bool _internal_has_mousedelta() const;
+  public:
+  void clear_mousedelta();
+  const ::rustplus::Vector2& mousedelta() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector2* release_mousedelta();
+  ::rustplus::Vector2* mutable_mousedelta();
+  void set_allocated_mousedelta(::rustplus::Vector2* mousedelta);
+  private:
+  const ::rustplus::Vector2& _internal_mousedelta() const;
+  ::rustplus::Vector2* _internal_mutable_mousedelta();
+  public:
+  void unsafe_arena_set_allocated_mousedelta(
+      ::rustplus::Vector2* mousedelta);
+  ::rustplus::Vector2* unsafe_arena_release_mousedelta();
+
+  // required int32 buttons = 1;
+  bool has_buttons() const;
+  private:
+  bool _internal_has_buttons() const;
+  public:
+  void clear_buttons();
+  ::PROTOBUF_NAMESPACE_ID::int32 buttons() const;
+  void set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_buttons() const;
+  void _internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppCameraInput)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::rustplus::Vector2* mousedelta_;
+  ::PROTOBUF_NAMESPACE_ID::int32 buttons_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppCameraInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraInfo) */ {
+ public:
+  inline AppCameraInfo() : AppCameraInfo(nullptr) {}
+  ~AppCameraInfo() override;
+  explicit constexpr AppCameraInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppCameraInfo(const AppCameraInfo& from);
+  AppCameraInfo(AppCameraInfo&& from) noexcept
+    : AppCameraInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline AppCameraInfo& operator=(const AppCameraInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppCameraInfo& operator=(AppCameraInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppCameraInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppCameraInfo* internal_default_instance() {
+    return reinterpret_cast<const AppCameraInfo*>(
+               &_AppCameraInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    53;
+
+  friend void swap(AppCameraInfo& a, AppCameraInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppCameraInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppCameraInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppCameraInfo* New() const final {
+    return new AppCameraInfo();
+  }
+
+  AppCameraInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppCameraInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppCameraInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppCameraInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppCameraInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppCameraInfo";
+  }
+  protected:
+  explicit AppCameraInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kWidthFieldNumber = 1,
+    kHeightFieldNumber = 2,
+    kNearPlaneFieldNumber = 3,
+    kFarPlaneFieldNumber = 4,
+    kControlFlagsFieldNumber = 5,
+  };
+  // required int32 width = 1;
+  bool has_width() const;
+  private:
+  bool _internal_has_width() const;
+  public:
+  void clear_width();
+  ::PROTOBUF_NAMESPACE_ID::int32 width() const;
+  void set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_width() const;
+  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required int32 height = 2;
+  bool has_height() const;
+  private:
+  bool _internal_has_height() const;
+  public:
+  void clear_height();
+  ::PROTOBUF_NAMESPACE_ID::int32 height() const;
+  void set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_height() const;
+  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required float nearPlane = 3;
+  bool has_nearplane() const;
+  private:
+  bool _internal_has_nearplane() const;
+  public:
+  void clear_nearplane();
+  float nearplane() const;
+  void set_nearplane(float value);
+  private:
+  float _internal_nearplane() const;
+  void _internal_set_nearplane(float value);
+  public:
+
+  // required float farPlane = 4;
+  bool has_farplane() const;
+  private:
+  bool _internal_has_farplane() const;
+  public:
+  void clear_farplane();
+  float farplane() const;
+  void set_farplane(float value);
+  private:
+  float _internal_farplane() const;
+  void _internal_set_farplane(float value);
+  public:
+
+  // required int32 controlFlags = 5;
+  bool has_controlflags() const;
+  private:
+  bool _internal_has_controlflags() const;
+  public:
+  void clear_controlflags();
+  ::PROTOBUF_NAMESPACE_ID::int32 controlflags() const;
+  void set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_controlflags() const;
+  void _internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppCameraInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::int32 width_;
+  ::PROTOBUF_NAMESPACE_ID::int32 height_;
+  float nearplane_;
+  float farplane_;
+  ::PROTOBUF_NAMESPACE_ID::int32 controlflags_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppCameraRays_Entity final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraRays.Entity) */ {
+ public:
+  inline AppCameraRays_Entity() : AppCameraRays_Entity(nullptr) {}
+  ~AppCameraRays_Entity() override;
+  explicit constexpr AppCameraRays_Entity(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppCameraRays_Entity(const AppCameraRays_Entity& from);
+  AppCameraRays_Entity(AppCameraRays_Entity&& from) noexcept
+    : AppCameraRays_Entity() {
+    *this = ::std::move(from);
+  }
+
+  inline AppCameraRays_Entity& operator=(const AppCameraRays_Entity& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppCameraRays_Entity& operator=(AppCameraRays_Entity&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppCameraRays_Entity& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppCameraRays_Entity* internal_default_instance() {
+    return reinterpret_cast<const AppCameraRays_Entity*>(
+               &_AppCameraRays_Entity_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    54;
+
+  friend void swap(AppCameraRays_Entity& a, AppCameraRays_Entity& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppCameraRays_Entity* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppCameraRays_Entity* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppCameraRays_Entity* New() const final {
+    return new AppCameraRays_Entity();
+  }
+
+  AppCameraRays_Entity* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppCameraRays_Entity>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppCameraRays_Entity& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppCameraRays_Entity& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppCameraRays_Entity* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppCameraRays.Entity";
+  }
+  protected:
+  explicit AppCameraRays_Entity(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 6,
+    kPositionFieldNumber = 3,
+    kRotationFieldNumber = 4,
+    kSizeFieldNumber = 5,
+    kEntityIdFieldNumber = 1,
+    kTypeFieldNumber = 2,
+  };
+  // optional string name = 6;
+  bool has_name() const;
+  private:
+  bool _internal_has_name() const;
+  public:
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // required .rustplus.Vector3 position = 3;
+  bool has_position() const;
+  private:
+  bool _internal_has_position() const;
+  public:
+  void clear_position();
+  const ::rustplus::Vector3& position() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector3* release_position();
+  ::rustplus::Vector3* mutable_position();
+  void set_allocated_position(::rustplus::Vector3* position);
+  private:
+  const ::rustplus::Vector3& _internal_position() const;
+  ::rustplus::Vector3* _internal_mutable_position();
+  public:
+  void unsafe_arena_set_allocated_position(
+      ::rustplus::Vector3* position);
+  ::rustplus::Vector3* unsafe_arena_release_position();
+
+  // required .rustplus.Vector3 rotation = 4;
+  bool has_rotation() const;
+  private:
+  bool _internal_has_rotation() const;
+  public:
+  void clear_rotation();
+  const ::rustplus::Vector3& rotation() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector3* release_rotation();
+  ::rustplus::Vector3* mutable_rotation();
+  void set_allocated_rotation(::rustplus::Vector3* rotation);
+  private:
+  const ::rustplus::Vector3& _internal_rotation() const;
+  ::rustplus::Vector3* _internal_mutable_rotation();
+  public:
+  void unsafe_arena_set_allocated_rotation(
+      ::rustplus::Vector3* rotation);
+  ::rustplus::Vector3* unsafe_arena_release_rotation();
+
+  // required .rustplus.Vector3 size = 5;
+  bool has_size() const;
+  private:
+  bool _internal_has_size() const;
+  public:
+  void clear_size();
+  const ::rustplus::Vector3& size() const;
+  PROTOBUF_MUST_USE_RESULT ::rustplus::Vector3* release_size();
+  ::rustplus::Vector3* mutable_size();
+  void set_allocated_size(::rustplus::Vector3* size);
+  private:
+  const ::rustplus::Vector3& _internal_size() const;
+  ::rustplus::Vector3* _internal_mutable_size();
+  public:
+  void unsafe_arena_set_allocated_size(
+      ::rustplus::Vector3* size);
+  ::rustplus::Vector3* unsafe_arena_release_size();
+
+  // required uint32 entityId = 1;
+  bool has_entityid() const;
+  private:
+  bool _internal_has_entityid() const;
+  public:
+  void clear_entityid();
+  ::PROTOBUF_NAMESPACE_ID::uint32 entityid() const;
+  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_entityid() const;
+  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // required .rustplus.AppCameraRays.EntityType type = 2;
+  bool has_type() const;
+  private:
+  bool _internal_has_type() const;
+  public:
+  void clear_type();
+  ::rustplus::AppCameraRays_EntityType type() const;
+  void set_type(::rustplus::AppCameraRays_EntityType value);
+  private:
+  ::rustplus::AppCameraRays_EntityType _internal_type() const;
+  void _internal_set_type(::rustplus::AppCameraRays_EntityType value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppCameraRays.Entity)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::rustplus::Vector3* position_;
+  ::rustplus::Vector3* rotation_;
+  ::rustplus::Vector3* size_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 entityid_;
+  int type_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppCameraRays final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rustplus.AppCameraRays) */ {
+ public:
+  inline AppCameraRays() : AppCameraRays(nullptr) {}
+  ~AppCameraRays() override;
+  explicit constexpr AppCameraRays(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppCameraRays(const AppCameraRays& from);
+  AppCameraRays(AppCameraRays&& from) noexcept
+    : AppCameraRays() {
+    *this = ::std::move(from);
+  }
+
+  inline AppCameraRays& operator=(const AppCameraRays& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppCameraRays& operator=(AppCameraRays&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const AppCameraRays& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppCameraRays* internal_default_instance() {
+    return reinterpret_cast<const AppCameraRays*>(
+               &_AppCameraRays_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    55;
+
+  friend void swap(AppCameraRays& a, AppCameraRays& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppCameraRays* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppCameraRays* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppCameraRays* New() const final {
+    return new AppCameraRays();
+  }
+
+  AppCameraRays* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppCameraRays>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const AppCameraRays& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const AppCameraRays& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to, const ::PROTOBUF_NAMESPACE_ID::Message&from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppCameraRays* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "rustplus.AppCameraRays";
+  }
+  protected:
+  explicit AppCameraRays(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef AppCameraRays_Entity Entity;
+
+  typedef AppCameraRays_EntityType EntityType;
+  static constexpr EntityType Tree =
+    AppCameraRays_EntityType_Tree;
+  static constexpr EntityType Player =
+    AppCameraRays_EntityType_Player;
+  static inline bool EntityType_IsValid(int value) {
+    return AppCameraRays_EntityType_IsValid(value);
+  }
+  static constexpr EntityType EntityType_MIN =
+    AppCameraRays_EntityType_EntityType_MIN;
+  static constexpr EntityType EntityType_MAX =
+    AppCameraRays_EntityType_EntityType_MAX;
+  static constexpr int EntityType_ARRAYSIZE =
+    AppCameraRays_EntityType_EntityType_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  EntityType_descriptor() {
+    return AppCameraRays_EntityType_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& EntityType_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, EntityType>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function EntityType_Name.");
+    return AppCameraRays_EntityType_Name(enum_t_value);
+  }
+  static inline bool EntityType_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      EntityType* value) {
+    return AppCameraRays_EntityType_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEntitiesFieldNumber = 5,
+    kRayDataFieldNumber = 3,
+    kVerticalFovFieldNumber = 1,
+    kSampleOffsetFieldNumber = 2,
+    kDistanceFieldNumber = 4,
+  };
+  // repeated .rustplus.AppCameraRays.Entity entities = 5;
+  int entities_size() const;
+  private:
+  int _internal_entities_size() const;
+  public:
+  void clear_entities();
+  ::rustplus::AppCameraRays_Entity* mutable_entities(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppCameraRays_Entity >*
+      mutable_entities();
+  private:
+  const ::rustplus::AppCameraRays_Entity& _internal_entities(int index) const;
+  ::rustplus::AppCameraRays_Entity* _internal_add_entities();
+  public:
+  const ::rustplus::AppCameraRays_Entity& entities(int index) const;
+  ::rustplus::AppCameraRays_Entity* add_entities();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppCameraRays_Entity >&
+      entities() const;
+
+  // required bytes rayData = 3;
+  bool has_raydata() const;
+  private:
+  bool _internal_has_raydata() const;
+  public:
+  void clear_raydata();
+  const std::string& raydata() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_raydata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_raydata();
+  PROTOBUF_MUST_USE_RESULT std::string* release_raydata();
+  void set_allocated_raydata(std::string* raydata);
+  private:
+  const std::string& _internal_raydata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_raydata(const std::string& value);
+  std::string* _internal_mutable_raydata();
+  public:
+
+  // required float verticalFov = 1;
+  bool has_verticalfov() const;
+  private:
+  bool _internal_has_verticalfov() const;
+  public:
+  void clear_verticalfov();
+  float verticalfov() const;
+  void set_verticalfov(float value);
+  private:
+  float _internal_verticalfov() const;
+  void _internal_set_verticalfov(float value);
+  public:
+
+  // required int32 sampleOffset = 2;
+  bool has_sampleoffset() const;
+  private:
+  bool _internal_has_sampleoffset() const;
+  public:
+  void clear_sampleoffset();
+  ::PROTOBUF_NAMESPACE_ID::int32 sampleoffset() const;
+  void set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sampleoffset() const;
+  void _internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // required float distance = 4;
+  bool has_distance() const;
+  private:
+  bool _internal_has_distance() const;
+  public:
+  void clear_distance();
+  float distance() const;
+  void set_distance(float value);
+  private:
+  float _internal_distance() const;
+  void _internal_set_distance(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:rustplus.AppCameraRays)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppCameraRays_Entity > entities_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr raydata_;
+  float verticalfov_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sampleoffset_;
+  float distance_;
+  friend struct ::TableStruct_rustplus_2eproto;
+};
 // ===================================================================
 
 
@@ -6866,137 +12214,515 @@ class AppEntityChanged final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// AppMessage
+// Vector2
 
-// optional .rustplus.AppResponse response = 1;
-inline bool AppMessage::_internal_has_response() const {
+// optional float x = 1;
+inline bool Vector2::_internal_has_x() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || response_ != nullptr);
   return value;
 }
-inline bool AppMessage::has_response() const {
-  return _internal_has_response();
+inline bool Vector2::has_x() const {
+  return _internal_has_x();
 }
-inline void AppMessage::clear_response() {
-  if (response_ != nullptr) response_->Clear();
+inline void Vector2::clear_x() {
+  x_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const ::rustplus::AppResponse& AppMessage::_internal_response() const {
-  const ::rustplus::AppResponse* p = response_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppResponse&>(
-      ::rustplus::_AppResponse_default_instance_);
+inline float Vector2::_internal_x() const {
+  return x_;
 }
-inline const ::rustplus::AppResponse& AppMessage::response() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppMessage.response)
-  return _internal_response();
+inline float Vector2::x() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector2.x)
+  return _internal_x();
 }
-inline void AppMessage::unsafe_arena_set_allocated_response(
-    ::rustplus::AppResponse* response) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response_);
-  }
-  response_ = response;
-  if (response) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppMessage.response)
-}
-inline ::rustplus::AppResponse* AppMessage::release_response() {
-  _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppResponse* temp = response_;
-  response_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::rustplus::AppResponse* AppMessage::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:rustplus.AppMessage.response)
-  _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppResponse* temp = response_;
-  response_ = nullptr;
-  return temp;
-}
-inline ::rustplus::AppResponse* AppMessage::_internal_mutable_response() {
+inline void Vector2::_internal_set_x(float value) {
   _has_bits_[0] |= 0x00000001u;
-  if (response_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppResponse>(GetArenaForAllocation());
-    response_ = p;
-  }
-  return response_;
+  x_ = value;
 }
-inline ::rustplus::AppResponse* AppMessage::mutable_response() {
-  ::rustplus::AppResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppMessage.response)
-  return _msg;
-}
-inline void AppMessage::set_allocated_response(::rustplus::AppResponse* response) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete response_;
-  }
-  if (response) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppResponse>::GetOwningArena(response);
-    if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
-    }
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppMessage.response)
+inline void Vector2::set_x(float value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector2.x)
 }
 
-// optional .rustplus.AppBroadcast broadcast = 2;
-inline bool AppMessage::_internal_has_broadcast() const {
+// optional float y = 2;
+inline bool Vector2::_internal_has_y() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || broadcast_ != nullptr);
   return value;
 }
-inline bool AppMessage::has_broadcast() const {
-  return _internal_has_broadcast();
+inline bool Vector2::has_y() const {
+  return _internal_has_y();
 }
-inline void AppMessage::clear_broadcast() {
-  if (broadcast_ != nullptr) broadcast_->Clear();
+inline void Vector2::clear_y() {
+  y_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::rustplus::AppBroadcast& AppMessage::_internal_broadcast() const {
-  const ::rustplus::AppBroadcast* p = broadcast_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppBroadcast&>(
-      ::rustplus::_AppBroadcast_default_instance_);
+inline float Vector2::_internal_y() const {
+  return y_;
 }
-inline const ::rustplus::AppBroadcast& AppMessage::broadcast() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppMessage.broadcast)
-  return _internal_broadcast();
+inline float Vector2::y() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector2.y)
+  return _internal_y();
 }
-inline void AppMessage::unsafe_arena_set_allocated_broadcast(
-    ::rustplus::AppBroadcast* broadcast) {
+inline void Vector2::_internal_set_y(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  y_ = value;
+}
+inline void Vector2::set_y(float value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector2.y)
+}
+
+// -------------------------------------------------------------------
+
+// Vector3
+
+// optional float x = 1;
+inline bool Vector3::_internal_has_x() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Vector3::has_x() const {
+  return _internal_has_x();
+}
+inline void Vector3::clear_x() {
+  x_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline float Vector3::_internal_x() const {
+  return x_;
+}
+inline float Vector3::x() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector3.x)
+  return _internal_x();
+}
+inline void Vector3::_internal_set_x(float value) {
+  _has_bits_[0] |= 0x00000001u;
+  x_ = value;
+}
+inline void Vector3::set_x(float value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector3.x)
+}
+
+// optional float y = 2;
+inline bool Vector3::_internal_has_y() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Vector3::has_y() const {
+  return _internal_has_y();
+}
+inline void Vector3::clear_y() {
+  y_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float Vector3::_internal_y() const {
+  return y_;
+}
+inline float Vector3::y() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector3.y)
+  return _internal_y();
+}
+inline void Vector3::_internal_set_y(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  y_ = value;
+}
+inline void Vector3::set_y(float value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector3.y)
+}
+
+// optional float z = 3;
+inline bool Vector3::_internal_has_z() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Vector3::has_z() const {
+  return _internal_has_z();
+}
+inline void Vector3::clear_z() {
+  z_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline float Vector3::_internal_z() const {
+  return z_;
+}
+inline float Vector3::z() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector3.z)
+  return _internal_z();
+}
+inline void Vector3::_internal_set_z(float value) {
+  _has_bits_[0] |= 0x00000004u;
+  z_ = value;
+}
+inline void Vector3::set_z(float value) {
+  _internal_set_z(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector3.z)
+}
+
+// -------------------------------------------------------------------
+
+// Vector4
+
+// optional float x = 1;
+inline bool Vector4::_internal_has_x() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Vector4::has_x() const {
+  return _internal_has_x();
+}
+inline void Vector4::clear_x() {
+  x_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline float Vector4::_internal_x() const {
+  return x_;
+}
+inline float Vector4::x() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector4.x)
+  return _internal_x();
+}
+inline void Vector4::_internal_set_x(float value) {
+  _has_bits_[0] |= 0x00000001u;
+  x_ = value;
+}
+inline void Vector4::set_x(float value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector4.x)
+}
+
+// optional float y = 2;
+inline bool Vector4::_internal_has_y() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Vector4::has_y() const {
+  return _internal_has_y();
+}
+inline void Vector4::clear_y() {
+  y_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float Vector4::_internal_y() const {
+  return y_;
+}
+inline float Vector4::y() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector4.y)
+  return _internal_y();
+}
+inline void Vector4::_internal_set_y(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  y_ = value;
+}
+inline void Vector4::set_y(float value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector4.y)
+}
+
+// optional float z = 3;
+inline bool Vector4::_internal_has_z() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Vector4::has_z() const {
+  return _internal_has_z();
+}
+inline void Vector4::clear_z() {
+  z_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline float Vector4::_internal_z() const {
+  return z_;
+}
+inline float Vector4::z() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector4.z)
+  return _internal_z();
+}
+inline void Vector4::_internal_set_z(float value) {
+  _has_bits_[0] |= 0x00000004u;
+  z_ = value;
+}
+inline void Vector4::set_z(float value) {
+  _internal_set_z(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector4.z)
+}
+
+// optional float w = 4;
+inline bool Vector4::_internal_has_w() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Vector4::has_w() const {
+  return _internal_has_w();
+}
+inline void Vector4::clear_w() {
+  w_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline float Vector4::_internal_w() const {
+  return w_;
+}
+inline float Vector4::w() const {
+  // @@protoc_insertion_point(field_get:rustplus.Vector4.w)
+  return _internal_w();
+}
+inline void Vector4::_internal_set_w(float value) {
+  _has_bits_[0] |= 0x00000008u;
+  w_ = value;
+}
+inline void Vector4::set_w(float value) {
+  _internal_set_w(value);
+  // @@protoc_insertion_point(field_set:rustplus.Vector4.w)
+}
+
+// -------------------------------------------------------------------
+
+// Half3
+
+// optional float x = 1;
+inline bool Half3::_internal_has_x() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Half3::has_x() const {
+  return _internal_has_x();
+}
+inline void Half3::clear_x() {
+  x_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline float Half3::_internal_x() const {
+  return x_;
+}
+inline float Half3::x() const {
+  // @@protoc_insertion_point(field_get:rustplus.Half3.x)
+  return _internal_x();
+}
+inline void Half3::_internal_set_x(float value) {
+  _has_bits_[0] |= 0x00000001u;
+  x_ = value;
+}
+inline void Half3::set_x(float value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:rustplus.Half3.x)
+}
+
+// optional float y = 2;
+inline bool Half3::_internal_has_y() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Half3::has_y() const {
+  return _internal_has_y();
+}
+inline void Half3::clear_y() {
+  y_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float Half3::_internal_y() const {
+  return y_;
+}
+inline float Half3::y() const {
+  // @@protoc_insertion_point(field_get:rustplus.Half3.y)
+  return _internal_y();
+}
+inline void Half3::_internal_set_y(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  y_ = value;
+}
+inline void Half3::set_y(float value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:rustplus.Half3.y)
+}
+
+// optional float z = 3;
+inline bool Half3::_internal_has_z() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Half3::has_z() const {
+  return _internal_has_z();
+}
+inline void Half3::clear_z() {
+  z_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline float Half3::_internal_z() const {
+  return z_;
+}
+inline float Half3::z() const {
+  // @@protoc_insertion_point(field_get:rustplus.Half3.z)
+  return _internal_z();
+}
+inline void Half3::_internal_set_z(float value) {
+  _has_bits_[0] |= 0x00000004u;
+  z_ = value;
+}
+inline void Half3::set_z(float value) {
+  _internal_set_z(value);
+  // @@protoc_insertion_point(field_set:rustplus.Half3.z)
+}
+
+// -------------------------------------------------------------------
+
+// Color
+
+// optional float r = 1;
+inline bool Color::_internal_has_r() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Color::has_r() const {
+  return _internal_has_r();
+}
+inline void Color::clear_r() {
+  r_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline float Color::_internal_r() const {
+  return r_;
+}
+inline float Color::r() const {
+  // @@protoc_insertion_point(field_get:rustplus.Color.r)
+  return _internal_r();
+}
+inline void Color::_internal_set_r(float value) {
+  _has_bits_[0] |= 0x00000001u;
+  r_ = value;
+}
+inline void Color::set_r(float value) {
+  _internal_set_r(value);
+  // @@protoc_insertion_point(field_set:rustplus.Color.r)
+}
+
+// optional float g = 2;
+inline bool Color::_internal_has_g() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Color::has_g() const {
+  return _internal_has_g();
+}
+inline void Color::clear_g() {
+  g_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float Color::_internal_g() const {
+  return g_;
+}
+inline float Color::g() const {
+  // @@protoc_insertion_point(field_get:rustplus.Color.g)
+  return _internal_g();
+}
+inline void Color::_internal_set_g(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  g_ = value;
+}
+inline void Color::set_g(float value) {
+  _internal_set_g(value);
+  // @@protoc_insertion_point(field_set:rustplus.Color.g)
+}
+
+// optional float b = 3;
+inline bool Color::_internal_has_b() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Color::has_b() const {
+  return _internal_has_b();
+}
+inline void Color::clear_b() {
+  b_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline float Color::_internal_b() const {
+  return b_;
+}
+inline float Color::b() const {
+  // @@protoc_insertion_point(field_get:rustplus.Color.b)
+  return _internal_b();
+}
+inline void Color::_internal_set_b(float value) {
+  _has_bits_[0] |= 0x00000004u;
+  b_ = value;
+}
+inline void Color::set_b(float value) {
+  _internal_set_b(value);
+  // @@protoc_insertion_point(field_set:rustplus.Color.b)
+}
+
+// optional float a = 4;
+inline bool Color::_internal_has_a() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Color::has_a() const {
+  return _internal_has_a();
+}
+inline void Color::clear_a() {
+  a_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline float Color::_internal_a() const {
+  return a_;
+}
+inline float Color::a() const {
+  // @@protoc_insertion_point(field_get:rustplus.Color.a)
+  return _internal_a();
+}
+inline void Color::_internal_set_a(float value) {
+  _has_bits_[0] |= 0x00000008u;
+  a_ = value;
+}
+inline void Color::set_a(float value) {
+  _internal_set_a(value);
+  // @@protoc_insertion_point(field_set:rustplus.Color.a)
+}
+
+// -------------------------------------------------------------------
+
+// Ray
+
+// optional .rustplus.Vector3 origin = 1;
+inline bool Ray::_internal_has_origin() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || origin_ != nullptr);
+  return value;
+}
+inline bool Ray::has_origin() const {
+  return _internal_has_origin();
+}
+inline void Ray::clear_origin() {
+  if (origin_ != nullptr) origin_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::Vector3& Ray::_internal_origin() const {
+  const ::rustplus::Vector3* p = origin_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector3&>(
+      ::rustplus::_Vector3_default_instance_);
+}
+inline const ::rustplus::Vector3& Ray::origin() const {
+  // @@protoc_insertion_point(field_get:rustplus.Ray.origin)
+  return _internal_origin();
+}
+inline void Ray::unsafe_arena_set_allocated_origin(
+    ::rustplus::Vector3* origin) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(broadcast_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(origin_);
   }
-  broadcast_ = broadcast;
-  if (broadcast) {
-    _has_bits_[0] |= 0x00000002u;
+  origin_ = origin;
+  if (origin) {
+    _has_bits_[0] |= 0x00000001u;
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    _has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppMessage.broadcast)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.Ray.origin)
 }
-inline ::rustplus::AppBroadcast* AppMessage::release_broadcast() {
-  _has_bits_[0] &= ~0x00000002u;
-  ::rustplus::AppBroadcast* temp = broadcast_;
-  broadcast_ = nullptr;
+inline ::rustplus::Vector3* Ray::release_origin() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::Vector3* temp = origin_;
+  origin_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7008,44 +12734,1964 @@ inline ::rustplus::AppBroadcast* AppMessage::release_broadcast() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rustplus::AppBroadcast* AppMessage::unsafe_arena_release_broadcast() {
-  // @@protoc_insertion_point(field_release:rustplus.AppMessage.broadcast)
-  _has_bits_[0] &= ~0x00000002u;
-  ::rustplus::AppBroadcast* temp = broadcast_;
-  broadcast_ = nullptr;
+inline ::rustplus::Vector3* Ray::unsafe_arena_release_origin() {
+  // @@protoc_insertion_point(field_release:rustplus.Ray.origin)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::Vector3* temp = origin_;
+  origin_ = nullptr;
   return temp;
 }
-inline ::rustplus::AppBroadcast* AppMessage::_internal_mutable_broadcast() {
-  _has_bits_[0] |= 0x00000002u;
-  if (broadcast_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppBroadcast>(GetArenaForAllocation());
-    broadcast_ = p;
+inline ::rustplus::Vector3* Ray::_internal_mutable_origin() {
+  _has_bits_[0] |= 0x00000001u;
+  if (origin_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector3>(GetArenaForAllocation());
+    origin_ = p;
   }
-  return broadcast_;
+  return origin_;
 }
-inline ::rustplus::AppBroadcast* AppMessage::mutable_broadcast() {
-  ::rustplus::AppBroadcast* _msg = _internal_mutable_broadcast();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppMessage.broadcast)
+inline ::rustplus::Vector3* Ray::mutable_origin() {
+  ::rustplus::Vector3* _msg = _internal_mutable_origin();
+  // @@protoc_insertion_point(field_mutable:rustplus.Ray.origin)
   return _msg;
 }
-inline void AppMessage::set_allocated_broadcast(::rustplus::AppBroadcast* broadcast) {
+inline void Ray::set_allocated_origin(::rustplus::Vector3* origin) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete broadcast_;
+    delete origin_;
   }
-  if (broadcast) {
+  if (origin) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppBroadcast>::GetOwningArena(broadcast);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector3>::GetOwningArena(origin);
     if (message_arena != submessage_arena) {
-      broadcast = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, broadcast, submessage_arena);
+      origin = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, origin, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  origin_ = origin;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.Ray.origin)
+}
+
+// optional .rustplus.Vector3 direction = 2;
+inline bool Ray::_internal_has_direction() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || direction_ != nullptr);
+  return value;
+}
+inline bool Ray::has_direction() const {
+  return _internal_has_direction();
+}
+inline void Ray::clear_direction() {
+  if (direction_ != nullptr) direction_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::rustplus::Vector3& Ray::_internal_direction() const {
+  const ::rustplus::Vector3* p = direction_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector3&>(
+      ::rustplus::_Vector3_default_instance_);
+}
+inline const ::rustplus::Vector3& Ray::direction() const {
+  // @@protoc_insertion_point(field_get:rustplus.Ray.direction)
+  return _internal_direction();
+}
+inline void Ray::unsafe_arena_set_allocated_direction(
+    ::rustplus::Vector3* direction) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(direction_);
+  }
+  direction_ = direction;
+  if (direction) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.Ray.direction)
+}
+inline ::rustplus::Vector3* Ray::release_direction() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::Vector3* temp = direction_;
+  direction_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::Vector3* Ray::unsafe_arena_release_direction() {
+  // @@protoc_insertion_point(field_release:rustplus.Ray.direction)
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::Vector3* temp = direction_;
+  direction_ = nullptr;
+  return temp;
+}
+inline ::rustplus::Vector3* Ray::_internal_mutable_direction() {
+  _has_bits_[0] |= 0x00000002u;
+  if (direction_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector3>(GetArenaForAllocation());
+    direction_ = p;
+  }
+  return direction_;
+}
+inline ::rustplus::Vector3* Ray::mutable_direction() {
+  ::rustplus::Vector3* _msg = _internal_mutable_direction();
+  // @@protoc_insertion_point(field_mutable:rustplus.Ray.direction)
+  return _msg;
+}
+inline void Ray::set_allocated_direction(::rustplus::Vector3* direction) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete direction_;
+  }
+  if (direction) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector3>::GetOwningArena(direction);
+    if (message_arena != submessage_arena) {
+      direction = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, direction, submessage_arena);
     }
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  broadcast_ = broadcast;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppMessage.broadcast)
+  direction_ = direction;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.Ray.direction)
+}
+
+// -------------------------------------------------------------------
+
+// ClanActionResult
+
+// required int32 requestId = 1;
+inline bool ClanActionResult::_internal_has_requestid() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanActionResult::has_requestid() const {
+  return _internal_has_requestid();
+}
+inline void ClanActionResult::clear_requestid() {
+  requestid_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::_internal_requestid() const {
+  return requestid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::requestid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.requestId)
+  return _internal_requestid();
+}
+inline void ClanActionResult::_internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  requestid_ = value;
+}
+inline void ClanActionResult::set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_requestid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.requestId)
+}
+
+// required int32 result = 2;
+inline bool ClanActionResult::_internal_has_result() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanActionResult::has_result() const {
+  return _internal_has_result();
+}
+inline void ClanActionResult::clear_result() {
+  result_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::_internal_result() const {
+  return result_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::result() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.result)
+  return _internal_result();
+}
+inline void ClanActionResult::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  result_ = value;
+}
+inline void ClanActionResult::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.result)
+}
+
+// required bool hasClanInfo = 3;
+inline bool ClanActionResult::_internal_has_hasclaninfo() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ClanActionResult::has_hasclaninfo() const {
+  return _internal_has_hasclaninfo();
+}
+inline void ClanActionResult::clear_hasclaninfo() {
+  hasclaninfo_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool ClanActionResult::_internal_hasclaninfo() const {
+  return hasclaninfo_;
+}
+inline bool ClanActionResult::hasclaninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.hasClanInfo)
+  return _internal_hasclaninfo();
+}
+inline void ClanActionResult::_internal_set_hasclaninfo(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  hasclaninfo_ = value;
+}
+inline void ClanActionResult::set_hasclaninfo(bool value) {
+  _internal_set_hasclaninfo(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.hasClanInfo)
+}
+
+// optional .rustplus.ClanInfo clanInfo = 4;
+inline bool ClanActionResult::_internal_has_claninfo() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
+  return value;
+}
+inline bool ClanActionResult::has_claninfo() const {
+  return _internal_has_claninfo();
+}
+inline void ClanActionResult::clear_claninfo() {
+  if (claninfo_ != nullptr) claninfo_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::ClanInfo& ClanActionResult::_internal_claninfo() const {
+  const ::rustplus::ClanInfo* p = claninfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::ClanInfo&>(
+      ::rustplus::_ClanInfo_default_instance_);
+}
+inline const ::rustplus::ClanInfo& ClanActionResult::claninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.clanInfo)
+  return _internal_claninfo();
+}
+inline void ClanActionResult::unsafe_arena_set_allocated_claninfo(
+    ::rustplus::ClanInfo* claninfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(claninfo_);
+  }
+  claninfo_ = claninfo;
+  if (claninfo) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.ClanActionResult.clanInfo)
+}
+inline ::rustplus::ClanInfo* ClanActionResult::release_claninfo() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::ClanInfo* ClanActionResult::unsafe_arena_release_claninfo() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanActionResult.clanInfo)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+  return temp;
+}
+inline ::rustplus::ClanInfo* ClanActionResult::_internal_mutable_claninfo() {
+  _has_bits_[0] |= 0x00000001u;
+  if (claninfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::ClanInfo>(GetArenaForAllocation());
+    claninfo_ = p;
+  }
+  return claninfo_;
+}
+inline ::rustplus::ClanInfo* ClanActionResult::mutable_claninfo() {
+  ::rustplus::ClanInfo* _msg = _internal_mutable_claninfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanActionResult.clanInfo)
+  return _msg;
+}
+inline void ClanActionResult::set_allocated_claninfo(::rustplus::ClanInfo* claninfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete claninfo_;
+  }
+  if (claninfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::ClanInfo>::GetOwningArena(claninfo);
+    if (message_arena != submessage_arena) {
+      claninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, claninfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  claninfo_ = claninfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanActionResult.clanInfo)
+}
+
+// -------------------------------------------------------------------
+
+// ClanInfo_Role
+
+// required int32 roleId = 1;
+inline bool ClanInfo_Role::_internal_has_roleid() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void ClanInfo_Role::clear_roleid() {
+  roleid_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::_internal_roleid() const {
+  return roleid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::roleid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.roleId)
+  return _internal_roleid();
+}
+inline void ClanInfo_Role::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  roleid_ = value;
+}
+inline void ClanInfo_Role::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.roleId)
+}
+
+// required int32 rank = 2;
+inline bool ClanInfo_Role::_internal_has_rank() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_rank() const {
+  return _internal_has_rank();
+}
+inline void ClanInfo_Role::clear_rank() {
+  rank_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::_internal_rank() const {
+  return rank_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::rank() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.rank)
+  return _internal_rank();
+}
+inline void ClanInfo_Role::_internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  rank_ = value;
+}
+inline void ClanInfo_Role::set_rank(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_rank(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.rank)
+}
+
+// required string name = 3;
+inline bool ClanInfo_Role::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_name() const {
+  return _internal_has_name();
+}
+inline void ClanInfo_Role::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ClanInfo_Role::name() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanInfo_Role::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.name)
+}
+inline std::string* ClanInfo_Role::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.Role.name)
+  return _s;
+}
+inline const std::string& ClanInfo_Role::_internal_name() const {
+  return name_.Get();
+}
+inline void ClanInfo_Role::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanInfo_Role::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanInfo_Role::release_name() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanInfo.Role.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanInfo_Role::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanInfo.Role.name)
+}
+
+// required bool canSetMotd = 4;
+inline bool ClanInfo_Role::_internal_has_cansetmotd() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_cansetmotd() const {
+  return _internal_has_cansetmotd();
+}
+inline void ClanInfo_Role::clear_cansetmotd() {
+  cansetmotd_ = false;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline bool ClanInfo_Role::_internal_cansetmotd() const {
+  return cansetmotd_;
+}
+inline bool ClanInfo_Role::cansetmotd() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetMotd)
+  return _internal_cansetmotd();
+}
+inline void ClanInfo_Role::_internal_set_cansetmotd(bool value) {
+  _has_bits_[0] |= 0x00000008u;
+  cansetmotd_ = value;
+}
+inline void ClanInfo_Role::set_cansetmotd(bool value) {
+  _internal_set_cansetmotd(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetMotd)
+}
+
+// required bool canSetLogo = 5;
+inline bool ClanInfo_Role::_internal_has_cansetlogo() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_cansetlogo() const {
+  return _internal_has_cansetlogo();
+}
+inline void ClanInfo_Role::clear_cansetlogo() {
+  cansetlogo_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool ClanInfo_Role::_internal_cansetlogo() const {
+  return cansetlogo_;
+}
+inline bool ClanInfo_Role::cansetlogo() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetLogo)
+  return _internal_cansetlogo();
+}
+inline void ClanInfo_Role::_internal_set_cansetlogo(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  cansetlogo_ = value;
+}
+inline void ClanInfo_Role::set_cansetlogo(bool value) {
+  _internal_set_cansetlogo(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetLogo)
+}
+
+// required bool canInvite = 6;
+inline bool ClanInfo_Role::_internal_has_caninvite() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_caninvite() const {
+  return _internal_has_caninvite();
+}
+inline void ClanInfo_Role::clear_caninvite() {
+  caninvite_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool ClanInfo_Role::_internal_caninvite() const {
+  return caninvite_;
+}
+inline bool ClanInfo_Role::caninvite() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canInvite)
+  return _internal_caninvite();
+}
+inline void ClanInfo_Role::_internal_set_caninvite(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  caninvite_ = value;
+}
+inline void ClanInfo_Role::set_caninvite(bool value) {
+  _internal_set_caninvite(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canInvite)
+}
+
+// required bool canKick = 7;
+inline bool ClanInfo_Role::_internal_has_cankick() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_cankick() const {
+  return _internal_has_cankick();
+}
+inline void ClanInfo_Role::clear_cankick() {
+  cankick_ = false;
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline bool ClanInfo_Role::_internal_cankick() const {
+  return cankick_;
+}
+inline bool ClanInfo_Role::cankick() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canKick)
+  return _internal_cankick();
+}
+inline void ClanInfo_Role::_internal_set_cankick(bool value) {
+  _has_bits_[0] |= 0x00000040u;
+  cankick_ = value;
+}
+inline void ClanInfo_Role::set_cankick(bool value) {
+  _internal_set_cankick(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canKick)
+}
+
+// required bool canPromote = 8;
+inline bool ClanInfo_Role::_internal_has_canpromote() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_canpromote() const {
+  return _internal_has_canpromote();
+}
+inline void ClanInfo_Role::clear_canpromote() {
+  canpromote_ = false;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline bool ClanInfo_Role::_internal_canpromote() const {
+  return canpromote_;
+}
+inline bool ClanInfo_Role::canpromote() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canPromote)
+  return _internal_canpromote();
+}
+inline void ClanInfo_Role::_internal_set_canpromote(bool value) {
+  _has_bits_[0] |= 0x00000080u;
+  canpromote_ = value;
+}
+inline void ClanInfo_Role::set_canpromote(bool value) {
+  _internal_set_canpromote(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canPromote)
+}
+
+// required bool canDemote = 9;
+inline bool ClanInfo_Role::_internal_has_candemote() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_candemote() const {
+  return _internal_has_candemote();
+}
+inline void ClanInfo_Role::clear_candemote() {
+  candemote_ = false;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline bool ClanInfo_Role::_internal_candemote() const {
+  return candemote_;
+}
+inline bool ClanInfo_Role::candemote() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canDemote)
+  return _internal_candemote();
+}
+inline void ClanInfo_Role::_internal_set_candemote(bool value) {
+  _has_bits_[0] |= 0x00000100u;
+  candemote_ = value;
+}
+inline void ClanInfo_Role::set_candemote(bool value) {
+  _internal_set_candemote(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canDemote)
+}
+
+// required bool canSetPlayerNotes = 10;
+inline bool ClanInfo_Role::_internal_has_cansetplayernotes() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_cansetplayernotes() const {
+  return _internal_has_cansetplayernotes();
+}
+inline void ClanInfo_Role::clear_cansetplayernotes() {
+  cansetplayernotes_ = false;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline bool ClanInfo_Role::_internal_cansetplayernotes() const {
+  return cansetplayernotes_;
+}
+inline bool ClanInfo_Role::cansetplayernotes() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetPlayerNotes)
+  return _internal_cansetplayernotes();
+}
+inline void ClanInfo_Role::_internal_set_cansetplayernotes(bool value) {
+  _has_bits_[0] |= 0x00000200u;
+  cansetplayernotes_ = value;
+}
+inline void ClanInfo_Role::set_cansetplayernotes(bool value) {
+  _internal_set_cansetplayernotes(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetPlayerNotes)
+}
+
+// required bool canAccessLogs = 11;
+inline bool ClanInfo_Role::_internal_has_canaccesslogs() const {
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool ClanInfo_Role::has_canaccesslogs() const {
+  return _internal_has_canaccesslogs();
+}
+inline void ClanInfo_Role::clear_canaccesslogs() {
+  canaccesslogs_ = false;
+  _has_bits_[0] &= ~0x00000400u;
+}
+inline bool ClanInfo_Role::_internal_canaccesslogs() const {
+  return canaccesslogs_;
+}
+inline bool ClanInfo_Role::canaccesslogs() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canAccessLogs)
+  return _internal_canaccesslogs();
+}
+inline void ClanInfo_Role::_internal_set_canaccesslogs(bool value) {
+  _has_bits_[0] |= 0x00000400u;
+  canaccesslogs_ = value;
+}
+inline void ClanInfo_Role::set_canaccesslogs(bool value) {
+  _internal_set_canaccesslogs(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canAccessLogs)
+}
+
+// -------------------------------------------------------------------
+
+// ClanInfo_Member
+
+// required int64 steamId = 1;
+inline bool ClanInfo_Member::_internal_has_steamid() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_steamid() const {
+  return _internal_has_steamid();
+}
+inline void ClanInfo_Member::clear_steamid() {
+  steamid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::_internal_steamid() const {
+  return steamid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::steamid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.steamId)
+  return _internal_steamid();
+}
+inline void ClanInfo_Member::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  steamid_ = value;
+}
+inline void ClanInfo_Member::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_steamid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.steamId)
+}
+
+// required int32 roleId = 2;
+inline bool ClanInfo_Member::_internal_has_roleid() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void ClanInfo_Member::clear_roleid() {
+  roleid_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Member::_internal_roleid() const {
+  return roleid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Member::roleid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.roleId)
+  return _internal_roleid();
+}
+inline void ClanInfo_Member::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000010u;
+  roleid_ = value;
+}
+inline void ClanInfo_Member::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.roleId)
+}
+
+// required int64 joined = 3;
+inline bool ClanInfo_Member::_internal_has_joined() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_joined() const {
+  return _internal_has_joined();
+}
+inline void ClanInfo_Member::clear_joined() {
+  joined_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::_internal_joined() const {
+  return joined_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::joined() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.joined)
+  return _internal_joined();
+}
+inline void ClanInfo_Member::_internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  joined_ = value;
+}
+inline void ClanInfo_Member::set_joined(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_joined(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.joined)
+}
+
+// required int64 lastSeen = 4;
+inline bool ClanInfo_Member::_internal_has_lastseen() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_lastseen() const {
+  return _internal_has_lastseen();
+}
+inline void ClanInfo_Member::clear_lastseen() {
+  lastseen_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::_internal_lastseen() const {
+  return lastseen_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::lastseen() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.lastSeen)
+  return _internal_lastseen();
+}
+inline void ClanInfo_Member::_internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  lastseen_ = value;
+}
+inline void ClanInfo_Member::set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_lastseen(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.lastSeen)
+}
+
+// optional string notes = 5;
+inline bool ClanInfo_Member::_internal_has_notes() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_notes() const {
+  return _internal_has_notes();
+}
+inline void ClanInfo_Member::clear_notes() {
+  notes_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ClanInfo_Member::notes() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.notes)
+  return _internal_notes();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanInfo_Member::set_notes(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ notes_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.notes)
+}
+inline std::string* ClanInfo_Member::mutable_notes() {
+  std::string* _s = _internal_mutable_notes();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.Member.notes)
+  return _s;
+}
+inline const std::string& ClanInfo_Member::_internal_notes() const {
+  return notes_.Get();
+}
+inline void ClanInfo_Member::_internal_set_notes(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  notes_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanInfo_Member::_internal_mutable_notes() {
+  _has_bits_[0] |= 0x00000001u;
+  return notes_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanInfo_Member::release_notes() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanInfo.Member.notes)
+  if (!_internal_has_notes()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return notes_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanInfo_Member::set_allocated_notes(std::string* notes) {
+  if (notes != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  notes_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), notes,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanInfo.Member.notes)
+}
+
+// optional bool online = 6;
+inline bool ClanInfo_Member::_internal_has_online() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ClanInfo_Member::has_online() const {
+  return _internal_has_online();
+}
+inline void ClanInfo_Member::clear_online() {
+  online_ = false;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline bool ClanInfo_Member::_internal_online() const {
+  return online_;
+}
+inline bool ClanInfo_Member::online() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.online)
+  return _internal_online();
+}
+inline void ClanInfo_Member::_internal_set_online(bool value) {
+  _has_bits_[0] |= 0x00000020u;
+  online_ = value;
+}
+inline void ClanInfo_Member::set_online(bool value) {
+  _internal_set_online(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.online)
+}
+
+// -------------------------------------------------------------------
+
+// ClanInfo_Invite
+
+// required int64 steamId = 1;
+inline bool ClanInfo_Invite::_internal_has_steamid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanInfo_Invite::has_steamid() const {
+  return _internal_has_steamid();
+}
+inline void ClanInfo_Invite::clear_steamid() {
+  steamid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::_internal_steamid() const {
+  return steamid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::steamid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.steamId)
+  return _internal_steamid();
+}
+inline void ClanInfo_Invite::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  steamid_ = value;
+}
+inline void ClanInfo_Invite::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_steamid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.steamId)
+}
+
+// required int64 recruiter = 2;
+inline bool ClanInfo_Invite::_internal_has_recruiter() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanInfo_Invite::has_recruiter() const {
+  return _internal_has_recruiter();
+}
+inline void ClanInfo_Invite::clear_recruiter() {
+  recruiter_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::_internal_recruiter() const {
+  return recruiter_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::recruiter() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.recruiter)
+  return _internal_recruiter();
+}
+inline void ClanInfo_Invite::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  recruiter_ = value;
+}
+inline void ClanInfo_Invite::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_recruiter(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.recruiter)
+}
+
+// required int64 timestamp = 3;
+inline bool ClanInfo_Invite::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanInfo_Invite::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void ClanInfo_Invite::clear_timestamp() {
+  timestamp_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::_internal_timestamp() const {
+  return timestamp_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::timestamp() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.timestamp)
+  return _internal_timestamp();
+}
+inline void ClanInfo_Invite::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  timestamp_ = value;
+}
+inline void ClanInfo_Invite::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.timestamp)
+}
+
+// -------------------------------------------------------------------
+
+// ClanInfo
+
+// required int64 clanId = 1;
+inline bool ClanInfo::_internal_has_clanid() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_clanid() const {
+  return _internal_has_clanid();
+}
+inline void ClanInfo::clear_clanid() {
+  clanid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::_internal_clanid() const {
+  return clanid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::clanid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.clanId)
+  return _internal_clanid();
+}
+inline void ClanInfo::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  clanid_ = value;
+}
+inline void ClanInfo::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_clanid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.clanId)
+}
+
+// required string name = 2;
+inline bool ClanInfo::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_name() const {
+  return _internal_has_name();
+}
+inline void ClanInfo::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ClanInfo::name() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanInfo::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.name)
+}
+inline std::string* ClanInfo::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.name)
+  return _s;
+}
+inline const std::string& ClanInfo::_internal_name() const {
+  return name_.Get();
+}
+inline void ClanInfo::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::release_name() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanInfo.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanInfo::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanInfo.name)
+}
+
+// required int64 created = 3;
+inline bool ClanInfo::_internal_has_created() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_created() const {
+  return _internal_has_created();
+}
+inline void ClanInfo::clear_created() {
+  created_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::_internal_created() const {
+  return created_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::created() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.created)
+  return _internal_created();
+}
+inline void ClanInfo::_internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  created_ = value;
+}
+inline void ClanInfo::set_created(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_created(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.created)
+}
+
+// required int64 creator = 4;
+inline bool ClanInfo::_internal_has_creator() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_creator() const {
+  return _internal_has_creator();
+}
+inline void ClanInfo::clear_creator() {
+  creator_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::_internal_creator() const {
+  return creator_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::creator() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.creator)
+  return _internal_creator();
+}
+inline void ClanInfo::_internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  creator_ = value;
+}
+inline void ClanInfo::set_creator(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_creator(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.creator)
+}
+
+// optional string motd = 5;
+inline bool ClanInfo::_internal_has_motd() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_motd() const {
+  return _internal_has_motd();
+}
+inline void ClanInfo::clear_motd() {
+  motd_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ClanInfo::motd() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.motd)
+  return _internal_motd();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanInfo::set_motd(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ motd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.motd)
+}
+inline std::string* ClanInfo::mutable_motd() {
+  std::string* _s = _internal_mutable_motd();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.motd)
+  return _s;
+}
+inline const std::string& ClanInfo::_internal_motd() const {
+  return motd_.Get();
+}
+inline void ClanInfo::_internal_set_motd(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  motd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::_internal_mutable_motd() {
+  _has_bits_[0] |= 0x00000002u;
+  return motd_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::release_motd() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanInfo.motd)
+  if (!_internal_has_motd()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return motd_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanInfo::set_allocated_motd(std::string* motd) {
+  if (motd != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  motd_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), motd,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanInfo.motd)
+}
+
+// optional int64 motdTimestamp = 6;
+inline bool ClanInfo::_internal_has_motdtimestamp() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_motdtimestamp() const {
+  return _internal_has_motdtimestamp();
+}
+inline void ClanInfo::clear_motdtimestamp() {
+  motdtimestamp_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::_internal_motdtimestamp() const {
+  return motdtimestamp_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::motdtimestamp() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.motdTimestamp)
+  return _internal_motdtimestamp();
+}
+inline void ClanInfo::_internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000040u;
+  motdtimestamp_ = value;
+}
+inline void ClanInfo::set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_motdtimestamp(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.motdTimestamp)
+}
+
+// optional int64 motdAuthor = 7;
+inline bool ClanInfo::_internal_has_motdauthor() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_motdauthor() const {
+  return _internal_has_motdauthor();
+}
+inline void ClanInfo::clear_motdauthor() {
+  motdauthor_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::_internal_motdauthor() const {
+  return motdauthor_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::motdauthor() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.motdAuthor)
+  return _internal_motdauthor();
+}
+inline void ClanInfo::_internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000080u;
+  motdauthor_ = value;
+}
+inline void ClanInfo::set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_motdauthor(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.motdAuthor)
+}
+
+// optional bytes logo = 8;
+inline bool ClanInfo::_internal_has_logo() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_logo() const {
+  return _internal_has_logo();
+}
+inline void ClanInfo::clear_logo() {
+  logo_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ClanInfo::logo() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.logo)
+  return _internal_logo();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanInfo::set_logo(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ logo_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.logo)
+}
+inline std::string* ClanInfo::mutable_logo() {
+  std::string* _s = _internal_mutable_logo();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.logo)
+  return _s;
+}
+inline const std::string& ClanInfo::_internal_logo() const {
+  return logo_.Get();
+}
+inline void ClanInfo::_internal_set_logo(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  logo_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::_internal_mutable_logo() {
+  _has_bits_[0] |= 0x00000004u;
+  return logo_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanInfo::release_logo() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanInfo.logo)
+  if (!_internal_has_logo()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return logo_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanInfo::set_allocated_logo(std::string* logo) {
+  if (logo != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  logo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), logo,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanInfo.logo)
+}
+
+// optional sint32 color = 9;
+inline bool ClanInfo::_internal_has_color() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_color() const {
+  return _internal_has_color();
+}
+inline void ClanInfo::clear_color() {
+  color_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::_internal_color() const {
+  return color_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::color() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.color)
+  return _internal_color();
+}
+inline void ClanInfo::_internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000100u;
+  color_ = value;
+}
+inline void ClanInfo::set_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_color(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.color)
+}
+
+// repeated .rustplus.ClanInfo.Role roles = 10;
+inline int ClanInfo::_internal_roles_size() const {
+  return roles_.size();
+}
+inline int ClanInfo::roles_size() const {
+  return _internal_roles_size();
+}
+inline void ClanInfo::clear_roles() {
+  roles_.Clear();
+}
+inline ::rustplus::ClanInfo_Role* ClanInfo::mutable_roles(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.roles)
+  return roles_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Role >*
+ClanInfo::mutable_roles() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.ClanInfo.roles)
+  return &roles_;
+}
+inline const ::rustplus::ClanInfo_Role& ClanInfo::_internal_roles(int index) const {
+  return roles_.Get(index);
+}
+inline const ::rustplus::ClanInfo_Role& ClanInfo::roles(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.roles)
+  return _internal_roles(index);
+}
+inline ::rustplus::ClanInfo_Role* ClanInfo::_internal_add_roles() {
+  return roles_.Add();
+}
+inline ::rustplus::ClanInfo_Role* ClanInfo::add_roles() {
+  ::rustplus::ClanInfo_Role* _add = _internal_add_roles();
+  // @@protoc_insertion_point(field_add:rustplus.ClanInfo.roles)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Role >&
+ClanInfo::roles() const {
+  // @@protoc_insertion_point(field_list:rustplus.ClanInfo.roles)
+  return roles_;
+}
+
+// repeated .rustplus.ClanInfo.Member members = 11;
+inline int ClanInfo::_internal_members_size() const {
+  return members_.size();
+}
+inline int ClanInfo::members_size() const {
+  return _internal_members_size();
+}
+inline void ClanInfo::clear_members() {
+  members_.Clear();
+}
+inline ::rustplus::ClanInfo_Member* ClanInfo::mutable_members(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.members)
+  return members_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Member >*
+ClanInfo::mutable_members() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.ClanInfo.members)
+  return &members_;
+}
+inline const ::rustplus::ClanInfo_Member& ClanInfo::_internal_members(int index) const {
+  return members_.Get(index);
+}
+inline const ::rustplus::ClanInfo_Member& ClanInfo::members(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.members)
+  return _internal_members(index);
+}
+inline ::rustplus::ClanInfo_Member* ClanInfo::_internal_add_members() {
+  return members_.Add();
+}
+inline ::rustplus::ClanInfo_Member* ClanInfo::add_members() {
+  ::rustplus::ClanInfo_Member* _add = _internal_add_members();
+  // @@protoc_insertion_point(field_add:rustplus.ClanInfo.members)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Member >&
+ClanInfo::members() const {
+  // @@protoc_insertion_point(field_list:rustplus.ClanInfo.members)
+  return members_;
+}
+
+// repeated .rustplus.ClanInfo.Invite invites = 12;
+inline int ClanInfo::_internal_invites_size() const {
+  return invites_.size();
+}
+inline int ClanInfo::invites_size() const {
+  return _internal_invites_size();
+}
+inline void ClanInfo::clear_invites() {
+  invites_.Clear();
+}
+inline ::rustplus::ClanInfo_Invite* ClanInfo::mutable_invites(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInfo.invites)
+  return invites_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Invite >*
+ClanInfo::mutable_invites() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.ClanInfo.invites)
+  return &invites_;
+}
+inline const ::rustplus::ClanInfo_Invite& ClanInfo::_internal_invites(int index) const {
+  return invites_.Get(index);
+}
+inline const ::rustplus::ClanInfo_Invite& ClanInfo::invites(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.invites)
+  return _internal_invites(index);
+}
+inline ::rustplus::ClanInfo_Invite* ClanInfo::_internal_add_invites() {
+  return invites_.Add();
+}
+inline ::rustplus::ClanInfo_Invite* ClanInfo::add_invites() {
+  ::rustplus::ClanInfo_Invite* _add = _internal_add_invites();
+  // @@protoc_insertion_point(field_add:rustplus.ClanInfo.invites)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInfo_Invite >&
+ClanInfo::invites() const {
+  // @@protoc_insertion_point(field_list:rustplus.ClanInfo.invites)
+  return invites_;
+}
+
+// optional int32 maxMemberCount = 13;
+inline bool ClanInfo::_internal_has_maxmembercount() const {
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool ClanInfo::has_maxmembercount() const {
+  return _internal_has_maxmembercount();
+}
+inline void ClanInfo::clear_maxmembercount() {
+  maxmembercount_ = 0;
+  _has_bits_[0] &= ~0x00000200u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::_internal_maxmembercount() const {
+  return maxmembercount_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::maxmembercount() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInfo.maxMemberCount)
+  return _internal_maxmembercount();
+}
+inline void ClanInfo::_internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000200u;
+  maxmembercount_ = value;
+}
+inline void ClanInfo::set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_maxmembercount(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInfo.maxMemberCount)
+}
+
+// -------------------------------------------------------------------
+
+// ClanLog_Entry
+
+// required int64 timestamp = 1;
+inline bool ClanLog_Entry::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void ClanLog_Entry::clear_timestamp() {
+  timestamp_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog_Entry::_internal_timestamp() const {
+  return timestamp_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog_Entry::timestamp() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.timestamp)
+  return _internal_timestamp();
+}
+inline void ClanLog_Entry::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  timestamp_ = value;
+}
+inline void ClanLog_Entry::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.timestamp)
+}
+
+// required string eventKey = 2;
+inline bool ClanLog_Entry::_internal_has_eventkey() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_eventkey() const {
+  return _internal_has_eventkey();
+}
+inline void ClanLog_Entry::clear_eventkey() {
+  eventkey_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ClanLog_Entry::eventkey() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.eventKey)
+  return _internal_eventkey();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanLog_Entry::set_eventkey(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ eventkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.eventKey)
+}
+inline std::string* ClanLog_Entry::mutable_eventkey() {
+  std::string* _s = _internal_mutable_eventkey();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.Entry.eventKey)
+  return _s;
+}
+inline const std::string& ClanLog_Entry::_internal_eventkey() const {
+  return eventkey_.Get();
+}
+inline void ClanLog_Entry::_internal_set_eventkey(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  eventkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::_internal_mutable_eventkey() {
+  _has_bits_[0] |= 0x00000001u;
+  return eventkey_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::release_eventkey() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanLog.Entry.eventKey)
+  if (!_internal_has_eventkey()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return eventkey_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanLog_Entry::set_allocated_eventkey(std::string* eventkey) {
+  if (eventkey != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  eventkey_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), eventkey,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanLog.Entry.eventKey)
+}
+
+// optional string arg1 = 3;
+inline bool ClanLog_Entry::_internal_has_arg1() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_arg1() const {
+  return _internal_has_arg1();
+}
+inline void ClanLog_Entry::clear_arg1() {
+  arg1_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ClanLog_Entry::arg1() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.arg1)
+  return _internal_arg1();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanLog_Entry::set_arg1(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ arg1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.arg1)
+}
+inline std::string* ClanLog_Entry::mutable_arg1() {
+  std::string* _s = _internal_mutable_arg1();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.Entry.arg1)
+  return _s;
+}
+inline const std::string& ClanLog_Entry::_internal_arg1() const {
+  return arg1_.Get();
+}
+inline void ClanLog_Entry::_internal_set_arg1(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  arg1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::_internal_mutable_arg1() {
+  _has_bits_[0] |= 0x00000002u;
+  return arg1_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::release_arg1() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanLog.Entry.arg1)
+  if (!_internal_has_arg1()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return arg1_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanLog_Entry::set_allocated_arg1(std::string* arg1) {
+  if (arg1 != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  arg1_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), arg1,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanLog.Entry.arg1)
+}
+
+// optional string arg2 = 4;
+inline bool ClanLog_Entry::_internal_has_arg2() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_arg2() const {
+  return _internal_has_arg2();
+}
+inline void ClanLog_Entry::clear_arg2() {
+  arg2_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ClanLog_Entry::arg2() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.arg2)
+  return _internal_arg2();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanLog_Entry::set_arg2(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ arg2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.arg2)
+}
+inline std::string* ClanLog_Entry::mutable_arg2() {
+  std::string* _s = _internal_mutable_arg2();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.Entry.arg2)
+  return _s;
+}
+inline const std::string& ClanLog_Entry::_internal_arg2() const {
+  return arg2_.Get();
+}
+inline void ClanLog_Entry::_internal_set_arg2(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  arg2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::_internal_mutable_arg2() {
+  _has_bits_[0] |= 0x00000004u;
+  return arg2_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::release_arg2() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanLog.Entry.arg2)
+  if (!_internal_has_arg2()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return arg2_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanLog_Entry::set_allocated_arg2(std::string* arg2) {
+  if (arg2 != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  arg2_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), arg2,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanLog.Entry.arg2)
+}
+
+// optional string arg3 = 5;
+inline bool ClanLog_Entry::_internal_has_arg3() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_arg3() const {
+  return _internal_has_arg3();
+}
+inline void ClanLog_Entry::clear_arg3() {
+  arg3_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& ClanLog_Entry::arg3() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.arg3)
+  return _internal_arg3();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanLog_Entry::set_arg3(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000008u;
+ arg3_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.arg3)
+}
+inline std::string* ClanLog_Entry::mutable_arg3() {
+  std::string* _s = _internal_mutable_arg3();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.Entry.arg3)
+  return _s;
+}
+inline const std::string& ClanLog_Entry::_internal_arg3() const {
+  return arg3_.Get();
+}
+inline void ClanLog_Entry::_internal_set_arg3(const std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  arg3_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::_internal_mutable_arg3() {
+  _has_bits_[0] |= 0x00000008u;
+  return arg3_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::release_arg3() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanLog.Entry.arg3)
+  if (!_internal_has_arg3()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  return arg3_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanLog_Entry::set_allocated_arg3(std::string* arg3) {
+  if (arg3 != nullptr) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  arg3_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), arg3,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanLog.Entry.arg3)
+}
+
+// optional string arg4 = 6;
+inline bool ClanLog_Entry::_internal_has_arg4() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool ClanLog_Entry::has_arg4() const {
+  return _internal_has_arg4();
+}
+inline void ClanLog_Entry::clear_arg4() {
+  arg4_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& ClanLog_Entry::arg4() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.arg4)
+  return _internal_arg4();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ClanLog_Entry::set_arg4(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ arg4_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.arg4)
+}
+inline std::string* ClanLog_Entry::mutable_arg4() {
+  std::string* _s = _internal_mutable_arg4();
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.Entry.arg4)
+  return _s;
+}
+inline const std::string& ClanLog_Entry::_internal_arg4() const {
+  return arg4_.Get();
+}
+inline void ClanLog_Entry::_internal_set_arg4(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  arg4_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::_internal_mutable_arg4() {
+  _has_bits_[0] |= 0x00000010u;
+  return arg4_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ClanLog_Entry::release_arg4() {
+  // @@protoc_insertion_point(field_release:rustplus.ClanLog.Entry.arg4)
+  if (!_internal_has_arg4()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  return arg4_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ClanLog_Entry::set_allocated_arg4(std::string* arg4) {
+  if (arg4 != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  arg4_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), arg4,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.ClanLog.Entry.arg4)
+}
+
+// -------------------------------------------------------------------
+
+// ClanLog
+
+// required int64 clanId = 1;
+inline bool ClanLog::_internal_has_clanid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanLog::has_clanid() const {
+  return _internal_has_clanid();
+}
+inline void ClanLog::clear_clanid() {
+  clanid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog::_internal_clanid() const {
+  return clanid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog::clanid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.clanId)
+  return _internal_clanid();
+}
+inline void ClanLog::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  clanid_ = value;
+}
+inline void ClanLog::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_clanid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanLog.clanId)
+}
+
+// repeated .rustplus.ClanLog.Entry logEntries = 2;
+inline int ClanLog::_internal_logentries_size() const {
+  return logentries_.size();
+}
+inline int ClanLog::logentries_size() const {
+  return _internal_logentries_size();
+}
+inline void ClanLog::clear_logentries() {
+  logentries_.Clear();
+}
+inline ::rustplus::ClanLog_Entry* ClanLog::mutable_logentries(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanLog.logEntries)
+  return logentries_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanLog_Entry >*
+ClanLog::mutable_logentries() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.ClanLog.logEntries)
+  return &logentries_;
+}
+inline const ::rustplus::ClanLog_Entry& ClanLog::_internal_logentries(int index) const {
+  return logentries_.Get(index);
+}
+inline const ::rustplus::ClanLog_Entry& ClanLog::logentries(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanLog.logEntries)
+  return _internal_logentries(index);
+}
+inline ::rustplus::ClanLog_Entry* ClanLog::_internal_add_logentries() {
+  return logentries_.Add();
+}
+inline ::rustplus::ClanLog_Entry* ClanLog::add_logentries() {
+  ::rustplus::ClanLog_Entry* _add = _internal_add_logentries();
+  // @@protoc_insertion_point(field_add:rustplus.ClanLog.logEntries)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanLog_Entry >&
+ClanLog::logentries() const {
+  // @@protoc_insertion_point(field_list:rustplus.ClanLog.logEntries)
+  return logentries_;
+}
+
+// -------------------------------------------------------------------
+
+// ClanInvitations_Invitation
+
+// required int64 clanId = 1;
+inline bool ClanInvitations_Invitation::_internal_has_clanid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ClanInvitations_Invitation::has_clanid() const {
+  return _internal_has_clanid();
+}
+inline void ClanInvitations_Invitation::clear_clanid() {
+  clanid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::_internal_clanid() const {
+  return clanid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::clanid() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.clanId)
+  return _internal_clanid();
+}
+inline void ClanInvitations_Invitation::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  clanid_ = value;
+}
+inline void ClanInvitations_Invitation::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_clanid(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.clanId)
+}
+
+// required int64 recruiter = 2;
+inline bool ClanInvitations_Invitation::_internal_has_recruiter() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ClanInvitations_Invitation::has_recruiter() const {
+  return _internal_has_recruiter();
+}
+inline void ClanInvitations_Invitation::clear_recruiter() {
+  recruiter_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::_internal_recruiter() const {
+  return recruiter_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::recruiter() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.recruiter)
+  return _internal_recruiter();
+}
+inline void ClanInvitations_Invitation::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  recruiter_ = value;
+}
+inline void ClanInvitations_Invitation::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_recruiter(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.recruiter)
+}
+
+// required int64 timestamp = 3;
+inline bool ClanInvitations_Invitation::_internal_has_timestamp() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ClanInvitations_Invitation::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline void ClanInvitations_Invitation::clear_timestamp() {
+  timestamp_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::_internal_timestamp() const {
+  return timestamp_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::timestamp() const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.timestamp)
+  return _internal_timestamp();
+}
+inline void ClanInvitations_Invitation::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  timestamp_ = value;
+}
+inline void ClanInvitations_Invitation::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.timestamp)
+}
+
+// -------------------------------------------------------------------
+
+// ClanInvitations
+
+// repeated .rustplus.ClanInvitations.Invitation invitations = 1;
+inline int ClanInvitations::_internal_invitations_size() const {
+  return invitations_.size();
+}
+inline int ClanInvitations::invitations_size() const {
+  return _internal_invitations_size();
+}
+inline void ClanInvitations::clear_invitations() {
+  invitations_.Clear();
+}
+inline ::rustplus::ClanInvitations_Invitation* ClanInvitations::mutable_invitations(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.ClanInvitations.invitations)
+  return invitations_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInvitations_Invitation >*
+ClanInvitations::mutable_invitations() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.ClanInvitations.invitations)
+  return &invitations_;
+}
+inline const ::rustplus::ClanInvitations_Invitation& ClanInvitations::_internal_invitations(int index) const {
+  return invitations_.Get(index);
+}
+inline const ::rustplus::ClanInvitations_Invitation& ClanInvitations::invitations(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.invitations)
+  return _internal_invitations(index);
+}
+inline ::rustplus::ClanInvitations_Invitation* ClanInvitations::_internal_add_invitations() {
+  return invitations_.Add();
+}
+inline ::rustplus::ClanInvitations_Invitation* ClanInvitations::add_invitations() {
+  ::rustplus::ClanInvitations_Invitation* _add = _internal_add_invitations();
+  // @@protoc_insertion_point(field_add:rustplus.ClanInvitations.invitations)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::ClanInvitations_Invitation >&
+ClanInvitations::invitations() const {
+  // @@protoc_insertion_point(field_list:rustplus.ClanInvitations.invitations)
+  return invitations_;
 }
 
 // -------------------------------------------------------------------
@@ -7054,7 +14700,7 @@ inline void AppMessage::set_allocated_broadcast(::rustplus::AppBroadcast* broadc
 
 // required uint32 seq = 1;
 inline bool AppRequest::_internal_has_seq() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  bool value = (_has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
 inline bool AppRequest::has_seq() const {
@@ -7062,7 +14708,7 @@ inline bool AppRequest::has_seq() const {
 }
 inline void AppRequest::clear_seq() {
   seq_ = 0u;
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00200000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::_internal_seq() const {
   return seq_;
@@ -7072,7 +14718,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::seq() const {
   return _internal_seq();
 }
 inline void AppRequest::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00200000u;
   seq_ = value;
 }
 inline void AppRequest::set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -7082,7 +14728,7 @@ inline void AppRequest::set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required uint64 playerId = 2;
 inline bool AppRequest::_internal_has_playerid() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  bool value = (_has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
 inline bool AppRequest::has_playerid() const {
@@ -7090,7 +14736,7 @@ inline bool AppRequest::has_playerid() const {
 }
 inline void AppRequest::clear_playerid() {
   playerid_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00100000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 AppRequest::_internal_playerid() const {
   return playerid_;
@@ -7100,7 +14746,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppRequest::playerid() const {
   return _internal_playerid();
 }
 inline void AppRequest::_internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00100000u;
   playerid_ = value;
 }
 inline void AppRequest::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
@@ -7110,7 +14756,7 @@ inline void AppRequest::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
 
 // required int32 playerToken = 3;
 inline bool AppRequest::_internal_has_playertoken() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  bool value = (_has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
 inline bool AppRequest::has_playertoken() const {
@@ -7118,7 +14764,7 @@ inline bool AppRequest::has_playertoken() const {
 }
 inline void AppRequest::clear_playertoken() {
   playertoken_ = 0;
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00400000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 AppRequest::_internal_playertoken() const {
   return playertoken_;
@@ -7128,7 +14774,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppRequest::playertoken() const {
   return _internal_playertoken();
 }
 inline void AppRequest::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00400000u;
   playertoken_ = value;
 }
 inline void AppRequest::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7138,7 +14784,7 @@ inline void AppRequest::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // optional uint32 entityId = 4;
 inline bool AppRequest::_internal_has_entityid() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  bool value = (_has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
 inline bool AppRequest::has_entityid() const {
@@ -7146,7 +14792,7 @@ inline bool AppRequest::has_entityid() const {
 }
 inline void AppRequest::clear_entityid() {
   entityid_ = 0u;
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00800000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::_internal_entityid() const {
   return entityid_;
@@ -7156,7 +14802,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::entityid() const {
   return _internal_entityid();
 }
 inline void AppRequest::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00800000u;
   entityid_ = value;
 }
 inline void AppRequest::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -8154,99 +15800,9 @@ inline void AppRequest::set_allocated_getmapmarkers(::rustplus::AppEmpty* getmap
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.getMapMarkers)
 }
 
-// optional .rustplus.AppCameraFrameRequest getCameraFrame = 19;
-inline bool AppRequest::_internal_has_getcameraframe() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  PROTOBUF_ASSUME(!value || getcameraframe_ != nullptr);
-  return value;
-}
-inline bool AppRequest::has_getcameraframe() const {
-  return _internal_has_getcameraframe();
-}
-inline void AppRequest::clear_getcameraframe() {
-  if (getcameraframe_ != nullptr) getcameraframe_->Clear();
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline const ::rustplus::AppCameraFrameRequest& AppRequest::_internal_getcameraframe() const {
-  const ::rustplus::AppCameraFrameRequest* p = getcameraframe_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraFrameRequest&>(
-      ::rustplus::_AppCameraFrameRequest_default_instance_);
-}
-inline const ::rustplus::AppCameraFrameRequest& AppRequest::getcameraframe() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppRequest.getCameraFrame)
-  return _internal_getcameraframe();
-}
-inline void AppRequest::unsafe_arena_set_allocated_getcameraframe(
-    ::rustplus::AppCameraFrameRequest* getcameraframe) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(getcameraframe_);
-  }
-  getcameraframe_ = getcameraframe;
-  if (getcameraframe) {
-    _has_bits_[0] |= 0x00000800u;
-  } else {
-    _has_bits_[0] &= ~0x00000800u;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.getCameraFrame)
-}
-inline ::rustplus::AppCameraFrameRequest* AppRequest::release_getcameraframe() {
-  _has_bits_[0] &= ~0x00000800u;
-  ::rustplus::AppCameraFrameRequest* temp = getcameraframe_;
-  getcameraframe_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::rustplus::AppCameraFrameRequest* AppRequest::unsafe_arena_release_getcameraframe() {
-  // @@protoc_insertion_point(field_release:rustplus.AppRequest.getCameraFrame)
-  _has_bits_[0] &= ~0x00000800u;
-  ::rustplus::AppCameraFrameRequest* temp = getcameraframe_;
-  getcameraframe_ = nullptr;
-  return temp;
-}
-inline ::rustplus::AppCameraFrameRequest* AppRequest::_internal_mutable_getcameraframe() {
-  _has_bits_[0] |= 0x00000800u;
-  if (getcameraframe_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppCameraFrameRequest>(GetArenaForAllocation());
-    getcameraframe_ = p;
-  }
-  return getcameraframe_;
-}
-inline ::rustplus::AppCameraFrameRequest* AppRequest::mutable_getcameraframe() {
-  ::rustplus::AppCameraFrameRequest* _msg = _internal_mutable_getcameraframe();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.getCameraFrame)
-  return _msg;
-}
-inline void AppRequest::set_allocated_getcameraframe(::rustplus::AppCameraFrameRequest* getcameraframe) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete getcameraframe_;
-  }
-  if (getcameraframe) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraFrameRequest>::GetOwningArena(getcameraframe);
-    if (message_arena != submessage_arena) {
-      getcameraframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, getcameraframe, submessage_arena);
-    }
-    _has_bits_[0] |= 0x00000800u;
-  } else {
-    _has_bits_[0] &= ~0x00000800u;
-  }
-  getcameraframe_ = getcameraframe;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.getCameraFrame)
-}
-
 // optional .rustplus.AppPromoteToLeader promoteToLeader = 20;
 inline bool AppRequest::_internal_has_promotetoleader() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   PROTOBUF_ASSUME(!value || promotetoleader_ != nullptr);
   return value;
 }
@@ -8255,7 +15811,7 @@ inline bool AppRequest::has_promotetoleader() const {
 }
 inline void AppRequest::clear_promotetoleader() {
   if (promotetoleader_ != nullptr) promotetoleader_->Clear();
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline const ::rustplus::AppPromoteToLeader& AppRequest::_internal_promotetoleader() const {
   const ::rustplus::AppPromoteToLeader* p = promotetoleader_;
@@ -8273,14 +15829,14 @@ inline void AppRequest::unsafe_arena_set_allocated_promotetoleader(
   }
   promotetoleader_ = promotetoleader;
   if (promotetoleader) {
-    _has_bits_[0] |= 0x00001000u;
+    _has_bits_[0] |= 0x00000800u;
   } else {
-    _has_bits_[0] &= ~0x00001000u;
+    _has_bits_[0] &= ~0x00000800u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.promoteToLeader)
 }
 inline ::rustplus::AppPromoteToLeader* AppRequest::release_promotetoleader() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
   ::rustplus::AppPromoteToLeader* temp = promotetoleader_;
   promotetoleader_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8296,13 +15852,13 @@ inline ::rustplus::AppPromoteToLeader* AppRequest::release_promotetoleader() {
 }
 inline ::rustplus::AppPromoteToLeader* AppRequest::unsafe_arena_release_promotetoleader() {
   // @@protoc_insertion_point(field_release:rustplus.AppRequest.promoteToLeader)
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000800u;
   ::rustplus::AppPromoteToLeader* temp = promotetoleader_;
   promotetoleader_ = nullptr;
   return temp;
 }
 inline ::rustplus::AppPromoteToLeader* AppRequest::_internal_mutable_promotetoleader() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000800u;
   if (promotetoleader_ == nullptr) {
     auto* p = CreateMaybeMessage<::rustplus::AppPromoteToLeader>(GetArenaForAllocation());
     promotetoleader_ = p;
@@ -8326,258 +15882,946 @@ inline void AppRequest::set_allocated_promotetoleader(::rustplus::AppPromoteToLe
       promotetoleader = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, promotetoleader, submessage_arena);
     }
-    _has_bits_[0] |= 0x00001000u;
+    _has_bits_[0] |= 0x00000800u;
   } else {
-    _has_bits_[0] &= ~0x00001000u;
+    _has_bits_[0] &= ~0x00000800u;
   }
   promotetoleader_ = promotetoleader;
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.promoteToLeader)
 }
 
-// -------------------------------------------------------------------
-
-// AppSendMessage
-
-// required string message = 1;
-inline bool AppSendMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+// optional .rustplus.AppEmpty getClanInfo = 21;
+inline bool AppRequest::_internal_has_getclaninfo() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  PROTOBUF_ASSUME(!value || getclaninfo_ != nullptr);
   return value;
 }
-inline bool AppSendMessage::has_message() const {
-  return _internal_has_message();
+inline bool AppRequest::has_getclaninfo() const {
+  return _internal_has_getclaninfo();
 }
-inline void AppSendMessage::clear_message() {
-  message_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
+inline void AppRequest::clear_getclaninfo() {
+  if (getclaninfo_ != nullptr) getclaninfo_->Clear();
+  _has_bits_[0] &= ~0x00001000u;
 }
-inline const std::string& AppSendMessage::message() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppSendMessage.message)
-  return _internal_message();
+inline const ::rustplus::AppEmpty& AppRequest::_internal_getclaninfo() const {
+  const ::rustplus::AppEmpty* p = getclaninfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppEmpty&>(
+      ::rustplus::_AppEmpty_default_instance_);
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppSendMessage::set_message(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
- message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppSendMessage.message)
+inline const ::rustplus::AppEmpty& AppRequest::getclaninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.getClanInfo)
+  return _internal_getclaninfo();
 }
-inline std::string* AppSendMessage::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppSendMessage.message)
-  return _s;
-}
-inline const std::string& AppSendMessage::_internal_message() const {
-  return message_.Get();
-}
-inline void AppSendMessage::_internal_set_message(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppSendMessage::_internal_mutable_message() {
-  _has_bits_[0] |= 0x00000001u;
-  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppSendMessage::release_message() {
-  // @@protoc_insertion_point(field_release:rustplus.AppSendMessage.message)
-  if (!_internal_has_message()) {
-    return nullptr;
+inline void AppRequest::unsafe_arena_set_allocated_getclaninfo(
+    ::rustplus::AppEmpty* getclaninfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(getclaninfo_);
   }
-  _has_bits_[0] &= ~0x00000001u;
-  return message_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  getclaninfo_ = getclaninfo;
+  if (getclaninfo) {
+    _has_bits_[0] |= 0x00001000u;
+  } else {
+    _has_bits_[0] &= ~0x00001000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.getClanInfo)
 }
-inline void AppSendMessage::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline ::rustplus::AppEmpty* AppRequest::release_getclaninfo() {
+  _has_bits_[0] &= ~0x00001000u;
+  ::rustplus::AppEmpty* temp = getclaninfo_;
+  getclaninfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::unsafe_arena_release_getclaninfo() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.getClanInfo)
+  _has_bits_[0] &= ~0x00001000u;
+  ::rustplus::AppEmpty* temp = getclaninfo_;
+  getclaninfo_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::_internal_mutable_getclaninfo() {
+  _has_bits_[0] |= 0x00001000u;
+  if (getclaninfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppEmpty>(GetArenaForAllocation());
+    getclaninfo_ = p;
+  }
+  return getclaninfo_;
+}
+inline ::rustplus::AppEmpty* AppRequest::mutable_getclaninfo() {
+  ::rustplus::AppEmpty* _msg = _internal_mutable_getclaninfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.getClanInfo)
+  return _msg;
+}
+inline void AppRequest::set_allocated_getclaninfo(::rustplus::AppEmpty* getclaninfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete getclaninfo_;
+  }
+  if (getclaninfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppEmpty>::GetOwningArena(getclaninfo);
+    if (message_arena != submessage_arena) {
+      getclaninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, getclaninfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00001000u;
+  } else {
+    _has_bits_[0] &= ~0x00001000u;
+  }
+  getclaninfo_ = getclaninfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.getClanInfo)
+}
+
+// optional .rustplus.AppSendMessage setClanMotd = 22;
+inline bool AppRequest::_internal_has_setclanmotd() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  PROTOBUF_ASSUME(!value || setclanmotd_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_setclanmotd() const {
+  return _internal_has_setclanmotd();
+}
+inline void AppRequest::clear_setclanmotd() {
+  if (setclanmotd_ != nullptr) setclanmotd_->Clear();
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline const ::rustplus::AppSendMessage& AppRequest::_internal_setclanmotd() const {
+  const ::rustplus::AppSendMessage* p = setclanmotd_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppSendMessage&>(
+      ::rustplus::_AppSendMessage_default_instance_);
+}
+inline const ::rustplus::AppSendMessage& AppRequest::setclanmotd() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.setClanMotd)
+  return _internal_setclanmotd();
+}
+inline void AppRequest::unsafe_arena_set_allocated_setclanmotd(
+    ::rustplus::AppSendMessage* setclanmotd) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(setclanmotd_);
+  }
+  setclanmotd_ = setclanmotd;
+  if (setclanmotd) {
+    _has_bits_[0] |= 0x00002000u;
+  } else {
+    _has_bits_[0] &= ~0x00002000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.setClanMotd)
+}
+inline ::rustplus::AppSendMessage* AppRequest::release_setclanmotd() {
+  _has_bits_[0] &= ~0x00002000u;
+  ::rustplus::AppSendMessage* temp = setclanmotd_;
+  setclanmotd_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppSendMessage* AppRequest::unsafe_arena_release_setclanmotd() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.setClanMotd)
+  _has_bits_[0] &= ~0x00002000u;
+  ::rustplus::AppSendMessage* temp = setclanmotd_;
+  setclanmotd_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppSendMessage* AppRequest::_internal_mutable_setclanmotd() {
+  _has_bits_[0] |= 0x00002000u;
+  if (setclanmotd_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppSendMessage>(GetArenaForAllocation());
+    setclanmotd_ = p;
+  }
+  return setclanmotd_;
+}
+inline ::rustplus::AppSendMessage* AppRequest::mutable_setclanmotd() {
+  ::rustplus::AppSendMessage* _msg = _internal_mutable_setclanmotd();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.setClanMotd)
+  return _msg;
+}
+inline void AppRequest::set_allocated_setclanmotd(::rustplus::AppSendMessage* setclanmotd) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete setclanmotd_;
+  }
+  if (setclanmotd) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppSendMessage>::GetOwningArena(setclanmotd);
+    if (message_arena != submessage_arena) {
+      setclanmotd = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, setclanmotd, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00002000u;
+  } else {
+    _has_bits_[0] &= ~0x00002000u;
+  }
+  setclanmotd_ = setclanmotd;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.setClanMotd)
+}
+
+// optional .rustplus.AppEmpty getClanChat = 23;
+inline bool AppRequest::_internal_has_getclanchat() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  PROTOBUF_ASSUME(!value || getclanchat_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_getclanchat() const {
+  return _internal_has_getclanchat();
+}
+inline void AppRequest::clear_getclanchat() {
+  if (getclanchat_ != nullptr) getclanchat_->Clear();
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline const ::rustplus::AppEmpty& AppRequest::_internal_getclanchat() const {
+  const ::rustplus::AppEmpty* p = getclanchat_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppEmpty&>(
+      ::rustplus::_AppEmpty_default_instance_);
+}
+inline const ::rustplus::AppEmpty& AppRequest::getclanchat() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.getClanChat)
+  return _internal_getclanchat();
+}
+inline void AppRequest::unsafe_arena_set_allocated_getclanchat(
+    ::rustplus::AppEmpty* getclanchat) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(getclanchat_);
+  }
+  getclanchat_ = getclanchat;
+  if (getclanchat) {
+    _has_bits_[0] |= 0x00004000u;
+  } else {
+    _has_bits_[0] &= ~0x00004000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.getClanChat)
+}
+inline ::rustplus::AppEmpty* AppRequest::release_getclanchat() {
+  _has_bits_[0] &= ~0x00004000u;
+  ::rustplus::AppEmpty* temp = getclanchat_;
+  getclanchat_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::unsafe_arena_release_getclanchat() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.getClanChat)
+  _has_bits_[0] &= ~0x00004000u;
+  ::rustplus::AppEmpty* temp = getclanchat_;
+  getclanchat_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::_internal_mutable_getclanchat() {
+  _has_bits_[0] |= 0x00004000u;
+  if (getclanchat_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppEmpty>(GetArenaForAllocation());
+    getclanchat_ = p;
+  }
+  return getclanchat_;
+}
+inline ::rustplus::AppEmpty* AppRequest::mutable_getclanchat() {
+  ::rustplus::AppEmpty* _msg = _internal_mutable_getclanchat();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.getClanChat)
+  return _msg;
+}
+inline void AppRequest::set_allocated_getclanchat(::rustplus::AppEmpty* getclanchat) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete getclanchat_;
+  }
+  if (getclanchat) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppEmpty>::GetOwningArena(getclanchat);
+    if (message_arena != submessage_arena) {
+      getclanchat = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, getclanchat, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00004000u;
+  } else {
+    _has_bits_[0] &= ~0x00004000u;
+  }
+  getclanchat_ = getclanchat;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.getClanChat)
+}
+
+// optional .rustplus.AppSendMessage sendClanMessage = 24;
+inline bool AppRequest::_internal_has_sendclanmessage() const {
+  bool value = (_has_bits_[0] & 0x00008000u) != 0;
+  PROTOBUF_ASSUME(!value || sendclanmessage_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_sendclanmessage() const {
+  return _internal_has_sendclanmessage();
+}
+inline void AppRequest::clear_sendclanmessage() {
+  if (sendclanmessage_ != nullptr) sendclanmessage_->Clear();
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline const ::rustplus::AppSendMessage& AppRequest::_internal_sendclanmessage() const {
+  const ::rustplus::AppSendMessage* p = sendclanmessage_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppSendMessage&>(
+      ::rustplus::_AppSendMessage_default_instance_);
+}
+inline const ::rustplus::AppSendMessage& AppRequest::sendclanmessage() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.sendClanMessage)
+  return _internal_sendclanmessage();
+}
+inline void AppRequest::unsafe_arena_set_allocated_sendclanmessage(
+    ::rustplus::AppSendMessage* sendclanmessage) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(sendclanmessage_);
+  }
+  sendclanmessage_ = sendclanmessage;
+  if (sendclanmessage) {
+    _has_bits_[0] |= 0x00008000u;
+  } else {
+    _has_bits_[0] &= ~0x00008000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.sendClanMessage)
+}
+inline ::rustplus::AppSendMessage* AppRequest::release_sendclanmessage() {
+  _has_bits_[0] &= ~0x00008000u;
+  ::rustplus::AppSendMessage* temp = sendclanmessage_;
+  sendclanmessage_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppSendMessage* AppRequest::unsafe_arena_release_sendclanmessage() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.sendClanMessage)
+  _has_bits_[0] &= ~0x00008000u;
+  ::rustplus::AppSendMessage* temp = sendclanmessage_;
+  sendclanmessage_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppSendMessage* AppRequest::_internal_mutable_sendclanmessage() {
+  _has_bits_[0] |= 0x00008000u;
+  if (sendclanmessage_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppSendMessage>(GetArenaForAllocation());
+    sendclanmessage_ = p;
+  }
+  return sendclanmessage_;
+}
+inline ::rustplus::AppSendMessage* AppRequest::mutable_sendclanmessage() {
+  ::rustplus::AppSendMessage* _msg = _internal_mutable_sendclanmessage();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.sendClanMessage)
+  return _msg;
+}
+inline void AppRequest::set_allocated_sendclanmessage(::rustplus::AppSendMessage* sendclanmessage) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete sendclanmessage_;
+  }
+  if (sendclanmessage) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppSendMessage>::GetOwningArena(sendclanmessage);
+    if (message_arena != submessage_arena) {
+      sendclanmessage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, sendclanmessage, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00008000u;
+  } else {
+    _has_bits_[0] &= ~0x00008000u;
+  }
+  sendclanmessage_ = sendclanmessage;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.sendClanMessage)
+}
+
+// optional .rustplus.AppGetNexusAuth getNexusAuth = 25;
+inline bool AppRequest::_internal_has_getnexusauth() const {
+  bool value = (_has_bits_[0] & 0x00010000u) != 0;
+  PROTOBUF_ASSUME(!value || getnexusauth_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_getnexusauth() const {
+  return _internal_has_getnexusauth();
+}
+inline void AppRequest::clear_getnexusauth() {
+  if (getnexusauth_ != nullptr) getnexusauth_->Clear();
+  _has_bits_[0] &= ~0x00010000u;
+}
+inline const ::rustplus::AppGetNexusAuth& AppRequest::_internal_getnexusauth() const {
+  const ::rustplus::AppGetNexusAuth* p = getnexusauth_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppGetNexusAuth&>(
+      ::rustplus::_AppGetNexusAuth_default_instance_);
+}
+inline const ::rustplus::AppGetNexusAuth& AppRequest::getnexusauth() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.getNexusAuth)
+  return _internal_getnexusauth();
+}
+inline void AppRequest::unsafe_arena_set_allocated_getnexusauth(
+    ::rustplus::AppGetNexusAuth* getnexusauth) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(getnexusauth_);
+  }
+  getnexusauth_ = getnexusauth;
+  if (getnexusauth) {
+    _has_bits_[0] |= 0x00010000u;
+  } else {
+    _has_bits_[0] &= ~0x00010000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.getNexusAuth)
+}
+inline ::rustplus::AppGetNexusAuth* AppRequest::release_getnexusauth() {
+  _has_bits_[0] &= ~0x00010000u;
+  ::rustplus::AppGetNexusAuth* temp = getnexusauth_;
+  getnexusauth_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppGetNexusAuth* AppRequest::unsafe_arena_release_getnexusauth() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.getNexusAuth)
+  _has_bits_[0] &= ~0x00010000u;
+  ::rustplus::AppGetNexusAuth* temp = getnexusauth_;
+  getnexusauth_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppGetNexusAuth* AppRequest::_internal_mutable_getnexusauth() {
+  _has_bits_[0] |= 0x00010000u;
+  if (getnexusauth_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppGetNexusAuth>(GetArenaForAllocation());
+    getnexusauth_ = p;
+  }
+  return getnexusauth_;
+}
+inline ::rustplus::AppGetNexusAuth* AppRequest::mutable_getnexusauth() {
+  ::rustplus::AppGetNexusAuth* _msg = _internal_mutable_getnexusauth();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.getNexusAuth)
+  return _msg;
+}
+inline void AppRequest::set_allocated_getnexusauth(::rustplus::AppGetNexusAuth* getnexusauth) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete getnexusauth_;
+  }
+  if (getnexusauth) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppGetNexusAuth>::GetOwningArena(getnexusauth);
+    if (message_arena != submessage_arena) {
+      getnexusauth = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, getnexusauth, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00010000u;
+  } else {
+    _has_bits_[0] &= ~0x00010000u;
+  }
+  getnexusauth_ = getnexusauth;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.getNexusAuth)
+}
+
+// optional .rustplus.AppCameraSubscribe cameraSubscribe = 30;
+inline bool AppRequest::_internal_has_camerasubscribe() const {
+  bool value = (_has_bits_[0] & 0x00020000u) != 0;
+  PROTOBUF_ASSUME(!value || camerasubscribe_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_camerasubscribe() const {
+  return _internal_has_camerasubscribe();
+}
+inline void AppRequest::clear_camerasubscribe() {
+  if (camerasubscribe_ != nullptr) camerasubscribe_->Clear();
+  _has_bits_[0] &= ~0x00020000u;
+}
+inline const ::rustplus::AppCameraSubscribe& AppRequest::_internal_camerasubscribe() const {
+  const ::rustplus::AppCameraSubscribe* p = camerasubscribe_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraSubscribe&>(
+      ::rustplus::_AppCameraSubscribe_default_instance_);
+}
+inline const ::rustplus::AppCameraSubscribe& AppRequest::camerasubscribe() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.cameraSubscribe)
+  return _internal_camerasubscribe();
+}
+inline void AppRequest::unsafe_arena_set_allocated_camerasubscribe(
+    ::rustplus::AppCameraSubscribe* camerasubscribe) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(camerasubscribe_);
+  }
+  camerasubscribe_ = camerasubscribe;
+  if (camerasubscribe) {
+    _has_bits_[0] |= 0x00020000u;
+  } else {
+    _has_bits_[0] &= ~0x00020000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.cameraSubscribe)
+}
+inline ::rustplus::AppCameraSubscribe* AppRequest::release_camerasubscribe() {
+  _has_bits_[0] &= ~0x00020000u;
+  ::rustplus::AppCameraSubscribe* temp = camerasubscribe_;
+  camerasubscribe_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppCameraSubscribe* AppRequest::unsafe_arena_release_camerasubscribe() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.cameraSubscribe)
+  _has_bits_[0] &= ~0x00020000u;
+  ::rustplus::AppCameraSubscribe* temp = camerasubscribe_;
+  camerasubscribe_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppCameraSubscribe* AppRequest::_internal_mutable_camerasubscribe() {
+  _has_bits_[0] |= 0x00020000u;
+  if (camerasubscribe_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppCameraSubscribe>(GetArenaForAllocation());
+    camerasubscribe_ = p;
+  }
+  return camerasubscribe_;
+}
+inline ::rustplus::AppCameraSubscribe* AppRequest::mutable_camerasubscribe() {
+  ::rustplus::AppCameraSubscribe* _msg = _internal_mutable_camerasubscribe();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.cameraSubscribe)
+  return _msg;
+}
+inline void AppRequest::set_allocated_camerasubscribe(::rustplus::AppCameraSubscribe* camerasubscribe) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete camerasubscribe_;
+  }
+  if (camerasubscribe) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraSubscribe>::GetOwningArena(camerasubscribe);
+    if (message_arena != submessage_arena) {
+      camerasubscribe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, camerasubscribe, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00020000u;
+  } else {
+    _has_bits_[0] &= ~0x00020000u;
+  }
+  camerasubscribe_ = camerasubscribe;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.cameraSubscribe)
+}
+
+// optional .rustplus.AppEmpty cameraUnsubscribe = 31;
+inline bool AppRequest::_internal_has_cameraunsubscribe() const {
+  bool value = (_has_bits_[0] & 0x00040000u) != 0;
+  PROTOBUF_ASSUME(!value || cameraunsubscribe_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_cameraunsubscribe() const {
+  return _internal_has_cameraunsubscribe();
+}
+inline void AppRequest::clear_cameraunsubscribe() {
+  if (cameraunsubscribe_ != nullptr) cameraunsubscribe_->Clear();
+  _has_bits_[0] &= ~0x00040000u;
+}
+inline const ::rustplus::AppEmpty& AppRequest::_internal_cameraunsubscribe() const {
+  const ::rustplus::AppEmpty* p = cameraunsubscribe_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppEmpty&>(
+      ::rustplus::_AppEmpty_default_instance_);
+}
+inline const ::rustplus::AppEmpty& AppRequest::cameraunsubscribe() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.cameraUnsubscribe)
+  return _internal_cameraunsubscribe();
+}
+inline void AppRequest::unsafe_arena_set_allocated_cameraunsubscribe(
+    ::rustplus::AppEmpty* cameraunsubscribe) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cameraunsubscribe_);
+  }
+  cameraunsubscribe_ = cameraunsubscribe;
+  if (cameraunsubscribe) {
+    _has_bits_[0] |= 0x00040000u;
+  } else {
+    _has_bits_[0] &= ~0x00040000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.cameraUnsubscribe)
+}
+inline ::rustplus::AppEmpty* AppRequest::release_cameraunsubscribe() {
+  _has_bits_[0] &= ~0x00040000u;
+  ::rustplus::AppEmpty* temp = cameraunsubscribe_;
+  cameraunsubscribe_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::unsafe_arena_release_cameraunsubscribe() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.cameraUnsubscribe)
+  _has_bits_[0] &= ~0x00040000u;
+  ::rustplus::AppEmpty* temp = cameraunsubscribe_;
+  cameraunsubscribe_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppEmpty* AppRequest::_internal_mutable_cameraunsubscribe() {
+  _has_bits_[0] |= 0x00040000u;
+  if (cameraunsubscribe_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppEmpty>(GetArenaForAllocation());
+    cameraunsubscribe_ = p;
+  }
+  return cameraunsubscribe_;
+}
+inline ::rustplus::AppEmpty* AppRequest::mutable_cameraunsubscribe() {
+  ::rustplus::AppEmpty* _msg = _internal_mutable_cameraunsubscribe();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.cameraUnsubscribe)
+  return _msg;
+}
+inline void AppRequest::set_allocated_cameraunsubscribe(::rustplus::AppEmpty* cameraunsubscribe) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete cameraunsubscribe_;
+  }
+  if (cameraunsubscribe) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppEmpty>::GetOwningArena(cameraunsubscribe);
+    if (message_arena != submessage_arena) {
+      cameraunsubscribe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, cameraunsubscribe, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00040000u;
+  } else {
+    _has_bits_[0] &= ~0x00040000u;
+  }
+  cameraunsubscribe_ = cameraunsubscribe;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.cameraUnsubscribe)
+}
+
+// optional .rustplus.AppCameraInput cameraInput = 32;
+inline bool AppRequest::_internal_has_camerainput() const {
+  bool value = (_has_bits_[0] & 0x00080000u) != 0;
+  PROTOBUF_ASSUME(!value || camerainput_ != nullptr);
+  return value;
+}
+inline bool AppRequest::has_camerainput() const {
+  return _internal_has_camerainput();
+}
+inline void AppRequest::clear_camerainput() {
+  if (camerainput_ != nullptr) camerainput_->Clear();
+  _has_bits_[0] &= ~0x00080000u;
+}
+inline const ::rustplus::AppCameraInput& AppRequest::_internal_camerainput() const {
+  const ::rustplus::AppCameraInput* p = camerainput_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraInput&>(
+      ::rustplus::_AppCameraInput_default_instance_);
+}
+inline const ::rustplus::AppCameraInput& AppRequest::camerainput() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppRequest.cameraInput)
+  return _internal_camerainput();
+}
+inline void AppRequest::unsafe_arena_set_allocated_camerainput(
+    ::rustplus::AppCameraInput* camerainput) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(camerainput_);
+  }
+  camerainput_ = camerainput;
+  if (camerainput) {
+    _has_bits_[0] |= 0x00080000u;
+  } else {
+    _has_bits_[0] &= ~0x00080000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppRequest.cameraInput)
+}
+inline ::rustplus::AppCameraInput* AppRequest::release_camerainput() {
+  _has_bits_[0] &= ~0x00080000u;
+  ::rustplus::AppCameraInput* temp = camerainput_;
+  camerainput_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppCameraInput* AppRequest::unsafe_arena_release_camerainput() {
+  // @@protoc_insertion_point(field_release:rustplus.AppRequest.cameraInput)
+  _has_bits_[0] &= ~0x00080000u;
+  ::rustplus::AppCameraInput* temp = camerainput_;
+  camerainput_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppCameraInput* AppRequest::_internal_mutable_camerainput() {
+  _has_bits_[0] |= 0x00080000u;
+  if (camerainput_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppCameraInput>(GetArenaForAllocation());
+    camerainput_ = p;
+  }
+  return camerainput_;
+}
+inline ::rustplus::AppCameraInput* AppRequest::mutable_camerainput() {
+  ::rustplus::AppCameraInput* _msg = _internal_mutable_camerainput();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppRequest.cameraInput)
+  return _msg;
+}
+inline void AppRequest::set_allocated_camerainput(::rustplus::AppCameraInput* camerainput) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete camerainput_;
+  }
+  if (camerainput) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraInput>::GetOwningArena(camerainput);
+    if (message_arena != submessage_arena) {
+      camerainput = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, camerainput, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00080000u;
+  } else {
+    _has_bits_[0] &= ~0x00080000u;
+  }
+  camerainput_ = camerainput;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppRequest.cameraInput)
+}
+
+// -------------------------------------------------------------------
+
+// AppMessage
+
+// optional .rustplus.AppResponse response = 1;
+inline bool AppMessage::_internal_has_response() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || response_ != nullptr);
+  return value;
+}
+inline bool AppMessage::has_response() const {
+  return _internal_has_response();
+}
+inline void AppMessage::clear_response() {
+  if (response_ != nullptr) response_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::AppResponse& AppMessage::_internal_response() const {
+  const ::rustplus::AppResponse* p = response_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppResponse&>(
+      ::rustplus::_AppResponse_default_instance_);
+}
+inline const ::rustplus::AppResponse& AppMessage::response() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMessage.response)
+  return _internal_response();
+}
+inline void AppMessage::unsafe_arena_set_allocated_response(
+    ::rustplus::AppResponse* response) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response_);
+  }
+  response_ = response;
+  if (response) {
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
-      GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppSendMessage.message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppMessage.response)
 }
-
-// -------------------------------------------------------------------
-
-// AppSetEntityValue
-
-// required bool value = 1;
-inline bool AppSetEntityValue::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppSetEntityValue::has_value() const {
-  return _internal_has_value();
-}
-inline void AppSetEntityValue::clear_value() {
-  value_ = false;
+inline ::rustplus::AppResponse* AppMessage::release_response() {
   _has_bits_[0] &= ~0x00000001u;
-}
-inline bool AppSetEntityValue::_internal_value() const {
-  return value_;
-}
-inline bool AppSetEntityValue::value() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppSetEntityValue.value)
-  return _internal_value();
-}
-inline void AppSetEntityValue::_internal_set_value(bool value) {
-  _has_bits_[0] |= 0x00000001u;
-  value_ = value;
-}
-inline void AppSetEntityValue::set_value(bool value) {
-  _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppSetEntityValue.value)
-}
-
-// -------------------------------------------------------------------
-
-// AppCameraFrameRequest
-
-// required string identifier = 1;
-inline bool AppCameraFrameRequest::_internal_has_identifier() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppCameraFrameRequest::has_identifier() const {
-  return _internal_has_identifier();
-}
-inline void AppCameraFrameRequest::clear_identifier() {
-  identifier_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& AppCameraFrameRequest::identifier() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppCameraFrameRequest.identifier)
-  return _internal_identifier();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppCameraFrameRequest::set_identifier(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
- identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppCameraFrameRequest.identifier)
-}
-inline std::string* AppCameraFrameRequest::mutable_identifier() {
-  std::string* _s = _internal_mutable_identifier();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraFrameRequest.identifier)
-  return _s;
-}
-inline const std::string& AppCameraFrameRequest::_internal_identifier() const {
-  return identifier_.Get();
-}
-inline void AppCameraFrameRequest::_internal_set_identifier(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  identifier_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppCameraFrameRequest::_internal_mutable_identifier() {
-  _has_bits_[0] |= 0x00000001u;
-  return identifier_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppCameraFrameRequest::release_identifier() {
-  // @@protoc_insertion_point(field_release:rustplus.AppCameraFrameRequest.identifier)
-  if (!_internal_has_identifier()) {
-    return nullptr;
+  ::rustplus::AppResponse* temp = response_;
+  response_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-  _has_bits_[0] &= ~0x00000001u;
-  return identifier_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline void AppCameraFrameRequest::set_allocated_identifier(std::string* identifier) {
-  if (identifier != nullptr) {
+inline ::rustplus::AppResponse* AppMessage::unsafe_arena_release_response() {
+  // @@protoc_insertion_point(field_release:rustplus.AppMessage.response)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::AppResponse* temp = response_;
+  response_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppResponse* AppMessage::_internal_mutable_response() {
+  _has_bits_[0] |= 0x00000001u;
+  if (response_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppResponse>(GetArenaForAllocation());
+    response_ = p;
+  }
+  return response_;
+}
+inline ::rustplus::AppResponse* AppMessage::mutable_response() {
+  ::rustplus::AppResponse* _msg = _internal_mutable_response();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppMessage.response)
+  return _msg;
+}
+inline void AppMessage::set_allocated_response(::rustplus::AppResponse* response) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete response_;
+  }
+  if (response) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppResponse>::GetOwningArena(response);
+    if (message_arena != submessage_arena) {
+      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, response, submessage_arena);
+    }
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  identifier_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), identifier,
-      GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraFrameRequest.identifier)
+  response_ = response;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppMessage.response)
 }
 
-// required uint32 frame = 2;
-inline bool AppCameraFrameRequest::_internal_has_frame() const {
+// optional .rustplus.AppBroadcast broadcast = 2;
+inline bool AppMessage::_internal_has_broadcast() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || broadcast_ != nullptr);
   return value;
 }
-inline bool AppCameraFrameRequest::has_frame() const {
-  return _internal_has_frame();
+inline bool AppMessage::has_broadcast() const {
+  return _internal_has_broadcast();
 }
-inline void AppCameraFrameRequest::clear_frame() {
-  frame_ = 0u;
+inline void AppMessage::clear_broadcast() {
+  if (broadcast_ != nullptr) broadcast_->Clear();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraFrameRequest::_internal_frame() const {
-  return frame_;
+inline const ::rustplus::AppBroadcast& AppMessage::_internal_broadcast() const {
+  const ::rustplus::AppBroadcast* p = broadcast_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppBroadcast&>(
+      ::rustplus::_AppBroadcast_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraFrameRequest::frame() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppCameraFrameRequest.frame)
-  return _internal_frame();
+inline const ::rustplus::AppBroadcast& AppMessage::broadcast() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMessage.broadcast)
+  return _internal_broadcast();
 }
-inline void AppCameraFrameRequest::_internal_set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMessage::unsafe_arena_set_allocated_broadcast(
+    ::rustplus::AppBroadcast* broadcast) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(broadcast_);
+  }
+  broadcast_ = broadcast;
+  if (broadcast) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppMessage.broadcast)
+}
+inline ::rustplus::AppBroadcast* AppMessage::release_broadcast() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::AppBroadcast* temp = broadcast_;
+  broadcast_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppBroadcast* AppMessage::unsafe_arena_release_broadcast() {
+  // @@protoc_insertion_point(field_release:rustplus.AppMessage.broadcast)
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::AppBroadcast* temp = broadcast_;
+  broadcast_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppBroadcast* AppMessage::_internal_mutable_broadcast() {
   _has_bits_[0] |= 0x00000002u;
-  frame_ = value;
+  if (broadcast_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppBroadcast>(GetArenaForAllocation());
+    broadcast_ = p;
+  }
+  return broadcast_;
 }
-inline void AppCameraFrameRequest::set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_frame(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppCameraFrameRequest.frame)
+inline ::rustplus::AppBroadcast* AppMessage::mutable_broadcast() {
+  ::rustplus::AppBroadcast* _msg = _internal_mutable_broadcast();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppMessage.broadcast)
+  return _msg;
 }
-
-// -------------------------------------------------------------------
-
-// AppPromoteToLeader
-
-// required uint64 steamId = 1;
-inline bool AppPromoteToLeader::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppPromoteToLeader::has_steamid() const {
-  return _internal_has_steamid();
-}
-inline void AppPromoteToLeader::clear_steamid() {
-  steamid_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint64 AppPromoteToLeader::_internal_steamid() const {
-  return steamid_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint64 AppPromoteToLeader::steamid() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppPromoteToLeader.steamId)
-  return _internal_steamid();
-}
-inline void AppPromoteToLeader::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _has_bits_[0] |= 0x00000001u;
-  steamid_ = value;
-}
-inline void AppPromoteToLeader::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppPromoteToLeader.steamId)
+inline void AppMessage::set_allocated_broadcast(::rustplus::AppBroadcast* broadcast) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete broadcast_;
+  }
+  if (broadcast) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppBroadcast>::GetOwningArena(broadcast);
+    if (message_arena != submessage_arena) {
+      broadcast = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, broadcast, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  broadcast_ = broadcast;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppMessage.broadcast)
 }
 
 // -------------------------------------------------------------------
 
 // AppResponse
 
-// required uint32 seq = 1;
+// required int32 seq = 1;
 inline bool AppResponse::_internal_has_seq() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
 inline bool AppResponse::has_seq() const {
   return _internal_has_seq();
 }
 inline void AppResponse::clear_seq() {
-  seq_ = 0u;
-  _has_bits_[0] &= ~0x00000800u;
+  seq_ = 0;
+  _has_bits_[0] &= ~0x00004000u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppResponse::_internal_seq() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppResponse::_internal_seq() const {
   return seq_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppResponse::seq() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppResponse::seq() const {
   // @@protoc_insertion_point(field_get:rustplus.AppResponse.seq)
   return _internal_seq();
 }
-inline void AppResponse::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000800u;
+inline void AppResponse::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00004000u;
   seq_ = value;
 }
-inline void AppResponse::set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppResponse::set_seq(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_seq(value);
   // @@protoc_insertion_point(field_set:rustplus.AppResponse.seq)
 }
@@ -9482,45 +17726,45 @@ inline void AppResponse::set_allocated_mapmarkers(::rustplus::AppMapMarkers* map
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.mapMarkers)
 }
 
-// optional .rustplus.AppCameraFrame cameraFrame = 14;
-inline bool AppResponse::_internal_has_cameraframe() const {
+// optional .rustplus.AppClanInfo clanInfo = 15;
+inline bool AppResponse::_internal_has_claninfo() const {
   bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  PROTOBUF_ASSUME(!value || cameraframe_ != nullptr);
+  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
   return value;
 }
-inline bool AppResponse::has_cameraframe() const {
-  return _internal_has_cameraframe();
+inline bool AppResponse::has_claninfo() const {
+  return _internal_has_claninfo();
 }
-inline void AppResponse::clear_cameraframe() {
-  if (cameraframe_ != nullptr) cameraframe_->Clear();
+inline void AppResponse::clear_claninfo() {
+  if (claninfo_ != nullptr) claninfo_->Clear();
   _has_bits_[0] &= ~0x00000400u;
 }
-inline const ::rustplus::AppCameraFrame& AppResponse::_internal_cameraframe() const {
-  const ::rustplus::AppCameraFrame* p = cameraframe_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraFrame&>(
-      ::rustplus::_AppCameraFrame_default_instance_);
+inline const ::rustplus::AppClanInfo& AppResponse::_internal_claninfo() const {
+  const ::rustplus::AppClanInfo* p = claninfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppClanInfo&>(
+      ::rustplus::_AppClanInfo_default_instance_);
 }
-inline const ::rustplus::AppCameraFrame& AppResponse::cameraframe() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppResponse.cameraFrame)
-  return _internal_cameraframe();
+inline const ::rustplus::AppClanInfo& AppResponse::claninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppResponse.clanInfo)
+  return _internal_claninfo();
 }
-inline void AppResponse::unsafe_arena_set_allocated_cameraframe(
-    ::rustplus::AppCameraFrame* cameraframe) {
+inline void AppResponse::unsafe_arena_set_allocated_claninfo(
+    ::rustplus::AppClanInfo* claninfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cameraframe_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(claninfo_);
   }
-  cameraframe_ = cameraframe;
-  if (cameraframe) {
+  claninfo_ = claninfo;
+  if (claninfo) {
     _has_bits_[0] |= 0x00000400u;
   } else {
     _has_bits_[0] &= ~0x00000400u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppResponse.cameraFrame)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppResponse.clanInfo)
 }
-inline ::rustplus::AppCameraFrame* AppResponse::release_cameraframe() {
+inline ::rustplus::AppClanInfo* AppResponse::release_claninfo() {
   _has_bits_[0] &= ~0x00000400u;
-  ::rustplus::AppCameraFrame* temp = cameraframe_;
-  cameraframe_ = nullptr;
+  ::rustplus::AppClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9532,44 +17776,314 @@ inline ::rustplus::AppCameraFrame* AppResponse::release_cameraframe() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rustplus::AppCameraFrame* AppResponse::unsafe_arena_release_cameraframe() {
-  // @@protoc_insertion_point(field_release:rustplus.AppResponse.cameraFrame)
+inline ::rustplus::AppClanInfo* AppResponse::unsafe_arena_release_claninfo() {
+  // @@protoc_insertion_point(field_release:rustplus.AppResponse.clanInfo)
   _has_bits_[0] &= ~0x00000400u;
-  ::rustplus::AppCameraFrame* temp = cameraframe_;
-  cameraframe_ = nullptr;
+  ::rustplus::AppClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
   return temp;
 }
-inline ::rustplus::AppCameraFrame* AppResponse::_internal_mutable_cameraframe() {
+inline ::rustplus::AppClanInfo* AppResponse::_internal_mutable_claninfo() {
   _has_bits_[0] |= 0x00000400u;
-  if (cameraframe_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppCameraFrame>(GetArenaForAllocation());
-    cameraframe_ = p;
+  if (claninfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppClanInfo>(GetArenaForAllocation());
+    claninfo_ = p;
   }
-  return cameraframe_;
+  return claninfo_;
 }
-inline ::rustplus::AppCameraFrame* AppResponse::mutable_cameraframe() {
-  ::rustplus::AppCameraFrame* _msg = _internal_mutable_cameraframe();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppResponse.cameraFrame)
+inline ::rustplus::AppClanInfo* AppResponse::mutable_claninfo() {
+  ::rustplus::AppClanInfo* _msg = _internal_mutable_claninfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppResponse.clanInfo)
   return _msg;
 }
-inline void AppResponse::set_allocated_cameraframe(::rustplus::AppCameraFrame* cameraframe) {
+inline void AppResponse::set_allocated_claninfo(::rustplus::AppClanInfo* claninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete cameraframe_;
+    delete claninfo_;
   }
-  if (cameraframe) {
+  if (claninfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraFrame>::GetOwningArena(cameraframe);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppClanInfo>::GetOwningArena(claninfo);
     if (message_arena != submessage_arena) {
-      cameraframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cameraframe, submessage_arena);
+      claninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, claninfo, submessage_arena);
     }
     _has_bits_[0] |= 0x00000400u;
   } else {
     _has_bits_[0] &= ~0x00000400u;
   }
-  cameraframe_ = cameraframe;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.cameraFrame)
+  claninfo_ = claninfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.clanInfo)
+}
+
+// optional .rustplus.AppClanChat clanChat = 16;
+inline bool AppResponse::_internal_has_clanchat() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  PROTOBUF_ASSUME(!value || clanchat_ != nullptr);
+  return value;
+}
+inline bool AppResponse::has_clanchat() const {
+  return _internal_has_clanchat();
+}
+inline void AppResponse::clear_clanchat() {
+  if (clanchat_ != nullptr) clanchat_->Clear();
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline const ::rustplus::AppClanChat& AppResponse::_internal_clanchat() const {
+  const ::rustplus::AppClanChat* p = clanchat_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppClanChat&>(
+      ::rustplus::_AppClanChat_default_instance_);
+}
+inline const ::rustplus::AppClanChat& AppResponse::clanchat() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppResponse.clanChat)
+  return _internal_clanchat();
+}
+inline void AppResponse::unsafe_arena_set_allocated_clanchat(
+    ::rustplus::AppClanChat* clanchat) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clanchat_);
+  }
+  clanchat_ = clanchat;
+  if (clanchat) {
+    _has_bits_[0] |= 0x00000800u;
+  } else {
+    _has_bits_[0] &= ~0x00000800u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppResponse.clanChat)
+}
+inline ::rustplus::AppClanChat* AppResponse::release_clanchat() {
+  _has_bits_[0] &= ~0x00000800u;
+  ::rustplus::AppClanChat* temp = clanchat_;
+  clanchat_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppClanChat* AppResponse::unsafe_arena_release_clanchat() {
+  // @@protoc_insertion_point(field_release:rustplus.AppResponse.clanChat)
+  _has_bits_[0] &= ~0x00000800u;
+  ::rustplus::AppClanChat* temp = clanchat_;
+  clanchat_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppClanChat* AppResponse::_internal_mutable_clanchat() {
+  _has_bits_[0] |= 0x00000800u;
+  if (clanchat_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppClanChat>(GetArenaForAllocation());
+    clanchat_ = p;
+  }
+  return clanchat_;
+}
+inline ::rustplus::AppClanChat* AppResponse::mutable_clanchat() {
+  ::rustplus::AppClanChat* _msg = _internal_mutable_clanchat();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppResponse.clanChat)
+  return _msg;
+}
+inline void AppResponse::set_allocated_clanchat(::rustplus::AppClanChat* clanchat) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete clanchat_;
+  }
+  if (clanchat) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppClanChat>::GetOwningArena(clanchat);
+    if (message_arena != submessage_arena) {
+      clanchat = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, clanchat, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000800u;
+  } else {
+    _has_bits_[0] &= ~0x00000800u;
+  }
+  clanchat_ = clanchat;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.clanChat)
+}
+
+// optional .rustplus.AppNexusAuth nexusAuth = 17;
+inline bool AppResponse::_internal_has_nexusauth() const {
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
+  PROTOBUF_ASSUME(!value || nexusauth_ != nullptr);
+  return value;
+}
+inline bool AppResponse::has_nexusauth() const {
+  return _internal_has_nexusauth();
+}
+inline void AppResponse::clear_nexusauth() {
+  if (nexusauth_ != nullptr) nexusauth_->Clear();
+  _has_bits_[0] &= ~0x00001000u;
+}
+inline const ::rustplus::AppNexusAuth& AppResponse::_internal_nexusauth() const {
+  const ::rustplus::AppNexusAuth* p = nexusauth_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppNexusAuth&>(
+      ::rustplus::_AppNexusAuth_default_instance_);
+}
+inline const ::rustplus::AppNexusAuth& AppResponse::nexusauth() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppResponse.nexusAuth)
+  return _internal_nexusauth();
+}
+inline void AppResponse::unsafe_arena_set_allocated_nexusauth(
+    ::rustplus::AppNexusAuth* nexusauth) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(nexusauth_);
+  }
+  nexusauth_ = nexusauth;
+  if (nexusauth) {
+    _has_bits_[0] |= 0x00001000u;
+  } else {
+    _has_bits_[0] &= ~0x00001000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppResponse.nexusAuth)
+}
+inline ::rustplus::AppNexusAuth* AppResponse::release_nexusauth() {
+  _has_bits_[0] &= ~0x00001000u;
+  ::rustplus::AppNexusAuth* temp = nexusauth_;
+  nexusauth_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppNexusAuth* AppResponse::unsafe_arena_release_nexusauth() {
+  // @@protoc_insertion_point(field_release:rustplus.AppResponse.nexusAuth)
+  _has_bits_[0] &= ~0x00001000u;
+  ::rustplus::AppNexusAuth* temp = nexusauth_;
+  nexusauth_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppNexusAuth* AppResponse::_internal_mutable_nexusauth() {
+  _has_bits_[0] |= 0x00001000u;
+  if (nexusauth_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppNexusAuth>(GetArenaForAllocation());
+    nexusauth_ = p;
+  }
+  return nexusauth_;
+}
+inline ::rustplus::AppNexusAuth* AppResponse::mutable_nexusauth() {
+  ::rustplus::AppNexusAuth* _msg = _internal_mutable_nexusauth();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppResponse.nexusAuth)
+  return _msg;
+}
+inline void AppResponse::set_allocated_nexusauth(::rustplus::AppNexusAuth* nexusauth) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete nexusauth_;
+  }
+  if (nexusauth) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppNexusAuth>::GetOwningArena(nexusauth);
+    if (message_arena != submessage_arena) {
+      nexusauth = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, nexusauth, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00001000u;
+  } else {
+    _has_bits_[0] &= ~0x00001000u;
+  }
+  nexusauth_ = nexusauth;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.nexusAuth)
+}
+
+// optional .rustplus.AppCameraInfo cameraSubscribeInfo = 20;
+inline bool AppResponse::_internal_has_camerasubscribeinfo() const {
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
+  PROTOBUF_ASSUME(!value || camerasubscribeinfo_ != nullptr);
+  return value;
+}
+inline bool AppResponse::has_camerasubscribeinfo() const {
+  return _internal_has_camerasubscribeinfo();
+}
+inline void AppResponse::clear_camerasubscribeinfo() {
+  if (camerasubscribeinfo_ != nullptr) camerasubscribeinfo_->Clear();
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline const ::rustplus::AppCameraInfo& AppResponse::_internal_camerasubscribeinfo() const {
+  const ::rustplus::AppCameraInfo* p = camerasubscribeinfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraInfo&>(
+      ::rustplus::_AppCameraInfo_default_instance_);
+}
+inline const ::rustplus::AppCameraInfo& AppResponse::camerasubscribeinfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppResponse.cameraSubscribeInfo)
+  return _internal_camerasubscribeinfo();
+}
+inline void AppResponse::unsafe_arena_set_allocated_camerasubscribeinfo(
+    ::rustplus::AppCameraInfo* camerasubscribeinfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(camerasubscribeinfo_);
+  }
+  camerasubscribeinfo_ = camerasubscribeinfo;
+  if (camerasubscribeinfo) {
+    _has_bits_[0] |= 0x00002000u;
+  } else {
+    _has_bits_[0] &= ~0x00002000u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppResponse.cameraSubscribeInfo)
+}
+inline ::rustplus::AppCameraInfo* AppResponse::release_camerasubscribeinfo() {
+  _has_bits_[0] &= ~0x00002000u;
+  ::rustplus::AppCameraInfo* temp = camerasubscribeinfo_;
+  camerasubscribeinfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppCameraInfo* AppResponse::unsafe_arena_release_camerasubscribeinfo() {
+  // @@protoc_insertion_point(field_release:rustplus.AppResponse.cameraSubscribeInfo)
+  _has_bits_[0] &= ~0x00002000u;
+  ::rustplus::AppCameraInfo* temp = camerasubscribeinfo_;
+  camerasubscribeinfo_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppCameraInfo* AppResponse::_internal_mutable_camerasubscribeinfo() {
+  _has_bits_[0] |= 0x00002000u;
+  if (camerasubscribeinfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppCameraInfo>(GetArenaForAllocation());
+    camerasubscribeinfo_ = p;
+  }
+  return camerasubscribeinfo_;
+}
+inline ::rustplus::AppCameraInfo* AppResponse::mutable_camerasubscribeinfo() {
+  ::rustplus::AppCameraInfo* _msg = _internal_mutable_camerasubscribeinfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppResponse.cameraSubscribeInfo)
+  return _msg;
+}
+inline void AppResponse::set_allocated_camerasubscribeinfo(::rustplus::AppCameraInfo* camerasubscribeinfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete camerasubscribeinfo_;
+  }
+  if (camerasubscribeinfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraInfo>::GetOwningArena(camerasubscribeinfo);
+    if (message_arena != submessage_arena) {
+      camerasubscribeinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, camerasubscribeinfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00002000u;
+  } else {
+    _has_bits_[0] &= ~0x00002000u;
+  }
+  camerasubscribeinfo_ = camerasubscribeinfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppResponse.cameraSubscribeInfo)
 }
 
 // -------------------------------------------------------------------
@@ -9666,45 +18180,45 @@ inline void AppBroadcast::set_allocated_teamchanged(::rustplus::AppTeamChanged* 
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.teamChanged)
 }
 
-// optional .rustplus.AppTeamMessage teamMessage = 5;
-inline bool AppBroadcast::_internal_has_teammessage() const {
+// optional .rustplus.AppNewTeamMessage newTeamMessage = 5;
+inline bool AppBroadcast::_internal_has_newteammessage() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || teammessage_ != nullptr);
+  PROTOBUF_ASSUME(!value || newteammessage_ != nullptr);
   return value;
 }
-inline bool AppBroadcast::has_teammessage() const {
-  return _internal_has_teammessage();
+inline bool AppBroadcast::has_newteammessage() const {
+  return _internal_has_newteammessage();
 }
-inline void AppBroadcast::clear_teammessage() {
-  if (teammessage_ != nullptr) teammessage_->Clear();
+inline void AppBroadcast::clear_newteammessage() {
+  if (newteammessage_ != nullptr) newteammessage_->Clear();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::rustplus::AppTeamMessage& AppBroadcast::_internal_teammessage() const {
-  const ::rustplus::AppTeamMessage* p = teammessage_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppTeamMessage&>(
-      ::rustplus::_AppTeamMessage_default_instance_);
+inline const ::rustplus::AppNewTeamMessage& AppBroadcast::_internal_newteammessage() const {
+  const ::rustplus::AppNewTeamMessage* p = newteammessage_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppNewTeamMessage&>(
+      ::rustplus::_AppNewTeamMessage_default_instance_);
 }
-inline const ::rustplus::AppTeamMessage& AppBroadcast::teammessage() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppBroadcast.teamMessage)
-  return _internal_teammessage();
+inline const ::rustplus::AppNewTeamMessage& AppBroadcast::newteammessage() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppBroadcast.newTeamMessage)
+  return _internal_newteammessage();
 }
-inline void AppBroadcast::unsafe_arena_set_allocated_teammessage(
-    ::rustplus::AppTeamMessage* teammessage) {
+inline void AppBroadcast::unsafe_arena_set_allocated_newteammessage(
+    ::rustplus::AppNewTeamMessage* newteammessage) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(teammessage_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(newteammessage_);
   }
-  teammessage_ = teammessage;
-  if (teammessage) {
+  newteammessage_ = newteammessage;
+  if (newteammessage) {
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppBroadcast.teamMessage)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppBroadcast.newTeamMessage)
 }
-inline ::rustplus::AppTeamMessage* AppBroadcast::release_teammessage() {
+inline ::rustplus::AppNewTeamMessage* AppBroadcast::release_newteammessage() {
   _has_bits_[0] &= ~0x00000002u;
-  ::rustplus::AppTeamMessage* temp = teammessage_;
-  teammessage_ = nullptr;
+  ::rustplus::AppNewTeamMessage* temp = newteammessage_;
+  newteammessage_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9716,44 +18230,44 @@ inline ::rustplus::AppTeamMessage* AppBroadcast::release_teammessage() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rustplus::AppTeamMessage* AppBroadcast::unsafe_arena_release_teammessage() {
-  // @@protoc_insertion_point(field_release:rustplus.AppBroadcast.teamMessage)
+inline ::rustplus::AppNewTeamMessage* AppBroadcast::unsafe_arena_release_newteammessage() {
+  // @@protoc_insertion_point(field_release:rustplus.AppBroadcast.newTeamMessage)
   _has_bits_[0] &= ~0x00000002u;
-  ::rustplus::AppTeamMessage* temp = teammessage_;
-  teammessage_ = nullptr;
+  ::rustplus::AppNewTeamMessage* temp = newteammessage_;
+  newteammessage_ = nullptr;
   return temp;
 }
-inline ::rustplus::AppTeamMessage* AppBroadcast::_internal_mutable_teammessage() {
+inline ::rustplus::AppNewTeamMessage* AppBroadcast::_internal_mutable_newteammessage() {
   _has_bits_[0] |= 0x00000002u;
-  if (teammessage_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppTeamMessage>(GetArenaForAllocation());
-    teammessage_ = p;
+  if (newteammessage_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppNewTeamMessage>(GetArenaForAllocation());
+    newteammessage_ = p;
   }
-  return teammessage_;
+  return newteammessage_;
 }
-inline ::rustplus::AppTeamMessage* AppBroadcast::mutable_teammessage() {
-  ::rustplus::AppTeamMessage* _msg = _internal_mutable_teammessage();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppBroadcast.teamMessage)
+inline ::rustplus::AppNewTeamMessage* AppBroadcast::mutable_newteammessage() {
+  ::rustplus::AppNewTeamMessage* _msg = _internal_mutable_newteammessage();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppBroadcast.newTeamMessage)
   return _msg;
 }
-inline void AppBroadcast::set_allocated_teammessage(::rustplus::AppTeamMessage* teammessage) {
+inline void AppBroadcast::set_allocated_newteammessage(::rustplus::AppNewTeamMessage* newteammessage) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete teammessage_;
+    delete newteammessage_;
   }
-  if (teammessage) {
+  if (newteammessage) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppTeamMessage>::GetOwningArena(teammessage);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppNewTeamMessage>::GetOwningArena(newteammessage);
     if (message_arena != submessage_arena) {
-      teammessage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, teammessage, submessage_arena);
+      newteammessage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, newteammessage, submessage_arena);
     }
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  teammessage_ = teammessage;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.teamMessage)
+  newteammessage_ = newteammessage;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.newTeamMessage)
 }
 
 // optional .rustplus.AppEntityChanged entityChanged = 6;
@@ -9846,9 +18360,467 @@ inline void AppBroadcast::set_allocated_entitychanged(::rustplus::AppEntityChang
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.entityChanged)
 }
 
+// optional .rustplus.AppClanChanged clanChanged = 7;
+inline bool AppBroadcast::_internal_has_clanchanged() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || clanchanged_ != nullptr);
+  return value;
+}
+inline bool AppBroadcast::has_clanchanged() const {
+  return _internal_has_clanchanged();
+}
+inline void AppBroadcast::clear_clanchanged() {
+  if (clanchanged_ != nullptr) clanchanged_->Clear();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const ::rustplus::AppClanChanged& AppBroadcast::_internal_clanchanged() const {
+  const ::rustplus::AppClanChanged* p = clanchanged_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppClanChanged&>(
+      ::rustplus::_AppClanChanged_default_instance_);
+}
+inline const ::rustplus::AppClanChanged& AppBroadcast::clanchanged() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppBroadcast.clanChanged)
+  return _internal_clanchanged();
+}
+inline void AppBroadcast::unsafe_arena_set_allocated_clanchanged(
+    ::rustplus::AppClanChanged* clanchanged) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clanchanged_);
+  }
+  clanchanged_ = clanchanged;
+  if (clanchanged) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppBroadcast.clanChanged)
+}
+inline ::rustplus::AppClanChanged* AppBroadcast::release_clanchanged() {
+  _has_bits_[0] &= ~0x00000008u;
+  ::rustplus::AppClanChanged* temp = clanchanged_;
+  clanchanged_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppClanChanged* AppBroadcast::unsafe_arena_release_clanchanged() {
+  // @@protoc_insertion_point(field_release:rustplus.AppBroadcast.clanChanged)
+  _has_bits_[0] &= ~0x00000008u;
+  ::rustplus::AppClanChanged* temp = clanchanged_;
+  clanchanged_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppClanChanged* AppBroadcast::_internal_mutable_clanchanged() {
+  _has_bits_[0] |= 0x00000008u;
+  if (clanchanged_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppClanChanged>(GetArenaForAllocation());
+    clanchanged_ = p;
+  }
+  return clanchanged_;
+}
+inline ::rustplus::AppClanChanged* AppBroadcast::mutable_clanchanged() {
+  ::rustplus::AppClanChanged* _msg = _internal_mutable_clanchanged();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppBroadcast.clanChanged)
+  return _msg;
+}
+inline void AppBroadcast::set_allocated_clanchanged(::rustplus::AppClanChanged* clanchanged) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete clanchanged_;
+  }
+  if (clanchanged) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppClanChanged>::GetOwningArena(clanchanged);
+    if (message_arena != submessage_arena) {
+      clanchanged = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, clanchanged, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  clanchanged_ = clanchanged;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.clanChanged)
+}
+
+// optional .rustplus.AppNewClanMessage clanMessage = 8;
+inline bool AppBroadcast::_internal_has_clanmessage() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || clanmessage_ != nullptr);
+  return value;
+}
+inline bool AppBroadcast::has_clanmessage() const {
+  return _internal_has_clanmessage();
+}
+inline void AppBroadcast::clear_clanmessage() {
+  if (clanmessage_ != nullptr) clanmessage_->Clear();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const ::rustplus::AppNewClanMessage& AppBroadcast::_internal_clanmessage() const {
+  const ::rustplus::AppNewClanMessage* p = clanmessage_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppNewClanMessage&>(
+      ::rustplus::_AppNewClanMessage_default_instance_);
+}
+inline const ::rustplus::AppNewClanMessage& AppBroadcast::clanmessage() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppBroadcast.clanMessage)
+  return _internal_clanmessage();
+}
+inline void AppBroadcast::unsafe_arena_set_allocated_clanmessage(
+    ::rustplus::AppNewClanMessage* clanmessage) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clanmessage_);
+  }
+  clanmessage_ = clanmessage;
+  if (clanmessage) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppBroadcast.clanMessage)
+}
+inline ::rustplus::AppNewClanMessage* AppBroadcast::release_clanmessage() {
+  _has_bits_[0] &= ~0x00000010u;
+  ::rustplus::AppNewClanMessage* temp = clanmessage_;
+  clanmessage_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppNewClanMessage* AppBroadcast::unsafe_arena_release_clanmessage() {
+  // @@protoc_insertion_point(field_release:rustplus.AppBroadcast.clanMessage)
+  _has_bits_[0] &= ~0x00000010u;
+  ::rustplus::AppNewClanMessage* temp = clanmessage_;
+  clanmessage_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppNewClanMessage* AppBroadcast::_internal_mutable_clanmessage() {
+  _has_bits_[0] |= 0x00000010u;
+  if (clanmessage_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppNewClanMessage>(GetArenaForAllocation());
+    clanmessage_ = p;
+  }
+  return clanmessage_;
+}
+inline ::rustplus::AppNewClanMessage* AppBroadcast::mutable_clanmessage() {
+  ::rustplus::AppNewClanMessage* _msg = _internal_mutable_clanmessage();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppBroadcast.clanMessage)
+  return _msg;
+}
+inline void AppBroadcast::set_allocated_clanmessage(::rustplus::AppNewClanMessage* clanmessage) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete clanmessage_;
+  }
+  if (clanmessage) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppNewClanMessage>::GetOwningArena(clanmessage);
+    if (message_arena != submessage_arena) {
+      clanmessage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, clanmessage, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  clanmessage_ = clanmessage;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.clanMessage)
+}
+
+// optional .rustplus.AppCameraRays cameraRays = 10;
+inline bool AppBroadcast::_internal_has_camerarays() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!value || camerarays_ != nullptr);
+  return value;
+}
+inline bool AppBroadcast::has_camerarays() const {
+  return _internal_has_camerarays();
+}
+inline void AppBroadcast::clear_camerarays() {
+  if (camerarays_ != nullptr) camerarays_->Clear();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const ::rustplus::AppCameraRays& AppBroadcast::_internal_camerarays() const {
+  const ::rustplus::AppCameraRays* p = camerarays_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppCameraRays&>(
+      ::rustplus::_AppCameraRays_default_instance_);
+}
+inline const ::rustplus::AppCameraRays& AppBroadcast::camerarays() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppBroadcast.cameraRays)
+  return _internal_camerarays();
+}
+inline void AppBroadcast::unsafe_arena_set_allocated_camerarays(
+    ::rustplus::AppCameraRays* camerarays) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(camerarays_);
+  }
+  camerarays_ = camerarays;
+  if (camerarays) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppBroadcast.cameraRays)
+}
+inline ::rustplus::AppCameraRays* AppBroadcast::release_camerarays() {
+  _has_bits_[0] &= ~0x00000020u;
+  ::rustplus::AppCameraRays* temp = camerarays_;
+  camerarays_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppCameraRays* AppBroadcast::unsafe_arena_release_camerarays() {
+  // @@protoc_insertion_point(field_release:rustplus.AppBroadcast.cameraRays)
+  _has_bits_[0] &= ~0x00000020u;
+  ::rustplus::AppCameraRays* temp = camerarays_;
+  camerarays_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppCameraRays* AppBroadcast::_internal_mutable_camerarays() {
+  _has_bits_[0] |= 0x00000020u;
+  if (camerarays_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppCameraRays>(GetArenaForAllocation());
+    camerarays_ = p;
+  }
+  return camerarays_;
+}
+inline ::rustplus::AppCameraRays* AppBroadcast::mutable_camerarays() {
+  ::rustplus::AppCameraRays* _msg = _internal_mutable_camerarays();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppBroadcast.cameraRays)
+  return _msg;
+}
+inline void AppBroadcast::set_allocated_camerarays(::rustplus::AppCameraRays* camerarays) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete camerarays_;
+  }
+  if (camerarays) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppCameraRays>::GetOwningArena(camerarays);
+    if (message_arena != submessage_arena) {
+      camerarays = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, camerarays, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  camerarays_ = camerarays;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppBroadcast.cameraRays)
+}
+
 // -------------------------------------------------------------------
 
 // AppEmpty
+
+// -------------------------------------------------------------------
+
+// AppSendMessage
+
+// required string message = 1;
+inline bool AppSendMessage::_internal_has_message() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppSendMessage::has_message() const {
+  return _internal_has_message();
+}
+inline void AppSendMessage::clear_message() {
+  message_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppSendMessage::message() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppSendMessage.message)
+  return _internal_message();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppSendMessage::set_message(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppSendMessage.message)
+}
+inline std::string* AppSendMessage::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppSendMessage.message)
+  return _s;
+}
+inline const std::string& AppSendMessage::_internal_message() const {
+  return message_.Get();
+}
+inline void AppSendMessage::_internal_set_message(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppSendMessage::_internal_mutable_message() {
+  _has_bits_[0] |= 0x00000001u;
+  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppSendMessage::release_message() {
+  // @@protoc_insertion_point(field_release:rustplus.AppSendMessage.message)
+  if (!_internal_has_message()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return message_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppSendMessage::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppSendMessage.message)
+}
+
+// -------------------------------------------------------------------
+
+// AppSetEntityValue
+
+// required bool value = 1;
+inline bool AppSetEntityValue::_internal_has_value() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppSetEntityValue::has_value() const {
+  return _internal_has_value();
+}
+inline void AppSetEntityValue::clear_value() {
+  value_ = false;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline bool AppSetEntityValue::_internal_value() const {
+  return value_;
+}
+inline bool AppSetEntityValue::value() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppSetEntityValue.value)
+  return _internal_value();
+}
+inline void AppSetEntityValue::_internal_set_value(bool value) {
+  _has_bits_[0] |= 0x00000001u;
+  value_ = value;
+}
+inline void AppSetEntityValue::set_value(bool value) {
+  _internal_set_value(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppSetEntityValue.value)
+}
+
+// -------------------------------------------------------------------
+
+// AppPromoteToLeader
+
+// required int64 steamId = 1;
+inline bool AppPromoteToLeader::_internal_has_steamid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppPromoteToLeader::has_steamid() const {
+  return _internal_has_steamid();
+}
+inline void AppPromoteToLeader::clear_steamid() {
+  steamid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppPromoteToLeader::_internal_steamid() const {
+  return steamid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppPromoteToLeader::steamid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppPromoteToLeader.steamId)
+  return _internal_steamid();
+}
+inline void AppPromoteToLeader::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  steamid_ = value;
+}
+inline void AppPromoteToLeader::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_steamid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppPromoteToLeader.steamId)
+}
+
+// -------------------------------------------------------------------
+
+// AppGetNexusAuth
+
+// required string appKey = 1;
+inline bool AppGetNexusAuth::_internal_has_appkey() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppGetNexusAuth::has_appkey() const {
+  return _internal_has_appkey();
+}
+inline void AppGetNexusAuth::clear_appkey() {
+  appkey_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppGetNexusAuth::appkey() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppGetNexusAuth.appKey)
+  return _internal_appkey();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppGetNexusAuth::set_appkey(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ appkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppGetNexusAuth.appKey)
+}
+inline std::string* AppGetNexusAuth::mutable_appkey() {
+  std::string* _s = _internal_mutable_appkey();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppGetNexusAuth.appKey)
+  return _s;
+}
+inline const std::string& AppGetNexusAuth::_internal_appkey() const {
+  return appkey_.Get();
+}
+inline void AppGetNexusAuth::_internal_set_appkey(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  appkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppGetNexusAuth::_internal_mutable_appkey() {
+  _has_bits_[0] |= 0x00000001u;
+  return appkey_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppGetNexusAuth::release_appkey() {
+  // @@protoc_insertion_point(field_release:rustplus.AppGetNexusAuth.appKey)
+  if (!_internal_has_appkey()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return appkey_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppGetNexusAuth::set_allocated_appkey(std::string* appkey) {
+  if (appkey != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  appkey_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), appkey,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppGetNexusAuth.appKey)
+}
 
 // -------------------------------------------------------------------
 
@@ -9914,6 +18886,38 @@ inline void AppError::set_allocated_error(std::string* error) {
   error_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), error,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppError.error)
+}
+
+// -------------------------------------------------------------------
+
+// AppFlag
+
+// required bool value = 1;
+inline bool AppFlag::_internal_has_value() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppFlag::has_value() const {
+  return _internal_has_value();
+}
+inline void AppFlag::clear_value() {
+  value_ = false;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline bool AppFlag::_internal_value() const {
+  return value_;
+}
+inline bool AppFlag::value() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppFlag.value)
+  return _internal_value();
+}
+inline void AppFlag::_internal_set_value(bool value) {
+  _has_bits_[0] |= 0x00000001u;
+  value_ = value;
+}
+inline void AppFlag::set_value(bool value) {
+  _internal_set_value(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppFlag.value)
 }
 
 // -------------------------------------------------------------------
@@ -10154,7 +19158,7 @@ inline void AppInfo::set_allocated_map(std::string* map) {
 
 // required uint32 mapSize = 5;
 inline bool AppInfo::_internal_has_mapsize() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool AppInfo::has_mapsize() const {
@@ -10162,7 +19166,7 @@ inline bool AppInfo::has_mapsize() const {
 }
 inline void AppInfo::clear_mapsize() {
   mapsize_ = 0u;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_mapsize() const {
   return mapsize_;
@@ -10172,7 +19176,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::mapsize() const {
   return _internal_mapsize();
 }
 inline void AppInfo::_internal_set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000080u;
   mapsize_ = value;
 }
 inline void AppInfo::set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10182,7 +19186,7 @@ inline void AppInfo::set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required uint32 wipeTime = 6;
 inline bool AppInfo::_internal_has_wipetime() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool AppInfo::has_wipetime() const {
@@ -10190,7 +19194,7 @@ inline bool AppInfo::has_wipetime() const {
 }
 inline void AppInfo::clear_wipetime() {
   wipetime_ = 0u;
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_wipetime() const {
   return wipetime_;
@@ -10200,7 +19204,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::wipetime() const {
   return _internal_wipetime();
 }
 inline void AppInfo::_internal_set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000100u;
   wipetime_ = value;
 }
 inline void AppInfo::set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10210,7 +19214,7 @@ inline void AppInfo::set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required uint32 players = 7;
 inline bool AppInfo::_internal_has_players() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool AppInfo::has_players() const {
@@ -10218,7 +19222,7 @@ inline bool AppInfo::has_players() const {
 }
 inline void AppInfo::clear_players() {
   players_ = 0u;
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_players() const {
   return players_;
@@ -10228,7 +19232,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::players() const {
   return _internal_players();
 }
 inline void AppInfo::_internal_set_players(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000200u;
   players_ = value;
 }
 inline void AppInfo::set_players(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10238,7 +19242,7 @@ inline void AppInfo::set_players(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required uint32 maxPlayers = 8;
 inline bool AppInfo::_internal_has_maxplayers() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool AppInfo::has_maxplayers() const {
@@ -10246,7 +19250,7 @@ inline bool AppInfo::has_maxplayers() const {
 }
 inline void AppInfo::clear_maxplayers() {
   maxplayers_ = 0u;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_maxplayers() const {
   return maxplayers_;
@@ -10256,7 +19260,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::maxplayers() const {
   return _internal_maxplayers();
 }
 inline void AppInfo::_internal_set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000400u;
   maxplayers_ = value;
 }
 inline void AppInfo::set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10266,7 +19270,7 @@ inline void AppInfo::set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required uint32 queuedPlayers = 9;
 inline bool AppInfo::_internal_has_queuedplayers() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool AppInfo::has_queuedplayers() const {
@@ -10274,7 +19278,7 @@ inline bool AppInfo::has_queuedplayers() const {
 }
 inline void AppInfo::clear_queuedplayers() {
   queuedplayers_ = 0u;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_queuedplayers() const {
   return queuedplayers_;
@@ -10284,7 +19288,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::queuedplayers() const {
   return _internal_queuedplayers();
 }
 inline void AppInfo::_internal_set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000800u;
   queuedplayers_ = value;
 }
 inline void AppInfo::set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10294,7 +19298,7 @@ inline void AppInfo::set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // optional uint32 seed = 10;
 inline bool AppInfo::_internal_has_seed() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
 inline bool AppInfo::has_seed() const {
@@ -10302,7 +19306,7 @@ inline bool AppInfo::has_seed() const {
 }
 inline void AppInfo::clear_seed() {
   seed_ = 0u;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_seed() const {
   return seed_;
@@ -10312,7 +19316,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::seed() const {
   return _internal_seed();
 }
 inline void AppInfo::_internal_set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00001000u;
   seed_ = value;
 }
 inline void AppInfo::set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -10322,7 +19326,7 @@ inline void AppInfo::set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // optional uint32 salt = 11;
 inline bool AppInfo::_internal_has_salt() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
 inline bool AppInfo::has_salt() const {
@@ -10330,7 +19334,7 @@ inline bool AppInfo::has_salt() const {
 }
 inline void AppInfo::clear_salt() {
   salt_ = 0u;
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::_internal_salt() const {
   return salt_;
@@ -10340,12 +19344,214 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::salt() const {
   return _internal_salt();
 }
 inline void AppInfo::_internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00002000u;
   salt_ = value;
 }
 inline void AppInfo::set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_salt(value);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.salt)
+}
+
+// optional string logoImage = 12;
+inline bool AppInfo::_internal_has_logoimage() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool AppInfo::has_logoimage() const {
+  return _internal_has_logoimage();
+}
+inline void AppInfo::clear_logoimage() {
+  logoimage_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& AppInfo::logoimage() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppInfo.logoImage)
+  return _internal_logoimage();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppInfo::set_logoimage(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000010u;
+ logoimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppInfo.logoImage)
+}
+inline std::string* AppInfo::mutable_logoimage() {
+  std::string* _s = _internal_mutable_logoimage();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppInfo.logoImage)
+  return _s;
+}
+inline const std::string& AppInfo::_internal_logoimage() const {
+  return logoimage_.Get();
+}
+inline void AppInfo::_internal_set_logoimage(const std::string& value) {
+  _has_bits_[0] |= 0x00000010u;
+  logoimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppInfo::_internal_mutable_logoimage() {
+  _has_bits_[0] |= 0x00000010u;
+  return logoimage_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppInfo::release_logoimage() {
+  // @@protoc_insertion_point(field_release:rustplus.AppInfo.logoImage)
+  if (!_internal_has_logoimage()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000010u;
+  return logoimage_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppInfo::set_allocated_logoimage(std::string* logoimage) {
+  if (logoimage != nullptr) {
+    _has_bits_[0] |= 0x00000010u;
+  } else {
+    _has_bits_[0] &= ~0x00000010u;
+  }
+  logoimage_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), logoimage,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppInfo.logoImage)
+}
+
+// optional string nexus = 13;
+inline bool AppInfo::_internal_has_nexus() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool AppInfo::has_nexus() const {
+  return _internal_has_nexus();
+}
+inline void AppInfo::clear_nexus() {
+  nexus_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline const std::string& AppInfo::nexus() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppInfo.nexus)
+  return _internal_nexus();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppInfo::set_nexus(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000020u;
+ nexus_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppInfo.nexus)
+}
+inline std::string* AppInfo::mutable_nexus() {
+  std::string* _s = _internal_mutable_nexus();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppInfo.nexus)
+  return _s;
+}
+inline const std::string& AppInfo::_internal_nexus() const {
+  return nexus_.Get();
+}
+inline void AppInfo::_internal_set_nexus(const std::string& value) {
+  _has_bits_[0] |= 0x00000020u;
+  nexus_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppInfo::_internal_mutable_nexus() {
+  _has_bits_[0] |= 0x00000020u;
+  return nexus_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppInfo::release_nexus() {
+  // @@protoc_insertion_point(field_release:rustplus.AppInfo.nexus)
+  if (!_internal_has_nexus()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000020u;
+  return nexus_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppInfo::set_allocated_nexus(std::string* nexus) {
+  if (nexus != nullptr) {
+    _has_bits_[0] |= 0x00000020u;
+  } else {
+    _has_bits_[0] &= ~0x00000020u;
+  }
+  nexus_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), nexus,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppInfo.nexus)
+}
+
+// optional int32 nexusId = 14;
+inline bool AppInfo::_internal_has_nexusid() const {
+  bool value = (_has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool AppInfo::has_nexusid() const {
+  return _internal_has_nexusid();
+}
+inline void AppInfo::clear_nexusid() {
+  nexusid_ = 0;
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppInfo::_internal_nexusid() const {
+  return nexusid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppInfo::nexusid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppInfo.nexusId)
+  return _internal_nexusid();
+}
+inline void AppInfo::_internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00004000u;
+  nexusid_ = value;
+}
+inline void AppInfo::set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_nexusid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppInfo.nexusId)
+}
+
+// optional string nexusZone = 15;
+inline bool AppInfo::_internal_has_nexuszone() const {
+  bool value = (_has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool AppInfo::has_nexuszone() const {
+  return _internal_has_nexuszone();
+}
+inline void AppInfo::clear_nexuszone() {
+  nexuszone_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000040u;
+}
+inline const std::string& AppInfo::nexuszone() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppInfo.nexusZone)
+  return _internal_nexuszone();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppInfo::set_nexuszone(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000040u;
+ nexuszone_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppInfo.nexusZone)
+}
+inline std::string* AppInfo::mutable_nexuszone() {
+  std::string* _s = _internal_mutable_nexuszone();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppInfo.nexusZone)
+  return _s;
+}
+inline const std::string& AppInfo::_internal_nexuszone() const {
+  return nexuszone_.Get();
+}
+inline void AppInfo::_internal_set_nexuszone(const std::string& value) {
+  _has_bits_[0] |= 0x00000040u;
+  nexuszone_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppInfo::_internal_mutable_nexuszone() {
+  _has_bits_[0] |= 0x00000040u;
+  return nexuszone_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppInfo::release_nexuszone() {
+  // @@protoc_insertion_point(field_release:rustplus.AppInfo.nexusZone)
+  if (!_internal_has_nexuszone()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000040u;
+  return nexuszone_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppInfo::set_allocated_nexuszone(std::string* nexuszone) {
+  if (nexuszone != nullptr) {
+    _has_bits_[0] |= 0x00000040u;
+  } else {
+    _has_bits_[0] &= ~0x00000040u;
+  }
+  nexuszone_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), nexuszone,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppInfo.nexusZone)
 }
 
 // -------------------------------------------------------------------
@@ -10856,6 +20062,373 @@ inline void AppMap::set_allocated_background(std::string* background) {
 
 // -------------------------------------------------------------------
 
+// AppEntityInfo
+
+// required .rustplus.AppEntityType type = 1;
+inline bool AppEntityInfo::_internal_has_type() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppEntityInfo::has_type() const {
+  return _internal_has_type();
+}
+inline void AppEntityInfo::clear_type() {
+  type_ = 1;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::rustplus::AppEntityType AppEntityInfo::_internal_type() const {
+  return static_cast< ::rustplus::AppEntityType >(type_);
+}
+inline ::rustplus::AppEntityType AppEntityInfo::type() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityInfo.type)
+  return _internal_type();
+}
+inline void AppEntityInfo::_internal_set_type(::rustplus::AppEntityType value) {
+  assert(::rustplus::AppEntityType_IsValid(value));
+  _has_bits_[0] |= 0x00000002u;
+  type_ = value;
+}
+inline void AppEntityInfo::set_type(::rustplus::AppEntityType value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityInfo.type)
+}
+
+// required .rustplus.AppEntityPayload payload = 3;
+inline bool AppEntityInfo::_internal_has_payload() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || payload_ != nullptr);
+  return value;
+}
+inline bool AppEntityInfo::has_payload() const {
+  return _internal_has_payload();
+}
+inline void AppEntityInfo::clear_payload() {
+  if (payload_ != nullptr) payload_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::AppEntityPayload& AppEntityInfo::_internal_payload() const {
+  const ::rustplus::AppEntityPayload* p = payload_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppEntityPayload&>(
+      ::rustplus::_AppEntityPayload_default_instance_);
+}
+inline const ::rustplus::AppEntityPayload& AppEntityInfo::payload() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityInfo.payload)
+  return _internal_payload();
+}
+inline void AppEntityInfo::unsafe_arena_set_allocated_payload(
+    ::rustplus::AppEntityPayload* payload) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(payload_);
+  }
+  payload_ = payload;
+  if (payload) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppEntityInfo.payload)
+}
+inline ::rustplus::AppEntityPayload* AppEntityInfo::release_payload() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::AppEntityPayload* temp = payload_;
+  payload_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppEntityPayload* AppEntityInfo::unsafe_arena_release_payload() {
+  // @@protoc_insertion_point(field_release:rustplus.AppEntityInfo.payload)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::AppEntityPayload* temp = payload_;
+  payload_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppEntityPayload* AppEntityInfo::_internal_mutable_payload() {
+  _has_bits_[0] |= 0x00000001u;
+  if (payload_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppEntityPayload>(GetArenaForAllocation());
+    payload_ = p;
+  }
+  return payload_;
+}
+inline ::rustplus::AppEntityPayload* AppEntityInfo::mutable_payload() {
+  ::rustplus::AppEntityPayload* _msg = _internal_mutable_payload();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppEntityInfo.payload)
+  return _msg;
+}
+inline void AppEntityInfo::set_allocated_payload(::rustplus::AppEntityPayload* payload) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete payload_;
+  }
+  if (payload) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppEntityPayload>::GetOwningArena(payload);
+    if (message_arena != submessage_arena) {
+      payload = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, payload, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  payload_ = payload;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppEntityInfo.payload)
+}
+
+// -------------------------------------------------------------------
+
+// AppEntityPayload_Item
+
+// required int32 itemId = 1;
+inline bool AppEntityPayload_Item::_internal_has_itemid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppEntityPayload_Item::has_itemid() const {
+  return _internal_has_itemid();
+}
+inline void AppEntityPayload_Item::clear_itemid() {
+  itemid_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::_internal_itemid() const {
+  return itemid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::itemid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemId)
+  return _internal_itemid();
+}
+inline void AppEntityPayload_Item::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itemid_ = value;
+}
+inline void AppEntityPayload_Item::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_itemid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemId)
+}
+
+// required int32 quantity = 2;
+inline bool AppEntityPayload_Item::_internal_has_quantity() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppEntityPayload_Item::has_quantity() const {
+  return _internal_has_quantity();
+}
+inline void AppEntityPayload_Item::clear_quantity() {
+  quantity_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::_internal_quantity() const {
+  return quantity_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::quantity() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.quantity)
+  return _internal_quantity();
+}
+inline void AppEntityPayload_Item::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  quantity_ = value;
+}
+inline void AppEntityPayload_Item::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.quantity)
+}
+
+// required bool itemIsBlueprint = 3;
+inline bool AppEntityPayload_Item::_internal_has_itemisblueprint() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppEntityPayload_Item::has_itemisblueprint() const {
+  return _internal_has_itemisblueprint();
+}
+inline void AppEntityPayload_Item::clear_itemisblueprint() {
+  itemisblueprint_ = false;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline bool AppEntityPayload_Item::_internal_itemisblueprint() const {
+  return itemisblueprint_;
+}
+inline bool AppEntityPayload_Item::itemisblueprint() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemIsBlueprint)
+  return _internal_itemisblueprint();
+}
+inline void AppEntityPayload_Item::_internal_set_itemisblueprint(bool value) {
+  _has_bits_[0] |= 0x00000004u;
+  itemisblueprint_ = value;
+}
+inline void AppEntityPayload_Item::set_itemisblueprint(bool value) {
+  _internal_set_itemisblueprint(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemIsBlueprint)
+}
+
+// -------------------------------------------------------------------
+
+// AppEntityPayload
+
+// optional bool value = 1;
+inline bool AppEntityPayload::_internal_has_value() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppEntityPayload::has_value() const {
+  return _internal_has_value();
+}
+inline void AppEntityPayload::clear_value() {
+  value_ = false;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline bool AppEntityPayload::_internal_value() const {
+  return value_;
+}
+inline bool AppEntityPayload::value() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.value)
+  return _internal_value();
+}
+inline void AppEntityPayload::_internal_set_value(bool value) {
+  _has_bits_[0] |= 0x00000001u;
+  value_ = value;
+}
+inline void AppEntityPayload::set_value(bool value) {
+  _internal_set_value(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.value)
+}
+
+// repeated .rustplus.AppEntityPayload.Item items = 2;
+inline int AppEntityPayload::_internal_items_size() const {
+  return items_.size();
+}
+inline int AppEntityPayload::items_size() const {
+  return _internal_items_size();
+}
+inline void AppEntityPayload::clear_items() {
+  items_.Clear();
+}
+inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::mutable_items(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.AppEntityPayload.items)
+  return items_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >*
+AppEntityPayload::mutable_items() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.AppEntityPayload.items)
+  return &items_;
+}
+inline const ::rustplus::AppEntityPayload_Item& AppEntityPayload::_internal_items(int index) const {
+  return items_.Get(index);
+}
+inline const ::rustplus::AppEntityPayload_Item& AppEntityPayload::items(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.items)
+  return _internal_items(index);
+}
+inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::_internal_add_items() {
+  return items_.Add();
+}
+inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::add_items() {
+  ::rustplus::AppEntityPayload_Item* _add = _internal_add_items();
+  // @@protoc_insertion_point(field_add:rustplus.AppEntityPayload.items)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >&
+AppEntityPayload::items() const {
+  // @@protoc_insertion_point(field_list:rustplus.AppEntityPayload.items)
+  return items_;
+}
+
+// optional int32 capacity = 3;
+inline bool AppEntityPayload::_internal_has_capacity() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppEntityPayload::has_capacity() const {
+  return _internal_has_capacity();
+}
+inline void AppEntityPayload::clear_capacity() {
+  capacity_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload::_internal_capacity() const {
+  return capacity_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload::capacity() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.capacity)
+  return _internal_capacity();
+}
+inline void AppEntityPayload::_internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  capacity_ = value;
+}
+inline void AppEntityPayload::set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_capacity(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.capacity)
+}
+
+// optional bool hasProtection = 4;
+inline bool AppEntityPayload::_internal_has_hasprotection() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppEntityPayload::has_hasprotection() const {
+  return _internal_has_hasprotection();
+}
+inline void AppEntityPayload::clear_hasprotection() {
+  hasprotection_ = false;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline bool AppEntityPayload::_internal_hasprotection() const {
+  return hasprotection_;
+}
+inline bool AppEntityPayload::hasprotection() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.hasProtection)
+  return _internal_hasprotection();
+}
+inline void AppEntityPayload::_internal_set_hasprotection(bool value) {
+  _has_bits_[0] |= 0x00000002u;
+  hasprotection_ = value;
+}
+inline void AppEntityPayload::set_hasprotection(bool value) {
+  _internal_set_hasprotection(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.hasProtection)
+}
+
+// optional uint32 protectionExpiry = 5;
+inline bool AppEntityPayload::_internal_has_protectionexpiry() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool AppEntityPayload::has_protectionexpiry() const {
+  return _internal_has_protectionexpiry();
+}
+inline void AppEntityPayload::clear_protectionexpiry() {
+  protectionexpiry_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityPayload::_internal_protectionexpiry() const {
+  return protectionexpiry_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityPayload::protectionexpiry() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.protectionExpiry)
+  return _internal_protectionexpiry();
+}
+inline void AppEntityPayload::_internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _has_bits_[0] |= 0x00000008u;
+  protectionexpiry_ = value;
+}
+inline void AppEntityPayload::set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_protectionexpiry(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.protectionExpiry)
+}
+
+// -------------------------------------------------------------------
+
 // AppTeamInfo_Member
 
 // required uint64 steamId = 1;
@@ -11354,9 +20927,243 @@ AppTeamInfo::leadermapnotes() const {
 
 // -------------------------------------------------------------------
 
+// AppTeamMessage
+
+// required uint64 steamId = 1;
+inline bool AppTeamMessage::_internal_has_steamid() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool AppTeamMessage::has_steamid() const {
+  return _internal_has_steamid();
+}
+inline void AppTeamMessage::clear_steamid() {
+  steamid_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamMessage::_internal_steamid() const {
+  return steamid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamMessage::steamid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.steamId)
+  return _internal_steamid();
+}
+inline void AppTeamMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  steamid_ = value;
+}
+inline void AppTeamMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_steamid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.steamId)
+}
+
+// required string name = 2;
+inline bool AppTeamMessage::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppTeamMessage::has_name() const {
+  return _internal_has_name();
+}
+inline void AppTeamMessage::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppTeamMessage::name() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppTeamMessage::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.name)
+}
+inline std::string* AppTeamMessage::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppTeamMessage.name)
+  return _s;
+}
+inline const std::string& AppTeamMessage::_internal_name() const {
+  return name_.Get();
+}
+inline void AppTeamMessage::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::release_name() {
+  // @@protoc_insertion_point(field_release:rustplus.AppTeamMessage.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppTeamMessage::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppTeamMessage.name)
+}
+
+// required string message = 3;
+inline bool AppTeamMessage::_internal_has_message() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppTeamMessage::has_message() const {
+  return _internal_has_message();
+}
+inline void AppTeamMessage::clear_message() {
+  message_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& AppTeamMessage::message() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.message)
+  return _internal_message();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppTeamMessage::set_message(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.message)
+}
+inline std::string* AppTeamMessage::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppTeamMessage.message)
+  return _s;
+}
+inline const std::string& AppTeamMessage::_internal_message() const {
+  return message_.Get();
+}
+inline void AppTeamMessage::_internal_set_message(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::_internal_mutable_message() {
+  _has_bits_[0] |= 0x00000002u;
+  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::release_message() {
+  // @@protoc_insertion_point(field_release:rustplus.AppTeamMessage.message)
+  if (!_internal_has_message()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return message_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppTeamMessage::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppTeamMessage.message)
+}
+
+// required string color = 4;
+inline bool AppTeamMessage::_internal_has_color() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppTeamMessage::has_color() const {
+  return _internal_has_color();
+}
+inline void AppTeamMessage::clear_color() {
+  color_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& AppTeamMessage::color() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.color)
+  return _internal_color();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppTeamMessage::set_color(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.color)
+}
+inline std::string* AppTeamMessage::mutable_color() {
+  std::string* _s = _internal_mutable_color();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppTeamMessage.color)
+  return _s;
+}
+inline const std::string& AppTeamMessage::_internal_color() const {
+  return color_.Get();
+}
+inline void AppTeamMessage::_internal_set_color(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::_internal_mutable_color() {
+  _has_bits_[0] |= 0x00000004u;
+  return color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppTeamMessage::release_color() {
+  // @@protoc_insertion_point(field_release:rustplus.AppTeamMessage.color)
+  if (!_internal_has_color()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return color_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppTeamMessage::set_allocated_color(std::string* color) {
+  if (color != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  color_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), color,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppTeamMessage.color)
+}
+
+// required uint32 time = 5;
+inline bool AppTeamMessage::_internal_has_time() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool AppTeamMessage::has_time() const {
+  return _internal_has_time();
+}
+inline void AppTeamMessage::clear_time() {
+  time_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppTeamMessage::_internal_time() const {
+  return time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppTeamMessage::time() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.time)
+  return _internal_time();
+}
+inline void AppTeamMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _has_bits_[0] |= 0x00000010u;
+  time_ = value;
+}
+inline void AppTeamMessage::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_time(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.time)
+}
+
+// -------------------------------------------------------------------
+
 // AppTeamChat
 
-// repeated .rustplus.AppChatMessage messages = 1;
+// repeated .rustplus.AppTeamMessage messages = 1;
 inline int AppTeamChat::_internal_messages_size() const {
   return messages_.size();
 }
@@ -11366,827 +21173,34 @@ inline int AppTeamChat::messages_size() const {
 inline void AppTeamChat::clear_messages() {
   messages_.Clear();
 }
-inline ::rustplus::AppChatMessage* AppTeamChat::mutable_messages(int index) {
+inline ::rustplus::AppTeamMessage* AppTeamChat::mutable_messages(int index) {
   // @@protoc_insertion_point(field_mutable:rustplus.AppTeamChat.messages)
   return messages_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppChatMessage >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppTeamMessage >*
 AppTeamChat::mutable_messages() {
   // @@protoc_insertion_point(field_mutable_list:rustplus.AppTeamChat.messages)
   return &messages_;
 }
-inline const ::rustplus::AppChatMessage& AppTeamChat::_internal_messages(int index) const {
+inline const ::rustplus::AppTeamMessage& AppTeamChat::_internal_messages(int index) const {
   return messages_.Get(index);
 }
-inline const ::rustplus::AppChatMessage& AppTeamChat::messages(int index) const {
+inline const ::rustplus::AppTeamMessage& AppTeamChat::messages(int index) const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamChat.messages)
   return _internal_messages(index);
 }
-inline ::rustplus::AppChatMessage* AppTeamChat::_internal_add_messages() {
+inline ::rustplus::AppTeamMessage* AppTeamChat::_internal_add_messages() {
   return messages_.Add();
 }
-inline ::rustplus::AppChatMessage* AppTeamChat::add_messages() {
-  ::rustplus::AppChatMessage* _add = _internal_add_messages();
+inline ::rustplus::AppTeamMessage* AppTeamChat::add_messages() {
+  ::rustplus::AppTeamMessage* _add = _internal_add_messages();
   // @@protoc_insertion_point(field_add:rustplus.AppTeamChat.messages)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppChatMessage >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppTeamMessage >&
 AppTeamChat::messages() const {
   // @@protoc_insertion_point(field_list:rustplus.AppTeamChat.messages)
   return messages_;
-}
-
-// -------------------------------------------------------------------
-
-// AppChatMessage
-
-// required uint64 steamId = 1;
-inline bool AppChatMessage::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool AppChatMessage::has_steamid() const {
-  return _internal_has_steamid();
-}
-inline void AppChatMessage::clear_steamid() {
-  steamid_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint64 AppChatMessage::_internal_steamid() const {
-  return steamid_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint64 AppChatMessage::steamid() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppChatMessage.steamId)
-  return _internal_steamid();
-}
-inline void AppChatMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _has_bits_[0] |= 0x00000008u;
-  steamid_ = value;
-}
-inline void AppChatMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppChatMessage.steamId)
-}
-
-// required string name = 2;
-inline bool AppChatMessage::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppChatMessage::has_name() const {
-  return _internal_has_name();
-}
-inline void AppChatMessage::clear_name() {
-  name_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& AppChatMessage::name() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppChatMessage.name)
-  return _internal_name();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppChatMessage::set_name(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
- name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppChatMessage.name)
-}
-inline std::string* AppChatMessage::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppChatMessage.name)
-  return _s;
-}
-inline const std::string& AppChatMessage::_internal_name() const {
-  return name_.Get();
-}
-inline void AppChatMessage::_internal_set_name(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::_internal_mutable_name() {
-  _has_bits_[0] |= 0x00000001u;
-  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::release_name() {
-  // @@protoc_insertion_point(field_release:rustplus.AppChatMessage.name)
-  if (!_internal_has_name()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
-}
-inline void AppChatMessage::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
-      GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppChatMessage.name)
-}
-
-// required string message = 3;
-inline bool AppChatMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool AppChatMessage::has_message() const {
-  return _internal_has_message();
-}
-inline void AppChatMessage::clear_message() {
-  message_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& AppChatMessage::message() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppChatMessage.message)
-  return _internal_message();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppChatMessage::set_message(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
- message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppChatMessage.message)
-}
-inline std::string* AppChatMessage::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppChatMessage.message)
-  return _s;
-}
-inline const std::string& AppChatMessage::_internal_message() const {
-  return message_.Get();
-}
-inline void AppChatMessage::_internal_set_message(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::_internal_mutable_message() {
-  _has_bits_[0] |= 0x00000002u;
-  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::release_message() {
-  // @@protoc_insertion_point(field_release:rustplus.AppChatMessage.message)
-  if (!_internal_has_message()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return message_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
-}
-inline void AppChatMessage::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
-  } else {
-    _has_bits_[0] &= ~0x00000002u;
-  }
-  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
-      GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppChatMessage.message)
-}
-
-// required string color = 4;
-inline bool AppChatMessage::_internal_has_color() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool AppChatMessage::has_color() const {
-  return _internal_has_color();
-}
-inline void AppChatMessage::clear_color() {
-  color_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline const std::string& AppChatMessage::color() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppChatMessage.color)
-  return _internal_color();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppChatMessage::set_color(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
- color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppChatMessage.color)
-}
-inline std::string* AppChatMessage::mutable_color() {
-  std::string* _s = _internal_mutable_color();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppChatMessage.color)
-  return _s;
-}
-inline const std::string& AppChatMessage::_internal_color() const {
-  return color_.Get();
-}
-inline void AppChatMessage::_internal_set_color(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
-  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::_internal_mutable_color() {
-  _has_bits_[0] |= 0x00000004u;
-  return color_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppChatMessage::release_color() {
-  // @@protoc_insertion_point(field_release:rustplus.AppChatMessage.color)
-  if (!_internal_has_color()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return color_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
-}
-inline void AppChatMessage::set_allocated_color(std::string* color) {
-  if (color != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
-  } else {
-    _has_bits_[0] &= ~0x00000004u;
-  }
-  color_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), color,
-      GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppChatMessage.color)
-}
-
-// required uint32 time = 5;
-inline bool AppChatMessage::_internal_has_time() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool AppChatMessage::has_time() const {
-  return _internal_has_time();
-}
-inline void AppChatMessage::clear_time() {
-  time_ = 0u;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppChatMessage::_internal_time() const {
-  return time_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppChatMessage::time() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppChatMessage.time)
-  return _internal_time();
-}
-inline void AppChatMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000010u;
-  time_ = value;
-}
-inline void AppChatMessage::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_time(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppChatMessage.time)
-}
-
-// -------------------------------------------------------------------
-
-// AppEntityInfo
-
-// required .rustplus.AppEntityType type = 1;
-inline bool AppEntityInfo::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool AppEntityInfo::has_type() const {
-  return _internal_has_type();
-}
-inline void AppEntityInfo::clear_type() {
-  type_ = 1;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::rustplus::AppEntityType AppEntityInfo::_internal_type() const {
-  return static_cast< ::rustplus::AppEntityType >(type_);
-}
-inline ::rustplus::AppEntityType AppEntityInfo::type() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityInfo.type)
-  return _internal_type();
-}
-inline void AppEntityInfo::_internal_set_type(::rustplus::AppEntityType value) {
-  assert(::rustplus::AppEntityType_IsValid(value));
-  _has_bits_[0] |= 0x00000002u;
-  type_ = value;
-}
-inline void AppEntityInfo::set_type(::rustplus::AppEntityType value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityInfo.type)
-}
-
-// required .rustplus.AppEntityPayload payload = 3;
-inline bool AppEntityInfo::_internal_has_payload() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || payload_ != nullptr);
-  return value;
-}
-inline bool AppEntityInfo::has_payload() const {
-  return _internal_has_payload();
-}
-inline void AppEntityInfo::clear_payload() {
-  if (payload_ != nullptr) payload_->Clear();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const ::rustplus::AppEntityPayload& AppEntityInfo::_internal_payload() const {
-  const ::rustplus::AppEntityPayload* p = payload_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppEntityPayload&>(
-      ::rustplus::_AppEntityPayload_default_instance_);
-}
-inline const ::rustplus::AppEntityPayload& AppEntityInfo::payload() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityInfo.payload)
-  return _internal_payload();
-}
-inline void AppEntityInfo::unsafe_arena_set_allocated_payload(
-    ::rustplus::AppEntityPayload* payload) {
-  if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(payload_);
-  }
-  payload_ = payload;
-  if (payload) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppEntityInfo.payload)
-}
-inline ::rustplus::AppEntityPayload* AppEntityInfo::release_payload() {
-  _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppEntityPayload* temp = payload_;
-  payload_ = nullptr;
-#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
-  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr) { delete old; }
-#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
-  return temp;
-}
-inline ::rustplus::AppEntityPayload* AppEntityInfo::unsafe_arena_release_payload() {
-  // @@protoc_insertion_point(field_release:rustplus.AppEntityInfo.payload)
-  _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppEntityPayload* temp = payload_;
-  payload_ = nullptr;
-  return temp;
-}
-inline ::rustplus::AppEntityPayload* AppEntityInfo::_internal_mutable_payload() {
-  _has_bits_[0] |= 0x00000001u;
-  if (payload_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppEntityPayload>(GetArenaForAllocation());
-    payload_ = p;
-  }
-  return payload_;
-}
-inline ::rustplus::AppEntityPayload* AppEntityInfo::mutable_payload() {
-  ::rustplus::AppEntityPayload* _msg = _internal_mutable_payload();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppEntityInfo.payload)
-  return _msg;
-}
-inline void AppEntityInfo::set_allocated_payload(::rustplus::AppEntityPayload* payload) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr) {
-    delete payload_;
-  }
-  if (payload) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppEntityPayload>::GetOwningArena(payload);
-    if (message_arena != submessage_arena) {
-      payload = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, payload, submessage_arena);
-    }
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  payload_ = payload;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppEntityInfo.payload)
-}
-
-// -------------------------------------------------------------------
-
-// AppEntityPayload_Item
-
-// required int32 itemId = 1;
-inline bool AppEntityPayload_Item::_internal_has_itemid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppEntityPayload_Item::has_itemid() const {
-  return _internal_has_itemid();
-}
-inline void AppEntityPayload_Item::clear_itemid() {
-  itemid_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::_internal_itemid() const {
-  return itemid_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::itemid() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemId)
-  return _internal_itemid();
-}
-inline void AppEntityPayload_Item::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  itemid_ = value;
-}
-inline void AppEntityPayload_Item::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_itemid(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemId)
-}
-
-// required int32 quantity = 2;
-inline bool AppEntityPayload_Item::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool AppEntityPayload_Item::has_quantity() const {
-  return _internal_has_quantity();
-}
-inline void AppEntityPayload_Item::clear_quantity() {
-  quantity_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::_internal_quantity() const {
-  return quantity_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::quantity() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.quantity)
-  return _internal_quantity();
-}
-inline void AppEntityPayload_Item::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  quantity_ = value;
-}
-inline void AppEntityPayload_Item::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_quantity(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.quantity)
-}
-
-// required bool itemIsBlueprint = 3;
-inline bool AppEntityPayload_Item::_internal_has_itemisblueprint() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool AppEntityPayload_Item::has_itemisblueprint() const {
-  return _internal_has_itemisblueprint();
-}
-inline void AppEntityPayload_Item::clear_itemisblueprint() {
-  itemisblueprint_ = false;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline bool AppEntityPayload_Item::_internal_itemisblueprint() const {
-  return itemisblueprint_;
-}
-inline bool AppEntityPayload_Item::itemisblueprint() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemIsBlueprint)
-  return _internal_itemisblueprint();
-}
-inline void AppEntityPayload_Item::_internal_set_itemisblueprint(bool value) {
-  _has_bits_[0] |= 0x00000004u;
-  itemisblueprint_ = value;
-}
-inline void AppEntityPayload_Item::set_itemisblueprint(bool value) {
-  _internal_set_itemisblueprint(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemIsBlueprint)
-}
-
-// -------------------------------------------------------------------
-
-// AppEntityPayload
-
-// optional bool value = 1;
-inline bool AppEntityPayload::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppEntityPayload::has_value() const {
-  return _internal_has_value();
-}
-inline void AppEntityPayload::clear_value() {
-  value_ = false;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline bool AppEntityPayload::_internal_value() const {
-  return value_;
-}
-inline bool AppEntityPayload::value() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.value)
-  return _internal_value();
-}
-inline void AppEntityPayload::_internal_set_value(bool value) {
-  _has_bits_[0] |= 0x00000001u;
-  value_ = value;
-}
-inline void AppEntityPayload::set_value(bool value) {
-  _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.value)
-}
-
-// repeated .rustplus.AppEntityPayload.Item items = 2;
-inline int AppEntityPayload::_internal_items_size() const {
-  return items_.size();
-}
-inline int AppEntityPayload::items_size() const {
-  return _internal_items_size();
-}
-inline void AppEntityPayload::clear_items() {
-  items_.Clear();
-}
-inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::mutable_items(int index) {
-  // @@protoc_insertion_point(field_mutable:rustplus.AppEntityPayload.items)
-  return items_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >*
-AppEntityPayload::mutable_items() {
-  // @@protoc_insertion_point(field_mutable_list:rustplus.AppEntityPayload.items)
-  return &items_;
-}
-inline const ::rustplus::AppEntityPayload_Item& AppEntityPayload::_internal_items(int index) const {
-  return items_.Get(index);
-}
-inline const ::rustplus::AppEntityPayload_Item& AppEntityPayload::items(int index) const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.items)
-  return _internal_items(index);
-}
-inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::_internal_add_items() {
-  return items_.Add();
-}
-inline ::rustplus::AppEntityPayload_Item* AppEntityPayload::add_items() {
-  ::rustplus::AppEntityPayload_Item* _add = _internal_add_items();
-  // @@protoc_insertion_point(field_add:rustplus.AppEntityPayload.items)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppEntityPayload_Item >&
-AppEntityPayload::items() const {
-  // @@protoc_insertion_point(field_list:rustplus.AppEntityPayload.items)
-  return items_;
-}
-
-// optional int32 capacity = 3;
-inline bool AppEntityPayload::_internal_has_capacity() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool AppEntityPayload::has_capacity() const {
-  return _internal_has_capacity();
-}
-inline void AppEntityPayload::clear_capacity() {
-  capacity_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload::_internal_capacity() const {
-  return capacity_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload::capacity() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.capacity)
-  return _internal_capacity();
-}
-inline void AppEntityPayload::_internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  capacity_ = value;
-}
-inline void AppEntityPayload::set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_capacity(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.capacity)
-}
-
-// optional bool hasProtection = 4;
-inline bool AppEntityPayload::_internal_has_hasprotection() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool AppEntityPayload::has_hasprotection() const {
-  return _internal_has_hasprotection();
-}
-inline void AppEntityPayload::clear_hasprotection() {
-  hasprotection_ = false;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline bool AppEntityPayload::_internal_hasprotection() const {
-  return hasprotection_;
-}
-inline bool AppEntityPayload::hasprotection() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.hasProtection)
-  return _internal_hasprotection();
-}
-inline void AppEntityPayload::_internal_set_hasprotection(bool value) {
-  _has_bits_[0] |= 0x00000002u;
-  hasprotection_ = value;
-}
-inline void AppEntityPayload::set_hasprotection(bool value) {
-  _internal_set_hasprotection(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.hasProtection)
-}
-
-// optional uint32 protectionExpiry = 5;
-inline bool AppEntityPayload::_internal_has_protectionexpiry() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool AppEntityPayload::has_protectionexpiry() const {
-  return _internal_has_protectionexpiry();
-}
-inline void AppEntityPayload::clear_protectionexpiry() {
-  protectionexpiry_ = 0u;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityPayload::_internal_protectionexpiry() const {
-  return protectionexpiry_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityPayload::protectionexpiry() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.protectionExpiry)
-  return _internal_protectionexpiry();
-}
-inline void AppEntityPayload::_internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000008u;
-  protectionexpiry_ = value;
-}
-inline void AppEntityPayload::set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_protectionexpiry(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.protectionExpiry)
-}
-
-// -------------------------------------------------------------------
-
-// AppFlag
-
-// required bool value = 1;
-inline bool AppFlag::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool AppFlag::has_value() const {
-  return _internal_has_value();
-}
-inline void AppFlag::clear_value() {
-  value_ = false;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline bool AppFlag::_internal_value() const {
-  return value_;
-}
-inline bool AppFlag::value() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppFlag.value)
-  return _internal_value();
-}
-inline void AppFlag::_internal_set_value(bool value) {
-  _has_bits_[0] |= 0x00000001u;
-  value_ = value;
-}
-inline void AppFlag::set_value(bool value) {
-  _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppFlag.value)
-}
-
-// -------------------------------------------------------------------
-
-// AppMapMarkers
-
-// repeated .rustplus.AppMarker markers = 1;
-inline int AppMapMarkers::_internal_markers_size() const {
-  return markers_.size();
-}
-inline int AppMapMarkers::markers_size() const {
-  return _internal_markers_size();
-}
-inline void AppMapMarkers::clear_markers() {
-  markers_.Clear();
-}
-inline ::rustplus::AppMarker* AppMapMarkers::mutable_markers(int index) {
-  // @@protoc_insertion_point(field_mutable:rustplus.AppMapMarkers.markers)
-  return markers_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker >*
-AppMapMarkers::mutable_markers() {
-  // @@protoc_insertion_point(field_mutable_list:rustplus.AppMapMarkers.markers)
-  return &markers_;
-}
-inline const ::rustplus::AppMarker& AppMapMarkers::_internal_markers(int index) const {
-  return markers_.Get(index);
-}
-inline const ::rustplus::AppMarker& AppMapMarkers::markers(int index) const {
-  // @@protoc_insertion_point(field_get:rustplus.AppMapMarkers.markers)
-  return _internal_markers(index);
-}
-inline ::rustplus::AppMarker* AppMapMarkers::_internal_add_markers() {
-  return markers_.Add();
-}
-inline ::rustplus::AppMarker* AppMapMarkers::add_markers() {
-  ::rustplus::AppMarker* _add = _internal_add_markers();
-  // @@protoc_insertion_point(field_add:rustplus.AppMapMarkers.markers)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker >&
-AppMapMarkers::markers() const {
-  // @@protoc_insertion_point(field_list:rustplus.AppMapMarkers.markers)
-  return markers_;
-}
-
-// -------------------------------------------------------------------
-
-// Vector4
-
-// optional float x = 1;
-inline bool Vector4::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Vector4::has_x() const {
-  return _internal_has_x();
-}
-inline void Vector4::clear_x() {
-  x_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline float Vector4::_internal_x() const {
-  return x_;
-}
-inline float Vector4::x() const {
-  // @@protoc_insertion_point(field_get:rustplus.Vector4.x)
-  return _internal_x();
-}
-inline void Vector4::_internal_set_x(float value) {
-  _has_bits_[0] |= 0x00000001u;
-  x_ = value;
-}
-inline void Vector4::set_x(float value) {
-  _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:rustplus.Vector4.x)
-}
-
-// optional float y = 2;
-inline bool Vector4::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Vector4::has_y() const {
-  return _internal_has_y();
-}
-inline void Vector4::clear_y() {
-  y_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline float Vector4::_internal_y() const {
-  return y_;
-}
-inline float Vector4::y() const {
-  // @@protoc_insertion_point(field_get:rustplus.Vector4.y)
-  return _internal_y();
-}
-inline void Vector4::_internal_set_y(float value) {
-  _has_bits_[0] |= 0x00000002u;
-  y_ = value;
-}
-inline void Vector4::set_y(float value) {
-  _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:rustplus.Vector4.y)
-}
-
-// optional float z = 3;
-inline bool Vector4::_internal_has_z() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Vector4::has_z() const {
-  return _internal_has_z();
-}
-inline void Vector4::clear_z() {
-  z_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline float Vector4::_internal_z() const {
-  return z_;
-}
-inline float Vector4::z() const {
-  // @@protoc_insertion_point(field_get:rustplus.Vector4.z)
-  return _internal_z();
-}
-inline void Vector4::_internal_set_z(float value) {
-  _has_bits_[0] |= 0x00000004u;
-  z_ = value;
-}
-inline void Vector4::set_z(float value) {
-  _internal_set_z(value);
-  // @@protoc_insertion_point(field_set:rustplus.Vector4.z)
-}
-
-// optional float w = 4;
-inline bool Vector4::_internal_has_w() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Vector4::has_w() const {
-  return _internal_has_w();
-}
-inline void Vector4::clear_w() {
-  w_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline float Vector4::_internal_w() const {
-  return w_;
-}
-inline float Vector4::w() const {
-  // @@protoc_insertion_point(field_get:rustplus.Vector4.w)
-  return _internal_w();
-}
-inline void Vector4::_internal_set_w(float value) {
-  _has_bits_[0] |= 0x00000008u;
-  w_ = value;
-}
-inline void Vector4::set_w(float value) {
-  _internal_set_w(value);
-  // @@protoc_insertion_point(field_set:rustplus.Vector4.w)
 }
 
 // -------------------------------------------------------------------
@@ -12389,6 +21403,62 @@ inline void AppMarker_SellOrder::set_currencyisblueprint(bool value) {
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.currencyIsBlueprint)
 }
 
+// optional float itemCondition = 8;
+inline bool AppMarker_SellOrder::_internal_has_itemcondition() const {
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool AppMarker_SellOrder::has_itemcondition() const {
+  return _internal_has_itemcondition();
+}
+inline void AppMarker_SellOrder::clear_itemcondition() {
+  itemcondition_ = 0;
+  _has_bits_[0] &= ~0x00000080u;
+}
+inline float AppMarker_SellOrder::_internal_itemcondition() const {
+  return itemcondition_;
+}
+inline float AppMarker_SellOrder::itemcondition() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemCondition)
+  return _internal_itemcondition();
+}
+inline void AppMarker_SellOrder::_internal_set_itemcondition(float value) {
+  _has_bits_[0] |= 0x00000080u;
+  itemcondition_ = value;
+}
+inline void AppMarker_SellOrder::set_itemcondition(float value) {
+  _internal_set_itemcondition(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemCondition)
+}
+
+// optional float itemConditionMax = 9;
+inline bool AppMarker_SellOrder::_internal_has_itemconditionmax() const {
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool AppMarker_SellOrder::has_itemconditionmax() const {
+  return _internal_has_itemconditionmax();
+}
+inline void AppMarker_SellOrder::clear_itemconditionmax() {
+  itemconditionmax_ = 0;
+  _has_bits_[0] &= ~0x00000100u;
+}
+inline float AppMarker_SellOrder::_internal_itemconditionmax() const {
+  return itemconditionmax_;
+}
+inline float AppMarker_SellOrder::itemconditionmax() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemConditionMax)
+  return _internal_itemconditionmax();
+}
+inline void AppMarker_SellOrder::_internal_set_itemconditionmax(float value) {
+  _has_bits_[0] |= 0x00000100u;
+  itemconditionmax_ = value;
+}
+inline void AppMarker_SellOrder::set_itemconditionmax(float value) {
+  _internal_set_itemconditionmax(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemConditionMax)
+}
+
 // -------------------------------------------------------------------
 
 // AppMarker
@@ -12423,15 +21493,15 @@ inline void AppMarker::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // required .rustplus.AppMarkerType type = 2;
 inline bool AppMarker::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool AppMarker::has_type() const {
   return _internal_has_type();
 }
 inline void AppMarker::clear_type() {
-  type_ = 1;
-  _has_bits_[0] &= ~0x00000400u;
+  type_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline ::rustplus::AppMarkerType AppMarker::_internal_type() const {
   return static_cast< ::rustplus::AppMarkerType >(type_);
@@ -12442,7 +21512,7 @@ inline ::rustplus::AppMarkerType AppMarker::type() const {
 }
 inline void AppMarker::_internal_set_type(::rustplus::AppMarkerType value) {
   assert(::rustplus::AppMarkerType_IsValid(value));
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000010u;
   type_ = value;
 }
 inline void AppMarker::set_type(::rustplus::AppMarkerType value) {
@@ -12452,7 +21522,7 @@ inline void AppMarker::set_type(::rustplus::AppMarkerType value) {
 
 // required float x = 3;
 inline bool AppMarker::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool AppMarker::has_x() const {
@@ -12460,7 +21530,7 @@ inline bool AppMarker::has_x() const {
 }
 inline void AppMarker::clear_x() {
   x_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline float AppMarker::_internal_x() const {
   return x_;
@@ -12470,7 +21540,7 @@ inline float AppMarker::x() const {
   return _internal_x();
 }
 inline void AppMarker::_internal_set_x(float value) {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000020u;
   x_ = value;
 }
 inline void AppMarker::set_x(float value) {
@@ -12508,7 +21578,7 @@ inline void AppMarker::set_y(float value) {
 
 // optional uint64 steamId = 5;
 inline bool AppMarker::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool AppMarker::has_steamid() const {
@@ -12516,7 +21586,7 @@ inline bool AppMarker::has_steamid() const {
 }
 inline void AppMarker::clear_steamid() {
   steamid_ = uint64_t{0u};
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 AppMarker::_internal_steamid() const {
   return steamid_;
@@ -12526,7 +21596,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppMarker::steamid() const {
   return _internal_steamid();
 }
 inline void AppMarker::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _has_bits_[0] |= 0x00000020u;
+  _has_bits_[0] |= 0x00000080u;
   steamid_ = value;
 }
 inline void AppMarker::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
@@ -12536,7 +21606,7 @@ inline void AppMarker::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
 
 // optional float rotation = 6;
 inline bool AppMarker::_internal_has_rotation() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool AppMarker::has_rotation() const {
@@ -12544,7 +21614,7 @@ inline bool AppMarker::has_rotation() const {
 }
 inline void AppMarker::clear_rotation() {
   rotation_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 inline float AppMarker::_internal_rotation() const {
   return rotation_;
@@ -12554,7 +21624,7 @@ inline float AppMarker::rotation() const {
   return _internal_rotation();
 }
 inline void AppMarker::_internal_set_rotation(float value) {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000100u;
   rotation_ = value;
 }
 inline void AppMarker::set_rotation(float value) {
@@ -12564,7 +21634,7 @@ inline void AppMarker::set_rotation(float value) {
 
 // optional float radius = 7;
 inline bool AppMarker::_internal_has_radius() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool AppMarker::has_radius() const {
@@ -12572,7 +21642,7 @@ inline bool AppMarker::has_radius() const {
 }
 inline void AppMarker::clear_radius() {
   radius_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 inline float AppMarker::_internal_radius() const {
   return radius_;
@@ -12582,7 +21652,7 @@ inline float AppMarker::radius() const {
   return _internal_radius();
 }
 inline void AppMarker::_internal_set_radius(float value) {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000200u;
   radius_ = value;
 }
 inline void AppMarker::set_radius(float value) {
@@ -12772,7 +21842,7 @@ inline void AppMarker::set_allocated_color2(::rustplus::Vector4* color2) {
 
 // optional float alpha = 10;
 inline bool AppMarker::_internal_has_alpha() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool AppMarker::has_alpha() const {
@@ -12780,7 +21850,7 @@ inline bool AppMarker::has_alpha() const {
 }
 inline void AppMarker::clear_alpha() {
   alpha_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 inline float AppMarker::_internal_alpha() const {
   return alpha_;
@@ -12790,7 +21860,7 @@ inline float AppMarker::alpha() const {
   return _internal_alpha();
 }
 inline void AppMarker::_internal_set_alpha(float value) {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000400u;
   alpha_ = value;
 }
 inline void AppMarker::set_alpha(float value) {
@@ -12856,6 +21926,34 @@ inline void AppMarker::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppMarker.name)
 }
 
+// optional bool outOfStock = 12;
+inline bool AppMarker::_internal_has_outofstock() const {
+  bool value = (_has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool AppMarker::has_outofstock() const {
+  return _internal_has_outofstock();
+}
+inline void AppMarker::clear_outofstock() {
+  outofstock_ = false;
+  _has_bits_[0] &= ~0x00000800u;
+}
+inline bool AppMarker::_internal_outofstock() const {
+  return outofstock_;
+}
+inline bool AppMarker::outofstock() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMarker.outOfStock)
+  return _internal_outofstock();
+}
+inline void AppMarker::_internal_set_outofstock(bool value) {
+  _has_bits_[0] |= 0x00000800u;
+  outofstock_ = value;
+}
+inline void AppMarker::set_outofstock(bool value) {
+  _internal_set_outofstock(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppMarker.outOfStock)
+}
+
 // repeated .rustplus.AppMarker.SellOrder sellOrders = 13;
 inline int AppMarker::_internal_sellorders_size() const {
   return sellorders_.size();
@@ -12898,92 +21996,450 @@ AppMarker::sellorders() const {
 
 // -------------------------------------------------------------------
 
-// AppCameraFrame
+// AppMapMarkers
 
-// required uint32 frame = 1;
-inline bool AppCameraFrame::_internal_has_frame() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+// repeated .rustplus.AppMarker markers = 1;
+inline int AppMapMarkers::_internal_markers_size() const {
+  return markers_.size();
 }
-inline bool AppCameraFrame::has_frame() const {
-  return _internal_has_frame();
+inline int AppMapMarkers::markers_size() const {
+  return _internal_markers_size();
 }
-inline void AppCameraFrame::clear_frame() {
-  frame_ = 0u;
-  _has_bits_[0] &= ~0x00000002u;
+inline void AppMapMarkers::clear_markers() {
+  markers_.Clear();
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraFrame::_internal_frame() const {
-  return frame_;
+inline ::rustplus::AppMarker* AppMapMarkers::mutable_markers(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.AppMapMarkers.markers)
+  return markers_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraFrame::frame() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppCameraFrame.frame)
-  return _internal_frame();
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker >*
+AppMapMarkers::mutable_markers() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.AppMapMarkers.markers)
+  return &markers_;
 }
-inline void AppCameraFrame::_internal_set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  frame_ = value;
+inline const ::rustplus::AppMarker& AppMapMarkers::_internal_markers(int index) const {
+  return markers_.Get(index);
 }
-inline void AppCameraFrame::set_frame(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_frame(value);
-  // @@protoc_insertion_point(field_set:rustplus.AppCameraFrame.frame)
+inline const ::rustplus::AppMarker& AppMapMarkers::markers(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.AppMapMarkers.markers)
+  return _internal_markers(index);
+}
+inline ::rustplus::AppMarker* AppMapMarkers::_internal_add_markers() {
+  return markers_.Add();
+}
+inline ::rustplus::AppMarker* AppMapMarkers::add_markers() {
+  ::rustplus::AppMarker* _add = _internal_add_markers();
+  // @@protoc_insertion_point(field_add:rustplus.AppMapMarkers.markers)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppMarker >&
+AppMapMarkers::markers() const {
+  // @@protoc_insertion_point(field_list:rustplus.AppMapMarkers.markers)
+  return markers_;
 }
 
-// required bytes jpgImage = 2;
-inline bool AppCameraFrame::_internal_has_jpgimage() const {
+// -------------------------------------------------------------------
+
+// AppClanInfo
+
+// optional .rustplus.ClanInfo clanInfo = 1;
+inline bool AppClanInfo::_internal_has_claninfo() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
   return value;
 }
-inline bool AppCameraFrame::has_jpgimage() const {
-  return _internal_has_jpgimage();
+inline bool AppClanInfo::has_claninfo() const {
+  return _internal_has_claninfo();
 }
-inline void AppCameraFrame::clear_jpgimage() {
-  jpgimage_.ClearToEmpty();
+inline void AppClanInfo::clear_claninfo() {
+  if (claninfo_ != nullptr) claninfo_->Clear();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& AppCameraFrame::jpgimage() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppCameraFrame.jpgImage)
-  return _internal_jpgimage();
+inline const ::rustplus::ClanInfo& AppClanInfo::_internal_claninfo() const {
+  const ::rustplus::ClanInfo* p = claninfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::ClanInfo&>(
+      ::rustplus::_ClanInfo_default_instance_);
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void AppCameraFrame::set_jpgimage(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
- jpgimage_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rustplus.AppCameraFrame.jpgImage)
+inline const ::rustplus::ClanInfo& AppClanInfo::claninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanInfo.clanInfo)
+  return _internal_claninfo();
 }
-inline std::string* AppCameraFrame::mutable_jpgimage() {
-  std::string* _s = _internal_mutable_jpgimage();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraFrame.jpgImage)
-  return _s;
-}
-inline const std::string& AppCameraFrame::_internal_jpgimage() const {
-  return jpgimage_.Get();
-}
-inline void AppCameraFrame::_internal_set_jpgimage(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  jpgimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* AppCameraFrame::_internal_mutable_jpgimage() {
-  _has_bits_[0] |= 0x00000001u;
-  return jpgimage_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* AppCameraFrame::release_jpgimage() {
-  // @@protoc_insertion_point(field_release:rustplus.AppCameraFrame.jpgImage)
-  if (!_internal_has_jpgimage()) {
-    return nullptr;
+inline void AppClanInfo::unsafe_arena_set_allocated_claninfo(
+    ::rustplus::ClanInfo* claninfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(claninfo_);
   }
-  _has_bits_[0] &= ~0x00000001u;
-  return jpgimage_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
-}
-inline void AppCameraFrame::set_allocated_jpgimage(std::string* jpgimage) {
-  if (jpgimage != nullptr) {
+  claninfo_ = claninfo;
+  if (claninfo) {
     _has_bits_[0] |= 0x00000001u;
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  jpgimage_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), jpgimage,
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppClanInfo.clanInfo)
+}
+inline ::rustplus::ClanInfo* AppClanInfo::release_claninfo() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::ClanInfo* AppClanInfo::unsafe_arena_release_claninfo() {
+  // @@protoc_insertion_point(field_release:rustplus.AppClanInfo.clanInfo)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+  return temp;
+}
+inline ::rustplus::ClanInfo* AppClanInfo::_internal_mutable_claninfo() {
+  _has_bits_[0] |= 0x00000001u;
+  if (claninfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::ClanInfo>(GetArenaForAllocation());
+    claninfo_ = p;
+  }
+  return claninfo_;
+}
+inline ::rustplus::ClanInfo* AppClanInfo::mutable_claninfo() {
+  ::rustplus::ClanInfo* _msg = _internal_mutable_claninfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppClanInfo.clanInfo)
+  return _msg;
+}
+inline void AppClanInfo::set_allocated_claninfo(::rustplus::ClanInfo* claninfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete claninfo_;
+  }
+  if (claninfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::ClanInfo>::GetOwningArena(claninfo);
+    if (message_arena != submessage_arena) {
+      claninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, claninfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  claninfo_ = claninfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppClanInfo.clanInfo)
+}
+
+// -------------------------------------------------------------------
+
+// AppClanMessage
+
+// required uint64 steamId = 1;
+inline bool AppClanMessage::_internal_has_steamid() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppClanMessage::has_steamid() const {
+  return _internal_has_steamid();
+}
+inline void AppClanMessage::clear_steamid() {
+  steamid_ = uint64_t{0u};
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AppClanMessage::_internal_steamid() const {
+  return steamid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AppClanMessage::steamid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.steamId)
+  return _internal_steamid();
+}
+inline void AppClanMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  steamid_ = value;
+}
+inline void AppClanMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_steamid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.steamId)
+}
+
+// required string name = 2;
+inline bool AppClanMessage::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppClanMessage::has_name() const {
+  return _internal_has_name();
+}
+inline void AppClanMessage::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppClanMessage::name() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppClanMessage::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.name)
+}
+inline std::string* AppClanMessage::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppClanMessage.name)
+  return _s;
+}
+inline const std::string& AppClanMessage::_internal_name() const {
+  return name_.Get();
+}
+inline void AppClanMessage::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppClanMessage::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppClanMessage::release_name() {
+  // @@protoc_insertion_point(field_release:rustplus.AppClanMessage.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppClanMessage::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraFrame.jpgImage)
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppClanMessage.name)
+}
+
+// required string message = 3;
+inline bool AppClanMessage::_internal_has_message() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppClanMessage::has_message() const {
+  return _internal_has_message();
+}
+inline void AppClanMessage::clear_message() {
+  message_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& AppClanMessage::message() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.message)
+  return _internal_message();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppClanMessage::set_message(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.message)
+}
+inline std::string* AppClanMessage::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppClanMessage.message)
+  return _s;
+}
+inline const std::string& AppClanMessage::_internal_message() const {
+  return message_.Get();
+}
+inline void AppClanMessage::_internal_set_message(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppClanMessage::_internal_mutable_message() {
+  _has_bits_[0] |= 0x00000002u;
+  return message_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppClanMessage::release_message() {
+  // @@protoc_insertion_point(field_release:rustplus.AppClanMessage.message)
+  if (!_internal_has_message()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return message_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppClanMessage::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppClanMessage.message)
+}
+
+// required int64 time = 4;
+inline bool AppClanMessage::_internal_has_time() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool AppClanMessage::has_time() const {
+  return _internal_has_time();
+}
+inline void AppClanMessage::clear_time() {
+  time_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppClanMessage::_internal_time() const {
+  return time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppClanMessage::time() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.time)
+  return _internal_time();
+}
+inline void AppClanMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  time_ = value;
+}
+inline void AppClanMessage::set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_time(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.time)
+}
+
+// -------------------------------------------------------------------
+
+// AppClanChat
+
+// repeated .rustplus.AppClanMessage messages = 1;
+inline int AppClanChat::_internal_messages_size() const {
+  return messages_.size();
+}
+inline int AppClanChat::messages_size() const {
+  return _internal_messages_size();
+}
+inline void AppClanChat::clear_messages() {
+  messages_.Clear();
+}
+inline ::rustplus::AppClanMessage* AppClanChat::mutable_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.AppClanChat.messages)
+  return messages_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppClanMessage >*
+AppClanChat::mutable_messages() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.AppClanChat.messages)
+  return &messages_;
+}
+inline const ::rustplus::AppClanMessage& AppClanChat::_internal_messages(int index) const {
+  return messages_.Get(index);
+}
+inline const ::rustplus::AppClanMessage& AppClanChat::messages(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanChat.messages)
+  return _internal_messages(index);
+}
+inline ::rustplus::AppClanMessage* AppClanChat::_internal_add_messages() {
+  return messages_.Add();
+}
+inline ::rustplus::AppClanMessage* AppClanChat::add_messages() {
+  ::rustplus::AppClanMessage* _add = _internal_add_messages();
+  // @@protoc_insertion_point(field_add:rustplus.AppClanChat.messages)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppClanMessage >&
+AppClanChat::messages() const {
+  // @@protoc_insertion_point(field_list:rustplus.AppClanChat.messages)
+  return messages_;
+}
+
+// -------------------------------------------------------------------
+
+// AppNexusAuth
+
+// required string serverId = 1;
+inline bool AppNexusAuth::_internal_has_serverid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppNexusAuth::has_serverid() const {
+  return _internal_has_serverid();
+}
+inline void AppNexusAuth::clear_serverid() {
+  serverid_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppNexusAuth::serverid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppNexusAuth.serverId)
+  return _internal_serverid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppNexusAuth::set_serverid(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ serverid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppNexusAuth.serverId)
+}
+inline std::string* AppNexusAuth::mutable_serverid() {
+  std::string* _s = _internal_mutable_serverid();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppNexusAuth.serverId)
+  return _s;
+}
+inline const std::string& AppNexusAuth::_internal_serverid() const {
+  return serverid_.Get();
+}
+inline void AppNexusAuth::_internal_set_serverid(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  serverid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppNexusAuth::_internal_mutable_serverid() {
+  _has_bits_[0] |= 0x00000001u;
+  return serverid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppNexusAuth::release_serverid() {
+  // @@protoc_insertion_point(field_release:rustplus.AppNexusAuth.serverId)
+  if (!_internal_has_serverid()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return serverid_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppNexusAuth::set_allocated_serverid(std::string* serverid) {
+  if (serverid != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  serverid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), serverid,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppNexusAuth.serverId)
+}
+
+// required int32 playerToken = 2;
+inline bool AppNexusAuth::_internal_has_playertoken() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppNexusAuth::has_playertoken() const {
+  return _internal_has_playertoken();
+}
+inline void AppNexusAuth::clear_playertoken() {
+  playertoken_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppNexusAuth::_internal_playertoken() const {
+  return playertoken_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppNexusAuth::playertoken() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppNexusAuth.playerToken)
+  return _internal_playertoken();
+}
+inline void AppNexusAuth::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  playertoken_ = value;
+}
+inline void AppNexusAuth::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_playertoken(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppNexusAuth.playerToken)
 }
 
 // -------------------------------------------------------------------
@@ -13110,32 +22566,32 @@ inline void AppTeamChanged::set_allocated_teaminfo(::rustplus::AppTeamInfo* team
 
 // -------------------------------------------------------------------
 
-// AppTeamMessage
+// AppNewTeamMessage
 
-// required .rustplus.AppChatMessage message = 1;
-inline bool AppTeamMessage::_internal_has_message() const {
+// required .rustplus.AppTeamMessage message = 1;
+inline bool AppNewTeamMessage::_internal_has_message() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || message_ != nullptr);
   return value;
 }
-inline bool AppTeamMessage::has_message() const {
+inline bool AppNewTeamMessage::has_message() const {
   return _internal_has_message();
 }
-inline void AppTeamMessage::clear_message() {
+inline void AppNewTeamMessage::clear_message() {
   if (message_ != nullptr) message_->Clear();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const ::rustplus::AppChatMessage& AppTeamMessage::_internal_message() const {
-  const ::rustplus::AppChatMessage* p = message_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppChatMessage&>(
-      ::rustplus::_AppChatMessage_default_instance_);
+inline const ::rustplus::AppTeamMessage& AppNewTeamMessage::_internal_message() const {
+  const ::rustplus::AppTeamMessage* p = message_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppTeamMessage&>(
+      ::rustplus::_AppTeamMessage_default_instance_);
 }
-inline const ::rustplus::AppChatMessage& AppTeamMessage::message() const {
-  // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.message)
+inline const ::rustplus::AppTeamMessage& AppNewTeamMessage::message() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppNewTeamMessage.message)
   return _internal_message();
 }
-inline void AppTeamMessage::unsafe_arena_set_allocated_message(
-    ::rustplus::AppChatMessage* message) {
+inline void AppNewTeamMessage::unsafe_arena_set_allocated_message(
+    ::rustplus::AppTeamMessage* message) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(message_);
   }
@@ -13145,11 +22601,11 @@ inline void AppTeamMessage::unsafe_arena_set_allocated_message(
   } else {
     _has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppTeamMessage.message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppNewTeamMessage.message)
 }
-inline ::rustplus::AppChatMessage* AppTeamMessage::release_message() {
+inline ::rustplus::AppTeamMessage* AppNewTeamMessage::release_message() {
   _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppChatMessage* temp = message_;
+  ::rustplus::AppTeamMessage* temp = message_;
   message_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -13162,34 +22618,34 @@ inline ::rustplus::AppChatMessage* AppTeamMessage::release_message() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rustplus::AppChatMessage* AppTeamMessage::unsafe_arena_release_message() {
-  // @@protoc_insertion_point(field_release:rustplus.AppTeamMessage.message)
+inline ::rustplus::AppTeamMessage* AppNewTeamMessage::unsafe_arena_release_message() {
+  // @@protoc_insertion_point(field_release:rustplus.AppNewTeamMessage.message)
   _has_bits_[0] &= ~0x00000001u;
-  ::rustplus::AppChatMessage* temp = message_;
+  ::rustplus::AppTeamMessage* temp = message_;
   message_ = nullptr;
   return temp;
 }
-inline ::rustplus::AppChatMessage* AppTeamMessage::_internal_mutable_message() {
+inline ::rustplus::AppTeamMessage* AppNewTeamMessage::_internal_mutable_message() {
   _has_bits_[0] |= 0x00000001u;
   if (message_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rustplus::AppChatMessage>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rustplus::AppTeamMessage>(GetArenaForAllocation());
     message_ = p;
   }
   return message_;
 }
-inline ::rustplus::AppChatMessage* AppTeamMessage::mutable_message() {
-  ::rustplus::AppChatMessage* _msg = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:rustplus.AppTeamMessage.message)
+inline ::rustplus::AppTeamMessage* AppNewTeamMessage::mutable_message() {
+  ::rustplus::AppTeamMessage* _msg = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppNewTeamMessage.message)
   return _msg;
 }
-inline void AppTeamMessage::set_allocated_message(::rustplus::AppChatMessage* message) {
+inline void AppNewTeamMessage::set_allocated_message(::rustplus::AppTeamMessage* message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete message_;
   }
   if (message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppChatMessage>::GetOwningArena(message);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppTeamMessage>::GetOwningArena(message);
     if (message_arena != submessage_arena) {
       message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, message, submessage_arena);
@@ -13199,7 +22655,7 @@ inline void AppTeamMessage::set_allocated_message(::rustplus::AppChatMessage* me
     _has_bits_[0] &= ~0x00000001u;
   }
   message_ = message;
-  // @@protoc_insertion_point(field_set_allocated:rustplus.AppTeamMessage.message)
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppNewTeamMessage.message)
 }
 
 // -------------------------------------------------------------------
@@ -13324,9 +22780,1176 @@ inline void AppEntityChanged::set_allocated_payload(::rustplus::AppEntityPayload
   // @@protoc_insertion_point(field_set_allocated:rustplus.AppEntityChanged.payload)
 }
 
+// -------------------------------------------------------------------
+
+// AppClanChanged
+
+// optional .rustplus.ClanInfo clanInfo = 1;
+inline bool AppClanChanged::_internal_has_claninfo() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
+  return value;
+}
+inline bool AppClanChanged::has_claninfo() const {
+  return _internal_has_claninfo();
+}
+inline void AppClanChanged::clear_claninfo() {
+  if (claninfo_ != nullptr) claninfo_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::ClanInfo& AppClanChanged::_internal_claninfo() const {
+  const ::rustplus::ClanInfo* p = claninfo_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::ClanInfo&>(
+      ::rustplus::_ClanInfo_default_instance_);
+}
+inline const ::rustplus::ClanInfo& AppClanChanged::claninfo() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppClanChanged.clanInfo)
+  return _internal_claninfo();
+}
+inline void AppClanChanged::unsafe_arena_set_allocated_claninfo(
+    ::rustplus::ClanInfo* claninfo) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(claninfo_);
+  }
+  claninfo_ = claninfo;
+  if (claninfo) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppClanChanged.clanInfo)
+}
+inline ::rustplus::ClanInfo* AppClanChanged::release_claninfo() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::ClanInfo* AppClanChanged::unsafe_arena_release_claninfo() {
+  // @@protoc_insertion_point(field_release:rustplus.AppClanChanged.clanInfo)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::ClanInfo* temp = claninfo_;
+  claninfo_ = nullptr;
+  return temp;
+}
+inline ::rustplus::ClanInfo* AppClanChanged::_internal_mutable_claninfo() {
+  _has_bits_[0] |= 0x00000001u;
+  if (claninfo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::ClanInfo>(GetArenaForAllocation());
+    claninfo_ = p;
+  }
+  return claninfo_;
+}
+inline ::rustplus::ClanInfo* AppClanChanged::mutable_claninfo() {
+  ::rustplus::ClanInfo* _msg = _internal_mutable_claninfo();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppClanChanged.clanInfo)
+  return _msg;
+}
+inline void AppClanChanged::set_allocated_claninfo(::rustplus::ClanInfo* claninfo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete claninfo_;
+  }
+  if (claninfo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::ClanInfo>::GetOwningArena(claninfo);
+    if (message_arena != submessage_arena) {
+      claninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, claninfo, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  claninfo_ = claninfo;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppClanChanged.clanInfo)
+}
+
+// -------------------------------------------------------------------
+
+// AppNewClanMessage
+
+// required int64 clanId = 1;
+inline bool AppNewClanMessage::_internal_has_clanid() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppNewClanMessage::has_clanid() const {
+  return _internal_has_clanid();
+}
+inline void AppNewClanMessage::clear_clanid() {
+  clanid_ = int64_t{0};
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppNewClanMessage::_internal_clanid() const {
+  return clanid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 AppNewClanMessage::clanid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppNewClanMessage.clanId)
+  return _internal_clanid();
+}
+inline void AppNewClanMessage::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  clanid_ = value;
+}
+inline void AppNewClanMessage::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_clanid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppNewClanMessage.clanId)
+}
+
+// required .rustplus.AppClanMessage message = 2;
+inline bool AppNewClanMessage::_internal_has_message() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || message_ != nullptr);
+  return value;
+}
+inline bool AppNewClanMessage::has_message() const {
+  return _internal_has_message();
+}
+inline void AppNewClanMessage::clear_message() {
+  if (message_ != nullptr) message_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::AppClanMessage& AppNewClanMessage::_internal_message() const {
+  const ::rustplus::AppClanMessage* p = message_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::AppClanMessage&>(
+      ::rustplus::_AppClanMessage_default_instance_);
+}
+inline const ::rustplus::AppClanMessage& AppNewClanMessage::message() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppNewClanMessage.message)
+  return _internal_message();
+}
+inline void AppNewClanMessage::unsafe_arena_set_allocated_message(
+    ::rustplus::AppClanMessage* message) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(message_);
+  }
+  message_ = message;
+  if (message) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppNewClanMessage.message)
+}
+inline ::rustplus::AppClanMessage* AppNewClanMessage::release_message() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::AppClanMessage* temp = message_;
+  message_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::AppClanMessage* AppNewClanMessage::unsafe_arena_release_message() {
+  // @@protoc_insertion_point(field_release:rustplus.AppNewClanMessage.message)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::AppClanMessage* temp = message_;
+  message_ = nullptr;
+  return temp;
+}
+inline ::rustplus::AppClanMessage* AppNewClanMessage::_internal_mutable_message() {
+  _has_bits_[0] |= 0x00000001u;
+  if (message_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::AppClanMessage>(GetArenaForAllocation());
+    message_ = p;
+  }
+  return message_;
+}
+inline ::rustplus::AppClanMessage* AppNewClanMessage::mutable_message() {
+  ::rustplus::AppClanMessage* _msg = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppNewClanMessage.message)
+  return _msg;
+}
+inline void AppNewClanMessage::set_allocated_message(::rustplus::AppClanMessage* message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete message_;
+  }
+  if (message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::AppClanMessage>::GetOwningArena(message);
+    if (message_arena != submessage_arena) {
+      message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, message, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  message_ = message;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppNewClanMessage.message)
+}
+
+// -------------------------------------------------------------------
+
+// AppCameraSubscribe
+
+// required string cameraId = 1;
+inline bool AppCameraSubscribe::_internal_has_cameraid() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppCameraSubscribe::has_cameraid() const {
+  return _internal_has_cameraid();
+}
+inline void AppCameraSubscribe::clear_cameraid() {
+  cameraid_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppCameraSubscribe::cameraid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraSubscribe.cameraId)
+  return _internal_cameraid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppCameraSubscribe::set_cameraid(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ cameraid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraSubscribe.cameraId)
+}
+inline std::string* AppCameraSubscribe::mutable_cameraid() {
+  std::string* _s = _internal_mutable_cameraid();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraSubscribe.cameraId)
+  return _s;
+}
+inline const std::string& AppCameraSubscribe::_internal_cameraid() const {
+  return cameraid_.Get();
+}
+inline void AppCameraSubscribe::_internal_set_cameraid(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  cameraid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppCameraSubscribe::_internal_mutable_cameraid() {
+  _has_bits_[0] |= 0x00000001u;
+  return cameraid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppCameraSubscribe::release_cameraid() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraSubscribe.cameraId)
+  if (!_internal_has_cameraid()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return cameraid_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppCameraSubscribe::set_allocated_cameraid(std::string* cameraid) {
+  if (cameraid != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  cameraid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cameraid,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraSubscribe.cameraId)
+}
+
+// -------------------------------------------------------------------
+
+// AppCameraInput
+
+// required int32 buttons = 1;
+inline bool AppCameraInput::_internal_has_buttons() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppCameraInput::has_buttons() const {
+  return _internal_has_buttons();
+}
+inline void AppCameraInput::clear_buttons() {
+  buttons_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInput::_internal_buttons() const {
+  return buttons_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInput::buttons() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInput.buttons)
+  return _internal_buttons();
+}
+inline void AppCameraInput::_internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  buttons_ = value;
+}
+inline void AppCameraInput::set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_buttons(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInput.buttons)
+}
+
+// required .rustplus.Vector2 mouseDelta = 2;
+inline bool AppCameraInput::_internal_has_mousedelta() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || mousedelta_ != nullptr);
+  return value;
+}
+inline bool AppCameraInput::has_mousedelta() const {
+  return _internal_has_mousedelta();
+}
+inline void AppCameraInput::clear_mousedelta() {
+  if (mousedelta_ != nullptr) mousedelta_->Clear();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::rustplus::Vector2& AppCameraInput::_internal_mousedelta() const {
+  const ::rustplus::Vector2* p = mousedelta_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector2&>(
+      ::rustplus::_Vector2_default_instance_);
+}
+inline const ::rustplus::Vector2& AppCameraInput::mousedelta() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInput.mouseDelta)
+  return _internal_mousedelta();
+}
+inline void AppCameraInput::unsafe_arena_set_allocated_mousedelta(
+    ::rustplus::Vector2* mousedelta) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mousedelta_);
+  }
+  mousedelta_ = mousedelta;
+  if (mousedelta) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppCameraInput.mouseDelta)
+}
+inline ::rustplus::Vector2* AppCameraInput::release_mousedelta() {
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::Vector2* temp = mousedelta_;
+  mousedelta_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::Vector2* AppCameraInput::unsafe_arena_release_mousedelta() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraInput.mouseDelta)
+  _has_bits_[0] &= ~0x00000001u;
+  ::rustplus::Vector2* temp = mousedelta_;
+  mousedelta_ = nullptr;
+  return temp;
+}
+inline ::rustplus::Vector2* AppCameraInput::_internal_mutable_mousedelta() {
+  _has_bits_[0] |= 0x00000001u;
+  if (mousedelta_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector2>(GetArenaForAllocation());
+    mousedelta_ = p;
+  }
+  return mousedelta_;
+}
+inline ::rustplus::Vector2* AppCameraInput::mutable_mousedelta() {
+  ::rustplus::Vector2* _msg = _internal_mutable_mousedelta();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraInput.mouseDelta)
+  return _msg;
+}
+inline void AppCameraInput::set_allocated_mousedelta(::rustplus::Vector2* mousedelta) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete mousedelta_;
+  }
+  if (mousedelta) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector2>::GetOwningArena(mousedelta);
+    if (message_arena != submessage_arena) {
+      mousedelta = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, mousedelta, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  mousedelta_ = mousedelta;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraInput.mouseDelta)
+}
+
+// -------------------------------------------------------------------
+
+// AppCameraInfo
+
+// required int32 width = 1;
+inline bool AppCameraInfo::_internal_has_width() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppCameraInfo::has_width() const {
+  return _internal_has_width();
+}
+inline void AppCameraInfo::clear_width() {
+  width_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::_internal_width() const {
+  return width_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::width() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.width)
+  return _internal_width();
+}
+inline void AppCameraInfo::_internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  width_ = value;
+}
+inline void AppCameraInfo::set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_width(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.width)
+}
+
+// required int32 height = 2;
+inline bool AppCameraInfo::_internal_has_height() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppCameraInfo::has_height() const {
+  return _internal_has_height();
+}
+inline void AppCameraInfo::clear_height() {
+  height_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::_internal_height() const {
+  return height_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::height() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.height)
+  return _internal_height();
+}
+inline void AppCameraInfo::_internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  height_ = value;
+}
+inline void AppCameraInfo::set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_height(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.height)
+}
+
+// required float nearPlane = 3;
+inline bool AppCameraInfo::_internal_has_nearplane() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppCameraInfo::has_nearplane() const {
+  return _internal_has_nearplane();
+}
+inline void AppCameraInfo::clear_nearplane() {
+  nearplane_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline float AppCameraInfo::_internal_nearplane() const {
+  return nearplane_;
+}
+inline float AppCameraInfo::nearplane() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.nearPlane)
+  return _internal_nearplane();
+}
+inline void AppCameraInfo::_internal_set_nearplane(float value) {
+  _has_bits_[0] |= 0x00000004u;
+  nearplane_ = value;
+}
+inline void AppCameraInfo::set_nearplane(float value) {
+  _internal_set_nearplane(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.nearPlane)
+}
+
+// required float farPlane = 4;
+inline bool AppCameraInfo::_internal_has_farplane() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool AppCameraInfo::has_farplane() const {
+  return _internal_has_farplane();
+}
+inline void AppCameraInfo::clear_farplane() {
+  farplane_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline float AppCameraInfo::_internal_farplane() const {
+  return farplane_;
+}
+inline float AppCameraInfo::farplane() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.farPlane)
+  return _internal_farplane();
+}
+inline void AppCameraInfo::_internal_set_farplane(float value) {
+  _has_bits_[0] |= 0x00000008u;
+  farplane_ = value;
+}
+inline void AppCameraInfo::set_farplane(float value) {
+  _internal_set_farplane(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.farPlane)
+}
+
+// required int32 controlFlags = 5;
+inline bool AppCameraInfo::_internal_has_controlflags() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool AppCameraInfo::has_controlflags() const {
+  return _internal_has_controlflags();
+}
+inline void AppCameraInfo::clear_controlflags() {
+  controlflags_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::_internal_controlflags() const {
+  return controlflags_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::controlflags() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.controlFlags)
+  return _internal_controlflags();
+}
+inline void AppCameraInfo::_internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000010u;
+  controlflags_ = value;
+}
+inline void AppCameraInfo::set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_controlflags(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.controlFlags)
+}
+
+// -------------------------------------------------------------------
+
+// AppCameraRays_Entity
+
+// required uint32 entityId = 1;
+inline bool AppCameraRays_Entity::_internal_has_entityid() const {
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool AppCameraRays_Entity::has_entityid() const {
+  return _internal_has_entityid();
+}
+inline void AppCameraRays_Entity::clear_entityid() {
+  entityid_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraRays_Entity::_internal_entityid() const {
+  return entityid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraRays_Entity::entityid() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.entityId)
+  return _internal_entityid();
+}
+inline void AppCameraRays_Entity::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _has_bits_[0] |= 0x00000010u;
+  entityid_ = value;
+}
+inline void AppCameraRays_Entity::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_entityid(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.Entity.entityId)
+}
+
+// required .rustplus.AppCameraRays.EntityType type = 2;
+inline bool AppCameraRays_Entity::_internal_has_type() const {
+  bool value = (_has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool AppCameraRays_Entity::has_type() const {
+  return _internal_has_type();
+}
+inline void AppCameraRays_Entity::clear_type() {
+  type_ = 1;
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::rustplus::AppCameraRays_EntityType AppCameraRays_Entity::_internal_type() const {
+  return static_cast< ::rustplus::AppCameraRays_EntityType >(type_);
+}
+inline ::rustplus::AppCameraRays_EntityType AppCameraRays_Entity::type() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.type)
+  return _internal_type();
+}
+inline void AppCameraRays_Entity::_internal_set_type(::rustplus::AppCameraRays_EntityType value) {
+  assert(::rustplus::AppCameraRays_EntityType_IsValid(value));
+  _has_bits_[0] |= 0x00000020u;
+  type_ = value;
+}
+inline void AppCameraRays_Entity::set_type(::rustplus::AppCameraRays_EntityType value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.Entity.type)
+}
+
+// required .rustplus.Vector3 position = 3;
+inline bool AppCameraRays_Entity::_internal_has_position() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || position_ != nullptr);
+  return value;
+}
+inline bool AppCameraRays_Entity::has_position() const {
+  return _internal_has_position();
+}
+inline void AppCameraRays_Entity::clear_position() {
+  if (position_ != nullptr) position_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::_internal_position() const {
+  const ::rustplus::Vector3* p = position_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector3&>(
+      ::rustplus::_Vector3_default_instance_);
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::position() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.position)
+  return _internal_position();
+}
+inline void AppCameraRays_Entity::unsafe_arena_set_allocated_position(
+    ::rustplus::Vector3* position) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(position_);
+  }
+  position_ = position;
+  if (position) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppCameraRays.Entity.position)
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::release_position() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::Vector3* temp = position_;
+  position_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::unsafe_arena_release_position() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraRays.Entity.position)
+  _has_bits_[0] &= ~0x00000002u;
+  ::rustplus::Vector3* temp = position_;
+  position_ = nullptr;
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::_internal_mutable_position() {
+  _has_bits_[0] |= 0x00000002u;
+  if (position_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector3>(GetArenaForAllocation());
+    position_ = p;
+  }
+  return position_;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::mutable_position() {
+  ::rustplus::Vector3* _msg = _internal_mutable_position();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.Entity.position)
+  return _msg;
+}
+inline void AppCameraRays_Entity::set_allocated_position(::rustplus::Vector3* position) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete position_;
+  }
+  if (position) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector3>::GetOwningArena(position);
+    if (message_arena != submessage_arena) {
+      position = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, position, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  position_ = position;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraRays.Entity.position)
+}
+
+// required .rustplus.Vector3 rotation = 4;
+inline bool AppCameraRays_Entity::_internal_has_rotation() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || rotation_ != nullptr);
+  return value;
+}
+inline bool AppCameraRays_Entity::has_rotation() const {
+  return _internal_has_rotation();
+}
+inline void AppCameraRays_Entity::clear_rotation() {
+  if (rotation_ != nullptr) rotation_->Clear();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::_internal_rotation() const {
+  const ::rustplus::Vector3* p = rotation_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector3&>(
+      ::rustplus::_Vector3_default_instance_);
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::rotation() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.rotation)
+  return _internal_rotation();
+}
+inline void AppCameraRays_Entity::unsafe_arena_set_allocated_rotation(
+    ::rustplus::Vector3* rotation) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(rotation_);
+  }
+  rotation_ = rotation;
+  if (rotation) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppCameraRays.Entity.rotation)
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::release_rotation() {
+  _has_bits_[0] &= ~0x00000004u;
+  ::rustplus::Vector3* temp = rotation_;
+  rotation_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::unsafe_arena_release_rotation() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraRays.Entity.rotation)
+  _has_bits_[0] &= ~0x00000004u;
+  ::rustplus::Vector3* temp = rotation_;
+  rotation_ = nullptr;
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::_internal_mutable_rotation() {
+  _has_bits_[0] |= 0x00000004u;
+  if (rotation_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector3>(GetArenaForAllocation());
+    rotation_ = p;
+  }
+  return rotation_;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::mutable_rotation() {
+  ::rustplus::Vector3* _msg = _internal_mutable_rotation();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.Entity.rotation)
+  return _msg;
+}
+inline void AppCameraRays_Entity::set_allocated_rotation(::rustplus::Vector3* rotation) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete rotation_;
+  }
+  if (rotation) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector3>::GetOwningArena(rotation);
+    if (message_arena != submessage_arena) {
+      rotation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, rotation, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  rotation_ = rotation;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraRays.Entity.rotation)
+}
+
+// required .rustplus.Vector3 size = 5;
+inline bool AppCameraRays_Entity::_internal_has_size() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || size_ != nullptr);
+  return value;
+}
+inline bool AppCameraRays_Entity::has_size() const {
+  return _internal_has_size();
+}
+inline void AppCameraRays_Entity::clear_size() {
+  if (size_ != nullptr) size_->Clear();
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::_internal_size() const {
+  const ::rustplus::Vector3* p = size_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rustplus::Vector3&>(
+      ::rustplus::_Vector3_default_instance_);
+}
+inline const ::rustplus::Vector3& AppCameraRays_Entity::size() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.size)
+  return _internal_size();
+}
+inline void AppCameraRays_Entity::unsafe_arena_set_allocated_size(
+    ::rustplus::Vector3* size) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(size_);
+  }
+  size_ = size;
+  if (size) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rustplus.AppCameraRays.Entity.size)
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::release_size() {
+  _has_bits_[0] &= ~0x00000008u;
+  ::rustplus::Vector3* temp = size_;
+  size_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::unsafe_arena_release_size() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraRays.Entity.size)
+  _has_bits_[0] &= ~0x00000008u;
+  ::rustplus::Vector3* temp = size_;
+  size_ = nullptr;
+  return temp;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::_internal_mutable_size() {
+  _has_bits_[0] |= 0x00000008u;
+  if (size_ == nullptr) {
+    auto* p = CreateMaybeMessage<::rustplus::Vector3>(GetArenaForAllocation());
+    size_ = p;
+  }
+  return size_;
+}
+inline ::rustplus::Vector3* AppCameraRays_Entity::mutable_size() {
+  ::rustplus::Vector3* _msg = _internal_mutable_size();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.Entity.size)
+  return _msg;
+}
+inline void AppCameraRays_Entity::set_allocated_size(::rustplus::Vector3* size) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete size_;
+  }
+  if (size) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::rustplus::Vector3>::GetOwningArena(size);
+    if (message_arena != submessage_arena) {
+      size = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, size, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  size_ = size;
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraRays.Entity.size)
+}
+
+// optional string name = 6;
+inline bool AppCameraRays_Entity::_internal_has_name() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppCameraRays_Entity::has_name() const {
+  return _internal_has_name();
+}
+inline void AppCameraRays_Entity::clear_name() {
+  name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppCameraRays_Entity::name() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppCameraRays_Entity::set_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.Entity.name)
+}
+inline std::string* AppCameraRays_Entity::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.Entity.name)
+  return _s;
+}
+inline const std::string& AppCameraRays_Entity::_internal_name() const {
+  return name_.Get();
+}
+inline void AppCameraRays_Entity::_internal_set_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppCameraRays_Entity::_internal_mutable_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppCameraRays_Entity::release_name() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraRays.Entity.name)
+  if (!_internal_has_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppCameraRays_Entity::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraRays.Entity.name)
+}
+
+// -------------------------------------------------------------------
+
+// AppCameraRays
+
+// required float verticalFov = 1;
+inline bool AppCameraRays::_internal_has_verticalfov() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AppCameraRays::has_verticalfov() const {
+  return _internal_has_verticalfov();
+}
+inline void AppCameraRays::clear_verticalfov() {
+  verticalfov_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline float AppCameraRays::_internal_verticalfov() const {
+  return verticalfov_;
+}
+inline float AppCameraRays::verticalfov() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.verticalFov)
+  return _internal_verticalfov();
+}
+inline void AppCameraRays::_internal_set_verticalfov(float value) {
+  _has_bits_[0] |= 0x00000002u;
+  verticalfov_ = value;
+}
+inline void AppCameraRays::set_verticalfov(float value) {
+  _internal_set_verticalfov(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.verticalFov)
+}
+
+// required int32 sampleOffset = 2;
+inline bool AppCameraRays::_internal_has_sampleoffset() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AppCameraRays::has_sampleoffset() const {
+  return _internal_has_sampleoffset();
+}
+inline void AppCameraRays::clear_sampleoffset() {
+  sampleoffset_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraRays::_internal_sampleoffset() const {
+  return sampleoffset_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraRays::sampleoffset() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.sampleOffset)
+  return _internal_sampleoffset();
+}
+inline void AppCameraRays::_internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  sampleoffset_ = value;
+}
+inline void AppCameraRays::set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sampleoffset(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.sampleOffset)
+}
+
+// required bytes rayData = 3;
+inline bool AppCameraRays::_internal_has_raydata() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AppCameraRays::has_raydata() const {
+  return _internal_has_raydata();
+}
+inline void AppCameraRays::clear_raydata() {
+  raydata_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& AppCameraRays::raydata() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.rayData)
+  return _internal_raydata();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void AppCameraRays::set_raydata(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ raydata_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.rayData)
+}
+inline std::string* AppCameraRays::mutable_raydata() {
+  std::string* _s = _internal_mutable_raydata();
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.rayData)
+  return _s;
+}
+inline const std::string& AppCameraRays::_internal_raydata() const {
+  return raydata_.Get();
+}
+inline void AppCameraRays::_internal_set_raydata(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  raydata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* AppCameraRays::_internal_mutable_raydata() {
+  _has_bits_[0] |= 0x00000001u;
+  return raydata_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* AppCameraRays::release_raydata() {
+  // @@protoc_insertion_point(field_release:rustplus.AppCameraRays.rayData)
+  if (!_internal_has_raydata()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return raydata_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void AppCameraRays::set_allocated_raydata(std::string* raydata) {
+  if (raydata != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  raydata_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), raydata,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:rustplus.AppCameraRays.rayData)
+}
+
+// required float distance = 4;
+inline bool AppCameraRays::_internal_has_distance() const {
+  bool value = (_has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool AppCameraRays::has_distance() const {
+  return _internal_has_distance();
+}
+inline void AppCameraRays::clear_distance() {
+  distance_ = 0;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline float AppCameraRays::_internal_distance() const {
+  return distance_;
+}
+inline float AppCameraRays::distance() const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.distance)
+  return _internal_distance();
+}
+inline void AppCameraRays::_internal_set_distance(float value) {
+  _has_bits_[0] |= 0x00000008u;
+  distance_ = value;
+}
+inline void AppCameraRays::set_distance(float value) {
+  _internal_set_distance(value);
+  // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.distance)
+}
+
+// repeated .rustplus.AppCameraRays.Entity entities = 5;
+inline int AppCameraRays::_internal_entities_size() const {
+  return entities_.size();
+}
+inline int AppCameraRays::entities_size() const {
+  return _internal_entities_size();
+}
+inline void AppCameraRays::clear_entities() {
+  entities_.Clear();
+}
+inline ::rustplus::AppCameraRays_Entity* AppCameraRays::mutable_entities(int index) {
+  // @@protoc_insertion_point(field_mutable:rustplus.AppCameraRays.entities)
+  return entities_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppCameraRays_Entity >*
+AppCameraRays::mutable_entities() {
+  // @@protoc_insertion_point(field_mutable_list:rustplus.AppCameraRays.entities)
+  return &entities_;
+}
+inline const ::rustplus::AppCameraRays_Entity& AppCameraRays::_internal_entities(int index) const {
+  return entities_.Get(index);
+}
+inline const ::rustplus::AppCameraRays_Entity& AppCameraRays::entities(int index) const {
+  // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.entities)
+  return _internal_entities(index);
+}
+inline ::rustplus::AppCameraRays_Entity* AppCameraRays::_internal_add_entities() {
+  return entities_.Add();
+}
+inline ::rustplus::AppCameraRays_Entity* AppCameraRays::add_entities() {
+  ::rustplus::AppCameraRays_Entity* _add = _internal_add_entities();
+  // @@protoc_insertion_point(field_add:rustplus.AppCameraRays.entities)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rustplus::AppCameraRays_Entity >&
+AppCameraRays::entities() const {
+  // @@protoc_insertion_point(field_list:rustplus.AppCameraRays.entities)
+  return entities_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -13396,6 +24019,11 @@ inline void AppEntityChanged::set_allocated_payload(::rustplus::AppEntityPayload
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::rustplus::AppCameraRays_EntityType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::rustplus::AppCameraRays_EntityType>() {
+  return ::rustplus::AppCameraRays_EntityType_descriptor();
+}
 template <> struct is_proto_enum< ::rustplus::AppEntityType> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::rustplus::AppEntityType>() {

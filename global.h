@@ -44,6 +44,7 @@ public:
 	rustplus::AppInfo appInfo;
 	rustplus::AppMapMarkers appMapMarkers;
 	rustplus::AppTeamInfo appTeamInfo;
+	rustplus::AppCameraInfo appCameraInfo;
 	Events curEvents;
 	Events lastEvents;
 	rustplus::AppTeamChat curTeamChat;

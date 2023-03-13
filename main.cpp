@@ -60,41 +60,51 @@ int main(int argc, char* argv[])
 	//GUI Instancing
 	SDL_GetWindowSize(pWindow, &GUI::Get().windowRect.w, &GUI::Get().windowRect.h); //Reativity garbage
 	static bool bSettings = false;
-	Button* focusButton = new Button("button_focus", "Focus", g.fontTahomaBold, { 10, 10, 80, 30 }, TopLeft, Color::White, { 115,140,69,200 }, false);
+	Button* focusButton = new Button("button_focus", "Focus", g.fontTahomaBold, { 10, 10, 80, 30 }, TopLeft, GUIColor::White, { 115,140,69,200 }, false);
 	focusButton->OnClick([&]() { g.bFocus = !g.bFocus; });
+
+	Button* cameraButton = new Button("button_camera", "Camera", g.fontTahomaBold, { 10, 10, 80, 30 }, Left, GUIColor::White, { 115,140,69,200 }, true);
+	cameraButton->OnClick([&]() { g.appCameraInfo = rs->Subscribe("OILRIG2DOCK");
+	std::cout << g.appCameraInfo.width() << "x" << g.appCameraInfo.height() << std::endl; });
 	Block* settingsBlock = new Block("block_settings", { -200, 0, 200, 1000 }, TopRight, { 0,0,0,200 }, false);
 
-	Button* registerButton = new Button("button_register", "Sign in", g.fontTahomaBold, { -105, -120, 80, 25 }, BottomRight, Color::White, { 115,140,69,200 }, false);
-	registerButton->OnClick([]() { ShellExecute(NULL, "open", "cmd", "/c \"npx @liamcottle/rustplus.js fcm-register\"", NULL, SW_SHOW); });
-	Button* listenButton = new Button("button_listen", "Listen", g.fontTahomaBold, { -15, -120, 80, 25 }, BottomRight, Color::White, { 115,140,69,200 }, false);
-	listenButton->OnClick([]() { ShellExecute(NULL, "open", "cmd", "/c \"npx @liamcottle/rustplus.js fcm-listen > imao.txt\"", NULL, SW_SHOW); });
-	Button* importButton = new Button("button_import", "Import", g.fontTahomaBold, { -15, -85, 170, 25 }, BottomRight, Color::White, { 115,140,69,200 }, false);
+	Button* registerButton = new Button("button_register", "Sign in", g.fontTahomaBold, { -105, -120, 80, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
+	registerButton->OnClick([]()
+		{
+			ShellExecute(NULL, "runas", "cmd", "/c npx @liamcottle/rustplus.js fcm-register", NULL, SW_SHOW);
+		});
+	Button* listenButton = new Button("button_listen", "Listen", g.fontTahomaBold, { -15, -120, 80, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
+	listenButton->OnClick([]()
+		{
+			ShellExecute(NULL, "runas", "cmd", "/c npx @liamcottle/rustplus.js fcm-listen > C:/listen.temp", NULL, SW_SHOW);
+		});
+	Button* importButton = new Button("button_import", "Import", g.fontTahomaBold, { -15, -85, 170, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
 	importButton->OnClick([&]() { Import(); });
-	Button* disconnectButton = new Button("button_disconnect", "Disconnect", g.fontTahomaBold, { -15, -50, 170, 25 }, BottomRight, Color::White, { 150,40,40,200 }, false);
+	Button* disconnectButton = new Button("button_disconnect", "Disconnect", g.fontTahomaBold, { -15, -50, 170, 25 }, BottomRight, GUIColor::White, { 150,40,40,200 }, false);
 	disconnectButton->OnClick([&]() { Disconnect(); });
 
-	Label* creditsLabel = new Label("label_credits", "Made by Bananik007\nCredits: liamcottle (Rust+ API)", g.fontTahoma, { 0,0,190,35 }, BottomRight, Color::White, false);
+	Label* creditsLabel = new Label("label_credits", "Made by Bananik007\nCredits: liamcottle (Rust+ API)", g.fontTahoma, { 0,0,190,35 }, BottomRight, GUIColor::White, false);
 
-	Checkbox* ignoreErrorsCheckbox = new Checkbox("checkbox_ignore_errors", "Ignore Errors", g.fontTahomaBold, { -180, 65,200,18 }, TopRight, Color::White, Color::White, false, false);
+	Checkbox* ignoreErrorsCheckbox = new Checkbox("checkbox_ignore_errors", "Ignore Errors", g.fontTahomaBold, { -180, 65,200,18 }, TopRight, GUIColor::White, GUIColor::White, false, false);
 	ignoreErrorsCheckbox->OnCheck([&]() {ignoreErrors = true; });
 	ignoreErrorsCheckbox->OnUncheck([&]() {ignoreErrors = false; });
 
-	Checkbox* cargoCheckbox = new Checkbox("checkbox_alert_cargo", "Cargo alerts", g.fontTahomaBold, { -180, 100,200,18 }, TopRight, Color::White, Color::White, true, false);
+	Checkbox* cargoCheckbox = new Checkbox("checkbox_alert_cargo", "Cargo alerts", g.fontTahomaBold, { -180, 100,200,18 }, TopRight, GUIColor::White, GUIColor::White, true, false);
 	cargoCheckbox->OnCheck([&]() {alertCargo = true; });
 	cargoCheckbox->OnUncheck([&]() {alertCargo = false; });
-	Checkbox* patrolCheckbox = new Checkbox("checkbox_alert_patrol", "Patrol alerts", g.fontTahomaBold, { -180, 125,200,18 }, TopRight, Color::White, Color::White, true, false);
+	Checkbox* patrolCheckbox = new Checkbox("checkbox_alert_patrol", "Patrol alerts", g.fontTahomaBold, { -180, 125,200,18 }, TopRight, GUIColor::White, GUIColor::White, true, false);
 	patrolCheckbox->OnCheck([&]() {alertPatrol = true; });
 	patrolCheckbox->OnUncheck([&]() {alertPatrol = false; });
-	Checkbox* exploCheckbox = new Checkbox("checkbox_alert_explo", "Explosion alerts", g.fontTahomaBold, { -180, 150,200,18 }, TopRight, Color::White, Color::White, true, false);
+	Checkbox* exploCheckbox = new Checkbox("checkbox_alert_explo", "Explosion alerts", g.fontTahomaBold, { -180, 150,200,18 }, TopRight, GUIColor::White, GUIColor::White, true, false);
 	exploCheckbox->OnCheck([&]() {alertExplosion = true; });
 	exploCheckbox->OnUncheck([&]() {alertExplosion = false; });
-	Checkbox* chinookCheckbox = new Checkbox("checkbox_alert_chinook", "Chinook alerts", g.fontTahomaBold, { -180, 175,200,18 }, TopRight, Color::White, Color::White, true, false);
+	Checkbox* chinookCheckbox = new Checkbox("checkbox_alert_chinook", "Chinook alerts", g.fontTahomaBold, { -180, 175,200,18 }, TopRight, GUIColor::White, GUIColor::White, true, false);
 	chinookCheckbox->OnCheck([&]() {alertChinook = true; });
 	chinookCheckbox->OnUncheck([&]() {alertChinook = false; });
-	Checkbox* crateCheckbox = new Checkbox("checkbox_alert_crate", "Crate alerts", g.fontTahomaBold, { -180, 200,200,18 }, TopRight, Color::White, Color::White, true, false);
+	Checkbox* crateCheckbox = new Checkbox("checkbox_alert_crate", "Crate alerts", g.fontTahomaBold, { -180, 200,200,18 }, TopRight, GUIColor::White, GUIColor::White, true, false);
 	crateCheckbox->OnCheck([&]() {alertCrate = true; });
 	crateCheckbox->OnUncheck([&]() {alertCrate = false; });
-	Button* settingsButton = new Button("button_settings", "Settings", g.fontTahomaBold, { -100,10,80,30 }, TopRight, Color::White, Color::Gray, true);
+	Button* settingsButton = new Button("button_settings", "Settings", g.fontTahomaBold, { -100,10,80,30 }, TopRight, GUIColor::White, GUIColor::Gray, true);
 	settingsButton->OnClick([&]() {bSettings = !bSettings;
 	settingsBlock->enabled = bSettings;
 	ignoreErrorsCheckbox->enabled = bSettings;
@@ -112,7 +122,7 @@ int main(int argc, char* argv[])
 	//TODO: fix mem leak
 	for (int i = 0; i < g.servers.size(); i++)
 	{
-		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, Color::White, Color::Gray, true);
+		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
 		serverButton->OnClick([i]() { g.connected = Connect(g.servers[i]); });
 	}
 
@@ -379,7 +389,27 @@ void PollEvents()
 		}
 	}
 }
+std::string string_to_hex(const std::string input)
+{
+	static const char hex_digits[] = "0123456789ABCDEF";
 
+	std::string output;
+	output.reserve(input.length() * 2);
+	for (unsigned char c : input)
+	{
+		output.push_back(hex_digits[c >> 4]);
+		output.push_back(hex_digits[c & 15]);
+	}
+	return output;
+}
+static SDL_Surface* cameraImage = SDL_CreateRGBSurface(0, 160, 90, 32, 0, 0, 0, 0);
+void set_pixel(SDL_Surface* surface, int x, int y, Uint32 pixel)
+{
+	Uint32* const target_pixel = (Uint32*)((Uint8*)surface->pixels
+		+ y * surface->pitch
+		+ x * surface->format->BytesPerPixel);
+	*target_pixel = pixel;
+}
 void NetLoop()
 {
 	if (!g.connected)
@@ -392,11 +422,17 @@ void NetLoop()
 	NStatus& NSmapMarkers = g.NSmapMarkers;
 	NStatus& NSTeamChat = g.NSTeamChat;
 	NStatus& NSTeamInfo = g.NSTeamInfo;
+	AppMessage appMessage;
+	rs->ws->poll();
+	rs->ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+
+	if (appMessage.has_broadcast() && appMessage.broadcast().has_camerarays())
+	{
+		
+
+	}
 	if (NSmapMarkers == NWaiting || NSTeamChat == NWaiting || NSTeamInfo == NWaiting)
 	{
-		AppMessage appMessage;
-		rs->ws->poll();
-		rs->ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
 		if (appMessage.has_response())
 		{
 			if (appMessage.response().has_mapmarkers())
@@ -576,7 +612,7 @@ void NetLoop()
 		//Commands
 		if (curTeamChat.ByteSizeLong() && DifferentChats(curTeamChat, lastTeamChat))
 		{
-			AppChatMessage msg = curTeamChat.messages().Get(curTeamChat.messages().size() - 1);
+			AppTeamMessage msg = curTeamChat.messages().Get(curTeamChat.messages().size() - 1);
 			if (msg.message() == "!help")
 				rs->SendTeamChatMessage("commands: !time !promoteme !info !id64");
 			else if (msg.message() == "!promoteme")
@@ -664,7 +700,7 @@ bool Connect(std::string serverName)
 	g.jPort = json["port"];
 	g.jID = json["id"];
 	g.jToken = json["token"];
-	if(json.count("name"))
+	if (json.count("name"))
 		g.connectedServerName = json["name"];
 	LoadMarkersFromJson();
 	rs = new RustSocket(g.jIP.c_str(), g.jPort.c_str(), g.jID, g.jToken);
@@ -743,7 +779,7 @@ void Import()
 {
 	std::string data;
 	std::ifstream input;
-	input.open("imao.txt", std::ios::binary);
+	input.open("C:/listen.temp", std::ios::binary);
 	if (input.is_open()) {
 		std::string tp;
 		while (std::getline(input, tp))
@@ -864,7 +900,7 @@ void Render_Events()
 			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), true, 32, 32);
 			SDL_RenderCopyEx(g.pRenderer, Icons::cargo, 0, &rect, -marker.rotation() - 90.0, 0, SDL_FLIP_NONE);
 		}
-		else if (marker.type() == CH47 || marker.type() == Patrol)
+		else if (marker.type() == CH47 || marker.type() == PatrolHelicopter)
 		{
 			float x = marker.x() + 1000.f;
 			float y = g.appInfo.mapsize() - marker.y() + 1000.f;
@@ -1016,7 +1052,7 @@ void ResetServerButtons()
 	g.servers = GetServerlist();
 	for (int i = 0; i < g.servers.size(); i++)
 	{
-		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, Color::White, Color::Gray, true);
+		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
 		serverButton->OnClick([i]() { g.connected = Connect(g.servers[i]); });
 	}
 	g.skipRender = true;
