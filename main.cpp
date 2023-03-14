@@ -14,6 +14,7 @@
 #include "GUI.h"
 #include "main.h"
 #include "resources.h"
+#include "RayParser.h"
 auto& json = g.json;
 float& fMapZoom = g.fMapZoom;
 float& fMapX = g.fMapX;
@@ -410,6 +411,9 @@ void set_pixel(SDL_Surface* surface, int x, int y, Uint32 pixel)
 		+ x * surface->format->BytesPerPixel);
 	*target_pixel = pixel;
 }
+
+Parser parser(160, 90);
+int iksde = 0;
 void NetLoop()
 {
 	if (!g.connected)
@@ -428,8 +432,12 @@ void NetLoop()
 
 	if (appMessage.has_broadcast() && appMessage.broadcast().has_camerarays())
 	{
-		
-
+		iksde++;
+		parser.handle_camera_ray_data(appMessage.broadcast().camerarays());
+		parser.step();
+		parser.render();
+		std::string imgfile = std::string(std::to_string(iksde) + "map.jpg").c_str();
+		IMG_SaveJPG(parser.image, imgfile.c_str(), 100);
 	}
 	if (NSmapMarkers == NWaiting || NSTeamChat == NWaiting || NSTeamInfo == NWaiting)
 	{
