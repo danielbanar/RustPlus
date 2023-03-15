@@ -7,9 +7,11 @@
 #include "texture.h"
 #include "rustplus.pb.h"
 #include "rustsocket.h"
+#include "GUI.h"
 #define MAX_FPS 60
 #define MAP_WINDOW_SIZE 800.f
 #define MAP_SIZE_HALF (MAP_WINDOW_SIZE * .5f)
+#define DEG2RAD(deg) ((deg) * 0.01745329238474369049072265625f)
 class GlobalVars
 {
 public:

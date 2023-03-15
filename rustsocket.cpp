@@ -1,13 +1,5 @@
 #include "rustsocket.h"
 
-//inline float RAD2DEG(float rad)
-//{
-//	return rad * 57.295780181884765625f;
-//}
-//inline float DEG2RAD(float deg)
-//{
-//	return deg * 0.01745329238474369049072265625f;
-//}
 bool ignoreErrors = false;
 std::string buffer;
 std::string trim(const std::string& str, const std::string& whitespace)

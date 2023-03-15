@@ -14,25 +14,20 @@
 #include "GUI.h"
 #include "main.h"
 #include "resources.h"
-#include "RayParser.h"
+#include "cameradecoder.h"
+#include "render.h"
+#include "utils.h"
+
 auto& json = g.json;
 float& fMapZoom = g.fMapZoom;
 float& fMapX = g.fMapX;
 float& fMapY = g.fMapY;
+
 RustSocket* rs = (RustSocket*)g.socket;
 SDL_Window* pWindow;
+SDL_Renderer* cameraRenderer;
 bool alertCargo = true, alertPatrol = true, alertCrate = true, alertExplosion = true, alertChinook = true;
-inline float DEG2RAD(float deg)
-{
-	return deg * 0.01745329238474369049072265625f;
-}
-void listen_for_input()
-{
-	while (true)
-	{
-		std::cin >> g.input;
-	}
-}
+
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1 && !ignoreErrors)
@@ -64,9 +59,10 @@ int main(int argc, char* argv[])
 	Button* focusButton = new Button("button_focus", "Focus", g.fontTahomaBold, { 10, 10, 80, 30 }, TopLeft, GUIColor::White, { 115,140,69,200 }, false);
 	focusButton->OnClick([&]() { g.bFocus = !g.bFocus; });
 
-	Button* cameraButton = new Button("button_camera", "Camera", g.fontTahomaBold, { 10, 10, 80, 30 }, Left, GUIColor::White, { 115,140,69,200 }, true);
-	cameraButton->OnClick([&]() { g.appCameraInfo = rs->Subscribe("OILRIG2DOCK");
-	std::cout << g.appCameraInfo.width() << "x" << g.appCameraInfo.height() << std::endl; });
+	Button* cameraButton = new Button("button_camera", "OILRIG2HELI", g.fontTahomaBold, { 10, 10, 80, 30 }, Left, GUIColor::White, { 115,140,69,200 }, true);
+	cameraButton->OnClick([&]() { g.appCameraInfo = rs->Subscribe("OILRIG2HELI");
+	Render_CameraWindow(); });
+
 	Block* settingsBlock = new Block("block_settings", { -200, 0, 200, 1000 }, TopRight, { 0,0,0,200 }, false);
 
 	Button* registerButton = new Button("button_register", "Sign in", g.fontTahomaBold, { -105, -120, 80, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
@@ -160,61 +156,6 @@ int main(int argc, char* argv[])
 	SDL_Quit();
 	return 0;
 }
-void CreateTemplateFile()
-{
-	std::ofstream outfile("servers\\template.json");
-	g.json["ip"] = "69.69.69.69";
-	g.json["port"] = "420";
-	g.json["id"] = 123456789;
-	g.json["token"] = 1488;
-	outfile << std::setw(8) << g.json << std::endl;
-	outfile.close();
-	std::cout << "Template file created!" << std::endl;
-}
-void LoadMarkersFromJson()
-{
-	g.vecMyMarkers.clear();
-	for (size_t i = 0; i < json["markers"].size(); i++)
-	{
-		g.vecMyMarkers.push_back({ json["markers"][i]["x"], json["markers"][i]["y"] });
-	}
-}
-void SaveMarkersToJson(int x, int y)
-{
-	g.vecMyMarkers.push_back({ x, y });
-	json["markers"].emplace_back(nlohmann::json::object({ {"x", x}, {"y",  y } }));
-	std::ofstream o(g.connectedServerFile);
-	if (o.is_open())
-	{
-		o << std::setw(4) << json << std::endl;
-		o.close();
-	}
-}
-inline SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h)
-{
-	float x = (X + 1000.f) * MAP_SIZE_HALF / mapwidth;
-	float y = (mapsize - Y + 1000.f) * MAP_SIZE_HALF / mapwidth;
-	if (relative)
-		return {
-			int(MAP_SIZE_HALF - (w * .5f * fMapZoom) + (x - fMapX) * fMapZoom),
-			int(MAP_SIZE_HALF - (h * .5f * fMapZoom) + (y - fMapY) * fMapZoom),
-			int(w * fMapZoom),
-			int(h * fMapZoom) };
-	else
-		return {
-			int(MAP_SIZE_HALF - w * .5f + (x - fMapX) * fMapZoom),
-			int(MAP_SIZE_HALF - h * .5f + (y - fMapY) * fMapZoom),
-			int(w),
-			int(h) };
-	return { 0 };
-}
-std::pair<float, float> GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my)
-{
-	return
-	{ (X * mapwidth + mx * zoom * mapwidth - MAP_SIZE_HALF * mapwidth) / (MAP_SIZE_HALF * zoom) - 1000.f,
-		-(Y * mapwidth + my * zoom * mapwidth - MAP_SIZE_HALF * mapwidth + zoom * mapwidth) / (zoom * MAP_SIZE_HALF) + 1005.f + mapsize
-	};
-}
 
 void GUIInteraction(const SDL_Event& ev)
 {
@@ -236,69 +177,8 @@ void GUIInteraction(const SDL_Event& ev)
 	}
 }
 
-SDL_Texture* CreateMap()
-{
-	SDL_Surface* mapSurf = IMG_LoadTyped_RW(SDL_RWFromMem((void*)g.appMap.jpgimage().data(), g.appMap.jpgimage().capacity()), 1, "JPG");
-	SDL_Surface* trainSurf = IMG_LoadTyped_RW(SDL_RWFromMem(Icons::pngTrain, 7618), 1, "PNG");
-	for (int i = 0; i < g.appMap.monuments_size(); i++)
-	{
-		auto monument = g.appMap.monuments().Get(i);
-		if (monument.token() == "DungeonBase" || monument.token() == "swamp_a" || monument.token() == "swamp_b" || monument.token() == "swamp_c")
-			continue;
-		auto [sx, sy] = FormatCoord(monument.x(), monument.y(), g.appInfo.mapsize());
-		auto str = Garbage::dict.find(monument.token());
-		if (str != Garbage::dict.end())
-		{
-			if (monument.token() == "train_tunnel_display_name")
-			{
-				SDL_Rect rc = { sx - 12, sy - 12, 24, 24 };
-				SDL_BlitScaled(Icons::trainSurf, 0, mapSurf, &rc);
-			}
-			else
-			{
-				SDL_Surface* surfText = TTF_RenderText_Solid(g.fontPermanentMarker, str->second.c_str(), { 0, 0, 0 });
-				SDL_Rect textRect = { sx - surfText->w / 2, sy - surfText->h / 2, 0, 0 };
-				SDL_BlitSurface(surfText, 0, mapSurf, &textRect);
-				SDL_FreeSurface(surfText);
-			}
-		}
-		else
-		{
-			std::cout << "Unknown monument:" << monument.token() << std::endl;
-		}
-	}
-	SDL_FreeSurface(trainSurf);
-	IMG_SaveJPG(mapSurf, "map.jpg", 100);
-	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
-	auto mapTexture = SDL_CreateTextureFromSurface(g.pRenderer, mapSurf);
-	SDL_FreeSurface(mapSurf);
-	return mapTexture;
-}
-AppTeamInfo_Member GetLocalPlayer()
-{
-	for (int i = 0; i < g.appTeamInfo.members_size(); i++)
-	{
-		AppTeamInfo_Member member = g.appTeamInfo.members().Get(i);
-		if (member.steamid() == g.jID)
-			return member;
-	}
-}
-std::vector<std::string> GetServerlist()
-{
-	system("dir /b servers\\*.json > files.txt");
-	std::ifstream newfile;
-	newfile.open("files.txt");
-	std::vector<std::string> servers;
-	if (newfile.is_open()) {
-		std::string tp;
-		while (std::getline(newfile, tp)) {
-			servers.push_back(tp);
-		}
-		newfile.close();
-		remove("files.txt");
-	}
-	return servers;
-}
+
+
 void PollEvents()
 {
 	SDL_Event ev;
@@ -308,7 +188,7 @@ void PollEvents()
 		{
 		case SDL_QUIT:
 			g.bRunning = false;
-			//return 0;
+			exit(0);//TODO: Fix error message due to second thread
 			break;
 		case SDL_MOUSEWHEEL:
 			//Zooming
@@ -390,30 +270,9 @@ void PollEvents()
 		}
 	}
 }
-std::string string_to_hex(const std::string input)
-{
-	static const char hex_digits[] = "0123456789ABCDEF";
 
-	std::string output;
-	output.reserve(input.length() * 2);
-	for (unsigned char c : input)
-	{
-		output.push_back(hex_digits[c >> 4]);
-		output.push_back(hex_digits[c & 15]);
-	}
-	return output;
-}
 static SDL_Surface* cameraImage = SDL_CreateRGBSurface(0, 160, 90, 32, 0, 0, 0, 0);
-void set_pixel(SDL_Surface* surface, int x, int y, Uint32 pixel)
-{
-	Uint32* const target_pixel = (Uint32*)((Uint8*)surface->pixels
-		+ y * surface->pitch
-		+ x * surface->format->BytesPerPixel);
-	*target_pixel = pixel;
-}
 
-Parser parser(160, 90);
-int iksde = 0;
 void NetLoop()
 {
 	if (!g.connected)
@@ -432,12 +291,7 @@ void NetLoop()
 
 	if (appMessage.has_broadcast() && appMessage.broadcast().has_camerarays())
 	{
-		iksde++;
-		parser.handle_camera_ray_data(appMessage.broadcast().camerarays());
-		parser.step();
-		parser.render();
-		std::string imgfile = std::string(std::to_string(iksde) + "map.jpg").c_str();
-		IMG_SaveJPG(parser.image, imgfile.c_str(), 100);
+		DecodeCamera(160, 90, appMessage.broadcast().camerarays(), cameraRenderer);
 	}
 	if (NSmapMarkers == NWaiting || NSTeamChat == NWaiting || NSTeamInfo == NWaiting)
 	{
@@ -773,76 +627,7 @@ void Disconnect()
 	SDL_SetWindowTitle(pWindow, "Rust+ PC | unconnected");
 }
 
-inline bool file_exists(const std::string& name) {
-	if (FILE* file = fopen(name.c_str(), "r")) {
-		fclose(file);
-		return true;
-	}
-	else {
-		return false;
-	}
-}
 
-void Import()
-{
-	std::string data;
-	std::ifstream input;
-	input.open("C:/listen.temp", std::ios::binary);
-	if (input.is_open()) {
-		std::string tp;
-		while (std::getline(input, tp))
-			data += tp;
-		input.close();
-	}
-	auto servers = Filter(data);
-	for (std::string tp : servers)
-	{
-		std::string sport, sip, sname, sid, stoken;
-		//port
-		int first = tp.find("port: '");
-		tp = tp.substr(first + 7);
-		first = tp.find("ip: ");
-		sport = tp.substr(0, first - 4);
-		//ip
-		tp = tp.substr(first + 5);
-		first = tp.find("name: ");
-		sip = tp.substr(0, first - 4);
-		//name
-		tp = tp.substr(first + 7);
-		first = tp.find("logo: ");
-		sname = tp.substr(0, first - 4);
-		//id
-		first = tp.find("playerId: ");
-		tp = tp.substr(first + 11);
-		first = tp.find("playerToken: ");
-		sid = tp.substr(0, first - 4);
-		//token
-		tp = tp.substr(first + 14);
-		stoken = tp;
-		std::string filename = std::string("servers\\") + sname.substr(0, 24) + ".json";
-		std::string illegals = "/?%*:|\"<>;=";
-		for (char character : illegals)
-			filename.erase(remove(filename.begin(), filename.end(), character), filename.end());
-		if (file_exists(filename))
-			continue;
-
-		std::ofstream outfile(filename, std::ios::binary);
-		if (outfile.is_open())
-		{
-			nlohmann::json j;
-			j["ip"] = sip;
-			j["port"] = sport;
-			j["name"] = sname;
-			std::istringstream iss(sid);
-			iss >> j["id"];
-			iss = std::istringstream(stoken);
-			iss >> j["token"];
-			outfile << std::setw(8) << j << std::endl;
-			outfile.close();
-		}
-	}
-	ResetServerButtons();
-}
 void Render()
 {
 	SDL_RenderClear(g.pRenderer);
@@ -868,178 +653,7 @@ void Render()
 	SDL_RenderPresent(g.pRenderer);
 }
 
-void Render_Map()
-{
-	SDL_Rect mapRect{
-		MAP_SIZE_HALF - fMapX * fMapZoom,
-		MAP_SIZE_HALF - fMapY * fMapZoom,
-		MAP_WINDOW_SIZE * fMapZoom,
-		MAP_WINDOW_SIZE * fMapZoom };
-	SDL_RenderCopy(g.pRenderer, g.mapTexture, 0, &mapRect);
 
-}
-void Render_CustomMapMarkers()
-{
-	for (auto& myMarker : g.vecMyMarkers)
-	{
-		auto rect = GetRect(myMarker.first, myMarker.second, g.appInfo.mapsize(), g.appMap.width(), false, 40, 40);
-		SDL_RenderCopy(g.pRenderer, Icons::myMarker, 0, &rect);
-	}
-}
-void Render_Events()
-{
-	static float angle = 0.f;
-	angle += 10.f;
-	for (int i = 0; i < g.appMapMarkers.markers_size(); i++)
-	{
-		auto& marker = g.appMapMarkers.markers().Get(i);
-		if (marker.type() == Crate)
-		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
-			SDL_RenderCopy(g.pRenderer, Icons::crate, 0, &rect);
-		}
-		else if (marker.type() == Explosion)
-		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
-			SDL_RenderCopy(g.pRenderer, Icons::explosion, 0, &rect);
-		}
-		else if (marker.type() == CargoShip)
-		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), true, 32, 32);
-			SDL_RenderCopyEx(g.pRenderer, Icons::cargo, 0, &rect, -marker.rotation() - 90.0, 0, SDL_FLIP_NONE);
-		}
-		else if (marker.type() == CH47 || marker.type() == PatrolHelicopter)
-		{
-			float x = marker.x() + 1000.f;
-			float y = g.appInfo.mapsize() - marker.y() + 1000.f;
-			float scale = g.appMap.width() / MAP_SIZE_HALF;
-			x /= scale;
-			y /= scale;
-			SDL_Rect rect{
-				MAP_SIZE_HALF - (10.f * fMapZoom) + (x - fMapX) * fMapZoom,
-				MAP_SIZE_HALF - (10.f * fMapZoom) + (y - fMapY) * fMapZoom,
-				20.f * fMapZoom,
-				20.f * fMapZoom };
-			SDL_RenderCopyEx(g.pRenderer, Icons::chinook, 0, &rect, -marker.rotation() - 90.0, 0, SDL_FLIP_NONE);
-
-			SDL_Rect rectBlades1{
-				MAP_SIZE_HALF - (6.f * fMapZoom) + (x + 6.f * sinf(DEG2RAD(marker.rotation())) - fMapX) * fMapZoom,
-				MAP_SIZE_HALF - (6.f * fMapZoom) + (y + 6.f * cosf(DEG2RAD(marker.rotation())) - fMapY) * fMapZoom,
-				12.f * fMapZoom,
-				12.f * fMapZoom };
-			SDL_Rect rectBlades2{
-				MAP_SIZE_HALF - (6.f * fMapZoom) + (x + 6.f * -sinf(DEG2RAD(marker.rotation())) - fMapX) * fMapZoom,
-				MAP_SIZE_HALF - (6.f * fMapZoom) + (y + 6.f * -cosf(DEG2RAD(marker.rotation())) - fMapY) * fMapZoom,
-				12.f * fMapZoom,
-				12.f * fMapZoom };
-			SDL_RenderCopyEx(g.pRenderer, Icons::blade, 0, &rectBlades1, angle, 0, SDL_FLIP_NONE);
-			SDL_RenderCopyEx(g.pRenderer, Icons::blade, 0, &rectBlades2, -angle, 0, SDL_FLIP_NONE);
-		}
-		else if (marker.type() == VendingMachine)
-		{
-			//marker.sellorders().Get(0).
-		}
-	}
-}
-void Render_Markers()
-{
-	//Draw Team markers
-	for (int i = 0; i < g.appTeamInfo.leadermapnotes_size(); i++)
-	{
-		auto& teamMarker = g.appTeamInfo.leadermapnotes().Get(i);
-		float x = teamMarker.x() + 1000.f;
-		float y = g.appInfo.mapsize() - teamMarker.y() + 1000.f;
-		float scale = g.appMap.width() / MAP_SIZE_HALF;
-		x /= scale;
-		y /= scale;
-		SDL_Rect rectMarker{
-			MAP_SIZE_HALF - 16.f + (x - fMapX) * fMapZoom,
-			MAP_SIZE_HALF - 32.f + (y - fMapY) * fMapZoom,
-			32.f,
-			32.f };
-		SDL_RenderCopy(g.pRenderer, Icons::marker, 0, &rectMarker);
-	}
-	//Draw markers
-	for (int i = 0; i < g.appTeamInfo.mapnotes_size(); i++)
-	{
-		auto& teamMarker = g.appTeamInfo.mapnotes().Get(i);
-		float x = teamMarker.x() + 1000.f;
-		float y = g.appInfo.mapsize() - teamMarker.y() + 1000.f;
-		float scale = g.appMap.width() / MAP_SIZE_HALF;
-		x /= scale;
-		y /= scale;
-		SDL_Rect rectMarker{
-			MAP_SIZE_HALF - 16.f + (x - fMapX) * fMapZoom,
-			MAP_SIZE_HALF - (teamMarker.type() ? 32.f : 16.f) + (y - fMapY) * fMapZoom,
-			32.f,
-			32.f };
-		SDL_RenderCopy(g.pRenderer, teamMarker.type() ? Icons::marker : Icons::death, 0, &rectMarker);
-	}
-}
-void Render_TeamMembers()
-{
-	for (int i = 0; i < g.appTeamInfo.members_size(); i++)
-	{
-		auto& member = g.appTeamInfo.members().Get(i);
-		if (g.bFocus && member.steamid() == g.jID)
-		{
-			float x = member.x() + 1000.f;
-			float y = g.appInfo.mapsize() - member.y() + 1000.f;
-			float scale = g.appMap.width() / MAP_SIZE_HALF;
-			x /= scale;
-			y /= scale;
-			fMapX = x;
-			fMapY = y;
-		}
-		auto rect = GetRect(member.x(), member.y(), g.appInfo.mapsize(), g.appMap.width(), false, 16, 16);
-		SDL_RenderCopy(g.pRenderer, member.isalive() ? member.isonline() ? Icons::player : Icons::playerOff : Icons::playerDead, 0, &rect);
-
-		auto nametag = g.nametags.find(member.name());
-		if (nametag == g.nametags.end())//Add to map
-		{
-			TTF_SetFontOutline(g.fontTahoma, 1);
-			auto sOutline = TTF_RenderText_Solid(g.fontTahoma, member.name().c_str(), { 0, 0, 0 });
-			TTF_SetFontOutline(g.fontTahoma, 0);
-			auto sText = TTF_RenderText_Solid(g.fontTahoma, member.name().c_str(), { 170, 255, 0 });
-			if (!ignoreErrors)
-				std::cout << TTF_GetError();
-			SDL_Surface* sName = SDL_CreateRGBSurface(0, sOutline->w, sOutline->h, 32, 0x000000FF, 0x0000FF00, 0x00FF0000, 0xFF000000);
-			SDL_Rect rectName = { 1, 1, sText->w, sText->h };
-			SDL_BlitSurface(sOutline, 0, sName, 0);
-			SDL_BlitSurface(sText, 0, sName, &rectName);
-			SDL_FreeSurface(sOutline);
-			SDL_FreeSurface(sText);
-			g.nametags.emplace(std::make_pair(member.name(), Texture{ SDL_CreateTextureFromSurface(g.pRenderer, sName), sName->w, sName->h }));
-			nametag = g.nametags.find(member.name());
-			SDL_FreeSurface(sName);
-		}
-		rect.x -= nametag->second.w / 2 - 8;
-		rect.y -= nametag->second.h;
-		rect.w = nametag->second.w;
-		rect.h = nametag->second.h;
-		SDL_RenderCopy(g.pRenderer, nametag->second.texture, 0, &rect);
-
-	}
-}
-void Render_GUI()
-{
-	for (GUIElement* element : GUI::Elements()) {
-		if (element->enabled) {
-			if (Block* block = dynamic_cast<Block*>(element)) {
-				SDL_RenderCopy(g.pRenderer, block->texture, 0, &block->rect);
-			}
-			if (Button* button = dynamic_cast<Button*>(element)) {
-				SDL_RenderCopy(g.pRenderer, button->texture, 0, &button->rect);
-			}
-			if (Checkbox* checkbox = dynamic_cast<Checkbox*>(element)) {
-				SDL_RenderCopy(g.pRenderer, checkbox->checked ? checkbox->textureChecked : checkbox->textureUnchecked, 0, &checkbox->rect);
-			}
-			if (Label* label = dynamic_cast<Label*>(element)) {
-				SDL_RenderCopy(g.pRenderer, label->texture, 0, &label->rect);
-			}
-		}
-	}
-}
 void ResetServerButtons()
 {
 	auto& els = GUI::Elements();
@@ -1064,19 +678,4 @@ void ResetServerButtons()
 		serverButton->OnClick([i]() { g.connected = Connect(g.servers[i]); });
 	}
 	g.skipRender = true;
-}
-
-std::vector<std::string> Filter(std::string str)
-{
-	std::vector<std::string> servers;
-	while (str.find('{') != -1 && str.find('}') != -1)
-	{
-		int first = str.find('{');
-		int last = str.find('}') + 1;
-		std::string tp = str.substr(first, last - first - 2);
-		if (tp.find("type: 'server'") != std::string::npos)
-			servers.push_back(tp);
-		str = str.substr(last);
-	}
-	return servers;
 }

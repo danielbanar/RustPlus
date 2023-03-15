@@ -167,28 +167,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cameradecoder.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="easywsclient.cpp" />
     <ClCompile Include="global.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="resource.cpp" />
     <ClCompile Include="rustplus.pb.cc" />
     <ClCompile Include="rustsocket.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libprotobufd.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cameradecoder.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="easywsclient.hpp" />
     <ClInclude Include="global.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="RayParser.h" />
+    <ClInclude Include="render.h" />
     <ClInclude Include="resources.h" />
     <ClInclude Include="rustplus.pb.h" />
     <ClInclude Include="rustsocket.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="icons\airfield_display_name.png" />
