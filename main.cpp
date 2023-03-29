@@ -24,21 +24,24 @@ float& fMapX = g.fMapX;
 float& fMapY = g.fMapY;
 
 RustSocket* rs = (RustSocket*)g.socket;
-SDL_Window* pWindow;
 SDL_Renderer* cameraRenderer;
 bool alertCargo = true, alertPatrol = true, alertCrate = true, alertExplosion = true, alertChinook = true;
+TextInput* ti_InFocus = nullptr;
 
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1 && !ignoreErrors)
 		std::cout << "Init error: " << SDL_GetError();
-	pWindow = SDL_CreateWindow("Rust+ PC | unconnected", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, MAP_WINDOW_SIZE, MAP_WINDOW_SIZE, SDL_WINDOW_SHOWN);
-	if (!pWindow && !ignoreErrors)
+
+	g.mainWindow = SDL_CreateWindow("Rust+ PC | unconnected", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, g.fWindowWidth, g.fWindowHeight, SDL_WINDOW_SHOWN);
+	if (!g.mainWindow && !ignoreErrors)
 		std::cout << "Window error: " << SDL_GetError();
-	SDL_SetWindowResizable(pWindow, SDL_FALSE);
-	g.pRenderer = SDL_CreateRenderer(pWindow, -1, SDL_RENDERER_PRESENTVSYNC);
-	if (!g.pRenderer && !ignoreErrors)
+	SDL_SetWindowResizable(g.mainWindow, SDL_TRUE);
+
+	g.mainRenderer = SDL_CreateRenderer(g.mainWindow, -1, SDL_RENDERER_PRESENTVSYNC);
+	if (!g.mainRenderer && !ignoreErrors)
 		std::cout << "Renderer error: " << SDL_GetError();
+
 	TTF_Init();
 	//Font init
 	g.fontPermanentMarker = TTF_OpenFontRW(SDL_RWFromMem(Fonts::PermanentMarker, 73620), 1, 24);
@@ -54,16 +57,22 @@ int main(int argc, char* argv[])
 		CreateTemplateFile();
 
 	//GUI Instancing
-	SDL_GetWindowSize(pWindow, &GUI::Get().windowRect.w, &GUI::Get().windowRect.h); //Reativity garbage
 	static bool bSettings = false;
 	Button* focusButton = new Button("button_focus", "Focus", g.fontTahomaBold, { 10, 10, 80, 30 }, TopLeft, GUIColor::White, { 115,140,69,200 }, false);
 	focusButton->OnClick([&]() { g.bFocus = !g.bFocus; });
 
-	Button* cameraButton = new Button("button_camera", "OILRIG2HELI", g.fontTahomaBold, { 10, 10, 80, 30 }, Left, GUIColor::White, { 115,140,69,200 }, true);
-	cameraButton->OnClick([&]() { g.appCameraInfo = rs->Subscribe("OILRIG2HELI");
-	Render_CameraWindow(); });
-
 	Block* settingsBlock = new Block("block_settings", { -200, 0, 200, 1000 }, TopRight, { 0,0,0,200 }, false);
+
+	TextInput* cameraTextInput = new TextInput("textinput_camera", "text", "Camera ID", g.fontTahomaBold, { -15, -215, 170, 25 }, BottomRight, GUIColor::White, { 150,150,150,200 }, { 30,30,30,200 }, false);
+	cameraTextInput->OnClick([&]() { ti_InFocus = cameraTextInput; });
+
+	Button* cameraSubButton = new Button("button_camera_subscribe", "Subscribe", g.fontTahomaBold, { -15, -180, 170, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
+	cameraSubButton->OnClick([&]() { if (!g.connected) return;
+	g.tLastCamera = std::chrono::high_resolution_clock::now();
+	g.activeCamera = cameraTextInput->m_sText;
+	g.appCameraInfo = rs->Subscribe(g.activeCamera.c_str());
+	Render_CameraWindow(); 
+		});
 
 	Button* registerButton = new Button("button_register", "Sign in", g.fontTahomaBold, { -105, -120, 80, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
 	registerButton->OnClick([]()
@@ -77,10 +86,11 @@ int main(int argc, char* argv[])
 		});
 	Button* importButton = new Button("button_import", "Import", g.fontTahomaBold, { -15, -85, 170, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
 	importButton->OnClick([&]() { Import(); });
+
 	Button* disconnectButton = new Button("button_disconnect", "Disconnect", g.fontTahomaBold, { -15, -50, 170, 25 }, BottomRight, GUIColor::White, { 150,40,40,200 }, false);
 	disconnectButton->OnClick([&]() { Disconnect(); });
 
-	Label* creditsLabel = new Label("label_credits", "Made by Bananik007\nCredits: liamcottle (Rust+ API)", g.fontTahoma, { 0,0,190,35 }, BottomRight, GUIColor::White, false);
+	Label* creditsLabel = new Label("label_credits", "Creator: Daniel Banár\nCredits: liamcottle (Rust+ API)", g.fontTahoma, { 0,0,190,35 }, BottomRight, GUIColor::White, false);
 
 	Checkbox* ignoreErrorsCheckbox = new Checkbox("checkbox_ignore_errors", "Ignore Errors", g.fontTahomaBold, { -180, 65,200,18 }, TopRight, GUIColor::White, GUIColor::White, false, false);
 	ignoreErrorsCheckbox->OnCheck([&]() {ignoreErrors = true; });
@@ -103,33 +113,40 @@ int main(int argc, char* argv[])
 	crateCheckbox->OnUncheck([&]() {alertCrate = false; });
 	Button* settingsButton = new Button("button_settings", "Settings", g.fontTahomaBold, { -100,10,80,30 }, TopRight, GUIColor::White, GUIColor::Gray, true);
 	settingsButton->OnClick([&]() {bSettings = !bSettings;
-	settingsBlock->enabled = bSettings;
-	ignoreErrorsCheckbox->enabled = bSettings;
-	cargoCheckbox->enabled = bSettings;
-	patrolCheckbox->enabled = bSettings;
-	exploCheckbox->enabled = bSettings;
-	chinookCheckbox->enabled = bSettings;
-	crateCheckbox->enabled = bSettings;
-	creditsLabel->enabled = bSettings;
-	registerButton->enabled = bSettings;
-	listenButton->enabled = bSettings;
-	importButton->enabled = bSettings;
-	disconnectButton->enabled = bSettings; /*&& g.connected;*/ });
+	settingsBlock->m_bEnabled = bSettings;
+	ignoreErrorsCheckbox->m_bEnabled = bSettings;
+	cargoCheckbox->m_bEnabled = bSettings;
+	patrolCheckbox->m_bEnabled = bSettings;
+	exploCheckbox->m_bEnabled = bSettings;
+	chinookCheckbox->m_bEnabled = bSettings;
+	crateCheckbox->m_bEnabled = bSettings;
+	creditsLabel->m_bEnabled = bSettings;
+	registerButton->m_bEnabled = bSettings;
+	listenButton->m_bEnabled = bSettings;
+	importButton->m_bEnabled = bSettings;
+	cameraSubButton->m_bEnabled = bSettings;
+	cameraTextInput->m_bEnabled = bSettings;
+	disconnectButton->m_bEnabled = bSettings; /*&& g.connected;*/ });
 
 	//TODO: fix mem leak
 	for (int i = 0; i < g.servers.size(); i++)
 	{
-		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
+		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 400, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
 		serverButton->OnClick([i]() { g.connected = Connect(g.servers[i]); });
 	}
 
-	SDL_SetRenderDrawColor(g.pRenderer, 18, 64, 77, 255);
+	SDL_SetRenderDrawColor(g.mainRenderer, 18, 64, 77, 255);
 
 	std::thread second(listen_for_input);
 
 	//Main loop
 	while (g.bRunning)
 	{
+		int x, y;
+		SDL_GetWindowSize(g.mainWindow, &x, &y);
+		g.fWindowWidth = x;
+		g.fWindowHeight = y;
+
 		PollEvents();
 		NetLoop();
 		Render();
@@ -148,8 +165,8 @@ int main(int argc, char* argv[])
 	SDL_DestroyTexture(Icons::playerDead);
 	SDL_DestroyTexture(Icons::playerOff);
 	SDL_DestroyTexture(Icons::myMarker);
-	SDL_DestroyRenderer(g.pRenderer);
-	SDL_DestroyWindow(pWindow);
+	SDL_DestroyRenderer(g.mainRenderer);
+	SDL_DestroyWindow(g.mainWindow);
 	if (rs)
 		rs->ws->close();
 	TTF_Quit();
@@ -157,8 +174,10 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void GUIInteraction(const SDL_Event& ev)
+void GUIInteraction(const SDL_Event& event)
 {
+	//SDL_StopTextInput(); - not great
+	ti_InFocus = nullptr;
 	for (GUIElement* element : GUI::Elements())
 	{
 		if (g.skipRender)
@@ -166,43 +185,53 @@ void GUIInteraction(const SDL_Event& ev)
 			g.skipRender = false;
 			return;
 		}
-		if (!element->enabled)
+		if (!element->m_bEnabled)
 			continue;
 		if (Button* button = dynamic_cast<Button*>(element))
-			if (ev.button.x > button->rect.x && ev.button.y > button->rect.y && ev.button.x < button->rect.x + button->rect.w && ev.button.y < button->rect.y + button->rect.h)
+			if (event.button.x > button->rect.x && event.button.y > button->rect.y && event.button.x < button->rect.x + button->rect.w && event.button.y < button->rect.y + button->rect.h)
 				button->Click();
 		if (Checkbox* checkbox = dynamic_cast<Checkbox*>(element))
-			if (ev.button.x > checkbox->rect.x && ev.button.y > checkbox->rect.y && ev.button.x < checkbox->rect.x + checkbox->rect.w && ev.button.y < checkbox->rect.y + checkbox->rect.h)
+			if (event.button.x > checkbox->rect.x && event.button.y > checkbox->rect.y && event.button.x < checkbox->rect.x + checkbox->rect.w && event.button.y < checkbox->rect.y + checkbox->rect.h)
 				checkbox->Click();
+		if (TextInput* textInput = dynamic_cast<TextInput*>(element))
+			if (event.button.x > textInput->rect.x && event.button.y > textInput->rect.y && event.button.x < textInput->rect.x + textInput->rect.w && event.button.y < textInput->rect.y + textInput->rect.h)
+				textInput->Click();
 	}
 }
 
-
-
 void PollEvents()
 {
-	SDL_Event ev;
-	while (SDL_PollEvent(&ev) != 0)
+	SDL_Event event;
+	while (SDL_PollEvent(&event) != 0)
 	{
-		switch (ev.type)
+		switch (event.type)
 		{
-		case SDL_QUIT:
-			g.bRunning = false;
-			exit(0);//TODO: Fix error message due to second thread
+		case SDL_WINDOWEVENT:
+			if (event.window.event == SDL_WINDOWEVENT_CLOSE)
+			{
+				if (event.window.windowID == SDL_GetWindowID(g.mainWindow))
+				{
+					g.bRunning = false;
+					exit(0);//TODO: Fix error message due to second thread
+				}
+				g.activeCamera.clear();
+				SDL_HideWindow(SDL_GetWindowFromID(event.window.windowID));
+				//SDL_DestroyWindow(SDL_GetWindowFromID(ev.window.windowID));
+			}
 			break;
 		case SDL_MOUSEWHEEL:
 			//Zooming
-			if (ev.wheel.y > 0)
+			if (event.wheel.y > 0)
 				fMapZoom *= 1.2f;
-			else if (ev.wheel.y < 0)
+			else if (event.wheel.y < 0)
 				fMapZoom *= 1.f / 1.2f;
 			if (fMapZoom < 1.f)
 				fMapZoom = 1.f;
 			break;
 		case SDL_MOUSEBUTTONDOWN:
-			if (ev.button.button == SDL_BUTTON_LEFT)
-				GUIInteraction(ev);
-			if (ev.button.button == SDL_BUTTON_RIGHT)
+			if (event.button.button == SDL_BUTTON_LEFT)
+				GUIInteraction(event);
+			if (event.button.button == SDL_BUTTON_RIGHT)
 			{
 				if (!g.connected)
 					continue;
@@ -211,9 +240,9 @@ void PollEvents()
 				for (size_t i = 0; i < g.vecMyMarkers.size(); i++)
 				{
 					auto screenpos = GetRect(g.vecMyMarkers[i].first, g.vecMyMarkers[i].second, g.appInfo.mapsize(), g.appMap.width(), false, 0, 0);
-					if (Distance(screenpos.x, screenpos.y, ev.button.x, ev.button.y) < dist)
+					if (Distance(screenpos.x, screenpos.y, event.button.x, event.button.y) < dist)
 					{
-						dist = Distance(screenpos.x, screenpos.y, ev.button.x, ev.button.y);
+						dist = Distance(screenpos.x, screenpos.y, event.button.x, event.button.y);
 						closest = i;
 					}
 				}
@@ -232,46 +261,56 @@ void PollEvents()
 				else
 				{
 					std::cout << "+ marker" << std::endl;
-					auto worldpos = GetWorldPos(ev.button.x, ev.button.y, g.appInfo.mapsize(), g.appMap.width(), fMapZoom, fMapX, fMapY);
+					auto worldpos = GetWorldPos(event.button.x, event.button.y, g.appInfo.mapsize(), g.appMap.width(), fMapZoom, fMapX, fMapY);
 					SaveMarkersToJson(worldpos.first, worldpos.second);
 				}
 			}
 			break;
 		case SDL_MOUSEMOTION:
 			//Panning
-			if (ev.button.button == SDL_BUTTON_LEFT)
+			if (event.button.button == SDL_BUTTON_LEFT)
 			{
 				if (!g.connected)
 					continue;
 				if (!g.bFocus)
 				{
-					fMapX -= (ev.motion.x - g.lastX) / fMapZoom;
-					fMapY -= (ev.motion.y - g.lastY) / fMapZoom;
+					fMapX -= (event.motion.x - g.lastX) / fMapZoom;
+					fMapY -= (event.motion.y - g.lastY) / fMapZoom;
 				}
 			}
-			g.lastX = ev.motion.x;
-			g.lastY = ev.motion.y;
+			g.lastX = event.motion.x;
+			g.lastY = event.motion.y;
 			break;
 		case SDL_KEYDOWN:
-			//Follow toggle
+			if (ti_InFocus && event.key.keysym.sym == SDLK_BACKSPACE && ti_InFocus->m_sText.length() > 0)
+			{
+				ti_InFocus->m_sText.pop_back();
+				ti_InFocus->Update();
+			}
+
 			if (!g.connected)
 				continue;
-			if (ev.key.keysym.scancode == SDL_SCANCODE_F)
+			if (event.key.keysym.scancode == SDL_SCANCODE_F && !ti_InFocus)
 			{
 				g.bFocus = !g.bFocus;
 				std::cout << "Focus: " << (g.bFocus ? "Enabled" : "Disabled") << std::endl;
 			}
-			if (ev.key.keysym.scancode == SDL_SCANCODE_M)
+			if (event.key.keysym.scancode == SDL_SCANCODE_M && !ti_InFocus)
 			{
 				std::cout << "+ marker" << std::endl;
 				SaveMarkersToJson(g.localPlayer.x(), g.localPlayer.y());
 			}
 			break;
+		case SDL_TEXTINPUT:
+			if (ti_InFocus)
+			{
+				ti_InFocus->m_sText += event.text.text;
+				ti_InFocus->Update();
+			}
+			break;
 		}
 	}
 }
-
-static SDL_Surface* cameraImage = SDL_CreateRGBSurface(0, 160, 90, 32, 0, 0, 0, 0);
 
 void NetLoop()
 {
@@ -322,8 +361,10 @@ void NetLoop()
 	}
 	auto& tNow = g.tNow;
 	auto& tLast = g.tLast;
+	auto& tLastCamera = g.tLastCamera;
 	tNow = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<float> deltaTime = tNow - tLast;
+	std::chrono::duration<float> deltaCamera = tNow - tLastCamera;
 	float tDelta = deltaTime.count();
 	if (tDelta > .7f)
 	{
@@ -540,9 +581,16 @@ void NetLoop()
 			rs->Message(g.input, MsgChat);
 			g.input.clear();
 		}
+
 #pragma endregion Commands
 		//End of loop
-		tLast = tNow = std::chrono::high_resolution_clock::now();
+		tLast = tNow;
+	}
+	if (deltaCamera.count() > 30.f)
+	{
+		if(!g.activeCamera.empty())
+			rs->Subscribe(g.activeCamera.c_str());
+		tLastCamera = tNow;
 	}
 }
 bool Connect(std::string serverName)
@@ -584,7 +632,7 @@ bool Connect(std::string serverName)
 	g.tLast = std::chrono::high_resolution_clock::now();
 	g.tNow = std::chrono::high_resolution_clock::now();
 	g.connectedServerFile = file_path;
-	SDL_SetWindowTitle(pWindow, (std::string("Rust+ PC | ") + (g.connectedServerName.size() ? g.connectedServerName : g.connectedServerFile.substr(8))).c_str());
+	SDL_SetWindowTitle(g.mainWindow, (std::string("Rust+ PC | ") + (g.connectedServerName.size() ? g.connectedServerName : g.connectedServerFile.substr(8))).c_str());
 	return true;
 }
 void Disconnect()
@@ -592,7 +640,8 @@ void Disconnect()
 	if (!g.connected)
 		return;
 	g.fMapZoom = 1.f;
-	g.fMapX = g.fMapY = MAP_SIZE_HALF;
+	g.fMapX = g.fWindowWidth / 2.f;
+	g.fMapY = g.fWindowHeight / 2.f;
 	g.lastX = g.lastY = 0;
 	//((RustSocket*)g.socket)->ws->close();
 	g.socket = nullptr;
@@ -624,13 +673,13 @@ void Disconnect()
 	ResetServerButtons();
 	g.connectedServerFile = "servers\\unconnected";
 	g.connectedServerName = "";
-	SDL_SetWindowTitle(pWindow, "Rust+ PC | unconnected");
+	SDL_SetWindowTitle(g.mainWindow, "Rust+ PC | unconnected");
 }
 
 
 void Render()
 {
-	SDL_RenderClear(g.pRenderer);
+	SDL_RenderClear(g.mainRenderer);
 	if (g.connected)
 	{
 		Render_Map();
@@ -641,16 +690,17 @@ void Render()
 	}
 	for (GUIElement* element : GUI::Elements())
 	{
+		element->SetRect();
 		if (Button* button = dynamic_cast<Button*>(element))
 		{
-			if (button->key.find("button_serverconnect") != std::string::npos)
-				button->enabled = !g.connected;
-			if (button->key.find("button_focus") != std::string::npos)
-				button->enabled = g.connected;
+			if (button->m_sKey.find("button_serverconnect") != std::string::npos)
+				button->m_bEnabled = !g.connected;
+			if (button->m_sKey.find("button_focus") != std::string::npos)
+				button->m_bEnabled = g.connected;
 		}
 	}
 	Render_GUI();
-	SDL_RenderPresent(g.pRenderer);
+	SDL_RenderPresent(g.mainRenderer);
 }
 
 
@@ -661,7 +711,7 @@ void ResetServerButtons()
 	{
 		if (Button* button = dynamic_cast<Button*>(element))
 		{
-			if (button->key.find("button_serverconnect") != std::string::npos)
+			if (button->m_sKey.find("button_serverconnect") != std::string::npos)
 			{
 				delete(element);
 				element = nullptr;

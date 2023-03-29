@@ -32,15 +32,15 @@ namespace Icons
 	SDL_Texture* CreateTexture(char* png, int size)
 	{
 		auto surf = IMG_LoadTyped_RW(SDL_RWFromMem(png, size), 1, "PNG");
-		auto texture = SDL_CreateTextureFromSurface(g.pRenderer, surf);
+		auto m_Texture = SDL_CreateTextureFromSurface(g.mainRenderer, surf);
 		SDL_FreeSurface(surf);
-		return texture;
+		return m_Texture;
 	}
 	SDL_Texture* CreateTextureFromSurf(SDL_Surface* surf)
 	{
-		auto texture = SDL_CreateTextureFromSurface(g.pRenderer, surf);
+		auto m_Texture = SDL_CreateTextureFromSurface(g.mainRenderer, surf);
 		SDL_FreeSurface(surf);
-		return texture;
+		return m_Texture;
 	}
 	void CreateTextures()
 	{

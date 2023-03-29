@@ -89,6 +89,8 @@ public:
 	AppRequest initProto();
 	void Message(const std::string& msg, int flags);
 	AppCameraInfo Subscribe(const char* camid);
+	void SetSubscription();
+	void CheckSubscription();
 private:
 	std::string url = "ws://";
 	uint32_t iSeq;

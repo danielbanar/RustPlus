@@ -4,6 +4,6 @@
 #include <SDL_image.h>
 struct Texture
 {
-	SDL_Texture* texture;
+	SDL_Texture* m_Texture;
 	int w, h;
 };

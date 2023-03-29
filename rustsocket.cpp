@@ -113,6 +113,39 @@ void RustSocket::SendTeamChatMessage(const char* message)
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SendTeamChatMessage\n\n";
 }
+void RustSocket::SetSubscription()
+{
+	AppFlag flag;
+	flag.set_value(1);
+	auto request = initProto();
+	request.mutable_setsubscription()->CopyFrom(flag);
+	ws->sendBinary(request.SerializeAsString());
+	AppMessage appMessage;
+	do
+	{
+		ws->poll(-1);
+		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+	} while (!appMessage.has_response());
+	if (appMessage.response().has_error() && !ignoreErrors)
+		std::cout << appMessage.response().error().DebugString() << "SetSubscription\n\n";
+}
+void RustSocket::CheckSubscription()
+{
+	auto request = initProto();
+	request.mutable_checksubscription()->CopyFrom(AppEmpty());
+	std::string data = request.SerializeAsString();
+	ws->sendBinary(data);
+	AppMessage appMessage;
+	do
+	{
+		ws->poll(-1);
+		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+	} while (!appMessage.has_response());
+	if (appMessage.response().has_error() && !ignoreErrors)
+		std::cout << appMessage.response().error().DebugString() << "CheckSubscription\n\n";
+	if (appMessage.has_broadcast())
+		std::cout << "CheckSubscription";
+}
 AppCameraInfo RustSocket::Subscribe(const char* camid)
 {
 	AppCameraSubscribe sub;
@@ -123,7 +156,6 @@ AppCameraInfo RustSocket::Subscribe(const char* camid)
 	//request.mutable_setsubscription()->CopyFrom(flag);
 	request.mutable_camerasubscribe()->CopyFrom(sub);
 	ws->sendBinary(request.SerializeAsString());
-	std::cout << "Sent";
 	AppMessage appMessage;
 	do
 	{
@@ -206,29 +238,29 @@ AppTeamChat RustSocket::GetTeamChat()
 }
 Events RustSocket::GetEvents(AppMapMarkers markers)
 {
-	Events ev;
+	Events m_func;
 	for (size_t i = 0; i < markers.markers_size(); i++)
 	{
 		AppMarker marker = markers.markers().Get(i);
 
 		if (marker.type() == Explosion)
-			ev.cExplosion++;
+			m_func.cExplosion++;
 		else if (marker.type() == CH47)
-			ev.cChinook++;
+			m_func.cChinook++;
 		else if (marker.type() == PatrolHelicopter)
-			ev.cPatrol++;
+			m_func.cPatrol++;
 		else if (marker.type() == CargoShip)
 		{
-			ev.cCargo++;
-			ev.i_cargo = marker;
+			m_func.cCargo++;
+			m_func.i_cargo = marker;
 		}
 		else if (marker.type() == Crate)
 		{
-			ev.cCrate++;
-			ev.v_crates.emplace_back(marker);
+			m_func.cCrate++;
+			m_func.v_crates.emplace_back(marker);
 		}
 	}
-	return ev;
+	return m_func;
 }
 
 AppTime RustSocket::GetTime()

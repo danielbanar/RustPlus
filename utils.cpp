@@ -4,7 +4,13 @@ void listen_for_input()
 {
 	while (g.bRunning)
 	{
-		std::cin >> g.input;
+		char str[128] = {0};
+		fgets(str, 128, stdin);
+		int len = strlen(str);
+		if (str[len - 1] == '\n') 
+			str[len - 1] = '\0';
+		//if(scanf("%[^\n]%*c", str))
+			g.input = str;
 	}
 }
 
@@ -59,7 +65,7 @@ void Import()
 		//token
 		tp = tp.substr(first + 14);
 		stoken = tp;
-		std::string filename = std::string("servers\\") + sname.substr(0, 24) + ".json";
+		std::string filename = std::string("servers\\") + sname.substr(0, 64) + ".json";
 		std::string illegals = "/?%*:|\"<>;=";
 		for (char character : illegals)
 			filename.erase(remove(filename.begin(), filename.end(), character), filename.end());
@@ -180,7 +186,7 @@ SDL_Texture* CreateMap()
 	SDL_FreeSurface(trainSurf);
 	IMG_SaveJPG(mapSurf, "map.jpg", 100);
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
-	auto mapTexture = SDL_CreateTextureFromSurface(g.pRenderer, mapSurf);
+	auto mapTexture = SDL_CreateTextureFromSurface(g.mainRenderer, mapSurf);
 	SDL_FreeSurface(mapSurf);
 	return mapTexture;
 }
@@ -220,18 +226,18 @@ void SaveMarkersToJson(int x, int y)
 
 SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h)
 {
-	float x = (X + 1000.f) * MAP_SIZE_HALF / mapwidth;
-	float y = (mapsize - Y + 1000.f) * MAP_SIZE_HALF / mapwidth;
+	float x = (X + 1000.f) * (g.fWindowHeight / 2.f) / mapwidth;
+	float y = (mapsize - Y + 1000.f) * (g.fWindowHeight / 2.f) / mapwidth;
 	if (relative)
 		return {
-			int(MAP_SIZE_HALF - (w * .5f * g.fMapZoom) + (x - g.fMapX) * g.fMapZoom),
-			int(MAP_SIZE_HALF - (h * .5f * g.fMapZoom) + (y - g.fMapY) * g.fMapZoom),
+			int((g.fWindowWidth / 2.f) - (w * .5f * g.fMapZoom) + (x - g.fMapX) * g.fMapZoom),
+			int((g.fWindowHeight / 2.f) - (h * .5f * g.fMapZoom) + (y - g.fMapY) * g.fMapZoom),
 			int(w * g.fMapZoom),
 			int(h * g.fMapZoom) };
 	else
 		return {
-			int(MAP_SIZE_HALF - w * .5f + (x - g.fMapX) * g.fMapZoom),
-			int(MAP_SIZE_HALF - h * .5f + (y - g.fMapY) * g.fMapZoom),
+			int((g.fWindowWidth / 2.f) - w * .5f + (x - g.fMapX) * g.fMapZoom),
+			int((g.fWindowHeight / 2.f) - h * .5f + (y - g.fMapY) * g.fMapZoom),
 			int(w),
 			int(h) };
 	return { 0 };
@@ -240,7 +246,7 @@ SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w
 std::pair<float, float> GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my)
 {
 	return
-	{ (X * mapwidth + mx * zoom * mapwidth - MAP_SIZE_HALF * mapwidth) / (MAP_SIZE_HALF * zoom) - 1000.f,
-		-(Y * mapwidth + my * zoom * mapwidth - MAP_SIZE_HALF * mapwidth + zoom * mapwidth) / (zoom * MAP_SIZE_HALF) + 1005.f + mapsize
+	{ (g.fWindowWidth /g.fWindowHeight)*(X * mapwidth + mx * zoom * mapwidth - (g.fWindowWidth / 2.f) * mapwidth) / ((g.fWindowWidth / 2.f) * zoom) - 1000.f,
+		-(Y * mapwidth + my * zoom * mapwidth - (g.fWindowHeight / 2.f) * mapwidth + zoom * mapwidth) / (zoom * (g.fWindowHeight / 2.f)) + 1005.f + mapsize
 	};
 }

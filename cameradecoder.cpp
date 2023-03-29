@@ -2,15 +2,15 @@
 
 uint16_t RayDistance(int ray)
 {
-    return (uint16_t)(ray >> 16);
+	return (uint16_t)(ray >> 16);
 }
 uint8_t RayAlignment(int ray)
 {
-    return (uint8_t)(ray >> 8);
+	return (uint8_t)(ray >> 8);
 }
 uint8_t RayMaterial(int ray)
 {
-    return (uint8_t)ray;
+	return (uint8_t)ray;
 }
 
 byte2* SetupBuffers(int width, int height)
@@ -31,7 +31,6 @@ byte2* SetupBuffers(int width, int height)
 		std::swap(samplePositionBuffer[i].x, samplePositionBuffer[posOfPixel].x);
 		std::swap(samplePositionBuffer[i].y, samplePositionBuffer[posOfPixel].y);
 	}
-	std::cout << "setupBuffers successful\n";
 	return samplePositionBuffer;
 }
 RayData NextRay(const std::string& data, uint* checksumBuffer, uint& offset)
@@ -85,7 +84,7 @@ RayData NextRay(const std::string& data, uint* checksumBuffer, uint& offset)
 		std::cout << ERROR("Something is wrong i can feel it.\n");
 	return { dist, align, mat };
 }
-bool ProcessRayBatch(int width, int height, const rustplus::AppCameraRays& rays, uint& offset, uint& sampleOffset,byte2* samplePositionBuffer, std::vector<RayData>& output, uint* checkSumBuffer)
+bool ProcessRayBatch(int width, int height, const rustplus::AppCameraRays& rays, uint& offset, uint& sampleOffset, byte2* samplePositionBuffer, std::vector<RayData>& output, uint* checkSumBuffer)
 {
 	if (!rays.ByteSizeLong())
 		return true;
@@ -94,7 +93,7 @@ bool ProcessRayBatch(int width, int height, const rustplus::AppCameraRays& rays,
 		if (offset >= rays.raydata().size() - 1)
 			return true;
 
-		RayData ray = NextRay(rays.raydata(), checkSumBuffer,offset);
+		RayData ray = NextRay(rays.raydata(), checkSumBuffer, offset);
 
 
 		while (sampleOffset >= width * height) {
@@ -138,11 +137,11 @@ void DecodeCamera(int width, int height, const rustplus::AppCameraRays& data, SD
 	memset(checksumBuffer, 0, 64);
 
 	while (true)
-		if (ProcessRayBatch(width,height,data,offset,sampleOffset,samplePositionBuffer, output,checksumBuffer))
+		if (ProcessRayBatch(width, height, data, offset, sampleOffset, samplePositionBuffer, output, checksumBuffer))
 			break;
 	RenderCamera(width, height, cameraRenderer, output, colors);
 }
-void RenderCamera(int width, int height, SDL_Renderer* cameraRenderer, const std::vector<RayData>& output,const std::vector<std::vector<byte>>& colors)
+void RenderCamera(int width, int height, SDL_Renderer* cameraRenderer, const std::vector<RayData>& output, const std::vector<std::vector<byte>>& colors)
 {
 	for (int i = 0; i < output.size(); i++)
 	{
@@ -159,7 +158,51 @@ void RenderCamera(int width, int height, SDL_Renderer* cameraRenderer, const std
 		Uint8 g = colors[material][1] * alignment;
 		Uint8 b = colors[material][2] * alignment;
 		SDL_SetRenderDrawColor(cameraRenderer, r, g, b, 255);
-		SDL_RenderDrawPoint(cameraRenderer, x, y);
+		SDL_Rect rect{ PIXEL_SIZE * x, PIXEL_SIZE * y, PIXEL_SIZE, PIXEL_SIZE };
+		//Slow
+		SDL_Point points[4] ={ 
+			{ PIXEL_SIZE * x, PIXEL_SIZE * y },
+			{ PIXEL_SIZE * x + 1, PIXEL_SIZE * y },
+			{ PIXEL_SIZE * x, PIXEL_SIZE * y + 1 },
+			{ PIXEL_SIZE * x + 1, PIXEL_SIZE * y + 1 },
+		};
+		SDL_RenderDrawPoints(cameraRenderer, points, 4);
+		//SDL_RenderFillRect(cameraRenderer, &rect);
+
+		/*
+		* // Lock the texture's pixels
+SDL_LockTexture(texture, NULL, (void**)&pixels, &pitch);
+
+// Set each pixel's color
+for (int y = 0; y < window_height; y++) {
+    for (int x = 0; x < window_width; x++) {
+        // Calculate the index of the current pixel
+        int index = y * (pitch / sizeof(Uint32)) + x;
+
+        // Set the color of the current pixel (assuming RGBA format)
+        Uint8 r = x % 256; // Red component based on x coordinate
+        Uint8 g = y % 256; // Green component based on y coordinate
+        Uint8 b = (x + y) % 256; // Blue component based on x and y coordinates
+        Uint8 a = SDL_ALPHA_OPAQUE; // Alpha component
+
+        pixels[index] = SDL_MapRGBA(texture->format, r, g, b, a);
+    }
+}
+
+// Unlock the texture's pixels
+SDL_UnlockTexture(texture);
+
+// Copy the texture to the renderer and present it
+SDL_RenderCopy(renderer, texture, NULL, NULL);
+SDL_RenderPresent(renderer);
+This example sets each pixel's color based on its x and y coordinates. Note that accessing the pixel buffer directly like this can be slow, especially for large textures, so it's not recommended for real-time rendering. If you need to update the pixels frequently, you might consider using SDL_UpdateTexture() instead, which is faster but requires copying the pixel data to the texture every frame.
+
+
+
+
+
+
+		*/
 	}
 
 	// Update the window

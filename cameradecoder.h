@@ -2,6 +2,7 @@
 #include <vector>
 #include <memory>
 #include "rustplus.pb.h"
+#include "global.h"
 #include <SDL.h>
 #include <iostream>
 #include <fstream>

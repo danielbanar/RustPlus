@@ -1949,8 +1949,8 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppCameraRays_EntityType_descript
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rustplus_2eproto);
   return file_level_enum_descriptors_rustplus_2eproto[0];
 }
-bool AppCameraRays_EntityType_IsValid(int value) {
-  switch (value) {
+bool AppCameraRays_EntityType_IsValid(int m_iValue) {
+  switch (m_iValue) {
     case 1:
     case 2:
       return true;
@@ -1970,8 +1970,8 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppEntityType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rustplus_2eproto);
   return file_level_enum_descriptors_rustplus_2eproto[1];
 }
-bool AppEntityType_IsValid(int value) {
-  switch (value) {
+bool AppEntityType_IsValid(int m_iValue) {
+  switch (m_iValue) {
     case 1:
     case 2:
     case 3:
@@ -1985,8 +1985,8 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMarkerType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rustplus_2eproto);
   return file_level_enum_descriptors_rustplus_2eproto[2];
 }
-bool AppMarkerType_IsValid(int value) {
-  switch (value) {
+bool AppMarkerType_IsValid(int m_iValue) {
+  switch (m_iValue) {
     case 0:
     case 1:
     case 2:

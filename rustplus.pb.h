@@ -288,7 +288,7 @@ enum AppCameraRays_EntityType : int {
   AppCameraRays_EntityType_Tree = 1,
   AppCameraRays_EntityType_Player = 2
 };
-bool AppCameraRays_EntityType_IsValid(int value);
+bool AppCameraRays_EntityType_IsValid(int m_iValue);
 constexpr AppCameraRays_EntityType AppCameraRays_EntityType_EntityType_MIN = AppCameraRays_EntityType_Tree;
 constexpr AppCameraRays_EntityType AppCameraRays_EntityType_EntityType_MAX = AppCameraRays_EntityType_Player;
 constexpr int AppCameraRays_EntityType_EntityType_ARRAYSIZE = AppCameraRays_EntityType_EntityType_MAX + 1;
@@ -296,23 +296,23 @@ constexpr int AppCameraRays_EntityType_EntityType_ARRAYSIZE = AppCameraRays_Enti
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppCameraRays_EntityType_descriptor();
 template<typename T>
 inline const std::string& AppCameraRays_EntityType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, AppCameraRays_EntityType>::value ||
-    ::std::is_integral<T>::value,
+  static_assert(::std::is_same<T, AppCameraRays_EntityType>::m_iValue ||
+    ::std::is_integral<T>::m_iValue,
     "Incorrect type passed to function AppCameraRays_EntityType_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
     AppCameraRays_EntityType_descriptor(), enum_t_value);
 }
 inline bool AppCameraRays_EntityType_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppCameraRays_EntityType* value) {
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppCameraRays_EntityType* m_iValue) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AppCameraRays_EntityType>(
-    AppCameraRays_EntityType_descriptor(), name, value);
+    AppCameraRays_EntityType_descriptor(), name, m_iValue);
 }
 enum AppEntityType : int {
   Switch = 1,
   Alarm = 2,
   StorageMonitor = 3
 };
-bool AppEntityType_IsValid(int value);
+bool AppEntityType_IsValid(int m_iValue);
 constexpr AppEntityType AppEntityType_MIN = Switch;
 constexpr AppEntityType AppEntityType_MAX = StorageMonitor;
 constexpr int AppEntityType_ARRAYSIZE = AppEntityType_MAX + 1;
@@ -320,16 +320,16 @@ constexpr int AppEntityType_ARRAYSIZE = AppEntityType_MAX + 1;
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppEntityType_descriptor();
 template<typename T>
 inline const std::string& AppEntityType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, AppEntityType>::value ||
-    ::std::is_integral<T>::value,
+  static_assert(::std::is_same<T, AppEntityType>::m_iValue ||
+    ::std::is_integral<T>::m_iValue,
     "Incorrect type passed to function AppEntityType_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
     AppEntityType_descriptor(), enum_t_value);
 }
 inline bool AppEntityType_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppEntityType* value) {
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppEntityType* m_iValue) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AppEntityType>(
-    AppEntityType_descriptor(), name, value);
+    AppEntityType_descriptor(), name, m_iValue);
 }
 enum AppMarkerType : int {
   Undefined = 0,
@@ -342,7 +342,7 @@ enum AppMarkerType : int {
   GenericRadius = 7,
   PatrolHelicopter = 8
 };
-bool AppMarkerType_IsValid(int value);
+bool AppMarkerType_IsValid(int m_iValue);
 constexpr AppMarkerType AppMarkerType_MIN = Undefined;
 constexpr AppMarkerType AppMarkerType_MAX = PatrolHelicopter;
 constexpr int AppMarkerType_ARRAYSIZE = AppMarkerType_MAX + 1;
@@ -350,16 +350,16 @@ constexpr int AppMarkerType_ARRAYSIZE = AppMarkerType_MAX + 1;
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMarkerType_descriptor();
 template<typename T>
 inline const std::string& AppMarkerType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, AppMarkerType>::value ||
-    ::std::is_integral<T>::value,
+  static_assert(::std::is_same<T, AppMarkerType>::m_iValue ||
+    ::std::is_integral<T>::m_iValue,
     "Incorrect type passed to function AppMarkerType_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
     AppMarkerType_descriptor(), enum_t_value);
 }
 inline bool AppMarkerType_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppMarkerType* value) {
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, AppMarkerType* m_iValue) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AppMarkerType>(
-    AppMarkerType_descriptor(), name, value);
+    AppMarkerType_descriptor(), name, m_iValue);
 }
 // ===================================================================
 
@@ -495,10 +495,10 @@ class Vector2 final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // optional float y = 2;
@@ -508,10 +508,10 @@ class Vector2 final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.Vector2)
@@ -662,10 +662,10 @@ class Vector3 final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // optional float y = 2;
@@ -675,10 +675,10 @@ class Vector3 final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // optional float z = 3;
@@ -688,10 +688,10 @@ class Vector3 final :
   public:
   void clear_z();
   float z() const;
-  void set_z(float value);
+  void set_z(float m_iValue);
   private:
   float _internal_z() const;
-  void _internal_set_z(float value);
+  void _internal_set_z(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.Vector3)
@@ -844,10 +844,10 @@ class Vector4 final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // optional float y = 2;
@@ -857,10 +857,10 @@ class Vector4 final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // optional float z = 3;
@@ -870,10 +870,10 @@ class Vector4 final :
   public:
   void clear_z();
   float z() const;
-  void set_z(float value);
+  void set_z(float m_iValue);
   private:
   float _internal_z() const;
-  void _internal_set_z(float value);
+  void _internal_set_z(float m_iValue);
   public:
 
   // optional float w = 4;
@@ -883,10 +883,10 @@ class Vector4 final :
   public:
   void clear_w();
   float w() const;
-  void set_w(float value);
+  void set_w(float m_iValue);
   private:
   float _internal_w() const;
-  void _internal_set_w(float value);
+  void _internal_set_w(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.Vector4)
@@ -1039,10 +1039,10 @@ class Half3 final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // optional float y = 2;
@@ -1052,10 +1052,10 @@ class Half3 final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // optional float z = 3;
@@ -1065,10 +1065,10 @@ class Half3 final :
   public:
   void clear_z();
   float z() const;
-  void set_z(float value);
+  void set_z(float m_iValue);
   private:
   float _internal_z() const;
-  void _internal_set_z(float value);
+  void _internal_set_z(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.Half3)
@@ -1221,10 +1221,10 @@ class Color final :
   public:
   void clear_r();
   float r() const;
-  void set_r(float value);
+  void set_r(float m_iValue);
   private:
   float _internal_r() const;
-  void _internal_set_r(float value);
+  void _internal_set_r(float m_iValue);
   public:
 
   // optional float g = 2;
@@ -1234,10 +1234,10 @@ class Color final :
   public:
   void clear_g();
   float g() const;
-  void set_g(float value);
+  void set_g(float m_iValue);
   private:
   float _internal_g() const;
-  void _internal_set_g(float value);
+  void _internal_set_g(float m_iValue);
   public:
 
   // optional float b = 3;
@@ -1247,10 +1247,10 @@ class Color final :
   public:
   void clear_b();
   float b() const;
-  void set_b(float value);
+  void set_b(float m_iValue);
   private:
   float _internal_b() const;
-  void _internal_set_b(float value);
+  void _internal_set_b(float m_iValue);
   public:
 
   // optional float a = 4;
@@ -1260,10 +1260,10 @@ class Color final :
   public:
   void clear_a();
   float a() const;
-  void set_a(float value);
+  void set_a(float m_iValue);
   private:
   float _internal_a() const;
-  void _internal_set_a(float value);
+  void _internal_set_a(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.Color)
@@ -1611,10 +1611,10 @@ class ClanActionResult final :
   public:
   void clear_requestid();
   ::PROTOBUF_NAMESPACE_ID::int32 requestid() const;
-  void set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_requestid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_requestid() const;
-  void _internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 result = 2;
@@ -1624,10 +1624,10 @@ class ClanActionResult final :
   public:
   void clear_result();
   ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_result(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required bool hasClanInfo = 3;
@@ -1637,10 +1637,10 @@ class ClanActionResult final :
   public:
   void clear_hasclaninfo();
   bool hasclaninfo() const;
-  void set_hasclaninfo(bool value);
+  void set_hasclaninfo(bool m_iValue);
   private:
   bool _internal_hasclaninfo() const;
-  void _internal_set_hasclaninfo(bool value);
+  void _internal_set_hasclaninfo(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanActionResult)
@@ -1811,7 +1811,7 @@ class ClanInfo_Role final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -1822,10 +1822,10 @@ class ClanInfo_Role final :
   public:
   void clear_roleid();
   ::PROTOBUF_NAMESPACE_ID::int32 roleid() const;
-  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_roleid() const;
-  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 rank = 2;
@@ -1835,10 +1835,10 @@ class ClanInfo_Role final :
   public:
   void clear_rank();
   ::PROTOBUF_NAMESPACE_ID::int32 rank() const;
-  void set_rank(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_rank(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_rank() const;
-  void _internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required bool canSetMotd = 4;
@@ -1848,10 +1848,10 @@ class ClanInfo_Role final :
   public:
   void clear_cansetmotd();
   bool cansetmotd() const;
-  void set_cansetmotd(bool value);
+  void set_cansetmotd(bool m_iValue);
   private:
   bool _internal_cansetmotd() const;
-  void _internal_set_cansetmotd(bool value);
+  void _internal_set_cansetmotd(bool m_iValue);
   public:
 
   // required bool canSetLogo = 5;
@@ -1861,10 +1861,10 @@ class ClanInfo_Role final :
   public:
   void clear_cansetlogo();
   bool cansetlogo() const;
-  void set_cansetlogo(bool value);
+  void set_cansetlogo(bool m_iValue);
   private:
   bool _internal_cansetlogo() const;
-  void _internal_set_cansetlogo(bool value);
+  void _internal_set_cansetlogo(bool m_iValue);
   public:
 
   // required bool canInvite = 6;
@@ -1874,10 +1874,10 @@ class ClanInfo_Role final :
   public:
   void clear_caninvite();
   bool caninvite() const;
-  void set_caninvite(bool value);
+  void set_caninvite(bool m_iValue);
   private:
   bool _internal_caninvite() const;
-  void _internal_set_caninvite(bool value);
+  void _internal_set_caninvite(bool m_iValue);
   public:
 
   // required bool canKick = 7;
@@ -1887,10 +1887,10 @@ class ClanInfo_Role final :
   public:
   void clear_cankick();
   bool cankick() const;
-  void set_cankick(bool value);
+  void set_cankick(bool m_iValue);
   private:
   bool _internal_cankick() const;
-  void _internal_set_cankick(bool value);
+  void _internal_set_cankick(bool m_iValue);
   public:
 
   // required bool canPromote = 8;
@@ -1900,10 +1900,10 @@ class ClanInfo_Role final :
   public:
   void clear_canpromote();
   bool canpromote() const;
-  void set_canpromote(bool value);
+  void set_canpromote(bool m_iValue);
   private:
   bool _internal_canpromote() const;
-  void _internal_set_canpromote(bool value);
+  void _internal_set_canpromote(bool m_iValue);
   public:
 
   // required bool canDemote = 9;
@@ -1913,10 +1913,10 @@ class ClanInfo_Role final :
   public:
   void clear_candemote();
   bool candemote() const;
-  void set_candemote(bool value);
+  void set_candemote(bool m_iValue);
   private:
   bool _internal_candemote() const;
-  void _internal_set_candemote(bool value);
+  void _internal_set_candemote(bool m_iValue);
   public:
 
   // required bool canSetPlayerNotes = 10;
@@ -1926,10 +1926,10 @@ class ClanInfo_Role final :
   public:
   void clear_cansetplayernotes();
   bool cansetplayernotes() const;
-  void set_cansetplayernotes(bool value);
+  void set_cansetplayernotes(bool m_iValue);
   private:
   bool _internal_cansetplayernotes() const;
-  void _internal_set_cansetplayernotes(bool value);
+  void _internal_set_cansetplayernotes(bool m_iValue);
   public:
 
   // required bool canAccessLogs = 11;
@@ -1939,10 +1939,10 @@ class ClanInfo_Role final :
   public:
   void clear_canaccesslogs();
   bool canaccesslogs() const;
-  void set_canaccesslogs(bool value);
+  void set_canaccesslogs(bool m_iValue);
   private:
   bool _internal_canaccesslogs() const;
-  void _internal_set_canaccesslogs(bool value);
+  void _internal_set_canaccesslogs(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Role)
@@ -2115,7 +2115,7 @@ class ClanInfo_Member final :
   void set_allocated_notes(std::string* notes);
   private:
   const std::string& _internal_notes() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_notes(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_notes(const std::string& m_iValue);
   std::string* _internal_mutable_notes();
   public:
 
@@ -2126,10 +2126,10 @@ class ClanInfo_Member final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 joined = 3;
@@ -2139,10 +2139,10 @@ class ClanInfo_Member final :
   public:
   void clear_joined();
   ::PROTOBUF_NAMESPACE_ID::int64 joined() const;
-  void set_joined(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_joined(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_joined() const;
-  void _internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 lastSeen = 4;
@@ -2152,10 +2152,10 @@ class ClanInfo_Member final :
   public:
   void clear_lastseen();
   ::PROTOBUF_NAMESPACE_ID::int64 lastseen() const;
-  void set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_lastseen() const;
-  void _internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int32 roleId = 2;
@@ -2165,10 +2165,10 @@ class ClanInfo_Member final :
   public:
   void clear_roleid();
   ::PROTOBUF_NAMESPACE_ID::int32 roleid() const;
-  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_roleid() const;
-  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // optional bool online = 6;
@@ -2178,10 +2178,10 @@ class ClanInfo_Member final :
   public:
   void clear_online();
   bool online() const;
-  void set_online(bool value);
+  void set_online(bool m_iValue);
   private:
   bool _internal_online() const;
-  void _internal_set_online(bool value);
+  void _internal_set_online(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Member)
@@ -2339,10 +2339,10 @@ class ClanInfo_Invite final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 recruiter = 2;
@@ -2352,10 +2352,10 @@ class ClanInfo_Invite final :
   public:
   void clear_recruiter();
   ::PROTOBUF_NAMESPACE_ID::int64 recruiter() const;
-  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_recruiter() const;
-  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 timestamp = 3;
@@ -2365,10 +2365,10 @@ class ClanInfo_Invite final :
   public:
   void clear_timestamp();
   ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
-  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
-  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanInfo.Invite)
@@ -2598,7 +2598,7 @@ class ClanInfo final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -2616,7 +2616,7 @@ class ClanInfo final :
   void set_allocated_motd(std::string* motd);
   private:
   const std::string& _internal_motd() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_motd(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_motd(const std::string& m_iValue);
   std::string* _internal_mutable_motd();
   public:
 
@@ -2634,7 +2634,7 @@ class ClanInfo final :
   void set_allocated_logo(std::string* logo);
   private:
   const std::string& _internal_logo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logo(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logo(const std::string& m_iValue);
   std::string* _internal_mutable_logo();
   public:
 
@@ -2645,10 +2645,10 @@ class ClanInfo final :
   public:
   void clear_clanid();
   ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
-  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
-  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 created = 3;
@@ -2658,10 +2658,10 @@ class ClanInfo final :
   public:
   void clear_created();
   ::PROTOBUF_NAMESPACE_ID::int64 created() const;
-  void set_created(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_created(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_created() const;
-  void _internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 creator = 4;
@@ -2671,10 +2671,10 @@ class ClanInfo final :
   public:
   void clear_creator();
   ::PROTOBUF_NAMESPACE_ID::int64 creator() const;
-  void set_creator(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_creator(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_creator() const;
-  void _internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // optional int64 motdTimestamp = 6;
@@ -2684,10 +2684,10 @@ class ClanInfo final :
   public:
   void clear_motdtimestamp();
   ::PROTOBUF_NAMESPACE_ID::int64 motdtimestamp() const;
-  void set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_motdtimestamp() const;
-  void _internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // optional int64 motdAuthor = 7;
@@ -2697,10 +2697,10 @@ class ClanInfo final :
   public:
   void clear_motdauthor();
   ::PROTOBUF_NAMESPACE_ID::int64 motdauthor() const;
-  void set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_motdauthor() const;
-  void _internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // optional sint32 color = 9;
@@ -2710,10 +2710,10 @@ class ClanInfo final :
   public:
   void clear_color();
   ::PROTOBUF_NAMESPACE_ID::int32 color() const;
-  void set_color(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_color(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_color() const;
-  void _internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // optional int32 maxMemberCount = 13;
@@ -2723,10 +2723,10 @@ class ClanInfo final :
   public:
   void clear_maxmembercount();
   ::PROTOBUF_NAMESPACE_ID::int32 maxmembercount() const;
-  void set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_maxmembercount() const;
-  void _internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanInfo)
@@ -2901,7 +2901,7 @@ class ClanLog_Entry final :
   void set_allocated_eventkey(std::string* eventkey);
   private:
   const std::string& _internal_eventkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_eventkey(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_eventkey(const std::string& m_iValue);
   std::string* _internal_mutable_eventkey();
   public:
 
@@ -2919,7 +2919,7 @@ class ClanLog_Entry final :
   void set_allocated_arg1(std::string* arg1);
   private:
   const std::string& _internal_arg1() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg1(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg1(const std::string& m_iValue);
   std::string* _internal_mutable_arg1();
   public:
 
@@ -2937,7 +2937,7 @@ class ClanLog_Entry final :
   void set_allocated_arg2(std::string* arg2);
   private:
   const std::string& _internal_arg2() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg2(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg2(const std::string& m_iValue);
   std::string* _internal_mutable_arg2();
   public:
 
@@ -2955,7 +2955,7 @@ class ClanLog_Entry final :
   void set_allocated_arg3(std::string* arg3);
   private:
   const std::string& _internal_arg3() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg3(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg3(const std::string& m_iValue);
   std::string* _internal_mutable_arg3();
   public:
 
@@ -2973,7 +2973,7 @@ class ClanLog_Entry final :
   void set_allocated_arg4(std::string* arg4);
   private:
   const std::string& _internal_arg4() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg4(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arg4(const std::string& m_iValue);
   std::string* _internal_mutable_arg4();
   public:
 
@@ -2984,10 +2984,10 @@ class ClanLog_Entry final :
   public:
   void clear_timestamp();
   ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
-  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
-  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanLog.Entry)
@@ -3164,10 +3164,10 @@ class ClanLog final :
   public:
   void clear_clanid();
   ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
-  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
-  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanLog)
@@ -3318,10 +3318,10 @@ class ClanInvitations_Invitation final :
   public:
   void clear_clanid();
   ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
-  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
-  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 recruiter = 2;
@@ -3331,10 +3331,10 @@ class ClanInvitations_Invitation final :
   public:
   void clear_recruiter();
   ::PROTOBUF_NAMESPACE_ID::int64 recruiter() const;
-  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_recruiter() const;
-  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // required int64 timestamp = 3;
@@ -3344,10 +3344,10 @@ class ClanInvitations_Invitation final :
   public:
   void clear_timestamp();
   ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
-  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_timestamp() const;
-  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.ClanInvitations.Invitation)
@@ -4040,10 +4040,10 @@ class AppRequest final :
   public:
   void clear_playerid();
   ::PROTOBUF_NAMESPACE_ID::uint64 playerid() const;
-  void set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_playerid() const;
-  void _internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // required uint32 seq = 1;
@@ -4053,10 +4053,10 @@ class AppRequest final :
   public:
   void clear_seq();
   ::PROTOBUF_NAMESPACE_ID::uint32 seq() const;
-  void set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_seq(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_seq() const;
-  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required int32 playerToken = 3;
@@ -4066,10 +4066,10 @@ class AppRequest final :
   public:
   void clear_playertoken();
   ::PROTOBUF_NAMESPACE_ID::int32 playertoken() const;
-  void set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_playertoken() const;
-  void _internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // optional uint32 entityId = 4;
@@ -4079,10 +4079,10 @@ class AppRequest final :
   public:
   void clear_entityid();
   ::PROTOBUF_NAMESPACE_ID::uint32 entityid() const;
-  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_entityid() const;
-  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppRequest)
@@ -4698,10 +4698,10 @@ class AppResponse final :
   public:
   void clear_seq();
   ::PROTOBUF_NAMESPACE_ID::int32 seq() const;
-  void set_seq(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_seq(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_seq() const;
-  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppResponse)
@@ -5259,7 +5259,7 @@ class AppSendMessage final :
   void set_allocated_message(std::string* message);
   private:
   const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& m_iValue);
   std::string* _internal_mutable_message();
   public:
 
@@ -5407,11 +5407,11 @@ class AppSetEntityValue final :
   bool _internal_has_value() const;
   public:
   void clear_value();
-  bool value() const;
-  void set_value(bool value);
+  bool m_iValue() const;
+  void set_value(bool m_iValue);
   private:
   bool _internal_value() const;
-  void _internal_set_value(bool value);
+  void _internal_set_value(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppSetEntityValue)
@@ -5559,10 +5559,10 @@ class AppPromoteToLeader final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::int64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppPromoteToLeader)
@@ -5717,7 +5717,7 @@ class AppGetNexusAuth final :
   void set_allocated_appkey(std::string* appkey);
   private:
   const std::string& _internal_appkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_appkey(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_appkey(const std::string& m_iValue);
   std::string* _internal_mutable_appkey();
   public:
 
@@ -6006,7 +6006,7 @@ class AppError final :
   void set_allocated_error(std::string* error);
   private:
   const std::string& _internal_error() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_error(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_error(const std::string& m_iValue);
   std::string* _internal_mutable_error();
   public:
 
@@ -6154,11 +6154,11 @@ class AppFlag final :
   bool _internal_has_value() const;
   public:
   void clear_value();
-  bool value() const;
-  void set_value(bool value);
+  bool m_iValue() const;
+  void set_value(bool m_iValue);
   private:
   bool _internal_value() const;
-  void _internal_set_value(bool value);
+  void _internal_set_value(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppFlag)
@@ -6327,7 +6327,7 @@ class AppInfo final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -6345,7 +6345,7 @@ class AppInfo final :
   void set_allocated_headerimage(std::string* headerimage);
   private:
   const std::string& _internal_headerimage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_headerimage(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_headerimage(const std::string& m_iValue);
   std::string* _internal_mutable_headerimage();
   public:
 
@@ -6363,7 +6363,7 @@ class AppInfo final :
   void set_allocated_url(std::string* url);
   private:
   const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& m_iValue);
   std::string* _internal_mutable_url();
   public:
 
@@ -6381,7 +6381,7 @@ class AppInfo final :
   void set_allocated_map(std::string* map);
   private:
   const std::string& _internal_map() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_map(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_map(const std::string& m_iValue);
   std::string* _internal_mutable_map();
   public:
 
@@ -6399,7 +6399,7 @@ class AppInfo final :
   void set_allocated_logoimage(std::string* logoimage);
   private:
   const std::string& _internal_logoimage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logoimage(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logoimage(const std::string& m_iValue);
   std::string* _internal_mutable_logoimage();
   public:
 
@@ -6417,7 +6417,7 @@ class AppInfo final :
   void set_allocated_nexus(std::string* nexus);
   private:
   const std::string& _internal_nexus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexus(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexus(const std::string& m_iValue);
   std::string* _internal_mutable_nexus();
   public:
 
@@ -6435,7 +6435,7 @@ class AppInfo final :
   void set_allocated_nexuszone(std::string* nexuszone);
   private:
   const std::string& _internal_nexuszone() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexuszone(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexuszone(const std::string& m_iValue);
   std::string* _internal_mutable_nexuszone();
   public:
 
@@ -6446,10 +6446,10 @@ class AppInfo final :
   public:
   void clear_mapsize();
   ::PROTOBUF_NAMESPACE_ID::uint32 mapsize() const;
-  void set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_mapsize() const;
-  void _internal_set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required uint32 wipeTime = 6;
@@ -6459,10 +6459,10 @@ class AppInfo final :
   public:
   void clear_wipetime();
   ::PROTOBUF_NAMESPACE_ID::uint32 wipetime() const;
-  void set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_wipetime() const;
-  void _internal_set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required uint32 players = 7;
@@ -6472,10 +6472,10 @@ class AppInfo final :
   public:
   void clear_players();
   ::PROTOBUF_NAMESPACE_ID::uint32 players() const;
-  void set_players(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_players(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_players() const;
-  void _internal_set_players(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_players(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required uint32 maxPlayers = 8;
@@ -6485,10 +6485,10 @@ class AppInfo final :
   public:
   void clear_maxplayers();
   ::PROTOBUF_NAMESPACE_ID::uint32 maxplayers() const;
-  void set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_maxplayers() const;
-  void _internal_set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required uint32 queuedPlayers = 9;
@@ -6498,10 +6498,10 @@ class AppInfo final :
   public:
   void clear_queuedplayers();
   ::PROTOBUF_NAMESPACE_ID::uint32 queuedplayers() const;
-  void set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_queuedplayers() const;
-  void _internal_set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // optional uint32 seed = 10;
@@ -6511,10 +6511,10 @@ class AppInfo final :
   public:
   void clear_seed();
   ::PROTOBUF_NAMESPACE_ID::uint32 seed() const;
-  void set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_seed(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_seed() const;
-  void _internal_set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_seed(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // optional uint32 salt = 11;
@@ -6524,10 +6524,10 @@ class AppInfo final :
   public:
   void clear_salt();
   ::PROTOBUF_NAMESPACE_ID::uint32 salt() const;
-  void set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_salt(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_salt() const;
-  void _internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // optional int32 nexusId = 14;
@@ -6537,10 +6537,10 @@ class AppInfo final :
   public:
   void clear_nexusid();
   ::PROTOBUF_NAMESPACE_ID::int32 nexusid() const;
-  void set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_nexusid() const;
-  void _internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppInfo)
@@ -6709,10 +6709,10 @@ class AppTime final :
   public:
   void clear_daylengthminutes();
   float daylengthminutes() const;
-  void set_daylengthminutes(float value);
+  void set_daylengthminutes(float m_iValue);
   private:
   float _internal_daylengthminutes() const;
-  void _internal_set_daylengthminutes(float value);
+  void _internal_set_daylengthminutes(float m_iValue);
   public:
 
   // required float timeScale = 2;
@@ -6722,10 +6722,10 @@ class AppTime final :
   public:
   void clear_timescale();
   float timescale() const;
-  void set_timescale(float value);
+  void set_timescale(float m_iValue);
   private:
   float _internal_timescale() const;
-  void _internal_set_timescale(float value);
+  void _internal_set_timescale(float m_iValue);
   public:
 
   // required float sunrise = 3;
@@ -6735,10 +6735,10 @@ class AppTime final :
   public:
   void clear_sunrise();
   float sunrise() const;
-  void set_sunrise(float value);
+  void set_sunrise(float m_iValue);
   private:
   float _internal_sunrise() const;
-  void _internal_set_sunrise(float value);
+  void _internal_set_sunrise(float m_iValue);
   public:
 
   // required float sunset = 4;
@@ -6748,10 +6748,10 @@ class AppTime final :
   public:
   void clear_sunset();
   float sunset() const;
-  void set_sunset(float value);
+  void set_sunset(float m_iValue);
   private:
   float _internal_sunset() const;
-  void _internal_set_sunset(float value);
+  void _internal_set_sunset(float m_iValue);
   public:
 
   // required float time = 5;
@@ -6761,10 +6761,10 @@ class AppTime final :
   public:
   void clear_time();
   float time() const;
-  void set_time(float value);
+  void set_time(float m_iValue);
   private:
   float _internal_time() const;
-  void _internal_set_time(float value);
+  void _internal_set_time(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTime)
@@ -6928,7 +6928,7 @@ class AppMap_Monument final :
   void set_allocated_token(std::string* token);
   private:
   const std::string& _internal_token() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_token(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_token(const std::string& m_iValue);
   std::string* _internal_mutable_token();
   public:
 
@@ -6939,10 +6939,10 @@ class AppMap_Monument final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // required float y = 3;
@@ -6952,10 +6952,10 @@ class AppMap_Monument final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppMap.Monument)
@@ -7140,7 +7140,7 @@ class AppMap final :
   void set_allocated_jpgimage(std::string* jpgimage);
   private:
   const std::string& _internal_jpgimage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_jpgimage(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_jpgimage(const std::string& m_iValue);
   std::string* _internal_mutable_jpgimage();
   public:
 
@@ -7158,7 +7158,7 @@ class AppMap final :
   void set_allocated_background(std::string* background);
   private:
   const std::string& _internal_background() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_background(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_background(const std::string& m_iValue);
   std::string* _internal_mutable_background();
   public:
 
@@ -7169,10 +7169,10 @@ class AppMap final :
   public:
   void clear_width();
   ::PROTOBUF_NAMESPACE_ID::uint32 width() const;
-  void set_width(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_width(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_width() const;
-  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required uint32 height = 2;
@@ -7182,10 +7182,10 @@ class AppMap final :
   public:
   void clear_height();
   ::PROTOBUF_NAMESPACE_ID::uint32 height() const;
-  void set_height(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_height(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_height() const;
-  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required int32 oceanMargin = 4;
@@ -7195,10 +7195,10 @@ class AppMap final :
   public:
   void clear_oceanmargin();
   ::PROTOBUF_NAMESPACE_ID::int32 oceanmargin() const;
-  void set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_oceanmargin() const;
-  void _internal_set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppMap)
@@ -7373,10 +7373,10 @@ class AppEntityInfo final :
   public:
   void clear_type();
   ::rustplus::AppEntityType type() const;
-  void set_type(::rustplus::AppEntityType value);
+  void set_type(::rustplus::AppEntityType m_iValue);
   private:
   ::rustplus::AppEntityType _internal_type() const;
-  void _internal_set_type(::rustplus::AppEntityType value);
+  void _internal_set_type(::rustplus::AppEntityType m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppEntityInfo)
@@ -7530,10 +7530,10 @@ class AppEntityPayload_Item final :
   public:
   void clear_itemid();
   ::PROTOBUF_NAMESPACE_ID::int32 itemid() const;
-  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_itemid() const;
-  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 quantity = 2;
@@ -7543,10 +7543,10 @@ class AppEntityPayload_Item final :
   public:
   void clear_quantity();
   ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
-  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_quantity() const;
-  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required bool itemIsBlueprint = 3;
@@ -7556,10 +7556,10 @@ class AppEntityPayload_Item final :
   public:
   void clear_itemisblueprint();
   bool itemisblueprint() const;
-  void set_itemisblueprint(bool value);
+  void set_itemisblueprint(bool m_iValue);
   private:
   bool _internal_itemisblueprint() const;
-  void _internal_set_itemisblueprint(bool value);
+  void _internal_set_itemisblueprint(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload.Item)
@@ -7735,11 +7735,11 @@ class AppEntityPayload final :
   bool _internal_has_value() const;
   public:
   void clear_value();
-  bool value() const;
-  void set_value(bool value);
+  bool m_iValue() const;
+  void set_value(bool m_iValue);
   private:
   bool _internal_value() const;
-  void _internal_set_value(bool value);
+  void _internal_set_value(bool m_iValue);
   public:
 
   // optional bool hasProtection = 4;
@@ -7749,10 +7749,10 @@ class AppEntityPayload final :
   public:
   void clear_hasprotection();
   bool hasprotection() const;
-  void set_hasprotection(bool value);
+  void set_hasprotection(bool m_iValue);
   private:
   bool _internal_hasprotection() const;
-  void _internal_set_hasprotection(bool value);
+  void _internal_set_hasprotection(bool m_iValue);
   public:
 
   // optional int32 capacity = 3;
@@ -7762,10 +7762,10 @@ class AppEntityPayload final :
   public:
   void clear_capacity();
   ::PROTOBUF_NAMESPACE_ID::int32 capacity() const;
-  void set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_capacity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_capacity() const;
-  void _internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // optional uint32 protectionExpiry = 5;
@@ -7775,10 +7775,10 @@ class AppEntityPayload final :
   public:
   void clear_protectionexpiry();
   ::PROTOBUF_NAMESPACE_ID::uint32 protectionexpiry() const;
-  void set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_protectionexpiry() const;
-  void _internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppEntityPayload)
@@ -7944,7 +7944,7 @@ class AppTeamInfo_Member final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -7955,10 +7955,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // required float x = 3;
@@ -7968,10 +7968,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // required float y = 4;
@@ -7981,10 +7981,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // required uint32 spawnTime = 6;
@@ -7994,10 +7994,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_spawntime();
   ::PROTOBUF_NAMESPACE_ID::uint32 spawntime() const;
-  void set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_spawntime() const;
-  void _internal_set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required bool isOnline = 5;
@@ -8007,10 +8007,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_isonline();
   bool isonline() const;
-  void set_isonline(bool value);
+  void set_isonline(bool m_iValue);
   private:
   bool _internal_isonline() const;
-  void _internal_set_isonline(bool value);
+  void _internal_set_isonline(bool m_iValue);
   public:
 
   // required bool isAlive = 7;
@@ -8020,10 +8020,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_isalive();
   bool isalive() const;
-  void set_isalive(bool value);
+  void set_isalive(bool m_iValue);
   private:
   bool _internal_isalive() const;
-  void _internal_set_isalive(bool value);
+  void _internal_set_isalive(bool m_iValue);
   public:
 
   // required uint32 deathTime = 8;
@@ -8033,10 +8033,10 @@ class AppTeamInfo_Member final :
   public:
   void clear_deathtime();
   ::PROTOBUF_NAMESPACE_ID::uint32 deathtime() const;
-  void set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_deathtime() const;
-  void _internal_set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTeamInfo.Member)
@@ -8196,10 +8196,10 @@ class AppTeamInfo_Note final :
   public:
   void clear_type();
   ::PROTOBUF_NAMESPACE_ID::int32 type() const;
-  void set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_type(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_type() const;
-  void _internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required float x = 3;
@@ -8209,10 +8209,10 @@ class AppTeamInfo_Note final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // required float y = 4;
@@ -8222,10 +8222,10 @@ class AppTeamInfo_Note final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTeamInfo.Note)
@@ -8438,10 +8438,10 @@ class AppTeamInfo final :
   public:
   void clear_leadersteamid();
   ::PROTOBUF_NAMESPACE_ID::uint64 leadersteamid() const;
-  void set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_leadersteamid() const;
-  void _internal_set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTeamInfo)
@@ -8603,7 +8603,7 @@ class AppTeamMessage final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -8621,7 +8621,7 @@ class AppTeamMessage final :
   void set_allocated_message(std::string* message);
   private:
   const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& m_iValue);
   std::string* _internal_mutable_message();
   public:
 
@@ -8639,7 +8639,7 @@ class AppTeamMessage final :
   void set_allocated_color(std::string* color);
   private:
   const std::string& _internal_color() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_color(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_color(const std::string& m_iValue);
   std::string* _internal_mutable_color();
   public:
 
@@ -8650,10 +8650,10 @@ class AppTeamMessage final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // required uint32 time = 5;
@@ -8663,10 +8663,10 @@ class AppTeamMessage final :
   public:
   void clear_time();
   ::PROTOBUF_NAMESPACE_ID::uint32 time() const;
-  void set_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_time(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_time() const;
-  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTeamMessage)
@@ -8984,10 +8984,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_itemid();
   ::PROTOBUF_NAMESPACE_ID::int32 itemid() const;
-  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_itemid() const;
-  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 quantity = 2;
@@ -8997,10 +8997,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_quantity();
   ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
-  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_quantity() const;
-  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 currencyId = 3;
@@ -9010,10 +9010,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_currencyid();
   ::PROTOBUF_NAMESPACE_ID::int32 currencyid() const;
-  void set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_currencyid() const;
-  void _internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 costPerItem = 4;
@@ -9023,10 +9023,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_costperitem();
   ::PROTOBUF_NAMESPACE_ID::int32 costperitem() const;
-  void set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_costperitem() const;
-  void _internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 amountInStock = 5;
@@ -9036,10 +9036,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_amountinstock();
   ::PROTOBUF_NAMESPACE_ID::int32 amountinstock() const;
-  void set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_amountinstock() const;
-  void _internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required bool itemIsBlueprint = 6;
@@ -9049,10 +9049,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_itemisblueprint();
   bool itemisblueprint() const;
-  void set_itemisblueprint(bool value);
+  void set_itemisblueprint(bool m_iValue);
   private:
   bool _internal_itemisblueprint() const;
-  void _internal_set_itemisblueprint(bool value);
+  void _internal_set_itemisblueprint(bool m_iValue);
   public:
 
   // required bool currencyIsBlueprint = 7;
@@ -9062,10 +9062,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_currencyisblueprint();
   bool currencyisblueprint() const;
-  void set_currencyisblueprint(bool value);
+  void set_currencyisblueprint(bool m_iValue);
   private:
   bool _internal_currencyisblueprint() const;
-  void _internal_set_currencyisblueprint(bool value);
+  void _internal_set_currencyisblueprint(bool m_iValue);
   public:
 
   // optional float itemCondition = 8;
@@ -9075,10 +9075,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_itemcondition();
   float itemcondition() const;
-  void set_itemcondition(float value);
+  void set_itemcondition(float m_iValue);
   private:
   float _internal_itemcondition() const;
-  void _internal_set_itemcondition(float value);
+  void _internal_set_itemcondition(float m_iValue);
   public:
 
   // optional float itemConditionMax = 9;
@@ -9088,10 +9088,10 @@ class AppMarker_SellOrder final :
   public:
   void clear_itemconditionmax();
   float itemconditionmax() const;
-  void set_itemconditionmax(float value);
+  void set_itemconditionmax(float m_iValue);
   private:
   float _internal_itemconditionmax() const;
-  void _internal_set_itemconditionmax(float value);
+  void _internal_set_itemconditionmax(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppMarker.SellOrder)
@@ -9289,7 +9289,7 @@ class AppMarker final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -9336,10 +9336,10 @@ class AppMarker final :
   public:
   void clear_id();
   ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required .rustplus.AppMarkerType type = 2;
@@ -9349,10 +9349,10 @@ class AppMarker final :
   public:
   void clear_type();
   ::rustplus::AppMarkerType type() const;
-  void set_type(::rustplus::AppMarkerType value);
+  void set_type(::rustplus::AppMarkerType m_iValue);
   private:
   ::rustplus::AppMarkerType _internal_type() const;
-  void _internal_set_type(::rustplus::AppMarkerType value);
+  void _internal_set_type(::rustplus::AppMarkerType m_iValue);
   public:
 
   // required float x = 3;
@@ -9362,10 +9362,10 @@ class AppMarker final :
   public:
   void clear_x();
   float x() const;
-  void set_x(float value);
+  void set_x(float m_iValue);
   private:
   float _internal_x() const;
-  void _internal_set_x(float value);
+  void _internal_set_x(float m_iValue);
   public:
 
   // required float y = 4;
@@ -9375,10 +9375,10 @@ class AppMarker final :
   public:
   void clear_y();
   float y() const;
-  void set_y(float value);
+  void set_y(float m_iValue);
   private:
   float _internal_y() const;
-  void _internal_set_y(float value);
+  void _internal_set_y(float m_iValue);
   public:
 
   // optional uint64 steamId = 5;
@@ -9388,10 +9388,10 @@ class AppMarker final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // optional float rotation = 6;
@@ -9401,10 +9401,10 @@ class AppMarker final :
   public:
   void clear_rotation();
   float rotation() const;
-  void set_rotation(float value);
+  void set_rotation(float m_iValue);
   private:
   float _internal_rotation() const;
-  void _internal_set_rotation(float value);
+  void _internal_set_rotation(float m_iValue);
   public:
 
   // optional float radius = 7;
@@ -9414,10 +9414,10 @@ class AppMarker final :
   public:
   void clear_radius();
   float radius() const;
-  void set_radius(float value);
+  void set_radius(float m_iValue);
   private:
   float _internal_radius() const;
-  void _internal_set_radius(float value);
+  void _internal_set_radius(float m_iValue);
   public:
 
   // optional float alpha = 10;
@@ -9427,10 +9427,10 @@ class AppMarker final :
   public:
   void clear_alpha();
   float alpha() const;
-  void set_alpha(float value);
+  void set_alpha(float m_iValue);
   private:
   float _internal_alpha() const;
-  void _internal_set_alpha(float value);
+  void _internal_set_alpha(float m_iValue);
   public:
 
   // optional bool outOfStock = 12;
@@ -9440,10 +9440,10 @@ class AppMarker final :
   public:
   void clear_outofstock();
   bool outofstock() const;
-  void set_outofstock(bool value);
+  void set_outofstock(bool m_iValue);
   private:
   bool _internal_outofstock() const;
-  void _internal_set_outofstock(bool value);
+  void _internal_set_outofstock(bool m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppMarker)
@@ -9927,7 +9927,7 @@ class AppClanMessage final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -9945,7 +9945,7 @@ class AppClanMessage final :
   void set_allocated_message(std::string* message);
   private:
   const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& m_iValue);
   std::string* _internal_mutable_message();
   public:
 
@@ -9956,10 +9956,10 @@ class AppClanMessage final :
   public:
   void clear_steamid();
   ::PROTOBUF_NAMESPACE_ID::uint64 steamid() const;
-  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_steamid() const;
-  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // required int64 time = 4;
@@ -9969,10 +9969,10 @@ class AppClanMessage final :
   public:
   void clear_time();
   ::PROTOBUF_NAMESPACE_ID::int64 time() const;
-  void set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_time(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_time() const;
-  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppClanMessage)
@@ -10289,7 +10289,7 @@ class AppNexusAuth final :
   void set_allocated_serverid(std::string* serverid);
   private:
   const std::string& _internal_serverid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_serverid(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_serverid(const std::string& m_iValue);
   std::string* _internal_mutable_serverid();
   public:
 
@@ -10300,10 +10300,10 @@ class AppNexusAuth final :
   public:
   void clear_playertoken();
   ::PROTOBUF_NAMESPACE_ID::int32 playertoken() const;
-  void set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_playertoken() const;
-  void _internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppNexusAuth)
@@ -10474,10 +10474,10 @@ class AppTeamChanged final :
   public:
   void clear_playerid();
   ::PROTOBUF_NAMESPACE_ID::uint64 playerid() const;
-  void set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint64 _internal_playerid() const;
-  void _internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void _internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppTeamChanged)
@@ -10804,10 +10804,10 @@ class AppEntityChanged final :
   public:
   void clear_entityid();
   ::PROTOBUF_NAMESPACE_ID::uint32 entityid() const;
-  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_entityid() const;
-  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppEntityChanged)
@@ -11134,10 +11134,10 @@ class AppNewClanMessage final :
   public:
   void clear_clanid();
   ::PROTOBUF_NAMESPACE_ID::int64 clanid() const;
-  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_clanid() const;
-  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value);
+  void _internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppNewClanMessage)
@@ -11296,7 +11296,7 @@ class AppCameraSubscribe final :
   void set_allocated_cameraid(std::string* cameraid);
   private:
   const std::string& _internal_cameraid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cameraid(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cameraid(const std::string& m_iValue);
   std::string* _internal_mutable_cameraid();
   public:
 
@@ -11464,10 +11464,10 @@ class AppCameraInput final :
   public:
   void clear_buttons();
   ::PROTOBUF_NAMESPACE_ID::int32 buttons() const;
-  void set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_buttons(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_buttons() const;
-  void _internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppCameraInput)
@@ -11623,10 +11623,10 @@ class AppCameraInfo final :
   public:
   void clear_width();
   ::PROTOBUF_NAMESPACE_ID::int32 width() const;
-  void set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_width(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_width() const;
-  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required int32 height = 2;
@@ -11636,10 +11636,10 @@ class AppCameraInfo final :
   public:
   void clear_height();
   ::PROTOBUF_NAMESPACE_ID::int32 height() const;
-  void set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_height(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_height() const;
-  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required float nearPlane = 3;
@@ -11649,10 +11649,10 @@ class AppCameraInfo final :
   public:
   void clear_nearplane();
   float nearplane() const;
-  void set_nearplane(float value);
+  void set_nearplane(float m_iValue);
   private:
   float _internal_nearplane() const;
-  void _internal_set_nearplane(float value);
+  void _internal_set_nearplane(float m_iValue);
   public:
 
   // required float farPlane = 4;
@@ -11662,10 +11662,10 @@ class AppCameraInfo final :
   public:
   void clear_farplane();
   float farplane() const;
-  void set_farplane(float value);
+  void set_farplane(float m_iValue);
   private:
   float _internal_farplane() const;
-  void _internal_set_farplane(float value);
+  void _internal_set_farplane(float m_iValue);
   public:
 
   // required int32 controlFlags = 5;
@@ -11675,10 +11675,10 @@ class AppCameraInfo final :
   public:
   void clear_controlflags();
   ::PROTOBUF_NAMESPACE_ID::int32 controlflags() const;
-  void set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_controlflags() const;
-  void _internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppCameraInfo)
@@ -11845,7 +11845,7 @@ class AppCameraRays_Entity final :
   void set_allocated_name(std::string* name);
   private:
   const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& m_iValue);
   std::string* _internal_mutable_name();
   public:
 
@@ -11910,10 +11910,10 @@ class AppCameraRays_Entity final :
   public:
   void clear_entityid();
   ::PROTOBUF_NAMESPACE_ID::uint32 entityid() const;
-  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::uint32 _internal_entityid() const;
-  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void _internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue);
   public:
 
   // required .rustplus.AppCameraRays.EntityType type = 2;
@@ -11923,10 +11923,10 @@ class AppCameraRays_Entity final :
   public:
   void clear_type();
   ::rustplus::AppCameraRays_EntityType type() const;
-  void set_type(::rustplus::AppCameraRays_EntityType value);
+  void set_type(::rustplus::AppCameraRays_EntityType m_iValue);
   private:
   ::rustplus::AppCameraRays_EntityType _internal_type() const;
-  void _internal_set_type(::rustplus::AppCameraRays_EntityType value);
+  void _internal_set_type(::rustplus::AppCameraRays_EntityType m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppCameraRays.Entity)
@@ -12077,8 +12077,8 @@ class AppCameraRays final :
     AppCameraRays_EntityType_Tree;
   static constexpr EntityType Player =
     AppCameraRays_EntityType_Player;
-  static inline bool EntityType_IsValid(int value) {
-    return AppCameraRays_EntityType_IsValid(value);
+  static inline bool EntityType_IsValid(int m_iValue) {
+    return AppCameraRays_EntityType_IsValid(m_iValue);
   }
   static constexpr EntityType EntityType_MIN =
     AppCameraRays_EntityType_EntityType_MIN;
@@ -12092,14 +12092,14 @@ class AppCameraRays final :
   }
   template<typename T>
   static inline const std::string& EntityType_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, EntityType>::value ||
-      ::std::is_integral<T>::value,
+    static_assert(::std::is_same<T, EntityType>::m_iValue ||
+      ::std::is_integral<T>::m_iValue,
       "Incorrect type passed to function EntityType_Name.");
     return AppCameraRays_EntityType_Name(enum_t_value);
   }
   static inline bool EntityType_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      EntityType* value) {
-    return AppCameraRays_EntityType_Parse(name, value);
+      EntityType* m_iValue) {
+    return AppCameraRays_EntityType_Parse(name, m_iValue);
   }
 
   // accessors -------------------------------------------------------
@@ -12143,7 +12143,7 @@ class AppCameraRays final :
   void set_allocated_raydata(std::string* raydata);
   private:
   const std::string& _internal_raydata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_raydata(const std::string& value);
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_raydata(const std::string& m_iValue);
   std::string* _internal_mutable_raydata();
   public:
 
@@ -12154,10 +12154,10 @@ class AppCameraRays final :
   public:
   void clear_verticalfov();
   float verticalfov() const;
-  void set_verticalfov(float value);
+  void set_verticalfov(float m_iValue);
   private:
   float _internal_verticalfov() const;
-  void _internal_set_verticalfov(float value);
+  void _internal_set_verticalfov(float m_iValue);
   public:
 
   // required int32 sampleOffset = 2;
@@ -12167,10 +12167,10 @@ class AppCameraRays final :
   public:
   void clear_sampleoffset();
   ::PROTOBUF_NAMESPACE_ID::int32 sampleoffset() const;
-  void set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   private:
   ::PROTOBUF_NAMESPACE_ID::int32 _internal_sampleoffset() const;
-  void _internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  void _internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 m_iValue);
   public:
 
   // required float distance = 4;
@@ -12180,10 +12180,10 @@ class AppCameraRays final :
   public:
   void clear_distance();
   float distance() const;
-  void set_distance(float value);
+  void set_distance(float m_iValue);
   private:
   float _internal_distance() const;
-  void _internal_set_distance(float value);
+  void _internal_set_distance(float m_iValue);
   public:
 
   // @@protoc_insertion_point(class_scope:rustplus.AppCameraRays)
@@ -12218,8 +12218,8 @@ class AppCameraRays final :
 
 // optional float x = 1;
 inline bool Vector2::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool Vector2::has_x() const {
   return _internal_has_x();
@@ -12235,19 +12235,19 @@ inline float Vector2::x() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector2.x)
   return _internal_x();
 }
-inline void Vector2::_internal_set_x(float value) {
+inline void Vector2::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void Vector2::set_x(float value) {
-  _internal_set_x(value);
+inline void Vector2::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector2.x)
 }
 
 // optional float y = 2;
 inline bool Vector2::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool Vector2::has_y() const {
   return _internal_has_y();
@@ -12263,12 +12263,12 @@ inline float Vector2::y() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector2.y)
   return _internal_y();
 }
-inline void Vector2::_internal_set_y(float value) {
+inline void Vector2::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void Vector2::set_y(float value) {
-  _internal_set_y(value);
+inline void Vector2::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector2.y)
 }
 
@@ -12278,8 +12278,8 @@ inline void Vector2::set_y(float value) {
 
 // optional float x = 1;
 inline bool Vector3::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool Vector3::has_x() const {
   return _internal_has_x();
@@ -12295,19 +12295,19 @@ inline float Vector3::x() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector3.x)
   return _internal_x();
 }
-inline void Vector3::_internal_set_x(float value) {
+inline void Vector3::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void Vector3::set_x(float value) {
-  _internal_set_x(value);
+inline void Vector3::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector3.x)
 }
 
 // optional float y = 2;
 inline bool Vector3::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool Vector3::has_y() const {
   return _internal_has_y();
@@ -12323,19 +12323,19 @@ inline float Vector3::y() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector3.y)
   return _internal_y();
 }
-inline void Vector3::_internal_set_y(float value) {
+inline void Vector3::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void Vector3::set_y(float value) {
-  _internal_set_y(value);
+inline void Vector3::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector3.y)
 }
 
 // optional float z = 3;
 inline bool Vector3::_internal_has_z() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool Vector3::has_z() const {
   return _internal_has_z();
@@ -12351,12 +12351,12 @@ inline float Vector3::z() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector3.z)
   return _internal_z();
 }
-inline void Vector3::_internal_set_z(float value) {
+inline void Vector3::_internal_set_z(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  z_ = value;
+  z_ = m_iValue;
 }
-inline void Vector3::set_z(float value) {
-  _internal_set_z(value);
+inline void Vector3::set_z(float m_iValue) {
+  _internal_set_z(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector3.z)
 }
 
@@ -12366,8 +12366,8 @@ inline void Vector3::set_z(float value) {
 
 // optional float x = 1;
 inline bool Vector4::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool Vector4::has_x() const {
   return _internal_has_x();
@@ -12383,19 +12383,19 @@ inline float Vector4::x() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector4.x)
   return _internal_x();
 }
-inline void Vector4::_internal_set_x(float value) {
+inline void Vector4::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void Vector4::set_x(float value) {
-  _internal_set_x(value);
+inline void Vector4::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector4.x)
 }
 
 // optional float y = 2;
 inline bool Vector4::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool Vector4::has_y() const {
   return _internal_has_y();
@@ -12411,19 +12411,19 @@ inline float Vector4::y() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector4.y)
   return _internal_y();
 }
-inline void Vector4::_internal_set_y(float value) {
+inline void Vector4::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void Vector4::set_y(float value) {
-  _internal_set_y(value);
+inline void Vector4::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector4.y)
 }
 
 // optional float z = 3;
 inline bool Vector4::_internal_has_z() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool Vector4::has_z() const {
   return _internal_has_z();
@@ -12439,19 +12439,19 @@ inline float Vector4::z() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector4.z)
   return _internal_z();
 }
-inline void Vector4::_internal_set_z(float value) {
+inline void Vector4::_internal_set_z(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  z_ = value;
+  z_ = m_iValue;
 }
-inline void Vector4::set_z(float value) {
-  _internal_set_z(value);
+inline void Vector4::set_z(float m_iValue) {
+  _internal_set_z(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector4.z)
 }
 
 // optional float w = 4;
 inline bool Vector4::_internal_has_w() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool Vector4::has_w() const {
   return _internal_has_w();
@@ -12467,12 +12467,12 @@ inline float Vector4::w() const {
   // @@protoc_insertion_point(field_get:rustplus.Vector4.w)
   return _internal_w();
 }
-inline void Vector4::_internal_set_w(float value) {
+inline void Vector4::_internal_set_w(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  w_ = value;
+  w_ = m_iValue;
 }
-inline void Vector4::set_w(float value) {
-  _internal_set_w(value);
+inline void Vector4::set_w(float m_iValue) {
+  _internal_set_w(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Vector4.w)
 }
 
@@ -12482,8 +12482,8 @@ inline void Vector4::set_w(float value) {
 
 // optional float x = 1;
 inline bool Half3::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool Half3::has_x() const {
   return _internal_has_x();
@@ -12499,19 +12499,19 @@ inline float Half3::x() const {
   // @@protoc_insertion_point(field_get:rustplus.Half3.x)
   return _internal_x();
 }
-inline void Half3::_internal_set_x(float value) {
+inline void Half3::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void Half3::set_x(float value) {
-  _internal_set_x(value);
+inline void Half3::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Half3.x)
 }
 
 // optional float y = 2;
 inline bool Half3::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool Half3::has_y() const {
   return _internal_has_y();
@@ -12527,19 +12527,19 @@ inline float Half3::y() const {
   // @@protoc_insertion_point(field_get:rustplus.Half3.y)
   return _internal_y();
 }
-inline void Half3::_internal_set_y(float value) {
+inline void Half3::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void Half3::set_y(float value) {
-  _internal_set_y(value);
+inline void Half3::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Half3.y)
 }
 
 // optional float z = 3;
 inline bool Half3::_internal_has_z() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool Half3::has_z() const {
   return _internal_has_z();
@@ -12555,12 +12555,12 @@ inline float Half3::z() const {
   // @@protoc_insertion_point(field_get:rustplus.Half3.z)
   return _internal_z();
 }
-inline void Half3::_internal_set_z(float value) {
+inline void Half3::_internal_set_z(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  z_ = value;
+  z_ = m_iValue;
 }
-inline void Half3::set_z(float value) {
-  _internal_set_z(value);
+inline void Half3::set_z(float m_iValue) {
+  _internal_set_z(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Half3.z)
 }
 
@@ -12570,8 +12570,8 @@ inline void Half3::set_z(float value) {
 
 // optional float r = 1;
 inline bool Color::_internal_has_r() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool Color::has_r() const {
   return _internal_has_r();
@@ -12587,19 +12587,19 @@ inline float Color::r() const {
   // @@protoc_insertion_point(field_get:rustplus.Color.r)
   return _internal_r();
 }
-inline void Color::_internal_set_r(float value) {
+inline void Color::_internal_set_r(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  r_ = value;
+  r_ = m_iValue;
 }
-inline void Color::set_r(float value) {
-  _internal_set_r(value);
+inline void Color::set_r(float m_iValue) {
+  _internal_set_r(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Color.r)
 }
 
 // optional float g = 2;
 inline bool Color::_internal_has_g() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool Color::has_g() const {
   return _internal_has_g();
@@ -12615,19 +12615,19 @@ inline float Color::g() const {
   // @@protoc_insertion_point(field_get:rustplus.Color.g)
   return _internal_g();
 }
-inline void Color::_internal_set_g(float value) {
+inline void Color::_internal_set_g(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  g_ = value;
+  g_ = m_iValue;
 }
-inline void Color::set_g(float value) {
-  _internal_set_g(value);
+inline void Color::set_g(float m_iValue) {
+  _internal_set_g(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Color.g)
 }
 
 // optional float b = 3;
 inline bool Color::_internal_has_b() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool Color::has_b() const {
   return _internal_has_b();
@@ -12643,19 +12643,19 @@ inline float Color::b() const {
   // @@protoc_insertion_point(field_get:rustplus.Color.b)
   return _internal_b();
 }
-inline void Color::_internal_set_b(float value) {
+inline void Color::_internal_set_b(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  b_ = value;
+  b_ = m_iValue;
 }
-inline void Color::set_b(float value) {
-  _internal_set_b(value);
+inline void Color::set_b(float m_iValue) {
+  _internal_set_b(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Color.b)
 }
 
 // optional float a = 4;
 inline bool Color::_internal_has_a() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool Color::has_a() const {
   return _internal_has_a();
@@ -12671,12 +12671,12 @@ inline float Color::a() const {
   // @@protoc_insertion_point(field_get:rustplus.Color.a)
   return _internal_a();
 }
-inline void Color::_internal_set_a(float value) {
+inline void Color::_internal_set_a(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  a_ = value;
+  a_ = m_iValue;
 }
-inline void Color::set_a(float value) {
-  _internal_set_a(value);
+inline void Color::set_a(float m_iValue) {
+  _internal_set_a(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.Color.a)
 }
 
@@ -12686,9 +12686,9 @@ inline void Color::set_a(float value) {
 
 // optional .rustplus.Vector3 origin = 1;
 inline bool Ray::_internal_has_origin() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || origin_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || origin_ != nullptr);
+  return m_iValue;
 }
 inline bool Ray::has_origin() const {
   return _internal_has_origin();
@@ -12776,9 +12776,9 @@ inline void Ray::set_allocated_origin(::rustplus::Vector3* origin) {
 
 // optional .rustplus.Vector3 direction = 2;
 inline bool Ray::_internal_has_direction() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || direction_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || direction_ != nullptr);
+  return m_iValue;
 }
 inline bool Ray::has_direction() const {
   return _internal_has_direction();
@@ -12870,8 +12870,8 @@ inline void Ray::set_allocated_direction(::rustplus::Vector3* direction) {
 
 // required int32 requestId = 1;
 inline bool ClanActionResult::_internal_has_requestid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanActionResult::has_requestid() const {
   return _internal_has_requestid();
@@ -12887,19 +12887,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::requestid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.requestId)
   return _internal_requestid();
 }
-inline void ClanActionResult::_internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanActionResult::_internal_set_requestid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  requestid_ = value;
+  requestid_ = m_iValue;
 }
-inline void ClanActionResult::set_requestid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_requestid(value);
+inline void ClanActionResult::set_requestid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_requestid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.requestId)
 }
 
 // required int32 result = 2;
 inline bool ClanActionResult::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanActionResult::has_result() const {
   return _internal_has_result();
@@ -12915,19 +12915,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanActionResult::result() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.result)
   return _internal_result();
 }
-inline void ClanActionResult::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanActionResult::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  result_ = value;
+  result_ = m_iValue;
 }
-inline void ClanActionResult::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
+inline void ClanActionResult::set_result(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_result(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.result)
 }
 
 // required bool hasClanInfo = 3;
 inline bool ClanActionResult::_internal_has_hasclaninfo() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool ClanActionResult::has_hasclaninfo() const {
   return _internal_has_hasclaninfo();
@@ -12943,20 +12943,20 @@ inline bool ClanActionResult::hasclaninfo() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanActionResult.hasClanInfo)
   return _internal_hasclaninfo();
 }
-inline void ClanActionResult::_internal_set_hasclaninfo(bool value) {
+inline void ClanActionResult::_internal_set_hasclaninfo(bool m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  hasclaninfo_ = value;
+  hasclaninfo_ = m_iValue;
 }
-inline void ClanActionResult::set_hasclaninfo(bool value) {
-  _internal_set_hasclaninfo(value);
+inline void ClanActionResult::set_hasclaninfo(bool m_iValue) {
+  _internal_set_hasclaninfo(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanActionResult.hasClanInfo)
 }
 
 // optional .rustplus.ClanInfo clanInfo = 4;
 inline bool ClanActionResult::_internal_has_claninfo() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || claninfo_ != nullptr);
+  return m_iValue;
 }
 inline bool ClanActionResult::has_claninfo() const {
   return _internal_has_claninfo();
@@ -13048,8 +13048,8 @@ inline void ClanActionResult::set_allocated_claninfo(::rustplus::ClanInfo* clani
 
 // required int32 roleId = 1;
 inline bool ClanInfo_Role::_internal_has_roleid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_roleid() const {
   return _internal_has_roleid();
@@ -13065,19 +13065,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::roleid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.roleId)
   return _internal_roleid();
 }
-inline void ClanInfo_Role::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanInfo_Role::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  roleid_ = value;
+  roleid_ = m_iValue;
 }
-inline void ClanInfo_Role::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_roleid(value);
+inline void ClanInfo_Role::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_roleid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.roleId)
 }
 
 // required int32 rank = 2;
 inline bool ClanInfo_Role::_internal_has_rank() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_rank() const {
   return _internal_has_rank();
@@ -13093,19 +13093,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Role::rank() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.rank)
   return _internal_rank();
 }
-inline void ClanInfo_Role::_internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanInfo_Role::_internal_set_rank(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  rank_ = value;
+  rank_ = m_iValue;
 }
-inline void ClanInfo_Role::set_rank(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_rank(value);
+inline void ClanInfo_Role::set_rank(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_rank(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.rank)
 }
 
 // required string name = 3;
 inline bool ClanInfo_Role::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_name() const {
   return _internal_has_name();
@@ -13133,9 +13133,9 @@ inline std::string* ClanInfo_Role::mutable_name() {
 inline const std::string& ClanInfo_Role::_internal_name() const {
   return name_.Get();
 }
-inline void ClanInfo_Role::_internal_set_name(const std::string& value) {
+inline void ClanInfo_Role::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanInfo_Role::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -13162,8 +13162,8 @@ inline void ClanInfo_Role::set_allocated_name(std::string* name) {
 
 // required bool canSetMotd = 4;
 inline bool ClanInfo_Role::_internal_has_cansetmotd() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_cansetmotd() const {
   return _internal_has_cansetmotd();
@@ -13179,19 +13179,19 @@ inline bool ClanInfo_Role::cansetmotd() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetMotd)
   return _internal_cansetmotd();
 }
-inline void ClanInfo_Role::_internal_set_cansetmotd(bool value) {
+inline void ClanInfo_Role::_internal_set_cansetmotd(bool m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  cansetmotd_ = value;
+  cansetmotd_ = m_iValue;
 }
-inline void ClanInfo_Role::set_cansetmotd(bool value) {
-  _internal_set_cansetmotd(value);
+inline void ClanInfo_Role::set_cansetmotd(bool m_iValue) {
+  _internal_set_cansetmotd(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetMotd)
 }
 
 // required bool canSetLogo = 5;
 inline bool ClanInfo_Role::_internal_has_cansetlogo() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_cansetlogo() const {
   return _internal_has_cansetlogo();
@@ -13207,19 +13207,19 @@ inline bool ClanInfo_Role::cansetlogo() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetLogo)
   return _internal_cansetlogo();
 }
-inline void ClanInfo_Role::_internal_set_cansetlogo(bool value) {
+inline void ClanInfo_Role::_internal_set_cansetlogo(bool m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  cansetlogo_ = value;
+  cansetlogo_ = m_iValue;
 }
-inline void ClanInfo_Role::set_cansetlogo(bool value) {
-  _internal_set_cansetlogo(value);
+inline void ClanInfo_Role::set_cansetlogo(bool m_iValue) {
+  _internal_set_cansetlogo(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetLogo)
 }
 
 // required bool canInvite = 6;
 inline bool ClanInfo_Role::_internal_has_caninvite() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_caninvite() const {
   return _internal_has_caninvite();
@@ -13235,19 +13235,19 @@ inline bool ClanInfo_Role::caninvite() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canInvite)
   return _internal_caninvite();
 }
-inline void ClanInfo_Role::_internal_set_caninvite(bool value) {
+inline void ClanInfo_Role::_internal_set_caninvite(bool m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  caninvite_ = value;
+  caninvite_ = m_iValue;
 }
-inline void ClanInfo_Role::set_caninvite(bool value) {
-  _internal_set_caninvite(value);
+inline void ClanInfo_Role::set_caninvite(bool m_iValue) {
+  _internal_set_caninvite(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canInvite)
 }
 
 // required bool canKick = 7;
 inline bool ClanInfo_Role::_internal_has_cankick() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_cankick() const {
   return _internal_has_cankick();
@@ -13263,19 +13263,19 @@ inline bool ClanInfo_Role::cankick() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canKick)
   return _internal_cankick();
 }
-inline void ClanInfo_Role::_internal_set_cankick(bool value) {
+inline void ClanInfo_Role::_internal_set_cankick(bool m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  cankick_ = value;
+  cankick_ = m_iValue;
 }
-inline void ClanInfo_Role::set_cankick(bool value) {
-  _internal_set_cankick(value);
+inline void ClanInfo_Role::set_cankick(bool m_iValue) {
+  _internal_set_cankick(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canKick)
 }
 
 // required bool canPromote = 8;
 inline bool ClanInfo_Role::_internal_has_canpromote() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_canpromote() const {
   return _internal_has_canpromote();
@@ -13291,19 +13291,19 @@ inline bool ClanInfo_Role::canpromote() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canPromote)
   return _internal_canpromote();
 }
-inline void ClanInfo_Role::_internal_set_canpromote(bool value) {
+inline void ClanInfo_Role::_internal_set_canpromote(bool m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  canpromote_ = value;
+  canpromote_ = m_iValue;
 }
-inline void ClanInfo_Role::set_canpromote(bool value) {
-  _internal_set_canpromote(value);
+inline void ClanInfo_Role::set_canpromote(bool m_iValue) {
+  _internal_set_canpromote(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canPromote)
 }
 
 // required bool canDemote = 9;
 inline bool ClanInfo_Role::_internal_has_candemote() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_candemote() const {
   return _internal_has_candemote();
@@ -13319,19 +13319,19 @@ inline bool ClanInfo_Role::candemote() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canDemote)
   return _internal_candemote();
 }
-inline void ClanInfo_Role::_internal_set_candemote(bool value) {
+inline void ClanInfo_Role::_internal_set_candemote(bool m_iValue) {
   _has_bits_[0] |= 0x00000100u;
-  candemote_ = value;
+  candemote_ = m_iValue;
 }
-inline void ClanInfo_Role::set_candemote(bool value) {
-  _internal_set_candemote(value);
+inline void ClanInfo_Role::set_candemote(bool m_iValue) {
+  _internal_set_candemote(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canDemote)
 }
 
 // required bool canSetPlayerNotes = 10;
 inline bool ClanInfo_Role::_internal_has_cansetplayernotes() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_cansetplayernotes() const {
   return _internal_has_cansetplayernotes();
@@ -13347,19 +13347,19 @@ inline bool ClanInfo_Role::cansetplayernotes() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canSetPlayerNotes)
   return _internal_cansetplayernotes();
 }
-inline void ClanInfo_Role::_internal_set_cansetplayernotes(bool value) {
+inline void ClanInfo_Role::_internal_set_cansetplayernotes(bool m_iValue) {
   _has_bits_[0] |= 0x00000200u;
-  cansetplayernotes_ = value;
+  cansetplayernotes_ = m_iValue;
 }
-inline void ClanInfo_Role::set_cansetplayernotes(bool value) {
-  _internal_set_cansetplayernotes(value);
+inline void ClanInfo_Role::set_cansetplayernotes(bool m_iValue) {
+  _internal_set_cansetplayernotes(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canSetPlayerNotes)
 }
 
 // required bool canAccessLogs = 11;
 inline bool ClanInfo_Role::_internal_has_canaccesslogs() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000400u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Role::has_canaccesslogs() const {
   return _internal_has_canaccesslogs();
@@ -13375,12 +13375,12 @@ inline bool ClanInfo_Role::canaccesslogs() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Role.canAccessLogs)
   return _internal_canaccesslogs();
 }
-inline void ClanInfo_Role::_internal_set_canaccesslogs(bool value) {
+inline void ClanInfo_Role::_internal_set_canaccesslogs(bool m_iValue) {
   _has_bits_[0] |= 0x00000400u;
-  canaccesslogs_ = value;
+  canaccesslogs_ = m_iValue;
 }
-inline void ClanInfo_Role::set_canaccesslogs(bool value) {
-  _internal_set_canaccesslogs(value);
+inline void ClanInfo_Role::set_canaccesslogs(bool m_iValue) {
+  _internal_set_canaccesslogs(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Role.canAccessLogs)
 }
 
@@ -13390,8 +13390,8 @@ inline void ClanInfo_Role::set_canaccesslogs(bool value) {
 
 // required int64 steamId = 1;
 inline bool ClanInfo_Member::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_steamid() const {
   return _internal_has_steamid();
@@ -13407,19 +13407,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.steamId)
   return _internal_steamid();
 }
-inline void ClanInfo_Member::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Member::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void ClanInfo_Member::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_steamid(value);
+inline void ClanInfo_Member::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.steamId)
 }
 
 // required int32 roleId = 2;
 inline bool ClanInfo_Member::_internal_has_roleid() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_roleid() const {
   return _internal_has_roleid();
@@ -13435,19 +13435,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo_Member::roleid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.roleId)
   return _internal_roleid();
 }
-inline void ClanInfo_Member::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanInfo_Member::_internal_set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  roleid_ = value;
+  roleid_ = m_iValue;
 }
-inline void ClanInfo_Member::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_roleid(value);
+inline void ClanInfo_Member::set_roleid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_roleid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.roleId)
 }
 
 // required int64 joined = 3;
 inline bool ClanInfo_Member::_internal_has_joined() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_joined() const {
   return _internal_has_joined();
@@ -13463,19 +13463,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::joined() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.joined)
   return _internal_joined();
 }
-inline void ClanInfo_Member::_internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Member::_internal_set_joined(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  joined_ = value;
+  joined_ = m_iValue;
 }
-inline void ClanInfo_Member::set_joined(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_joined(value);
+inline void ClanInfo_Member::set_joined(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_joined(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.joined)
 }
 
 // required int64 lastSeen = 4;
 inline bool ClanInfo_Member::_internal_has_lastseen() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_lastseen() const {
   return _internal_has_lastseen();
@@ -13491,19 +13491,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Member::lastseen() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.lastSeen)
   return _internal_lastseen();
 }
-inline void ClanInfo_Member::_internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Member::_internal_set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  lastseen_ = value;
+  lastseen_ = m_iValue;
 }
-inline void ClanInfo_Member::set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_lastseen(value);
+inline void ClanInfo_Member::set_lastseen(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_lastseen(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.lastSeen)
 }
 
 // optional string notes = 5;
 inline bool ClanInfo_Member::_internal_has_notes() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_notes() const {
   return _internal_has_notes();
@@ -13531,9 +13531,9 @@ inline std::string* ClanInfo_Member::mutable_notes() {
 inline const std::string& ClanInfo_Member::_internal_notes() const {
   return notes_.Get();
 }
-inline void ClanInfo_Member::_internal_set_notes(const std::string& value) {
+inline void ClanInfo_Member::_internal_set_notes(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  notes_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  notes_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanInfo_Member::_internal_mutable_notes() {
   _has_bits_[0] |= 0x00000001u;
@@ -13560,8 +13560,8 @@ inline void ClanInfo_Member::set_allocated_notes(std::string* notes) {
 
 // optional bool online = 6;
 inline bool ClanInfo_Member::_internal_has_online() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Member::has_online() const {
   return _internal_has_online();
@@ -13577,12 +13577,12 @@ inline bool ClanInfo_Member::online() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Member.online)
   return _internal_online();
 }
-inline void ClanInfo_Member::_internal_set_online(bool value) {
+inline void ClanInfo_Member::_internal_set_online(bool m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  online_ = value;
+  online_ = m_iValue;
 }
-inline void ClanInfo_Member::set_online(bool value) {
-  _internal_set_online(value);
+inline void ClanInfo_Member::set_online(bool m_iValue) {
+  _internal_set_online(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Member.online)
 }
 
@@ -13592,8 +13592,8 @@ inline void ClanInfo_Member::set_online(bool value) {
 
 // required int64 steamId = 1;
 inline bool ClanInfo_Invite::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Invite::has_steamid() const {
   return _internal_has_steamid();
@@ -13609,19 +13609,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.steamId)
   return _internal_steamid();
 }
-inline void ClanInfo_Invite::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Invite::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void ClanInfo_Invite::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_steamid(value);
+inline void ClanInfo_Invite::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.steamId)
 }
 
 // required int64 recruiter = 2;
 inline bool ClanInfo_Invite::_internal_has_recruiter() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Invite::has_recruiter() const {
   return _internal_has_recruiter();
@@ -13637,19 +13637,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::recruiter() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.recruiter)
   return _internal_recruiter();
 }
-inline void ClanInfo_Invite::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Invite::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  recruiter_ = value;
+  recruiter_ = m_iValue;
 }
-inline void ClanInfo_Invite::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_recruiter(value);
+inline void ClanInfo_Invite::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_recruiter(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.recruiter)
 }
 
 // required int64 timestamp = 3;
 inline bool ClanInfo_Invite::_internal_has_timestamp() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo_Invite::has_timestamp() const {
   return _internal_has_timestamp();
@@ -13665,12 +13665,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo_Invite::timestamp() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.Invite.timestamp)
   return _internal_timestamp();
 }
-inline void ClanInfo_Invite::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo_Invite::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  timestamp_ = value;
+  timestamp_ = m_iValue;
 }
-inline void ClanInfo_Invite::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_timestamp(value);
+inline void ClanInfo_Invite::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_timestamp(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.Invite.timestamp)
 }
 
@@ -13680,8 +13680,8 @@ inline void ClanInfo_Invite::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value)
 
 // required int64 clanId = 1;
 inline bool ClanInfo::_internal_has_clanid() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_clanid() const {
   return _internal_has_clanid();
@@ -13697,19 +13697,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::clanid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.clanId)
   return _internal_clanid();
 }
-inline void ClanInfo::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  clanid_ = value;
+  clanid_ = m_iValue;
 }
-inline void ClanInfo::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_clanid(value);
+inline void ClanInfo::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_clanid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.clanId)
 }
 
 // required string name = 2;
 inline bool ClanInfo::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_name() const {
   return _internal_has_name();
@@ -13737,9 +13737,9 @@ inline std::string* ClanInfo::mutable_name() {
 inline const std::string& ClanInfo::_internal_name() const {
   return name_.Get();
 }
-inline void ClanInfo::_internal_set_name(const std::string& value) {
+inline void ClanInfo::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanInfo::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -13766,8 +13766,8 @@ inline void ClanInfo::set_allocated_name(std::string* name) {
 
 // required int64 created = 3;
 inline bool ClanInfo::_internal_has_created() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_created() const {
   return _internal_has_created();
@@ -13783,19 +13783,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::created() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.created)
   return _internal_created();
 }
-inline void ClanInfo::_internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo::_internal_set_created(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  created_ = value;
+  created_ = m_iValue;
 }
-inline void ClanInfo::set_created(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_created(value);
+inline void ClanInfo::set_created(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_created(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.created)
 }
 
 // required int64 creator = 4;
 inline bool ClanInfo::_internal_has_creator() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_creator() const {
   return _internal_has_creator();
@@ -13811,19 +13811,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::creator() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.creator)
   return _internal_creator();
 }
-inline void ClanInfo::_internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo::_internal_set_creator(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  creator_ = value;
+  creator_ = m_iValue;
 }
-inline void ClanInfo::set_creator(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_creator(value);
+inline void ClanInfo::set_creator(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_creator(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.creator)
 }
 
 // optional string motd = 5;
 inline bool ClanInfo::_internal_has_motd() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_motd() const {
   return _internal_has_motd();
@@ -13851,9 +13851,9 @@ inline std::string* ClanInfo::mutable_motd() {
 inline const std::string& ClanInfo::_internal_motd() const {
   return motd_.Get();
 }
-inline void ClanInfo::_internal_set_motd(const std::string& value) {
+inline void ClanInfo::_internal_set_motd(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  motd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  motd_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanInfo::_internal_mutable_motd() {
   _has_bits_[0] |= 0x00000002u;
@@ -13880,8 +13880,8 @@ inline void ClanInfo::set_allocated_motd(std::string* motd) {
 
 // optional int64 motdTimestamp = 6;
 inline bool ClanInfo::_internal_has_motdtimestamp() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_motdtimestamp() const {
   return _internal_has_motdtimestamp();
@@ -13897,19 +13897,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::motdtimestamp() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.motdTimestamp)
   return _internal_motdtimestamp();
 }
-inline void ClanInfo::_internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo::_internal_set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  motdtimestamp_ = value;
+  motdtimestamp_ = m_iValue;
 }
-inline void ClanInfo::set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_motdtimestamp(value);
+inline void ClanInfo::set_motdtimestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_motdtimestamp(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.motdTimestamp)
 }
 
 // optional int64 motdAuthor = 7;
 inline bool ClanInfo::_internal_has_motdauthor() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_motdauthor() const {
   return _internal_has_motdauthor();
@@ -13925,19 +13925,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInfo::motdauthor() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.motdAuthor)
   return _internal_motdauthor();
 }
-inline void ClanInfo::_internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInfo::_internal_set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  motdauthor_ = value;
+  motdauthor_ = m_iValue;
 }
-inline void ClanInfo::set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_motdauthor(value);
+inline void ClanInfo::set_motdauthor(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_motdauthor(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.motdAuthor)
 }
 
 // optional bytes logo = 8;
 inline bool ClanInfo::_internal_has_logo() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_logo() const {
   return _internal_has_logo();
@@ -13965,9 +13965,9 @@ inline std::string* ClanInfo::mutable_logo() {
 inline const std::string& ClanInfo::_internal_logo() const {
   return logo_.Get();
 }
-inline void ClanInfo::_internal_set_logo(const std::string& value) {
+inline void ClanInfo::_internal_set_logo(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  logo_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  logo_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanInfo::_internal_mutable_logo() {
   _has_bits_[0] |= 0x00000004u;
@@ -13994,8 +13994,8 @@ inline void ClanInfo::set_allocated_logo(std::string* logo) {
 
 // optional sint32 color = 9;
 inline bool ClanInfo::_internal_has_color() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_color() const {
   return _internal_has_color();
@@ -14011,12 +14011,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::color() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.color)
   return _internal_color();
 }
-inline void ClanInfo::_internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanInfo::_internal_set_color(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000100u;
-  color_ = value;
+  color_ = m_iValue;
 }
-inline void ClanInfo::set_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_color(value);
+inline void ClanInfo::set_color(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_color(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.color)
 }
 
@@ -14142,8 +14142,8 @@ ClanInfo::invites() const {
 
 // optional int32 maxMemberCount = 13;
 inline bool ClanInfo::_internal_has_maxmembercount() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  return m_iValue;
 }
 inline bool ClanInfo::has_maxmembercount() const {
   return _internal_has_maxmembercount();
@@ -14159,12 +14159,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ClanInfo::maxmembercount() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanInfo.maxMemberCount)
   return _internal_maxmembercount();
 }
-inline void ClanInfo::_internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void ClanInfo::_internal_set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000200u;
-  maxmembercount_ = value;
+  maxmembercount_ = m_iValue;
 }
-inline void ClanInfo::set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_maxmembercount(value);
+inline void ClanInfo::set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_maxmembercount(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInfo.maxMemberCount)
 }
 
@@ -14174,8 +14174,8 @@ inline void ClanInfo::set_maxmembercount(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // required int64 timestamp = 1;
 inline bool ClanLog_Entry::_internal_has_timestamp() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_timestamp() const {
   return _internal_has_timestamp();
@@ -14191,19 +14191,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog_Entry::timestamp() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanLog.Entry.timestamp)
   return _internal_timestamp();
 }
-inline void ClanLog_Entry::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanLog_Entry::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  timestamp_ = value;
+  timestamp_ = m_iValue;
 }
-inline void ClanLog_Entry::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_timestamp(value);
+inline void ClanLog_Entry::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_timestamp(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanLog.Entry.timestamp)
 }
 
 // required string eventKey = 2;
 inline bool ClanLog_Entry::_internal_has_eventkey() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_eventkey() const {
   return _internal_has_eventkey();
@@ -14231,9 +14231,9 @@ inline std::string* ClanLog_Entry::mutable_eventkey() {
 inline const std::string& ClanLog_Entry::_internal_eventkey() const {
   return eventkey_.Get();
 }
-inline void ClanLog_Entry::_internal_set_eventkey(const std::string& value) {
+inline void ClanLog_Entry::_internal_set_eventkey(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  eventkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  eventkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanLog_Entry::_internal_mutable_eventkey() {
   _has_bits_[0] |= 0x00000001u;
@@ -14260,8 +14260,8 @@ inline void ClanLog_Entry::set_allocated_eventkey(std::string* eventkey) {
 
 // optional string arg1 = 3;
 inline bool ClanLog_Entry::_internal_has_arg1() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_arg1() const {
   return _internal_has_arg1();
@@ -14289,9 +14289,9 @@ inline std::string* ClanLog_Entry::mutable_arg1() {
 inline const std::string& ClanLog_Entry::_internal_arg1() const {
   return arg1_.Get();
 }
-inline void ClanLog_Entry::_internal_set_arg1(const std::string& value) {
+inline void ClanLog_Entry::_internal_set_arg1(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  arg1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  arg1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanLog_Entry::_internal_mutable_arg1() {
   _has_bits_[0] |= 0x00000002u;
@@ -14318,8 +14318,8 @@ inline void ClanLog_Entry::set_allocated_arg1(std::string* arg1) {
 
 // optional string arg2 = 4;
 inline bool ClanLog_Entry::_internal_has_arg2() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_arg2() const {
   return _internal_has_arg2();
@@ -14347,9 +14347,9 @@ inline std::string* ClanLog_Entry::mutable_arg2() {
 inline const std::string& ClanLog_Entry::_internal_arg2() const {
   return arg2_.Get();
 }
-inline void ClanLog_Entry::_internal_set_arg2(const std::string& value) {
+inline void ClanLog_Entry::_internal_set_arg2(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  arg2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  arg2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanLog_Entry::_internal_mutable_arg2() {
   _has_bits_[0] |= 0x00000004u;
@@ -14376,8 +14376,8 @@ inline void ClanLog_Entry::set_allocated_arg2(std::string* arg2) {
 
 // optional string arg3 = 5;
 inline bool ClanLog_Entry::_internal_has_arg3() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_arg3() const {
   return _internal_has_arg3();
@@ -14405,9 +14405,9 @@ inline std::string* ClanLog_Entry::mutable_arg3() {
 inline const std::string& ClanLog_Entry::_internal_arg3() const {
   return arg3_.Get();
 }
-inline void ClanLog_Entry::_internal_set_arg3(const std::string& value) {
+inline void ClanLog_Entry::_internal_set_arg3(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  arg3_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  arg3_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanLog_Entry::_internal_mutable_arg3() {
   _has_bits_[0] |= 0x00000008u;
@@ -14434,8 +14434,8 @@ inline void ClanLog_Entry::set_allocated_arg3(std::string* arg3) {
 
 // optional string arg4 = 6;
 inline bool ClanLog_Entry::_internal_has_arg4() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog_Entry::has_arg4() const {
   return _internal_has_arg4();
@@ -14463,9 +14463,9 @@ inline std::string* ClanLog_Entry::mutable_arg4() {
 inline const std::string& ClanLog_Entry::_internal_arg4() const {
   return arg4_.Get();
 }
-inline void ClanLog_Entry::_internal_set_arg4(const std::string& value) {
+inline void ClanLog_Entry::_internal_set_arg4(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  arg4_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  arg4_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* ClanLog_Entry::_internal_mutable_arg4() {
   _has_bits_[0] |= 0x00000010u;
@@ -14496,8 +14496,8 @@ inline void ClanLog_Entry::set_allocated_arg4(std::string* arg4) {
 
 // required int64 clanId = 1;
 inline bool ClanLog::_internal_has_clanid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanLog::has_clanid() const {
   return _internal_has_clanid();
@@ -14513,12 +14513,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanLog::clanid() const {
   // @@protoc_insertion_point(field_get:rustplus.ClanLog.clanId)
   return _internal_clanid();
 }
-inline void ClanLog::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanLog::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  clanid_ = value;
+  clanid_ = m_iValue;
 }
-inline void ClanLog::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_clanid(value);
+inline void ClanLog::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_clanid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanLog.clanId)
 }
 
@@ -14568,8 +14568,8 @@ ClanLog::logentries() const {
 
 // required int64 clanId = 1;
 inline bool ClanInvitations_Invitation::_internal_has_clanid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool ClanInvitations_Invitation::has_clanid() const {
   return _internal_has_clanid();
@@ -14585,19 +14585,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::clanid() const
   // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.clanId)
   return _internal_clanid();
 }
-inline void ClanInvitations_Invitation::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInvitations_Invitation::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  clanid_ = value;
+  clanid_ = m_iValue;
 }
-inline void ClanInvitations_Invitation::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_clanid(value);
+inline void ClanInvitations_Invitation::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_clanid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.clanId)
 }
 
 // required int64 recruiter = 2;
 inline bool ClanInvitations_Invitation::_internal_has_recruiter() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool ClanInvitations_Invitation::has_recruiter() const {
   return _internal_has_recruiter();
@@ -14613,19 +14613,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::recruiter() co
   // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.recruiter)
   return _internal_recruiter();
 }
-inline void ClanInvitations_Invitation::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInvitations_Invitation::_internal_set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  recruiter_ = value;
+  recruiter_ = m_iValue;
 }
-inline void ClanInvitations_Invitation::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_recruiter(value);
+inline void ClanInvitations_Invitation::set_recruiter(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_recruiter(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.recruiter)
 }
 
 // required int64 timestamp = 3;
 inline bool ClanInvitations_Invitation::_internal_has_timestamp() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool ClanInvitations_Invitation::has_timestamp() const {
   return _internal_has_timestamp();
@@ -14641,12 +14641,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 ClanInvitations_Invitation::timestamp() co
   // @@protoc_insertion_point(field_get:rustplus.ClanInvitations.Invitation.timestamp)
   return _internal_timestamp();
 }
-inline void ClanInvitations_Invitation::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void ClanInvitations_Invitation::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  timestamp_ = value;
+  timestamp_ = m_iValue;
 }
-inline void ClanInvitations_Invitation::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_timestamp(value);
+inline void ClanInvitations_Invitation::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_timestamp(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.ClanInvitations.Invitation.timestamp)
 }
 
@@ -14700,8 +14700,8 @@ ClanInvitations::invitations() const {
 
 // required uint32 seq = 1;
 inline bool AppRequest::_internal_has_seq() const {
-  bool value = (_has_bits_[0] & 0x00200000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00200000u) != 0;
+  return m_iValue;
 }
 inline bool AppRequest::has_seq() const {
   return _internal_has_seq();
@@ -14717,19 +14717,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::seq() const {
   // @@protoc_insertion_point(field_get:rustplus.AppRequest.seq)
   return _internal_seq();
 }
-inline void AppRequest::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppRequest::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00200000u;
-  seq_ = value;
+  seq_ = m_iValue;
 }
-inline void AppRequest::set_seq(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_seq(value);
+inline void AppRequest::set_seq(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_seq(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppRequest.seq)
 }
 
 // required uint64 playerId = 2;
 inline bool AppRequest::_internal_has_playerid() const {
-  bool value = (_has_bits_[0] & 0x00100000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00100000u) != 0;
+  return m_iValue;
 }
 inline bool AppRequest::has_playerid() const {
   return _internal_has_playerid();
@@ -14745,19 +14745,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppRequest::playerid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppRequest.playerId)
   return _internal_playerid();
 }
-inline void AppRequest::_internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppRequest::_internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00100000u;
-  playerid_ = value;
+  playerid_ = m_iValue;
 }
-inline void AppRequest::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_playerid(value);
+inline void AppRequest::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_playerid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppRequest.playerId)
 }
 
 // required int32 playerToken = 3;
 inline bool AppRequest::_internal_has_playertoken() const {
-  bool value = (_has_bits_[0] & 0x00400000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00400000u) != 0;
+  return m_iValue;
 }
 inline bool AppRequest::has_playertoken() const {
   return _internal_has_playertoken();
@@ -14773,19 +14773,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppRequest::playertoken() const {
   // @@protoc_insertion_point(field_get:rustplus.AppRequest.playerToken)
   return _internal_playertoken();
 }
-inline void AppRequest::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppRequest::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00400000u;
-  playertoken_ = value;
+  playertoken_ = m_iValue;
 }
-inline void AppRequest::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_playertoken(value);
+inline void AppRequest::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_playertoken(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppRequest.playerToken)
 }
 
 // optional uint32 entityId = 4;
 inline bool AppRequest::_internal_has_entityid() const {
-  bool value = (_has_bits_[0] & 0x00800000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00800000u) != 0;
+  return m_iValue;
 }
 inline bool AppRequest::has_entityid() const {
   return _internal_has_entityid();
@@ -14801,20 +14801,20 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppRequest::entityid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppRequest.entityId)
   return _internal_entityid();
 }
-inline void AppRequest::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppRequest::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00800000u;
-  entityid_ = value;
+  entityid_ = m_iValue;
 }
-inline void AppRequest::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_entityid(value);
+inline void AppRequest::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_entityid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppRequest.entityId)
 }
 
 // optional .rustplus.AppEmpty getInfo = 8;
 inline bool AppRequest::_internal_has_getinfo() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || getinfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getinfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getinfo() const {
   return _internal_has_getinfo();
@@ -14902,9 +14902,9 @@ inline void AppRequest::set_allocated_getinfo(::rustplus::AppEmpty* getinfo) {
 
 // optional .rustplus.AppEmpty getTime = 9;
 inline bool AppRequest::_internal_has_gettime() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || gettime_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || gettime_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_gettime() const {
   return _internal_has_gettime();
@@ -14992,9 +14992,9 @@ inline void AppRequest::set_allocated_gettime(::rustplus::AppEmpty* gettime) {
 
 // optional .rustplus.AppEmpty getMap = 10;
 inline bool AppRequest::_internal_has_getmap() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || getmap_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getmap_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getmap() const {
   return _internal_has_getmap();
@@ -15082,9 +15082,9 @@ inline void AppRequest::set_allocated_getmap(::rustplus::AppEmpty* getmap) {
 
 // optional .rustplus.AppEmpty getTeamInfo = 11;
 inline bool AppRequest::_internal_has_getteaminfo() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || getteaminfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getteaminfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getteaminfo() const {
   return _internal_has_getteaminfo();
@@ -15172,9 +15172,9 @@ inline void AppRequest::set_allocated_getteaminfo(::rustplus::AppEmpty* getteami
 
 // optional .rustplus.AppEmpty getTeamChat = 12;
 inline bool AppRequest::_internal_has_getteamchat() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || getteamchat_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getteamchat_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getteamchat() const {
   return _internal_has_getteamchat();
@@ -15262,9 +15262,9 @@ inline void AppRequest::set_allocated_getteamchat(::rustplus::AppEmpty* getteamc
 
 // optional .rustplus.AppSendMessage sendTeamMessage = 13;
 inline bool AppRequest::_internal_has_sendteammessage() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || sendteammessage_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || sendteammessage_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_sendteammessage() const {
   return _internal_has_sendteammessage();
@@ -15352,9 +15352,9 @@ inline void AppRequest::set_allocated_sendteammessage(::rustplus::AppSendMessage
 
 // optional .rustplus.AppEmpty getEntityInfo = 14;
 inline bool AppRequest::_internal_has_getentityinfo() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  PROTOBUF_ASSUME(!value || getentityinfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getentityinfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getentityinfo() const {
   return _internal_has_getentityinfo();
@@ -15442,9 +15442,9 @@ inline void AppRequest::set_allocated_getentityinfo(::rustplus::AppEmpty* getent
 
 // optional .rustplus.AppSetEntityValue setEntityValue = 15;
 inline bool AppRequest::_internal_has_setentityvalue() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  PROTOBUF_ASSUME(!value || setentityvalue_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || setentityvalue_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_setentityvalue() const {
   return _internal_has_setentityvalue();
@@ -15532,9 +15532,9 @@ inline void AppRequest::set_allocated_setentityvalue(::rustplus::AppSetEntityVal
 
 // optional .rustplus.AppEmpty checkSubscription = 16;
 inline bool AppRequest::_internal_has_checksubscription() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  PROTOBUF_ASSUME(!value || checksubscription_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || checksubscription_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_checksubscription() const {
   return _internal_has_checksubscription();
@@ -15622,9 +15622,9 @@ inline void AppRequest::set_allocated_checksubscription(::rustplus::AppEmpty* ch
 
 // optional .rustplus.AppFlag setSubscription = 17;
 inline bool AppRequest::_internal_has_setsubscription() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  PROTOBUF_ASSUME(!value || setsubscription_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || setsubscription_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_setsubscription() const {
   return _internal_has_setsubscription();
@@ -15712,9 +15712,9 @@ inline void AppRequest::set_allocated_setsubscription(::rustplus::AppFlag* setsu
 
 // optional .rustplus.AppEmpty getMapMarkers = 18;
 inline bool AppRequest::_internal_has_getmapmarkers() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  PROTOBUF_ASSUME(!value || getmapmarkers_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000400u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getmapmarkers_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getmapmarkers() const {
   return _internal_has_getmapmarkers();
@@ -15802,9 +15802,9 @@ inline void AppRequest::set_allocated_getmapmarkers(::rustplus::AppEmpty* getmap
 
 // optional .rustplus.AppPromoteToLeader promoteToLeader = 20;
 inline bool AppRequest::_internal_has_promotetoleader() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  PROTOBUF_ASSUME(!value || promotetoleader_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000800u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || promotetoleader_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_promotetoleader() const {
   return _internal_has_promotetoleader();
@@ -15892,9 +15892,9 @@ inline void AppRequest::set_allocated_promotetoleader(::rustplus::AppPromoteToLe
 
 // optional .rustplus.AppEmpty getClanInfo = 21;
 inline bool AppRequest::_internal_has_getclaninfo() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  PROTOBUF_ASSUME(!value || getclaninfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00001000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getclaninfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getclaninfo() const {
   return _internal_has_getclaninfo();
@@ -15982,9 +15982,9 @@ inline void AppRequest::set_allocated_getclaninfo(::rustplus::AppEmpty* getclani
 
 // optional .rustplus.AppSendMessage setClanMotd = 22;
 inline bool AppRequest::_internal_has_setclanmotd() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  PROTOBUF_ASSUME(!value || setclanmotd_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00002000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || setclanmotd_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_setclanmotd() const {
   return _internal_has_setclanmotd();
@@ -16072,9 +16072,9 @@ inline void AppRequest::set_allocated_setclanmotd(::rustplus::AppSendMessage* se
 
 // optional .rustplus.AppEmpty getClanChat = 23;
 inline bool AppRequest::_internal_has_getclanchat() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  PROTOBUF_ASSUME(!value || getclanchat_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00004000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getclanchat_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getclanchat() const {
   return _internal_has_getclanchat();
@@ -16162,9 +16162,9 @@ inline void AppRequest::set_allocated_getclanchat(::rustplus::AppEmpty* getclanc
 
 // optional .rustplus.AppSendMessage sendClanMessage = 24;
 inline bool AppRequest::_internal_has_sendclanmessage() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
-  PROTOBUF_ASSUME(!value || sendclanmessage_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00008000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || sendclanmessage_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_sendclanmessage() const {
   return _internal_has_sendclanmessage();
@@ -16252,9 +16252,9 @@ inline void AppRequest::set_allocated_sendclanmessage(::rustplus::AppSendMessage
 
 // optional .rustplus.AppGetNexusAuth getNexusAuth = 25;
 inline bool AppRequest::_internal_has_getnexusauth() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
-  PROTOBUF_ASSUME(!value || getnexusauth_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00010000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || getnexusauth_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_getnexusauth() const {
   return _internal_has_getnexusauth();
@@ -16342,9 +16342,9 @@ inline void AppRequest::set_allocated_getnexusauth(::rustplus::AppGetNexusAuth* 
 
 // optional .rustplus.AppCameraSubscribe cameraSubscribe = 30;
 inline bool AppRequest::_internal_has_camerasubscribe() const {
-  bool value = (_has_bits_[0] & 0x00020000u) != 0;
-  PROTOBUF_ASSUME(!value || camerasubscribe_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00020000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || camerasubscribe_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_camerasubscribe() const {
   return _internal_has_camerasubscribe();
@@ -16432,9 +16432,9 @@ inline void AppRequest::set_allocated_camerasubscribe(::rustplus::AppCameraSubsc
 
 // optional .rustplus.AppEmpty cameraUnsubscribe = 31;
 inline bool AppRequest::_internal_has_cameraunsubscribe() const {
-  bool value = (_has_bits_[0] & 0x00040000u) != 0;
-  PROTOBUF_ASSUME(!value || cameraunsubscribe_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00040000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || cameraunsubscribe_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_cameraunsubscribe() const {
   return _internal_has_cameraunsubscribe();
@@ -16522,9 +16522,9 @@ inline void AppRequest::set_allocated_cameraunsubscribe(::rustplus::AppEmpty* ca
 
 // optional .rustplus.AppCameraInput cameraInput = 32;
 inline bool AppRequest::_internal_has_camerainput() const {
-  bool value = (_has_bits_[0] & 0x00080000u) != 0;
-  PROTOBUF_ASSUME(!value || camerainput_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00080000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || camerainput_ != nullptr);
+  return m_iValue;
 }
 inline bool AppRequest::has_camerainput() const {
   return _internal_has_camerainput();
@@ -16616,9 +16616,9 @@ inline void AppRequest::set_allocated_camerainput(::rustplus::AppCameraInput* ca
 
 // optional .rustplus.AppResponse response = 1;
 inline bool AppMessage::_internal_has_response() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || response_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || response_ != nullptr);
+  return m_iValue;
 }
 inline bool AppMessage::has_response() const {
   return _internal_has_response();
@@ -16706,9 +16706,9 @@ inline void AppMessage::set_allocated_response(::rustplus::AppResponse* response
 
 // optional .rustplus.AppBroadcast broadcast = 2;
 inline bool AppMessage::_internal_has_broadcast() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || broadcast_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || broadcast_ != nullptr);
+  return m_iValue;
 }
 inline bool AppMessage::has_broadcast() const {
   return _internal_has_broadcast();
@@ -16800,8 +16800,8 @@ inline void AppMessage::set_allocated_broadcast(::rustplus::AppBroadcast* broadc
 
 // required int32 seq = 1;
 inline bool AppResponse::_internal_has_seq() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00004000u) != 0;
+  return m_iValue;
 }
 inline bool AppResponse::has_seq() const {
   return _internal_has_seq();
@@ -16817,20 +16817,20 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppResponse::seq() const {
   // @@protoc_insertion_point(field_get:rustplus.AppResponse.seq)
   return _internal_seq();
 }
-inline void AppResponse::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppResponse::_internal_set_seq(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00004000u;
-  seq_ = value;
+  seq_ = m_iValue;
 }
-inline void AppResponse::set_seq(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_seq(value);
+inline void AppResponse::set_seq(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_seq(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppResponse.seq)
 }
 
 // optional .rustplus.AppSuccess success = 4;
 inline bool AppResponse::_internal_has_success() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || success_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || success_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_success() const {
   return _internal_has_success();
@@ -16918,9 +16918,9 @@ inline void AppResponse::set_allocated_success(::rustplus::AppSuccess* success) 
 
 // optional .rustplus.AppError error = 5;
 inline bool AppResponse::_internal_has_error() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || error_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || error_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_error() const {
   return _internal_has_error();
@@ -17008,9 +17008,9 @@ inline void AppResponse::set_allocated_error(::rustplus::AppError* error) {
 
 // optional .rustplus.AppInfo info = 6;
 inline bool AppResponse::_internal_has_info() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || info_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || info_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_info() const {
   return _internal_has_info();
@@ -17098,9 +17098,9 @@ inline void AppResponse::set_allocated_info(::rustplus::AppInfo* info) {
 
 // optional .rustplus.AppTime time = 7;
 inline bool AppResponse::_internal_has_time() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || time_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || time_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_time() const {
   return _internal_has_time();
@@ -17188,9 +17188,9 @@ inline void AppResponse::set_allocated_time(::rustplus::AppTime* time) {
 
 // optional .rustplus.AppMap map = 8;
 inline bool AppResponse::_internal_has_map() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || map_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || map_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_map() const {
   return _internal_has_map();
@@ -17278,9 +17278,9 @@ inline void AppResponse::set_allocated_map(::rustplus::AppMap* map) {
 
 // optional .rustplus.AppTeamInfo teamInfo = 9;
 inline bool AppResponse::_internal_has_teaminfo() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || teaminfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || teaminfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_teaminfo() const {
   return _internal_has_teaminfo();
@@ -17368,9 +17368,9 @@ inline void AppResponse::set_allocated_teaminfo(::rustplus::AppTeamInfo* teaminf
 
 // optional .rustplus.AppTeamChat teamChat = 10;
 inline bool AppResponse::_internal_has_teamchat() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  PROTOBUF_ASSUME(!value || teamchat_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || teamchat_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_teamchat() const {
   return _internal_has_teamchat();
@@ -17458,9 +17458,9 @@ inline void AppResponse::set_allocated_teamchat(::rustplus::AppTeamChat* teamcha
 
 // optional .rustplus.AppEntityInfo entityInfo = 11;
 inline bool AppResponse::_internal_has_entityinfo() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  PROTOBUF_ASSUME(!value || entityinfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || entityinfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_entityinfo() const {
   return _internal_has_entityinfo();
@@ -17548,9 +17548,9 @@ inline void AppResponse::set_allocated_entityinfo(::rustplus::AppEntityInfo* ent
 
 // optional .rustplus.AppFlag flag = 12;
 inline bool AppResponse::_internal_has_flag() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  PROTOBUF_ASSUME(!value || flag_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || flag_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_flag() const {
   return _internal_has_flag();
@@ -17638,9 +17638,9 @@ inline void AppResponse::set_allocated_flag(::rustplus::AppFlag* flag) {
 
 // optional .rustplus.AppMapMarkers mapMarkers = 13;
 inline bool AppResponse::_internal_has_mapmarkers() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  PROTOBUF_ASSUME(!value || mapmarkers_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || mapmarkers_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_mapmarkers() const {
   return _internal_has_mapmarkers();
@@ -17728,9 +17728,9 @@ inline void AppResponse::set_allocated_mapmarkers(::rustplus::AppMapMarkers* map
 
 // optional .rustplus.AppClanInfo clanInfo = 15;
 inline bool AppResponse::_internal_has_claninfo() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000400u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || claninfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_claninfo() const {
   return _internal_has_claninfo();
@@ -17818,9 +17818,9 @@ inline void AppResponse::set_allocated_claninfo(::rustplus::AppClanInfo* claninf
 
 // optional .rustplus.AppClanChat clanChat = 16;
 inline bool AppResponse::_internal_has_clanchat() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  PROTOBUF_ASSUME(!value || clanchat_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000800u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || clanchat_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_clanchat() const {
   return _internal_has_clanchat();
@@ -17908,9 +17908,9 @@ inline void AppResponse::set_allocated_clanchat(::rustplus::AppClanChat* clancha
 
 // optional .rustplus.AppNexusAuth nexusAuth = 17;
 inline bool AppResponse::_internal_has_nexusauth() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  PROTOBUF_ASSUME(!value || nexusauth_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00001000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || nexusauth_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_nexusauth() const {
   return _internal_has_nexusauth();
@@ -17998,9 +17998,9 @@ inline void AppResponse::set_allocated_nexusauth(::rustplus::AppNexusAuth* nexus
 
 // optional .rustplus.AppCameraInfo cameraSubscribeInfo = 20;
 inline bool AppResponse::_internal_has_camerasubscribeinfo() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  PROTOBUF_ASSUME(!value || camerasubscribeinfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00002000u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || camerasubscribeinfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppResponse::has_camerasubscribeinfo() const {
   return _internal_has_camerasubscribeinfo();
@@ -18092,9 +18092,9 @@ inline void AppResponse::set_allocated_camerasubscribeinfo(::rustplus::AppCamera
 
 // optional .rustplus.AppTeamChanged teamChanged = 4;
 inline bool AppBroadcast::_internal_has_teamchanged() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || teamchanged_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || teamchanged_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_teamchanged() const {
   return _internal_has_teamchanged();
@@ -18182,9 +18182,9 @@ inline void AppBroadcast::set_allocated_teamchanged(::rustplus::AppTeamChanged* 
 
 // optional .rustplus.AppNewTeamMessage newTeamMessage = 5;
 inline bool AppBroadcast::_internal_has_newteammessage() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || newteammessage_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || newteammessage_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_newteammessage() const {
   return _internal_has_newteammessage();
@@ -18272,9 +18272,9 @@ inline void AppBroadcast::set_allocated_newteammessage(::rustplus::AppNewTeamMes
 
 // optional .rustplus.AppEntityChanged entityChanged = 6;
 inline bool AppBroadcast::_internal_has_entitychanged() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || entitychanged_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || entitychanged_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_entitychanged() const {
   return _internal_has_entitychanged();
@@ -18362,9 +18362,9 @@ inline void AppBroadcast::set_allocated_entitychanged(::rustplus::AppEntityChang
 
 // optional .rustplus.AppClanChanged clanChanged = 7;
 inline bool AppBroadcast::_internal_has_clanchanged() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || clanchanged_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || clanchanged_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_clanchanged() const {
   return _internal_has_clanchanged();
@@ -18452,9 +18452,9 @@ inline void AppBroadcast::set_allocated_clanchanged(::rustplus::AppClanChanged* 
 
 // optional .rustplus.AppNewClanMessage clanMessage = 8;
 inline bool AppBroadcast::_internal_has_clanmessage() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || clanmessage_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || clanmessage_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_clanmessage() const {
   return _internal_has_clanmessage();
@@ -18542,9 +18542,9 @@ inline void AppBroadcast::set_allocated_clanmessage(::rustplus::AppNewClanMessag
 
 // optional .rustplus.AppCameraRays cameraRays = 10;
 inline bool AppBroadcast::_internal_has_camerarays() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || camerarays_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || camerarays_ != nullptr);
+  return m_iValue;
 }
 inline bool AppBroadcast::has_camerarays() const {
   return _internal_has_camerarays();
@@ -18640,8 +18640,8 @@ inline void AppBroadcast::set_allocated_camerarays(::rustplus::AppCameraRays* ca
 
 // required string message = 1;
 inline bool AppSendMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppSendMessage::has_message() const {
   return _internal_has_message();
@@ -18669,9 +18669,9 @@ inline std::string* AppSendMessage::mutable_message() {
 inline const std::string& AppSendMessage::_internal_message() const {
   return message_.Get();
 }
-inline void AppSendMessage::_internal_set_message(const std::string& value) {
+inline void AppSendMessage::_internal_set_message(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppSendMessage::_internal_mutable_message() {
   _has_bits_[0] |= 0x00000001u;
@@ -18702,8 +18702,8 @@ inline void AppSendMessage::set_allocated_message(std::string* message) {
 
 // required bool value = 1;
 inline bool AppSetEntityValue::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppSetEntityValue::has_value() const {
   return _internal_has_value();
@@ -18715,16 +18715,16 @@ inline void AppSetEntityValue::clear_value() {
 inline bool AppSetEntityValue::_internal_value() const {
   return value_;
 }
-inline bool AppSetEntityValue::value() const {
+inline bool AppSetEntityValue::m_iValue() const {
   // @@protoc_insertion_point(field_get:rustplus.AppSetEntityValue.value)
   return _internal_value();
 }
-inline void AppSetEntityValue::_internal_set_value(bool value) {
+inline void AppSetEntityValue::_internal_set_value(bool m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  value_ = value;
+  value_ = m_iValue;
 }
-inline void AppSetEntityValue::set_value(bool value) {
-  _internal_set_value(value);
+inline void AppSetEntityValue::set_value(bool m_iValue) {
+  _internal_set_value(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppSetEntityValue.value)
 }
 
@@ -18734,8 +18734,8 @@ inline void AppSetEntityValue::set_value(bool value) {
 
 // required int64 steamId = 1;
 inline bool AppPromoteToLeader::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppPromoteToLeader::has_steamid() const {
   return _internal_has_steamid();
@@ -18751,12 +18751,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 AppPromoteToLeader::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppPromoteToLeader.steamId)
   return _internal_steamid();
 }
-inline void AppPromoteToLeader::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void AppPromoteToLeader::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void AppPromoteToLeader::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_steamid(value);
+inline void AppPromoteToLeader::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppPromoteToLeader.steamId)
 }
 
@@ -18766,8 +18766,8 @@ inline void AppPromoteToLeader::set_steamid(::PROTOBUF_NAMESPACE_ID::int64 value
 
 // required string appKey = 1;
 inline bool AppGetNexusAuth::_internal_has_appkey() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppGetNexusAuth::has_appkey() const {
   return _internal_has_appkey();
@@ -18795,9 +18795,9 @@ inline std::string* AppGetNexusAuth::mutable_appkey() {
 inline const std::string& AppGetNexusAuth::_internal_appkey() const {
   return appkey_.Get();
 }
-inline void AppGetNexusAuth::_internal_set_appkey(const std::string& value) {
+inline void AppGetNexusAuth::_internal_set_appkey(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  appkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  appkey_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppGetNexusAuth::_internal_mutable_appkey() {
   _has_bits_[0] |= 0x00000001u;
@@ -18832,8 +18832,8 @@ inline void AppGetNexusAuth::set_allocated_appkey(std::string* appkey) {
 
 // required string error = 1;
 inline bool AppError::_internal_has_error() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppError::has_error() const {
   return _internal_has_error();
@@ -18861,9 +18861,9 @@ inline std::string* AppError::mutable_error() {
 inline const std::string& AppError::_internal_error() const {
   return error_.Get();
 }
-inline void AppError::_internal_set_error(const std::string& value) {
+inline void AppError::_internal_set_error(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  error_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  error_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppError::_internal_mutable_error() {
   _has_bits_[0] |= 0x00000001u;
@@ -18894,8 +18894,8 @@ inline void AppError::set_allocated_error(std::string* error) {
 
 // required bool value = 1;
 inline bool AppFlag::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppFlag::has_value() const {
   return _internal_has_value();
@@ -18907,16 +18907,16 @@ inline void AppFlag::clear_value() {
 inline bool AppFlag::_internal_value() const {
   return value_;
 }
-inline bool AppFlag::value() const {
+inline bool AppFlag::m_iValue() const {
   // @@protoc_insertion_point(field_get:rustplus.AppFlag.value)
   return _internal_value();
 }
-inline void AppFlag::_internal_set_value(bool value) {
+inline void AppFlag::_internal_set_value(bool m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  value_ = value;
+  value_ = m_iValue;
 }
-inline void AppFlag::set_value(bool value) {
-  _internal_set_value(value);
+inline void AppFlag::set_value(bool m_iValue) {
+  _internal_set_value(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppFlag.value)
 }
 
@@ -18926,8 +18926,8 @@ inline void AppFlag::set_value(bool value) {
 
 // required string name = 1;
 inline bool AppInfo::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_name() const {
   return _internal_has_name();
@@ -18955,9 +18955,9 @@ inline std::string* AppInfo::mutable_name() {
 inline const std::string& AppInfo::_internal_name() const {
   return name_.Get();
 }
-inline void AppInfo::_internal_set_name(const std::string& value) {
+inline void AppInfo::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -18984,8 +18984,8 @@ inline void AppInfo::set_allocated_name(std::string* name) {
 
 // required string headerImage = 2;
 inline bool AppInfo::_internal_has_headerimage() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_headerimage() const {
   return _internal_has_headerimage();
@@ -19013,9 +19013,9 @@ inline std::string* AppInfo::mutable_headerimage() {
 inline const std::string& AppInfo::_internal_headerimage() const {
   return headerimage_.Get();
 }
-inline void AppInfo::_internal_set_headerimage(const std::string& value) {
+inline void AppInfo::_internal_set_headerimage(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  headerimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  headerimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_headerimage() {
   _has_bits_[0] |= 0x00000002u;
@@ -19042,8 +19042,8 @@ inline void AppInfo::set_allocated_headerimage(std::string* headerimage) {
 
 // required string url = 3;
 inline bool AppInfo::_internal_has_url() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_url() const {
   return _internal_has_url();
@@ -19071,9 +19071,9 @@ inline std::string* AppInfo::mutable_url() {
 inline const std::string& AppInfo::_internal_url() const {
   return url_.Get();
 }
-inline void AppInfo::_internal_set_url(const std::string& value) {
+inline void AppInfo::_internal_set_url(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  url_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_url() {
   _has_bits_[0] |= 0x00000004u;
@@ -19100,8 +19100,8 @@ inline void AppInfo::set_allocated_url(std::string* url) {
 
 // required string map = 4;
 inline bool AppInfo::_internal_has_map() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_map() const {
   return _internal_has_map();
@@ -19129,9 +19129,9 @@ inline std::string* AppInfo::mutable_map() {
 inline const std::string& AppInfo::_internal_map() const {
   return map_.Get();
 }
-inline void AppInfo::_internal_set_map(const std::string& value) {
+inline void AppInfo::_internal_set_map(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  map_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  map_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_map() {
   _has_bits_[0] |= 0x00000008u;
@@ -19158,8 +19158,8 @@ inline void AppInfo::set_allocated_map(std::string* map) {
 
 // required uint32 mapSize = 5;
 inline bool AppInfo::_internal_has_mapsize() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_mapsize() const {
   return _internal_has_mapsize();
@@ -19175,19 +19175,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::mapsize() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.mapSize)
   return _internal_mapsize();
 }
-inline void AppInfo::_internal_set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  mapsize_ = value;
+  mapsize_ = m_iValue;
 }
-inline void AppInfo::set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_mapsize(value);
+inline void AppInfo::set_mapsize(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_mapsize(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.mapSize)
 }
 
 // required uint32 wipeTime = 6;
 inline bool AppInfo::_internal_has_wipetime() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_wipetime() const {
   return _internal_has_wipetime();
@@ -19203,19 +19203,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::wipetime() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.wipeTime)
   return _internal_wipetime();
 }
-inline void AppInfo::_internal_set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000100u;
-  wipetime_ = value;
+  wipetime_ = m_iValue;
 }
-inline void AppInfo::set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_wipetime(value);
+inline void AppInfo::set_wipetime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_wipetime(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.wipeTime)
 }
 
 // required uint32 players = 7;
 inline bool AppInfo::_internal_has_players() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_players() const {
   return _internal_has_players();
@@ -19231,19 +19231,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::players() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.players)
   return _internal_players();
 }
-inline void AppInfo::_internal_set_players(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_players(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000200u;
-  players_ = value;
+  players_ = m_iValue;
 }
-inline void AppInfo::set_players(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_players(value);
+inline void AppInfo::set_players(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_players(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.players)
 }
 
 // required uint32 maxPlayers = 8;
 inline bool AppInfo::_internal_has_maxplayers() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000400u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_maxplayers() const {
   return _internal_has_maxplayers();
@@ -19259,19 +19259,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::maxplayers() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.maxPlayers)
   return _internal_maxplayers();
 }
-inline void AppInfo::_internal_set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000400u;
-  maxplayers_ = value;
+  maxplayers_ = m_iValue;
 }
-inline void AppInfo::set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_maxplayers(value);
+inline void AppInfo::set_maxplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_maxplayers(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.maxPlayers)
 }
 
 // required uint32 queuedPlayers = 9;
 inline bool AppInfo::_internal_has_queuedplayers() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000800u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_queuedplayers() const {
   return _internal_has_queuedplayers();
@@ -19287,19 +19287,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::queuedplayers() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.queuedPlayers)
   return _internal_queuedplayers();
 }
-inline void AppInfo::_internal_set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000800u;
-  queuedplayers_ = value;
+  queuedplayers_ = m_iValue;
 }
-inline void AppInfo::set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_queuedplayers(value);
+inline void AppInfo::set_queuedplayers(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_queuedplayers(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.queuedPlayers)
 }
 
 // optional uint32 seed = 10;
 inline bool AppInfo::_internal_has_seed() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00001000u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_seed() const {
   return _internal_has_seed();
@@ -19315,19 +19315,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::seed() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.seed)
   return _internal_seed();
 }
-inline void AppInfo::_internal_set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_seed(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00001000u;
-  seed_ = value;
+  seed_ = m_iValue;
 }
-inline void AppInfo::set_seed(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_seed(value);
+inline void AppInfo::set_seed(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_seed(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.seed)
 }
 
 // optional uint32 salt = 11;
 inline bool AppInfo::_internal_has_salt() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00002000u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_salt() const {
   return _internal_has_salt();
@@ -19343,19 +19343,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppInfo::salt() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.salt)
   return _internal_salt();
 }
-inline void AppInfo::_internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppInfo::_internal_set_salt(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00002000u;
-  salt_ = value;
+  salt_ = m_iValue;
 }
-inline void AppInfo::set_salt(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_salt(value);
+inline void AppInfo::set_salt(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_salt(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.salt)
 }
 
 // optional string logoImage = 12;
 inline bool AppInfo::_internal_has_logoimage() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_logoimage() const {
   return _internal_has_logoimage();
@@ -19383,9 +19383,9 @@ inline std::string* AppInfo::mutable_logoimage() {
 inline const std::string& AppInfo::_internal_logoimage() const {
   return logoimage_.Get();
 }
-inline void AppInfo::_internal_set_logoimage(const std::string& value) {
+inline void AppInfo::_internal_set_logoimage(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  logoimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  logoimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_logoimage() {
   _has_bits_[0] |= 0x00000010u;
@@ -19412,8 +19412,8 @@ inline void AppInfo::set_allocated_logoimage(std::string* logoimage) {
 
 // optional string nexus = 13;
 inline bool AppInfo::_internal_has_nexus() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_nexus() const {
   return _internal_has_nexus();
@@ -19441,9 +19441,9 @@ inline std::string* AppInfo::mutable_nexus() {
 inline const std::string& AppInfo::_internal_nexus() const {
   return nexus_.Get();
 }
-inline void AppInfo::_internal_set_nexus(const std::string& value) {
+inline void AppInfo::_internal_set_nexus(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  nexus_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  nexus_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_nexus() {
   _has_bits_[0] |= 0x00000020u;
@@ -19470,8 +19470,8 @@ inline void AppInfo::set_allocated_nexus(std::string* nexus) {
 
 // optional int32 nexusId = 14;
 inline bool AppInfo::_internal_has_nexusid() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00004000u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_nexusid() const {
   return _internal_has_nexusid();
@@ -19487,19 +19487,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppInfo::nexusid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppInfo.nexusId)
   return _internal_nexusid();
 }
-inline void AppInfo::_internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppInfo::_internal_set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00004000u;
-  nexusid_ = value;
+  nexusid_ = m_iValue;
 }
-inline void AppInfo::set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_nexusid(value);
+inline void AppInfo::set_nexusid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_nexusid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppInfo.nexusId)
 }
 
 // optional string nexusZone = 15;
 inline bool AppInfo::_internal_has_nexuszone() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool AppInfo::has_nexuszone() const {
   return _internal_has_nexuszone();
@@ -19527,9 +19527,9 @@ inline std::string* AppInfo::mutable_nexuszone() {
 inline const std::string& AppInfo::_internal_nexuszone() const {
   return nexuszone_.Get();
 }
-inline void AppInfo::_internal_set_nexuszone(const std::string& value) {
+inline void AppInfo::_internal_set_nexuszone(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  nexuszone_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  nexuszone_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppInfo::_internal_mutable_nexuszone() {
   _has_bits_[0] |= 0x00000040u;
@@ -19560,8 +19560,8 @@ inline void AppInfo::set_allocated_nexuszone(std::string* nexuszone) {
 
 // required float dayLengthMinutes = 1;
 inline bool AppTime::_internal_has_daylengthminutes() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppTime::has_daylengthminutes() const {
   return _internal_has_daylengthminutes();
@@ -19577,19 +19577,19 @@ inline float AppTime::daylengthminutes() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTime.dayLengthMinutes)
   return _internal_daylengthminutes();
 }
-inline void AppTime::_internal_set_daylengthminutes(float value) {
+inline void AppTime::_internal_set_daylengthminutes(float m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  daylengthminutes_ = value;
+  daylengthminutes_ = m_iValue;
 }
-inline void AppTime::set_daylengthminutes(float value) {
-  _internal_set_daylengthminutes(value);
+inline void AppTime::set_daylengthminutes(float m_iValue) {
+  _internal_set_daylengthminutes(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTime.dayLengthMinutes)
 }
 
 // required float timeScale = 2;
 inline bool AppTime::_internal_has_timescale() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppTime::has_timescale() const {
   return _internal_has_timescale();
@@ -19605,19 +19605,19 @@ inline float AppTime::timescale() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTime.timeScale)
   return _internal_timescale();
 }
-inline void AppTime::_internal_set_timescale(float value) {
+inline void AppTime::_internal_set_timescale(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  timescale_ = value;
+  timescale_ = m_iValue;
 }
-inline void AppTime::set_timescale(float value) {
-  _internal_set_timescale(value);
+inline void AppTime::set_timescale(float m_iValue) {
+  _internal_set_timescale(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTime.timeScale)
 }
 
 // required float sunrise = 3;
 inline bool AppTime::_internal_has_sunrise() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppTime::has_sunrise() const {
   return _internal_has_sunrise();
@@ -19633,19 +19633,19 @@ inline float AppTime::sunrise() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTime.sunrise)
   return _internal_sunrise();
 }
-inline void AppTime::_internal_set_sunrise(float value) {
+inline void AppTime::_internal_set_sunrise(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  sunrise_ = value;
+  sunrise_ = m_iValue;
 }
-inline void AppTime::set_sunrise(float value) {
-  _internal_set_sunrise(value);
+inline void AppTime::set_sunrise(float m_iValue) {
+  _internal_set_sunrise(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTime.sunrise)
 }
 
 // required float sunset = 4;
 inline bool AppTime::_internal_has_sunset() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppTime::has_sunset() const {
   return _internal_has_sunset();
@@ -19661,19 +19661,19 @@ inline float AppTime::sunset() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTime.sunset)
   return _internal_sunset();
 }
-inline void AppTime::_internal_set_sunset(float value) {
+inline void AppTime::_internal_set_sunset(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  sunset_ = value;
+  sunset_ = m_iValue;
 }
-inline void AppTime::set_sunset(float value) {
-  _internal_set_sunset(value);
+inline void AppTime::set_sunset(float m_iValue) {
+  _internal_set_sunset(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTime.sunset)
 }
 
 // required float time = 5;
 inline bool AppTime::_internal_has_time() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppTime::has_time() const {
   return _internal_has_time();
@@ -19689,12 +19689,12 @@ inline float AppTime::time() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTime.time)
   return _internal_time();
 }
-inline void AppTime::_internal_set_time(float value) {
+inline void AppTime::_internal_set_time(float m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  time_ = value;
+  time_ = m_iValue;
 }
-inline void AppTime::set_time(float value) {
-  _internal_set_time(value);
+inline void AppTime::set_time(float m_iValue) {
+  _internal_set_time(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTime.time)
 }
 
@@ -19704,8 +19704,8 @@ inline void AppTime::set_time(float value) {
 
 // required string token = 1;
 inline bool AppMap_Monument::_internal_has_token() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppMap_Monument::has_token() const {
   return _internal_has_token();
@@ -19733,9 +19733,9 @@ inline std::string* AppMap_Monument::mutable_token() {
 inline const std::string& AppMap_Monument::_internal_token() const {
   return token_.Get();
 }
-inline void AppMap_Monument::_internal_set_token(const std::string& value) {
+inline void AppMap_Monument::_internal_set_token(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppMap_Monument::_internal_mutable_token() {
   _has_bits_[0] |= 0x00000001u;
@@ -19762,8 +19762,8 @@ inline void AppMap_Monument::set_allocated_token(std::string* token) {
 
 // required float x = 2;
 inline bool AppMap_Monument::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppMap_Monument::has_x() const {
   return _internal_has_x();
@@ -19779,19 +19779,19 @@ inline float AppMap_Monument::x() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMap.Monument.x)
   return _internal_x();
 }
-inline void AppMap_Monument::_internal_set_x(float value) {
+inline void AppMap_Monument::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void AppMap_Monument::set_x(float value) {
-  _internal_set_x(value);
+inline void AppMap_Monument::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMap.Monument.x)
 }
 
 // required float y = 3;
 inline bool AppMap_Monument::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppMap_Monument::has_y() const {
   return _internal_has_y();
@@ -19807,12 +19807,12 @@ inline float AppMap_Monument::y() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMap.Monument.y)
   return _internal_y();
 }
-inline void AppMap_Monument::_internal_set_y(float value) {
+inline void AppMap_Monument::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void AppMap_Monument::set_y(float value) {
-  _internal_set_y(value);
+inline void AppMap_Monument::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMap.Monument.y)
 }
 
@@ -19822,8 +19822,8 @@ inline void AppMap_Monument::set_y(float value) {
 
 // required uint32 width = 1;
 inline bool AppMap::_internal_has_width() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppMap::has_width() const {
   return _internal_has_width();
@@ -19839,19 +19839,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMap::width() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMap.width)
   return _internal_width();
 }
-inline void AppMap::_internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMap::_internal_set_width(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  width_ = value;
+  width_ = m_iValue;
 }
-inline void AppMap::set_width(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_width(value);
+inline void AppMap::set_width(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_width(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMap.width)
 }
 
 // required uint32 height = 2;
 inline bool AppMap::_internal_has_height() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppMap::has_height() const {
   return _internal_has_height();
@@ -19867,19 +19867,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMap::height() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMap.height)
   return _internal_height();
 }
-inline void AppMap::_internal_set_height(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMap::_internal_set_height(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  height_ = value;
+  height_ = m_iValue;
 }
-inline void AppMap::set_height(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_height(value);
+inline void AppMap::set_height(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_height(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMap.height)
 }
 
 // required bytes jpgImage = 3;
 inline bool AppMap::_internal_has_jpgimage() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppMap::has_jpgimage() const {
   return _internal_has_jpgimage();
@@ -19907,9 +19907,9 @@ inline std::string* AppMap::mutable_jpgimage() {
 inline const std::string& AppMap::_internal_jpgimage() const {
   return jpgimage_.Get();
 }
-inline void AppMap::_internal_set_jpgimage(const std::string& value) {
+inline void AppMap::_internal_set_jpgimage(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  jpgimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  jpgimage_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppMap::_internal_mutable_jpgimage() {
   _has_bits_[0] |= 0x00000001u;
@@ -19936,8 +19936,8 @@ inline void AppMap::set_allocated_jpgimage(std::string* jpgimage) {
 
 // required int32 oceanMargin = 4;
 inline bool AppMap::_internal_has_oceanmargin() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppMap::has_oceanmargin() const {
   return _internal_has_oceanmargin();
@@ -19953,12 +19953,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMap::oceanmargin() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMap.oceanMargin)
   return _internal_oceanmargin();
 }
-inline void AppMap::_internal_set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMap::_internal_set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  oceanmargin_ = value;
+  oceanmargin_ = m_iValue;
 }
-inline void AppMap::set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_oceanmargin(value);
+inline void AppMap::set_oceanmargin(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_oceanmargin(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMap.oceanMargin)
 }
 
@@ -20004,8 +20004,8 @@ AppMap::monuments() const {
 
 // optional string background = 6;
 inline bool AppMap::_internal_has_background() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppMap::has_background() const {
   return _internal_has_background();
@@ -20033,9 +20033,9 @@ inline std::string* AppMap::mutable_background() {
 inline const std::string& AppMap::_internal_background() const {
   return background_.Get();
 }
-inline void AppMap::_internal_set_background(const std::string& value) {
+inline void AppMap::_internal_set_background(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  background_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  background_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppMap::_internal_mutable_background() {
   _has_bits_[0] |= 0x00000002u;
@@ -20066,8 +20066,8 @@ inline void AppMap::set_allocated_background(std::string* background) {
 
 // required .rustplus.AppEntityType type = 1;
 inline bool AppEntityInfo::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityInfo::has_type() const {
   return _internal_has_type();
@@ -20083,21 +20083,21 @@ inline ::rustplus::AppEntityType AppEntityInfo::type() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityInfo.type)
   return _internal_type();
 }
-inline void AppEntityInfo::_internal_set_type(::rustplus::AppEntityType value) {
-  assert(::rustplus::AppEntityType_IsValid(value));
+inline void AppEntityInfo::_internal_set_type(::rustplus::AppEntityType m_iValue) {
+  assert(::rustplus::AppEntityType_IsValid(m_iValue));
   _has_bits_[0] |= 0x00000002u;
-  type_ = value;
+  type_ = m_iValue;
 }
-inline void AppEntityInfo::set_type(::rustplus::AppEntityType value) {
-  _internal_set_type(value);
+inline void AppEntityInfo::set_type(::rustplus::AppEntityType m_iValue) {
+  _internal_set_type(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityInfo.type)
 }
 
 // required .rustplus.AppEntityPayload payload = 3;
 inline bool AppEntityInfo::_internal_has_payload() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || payload_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || payload_ != nullptr);
+  return m_iValue;
 }
 inline bool AppEntityInfo::has_payload() const {
   return _internal_has_payload();
@@ -20189,8 +20189,8 @@ inline void AppEntityInfo::set_allocated_payload(::rustplus::AppEntityPayload* p
 
 // required int32 itemId = 1;
 inline bool AppEntityPayload_Item::_internal_has_itemid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload_Item::has_itemid() const {
   return _internal_has_itemid();
@@ -20206,19 +20206,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::itemid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemId)
   return _internal_itemid();
 }
-inline void AppEntityPayload_Item::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppEntityPayload_Item::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  itemid_ = value;
+  itemid_ = m_iValue;
 }
-inline void AppEntityPayload_Item::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_itemid(value);
+inline void AppEntityPayload_Item::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_itemid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemId)
 }
 
 // required int32 quantity = 2;
 inline bool AppEntityPayload_Item::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload_Item::has_quantity() const {
   return _internal_has_quantity();
@@ -20234,19 +20234,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload_Item::quantity() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.quantity)
   return _internal_quantity();
 }
-inline void AppEntityPayload_Item::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppEntityPayload_Item::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  quantity_ = value;
+  quantity_ = m_iValue;
 }
-inline void AppEntityPayload_Item::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_quantity(value);
+inline void AppEntityPayload_Item::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_quantity(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.quantity)
 }
 
 // required bool itemIsBlueprint = 3;
 inline bool AppEntityPayload_Item::_internal_has_itemisblueprint() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload_Item::has_itemisblueprint() const {
   return _internal_has_itemisblueprint();
@@ -20262,12 +20262,12 @@ inline bool AppEntityPayload_Item::itemisblueprint() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.Item.itemIsBlueprint)
   return _internal_itemisblueprint();
 }
-inline void AppEntityPayload_Item::_internal_set_itemisblueprint(bool value) {
+inline void AppEntityPayload_Item::_internal_set_itemisblueprint(bool m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  itemisblueprint_ = value;
+  itemisblueprint_ = m_iValue;
 }
-inline void AppEntityPayload_Item::set_itemisblueprint(bool value) {
-  _internal_set_itemisblueprint(value);
+inline void AppEntityPayload_Item::set_itemisblueprint(bool m_iValue) {
+  _internal_set_itemisblueprint(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.Item.itemIsBlueprint)
 }
 
@@ -20277,8 +20277,8 @@ inline void AppEntityPayload_Item::set_itemisblueprint(bool value) {
 
 // optional bool value = 1;
 inline bool AppEntityPayload::_internal_has_value() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload::has_value() const {
   return _internal_has_value();
@@ -20290,16 +20290,16 @@ inline void AppEntityPayload::clear_value() {
 inline bool AppEntityPayload::_internal_value() const {
   return value_;
 }
-inline bool AppEntityPayload::value() const {
+inline bool AppEntityPayload::m_iValue() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.value)
   return _internal_value();
 }
-inline void AppEntityPayload::_internal_set_value(bool value) {
+inline void AppEntityPayload::_internal_set_value(bool m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  value_ = value;
+  value_ = m_iValue;
 }
-inline void AppEntityPayload::set_value(bool value) {
-  _internal_set_value(value);
+inline void AppEntityPayload::set_value(bool m_iValue) {
+  _internal_set_value(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.value)
 }
 
@@ -20345,8 +20345,8 @@ AppEntityPayload::items() const {
 
 // optional int32 capacity = 3;
 inline bool AppEntityPayload::_internal_has_capacity() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload::has_capacity() const {
   return _internal_has_capacity();
@@ -20362,19 +20362,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppEntityPayload::capacity() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.capacity)
   return _internal_capacity();
 }
-inline void AppEntityPayload::_internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppEntityPayload::_internal_set_capacity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  capacity_ = value;
+  capacity_ = m_iValue;
 }
-inline void AppEntityPayload::set_capacity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_capacity(value);
+inline void AppEntityPayload::set_capacity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_capacity(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.capacity)
 }
 
 // optional bool hasProtection = 4;
 inline bool AppEntityPayload::_internal_has_hasprotection() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload::has_hasprotection() const {
   return _internal_has_hasprotection();
@@ -20390,19 +20390,19 @@ inline bool AppEntityPayload::hasprotection() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.hasProtection)
   return _internal_hasprotection();
 }
-inline void AppEntityPayload::_internal_set_hasprotection(bool value) {
+inline void AppEntityPayload::_internal_set_hasprotection(bool m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  hasprotection_ = value;
+  hasprotection_ = m_iValue;
 }
-inline void AppEntityPayload::set_hasprotection(bool value) {
-  _internal_set_hasprotection(value);
+inline void AppEntityPayload::set_hasprotection(bool m_iValue) {
+  _internal_set_hasprotection(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.hasProtection)
 }
 
 // optional uint32 protectionExpiry = 5;
 inline bool AppEntityPayload::_internal_has_protectionexpiry() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityPayload::has_protectionexpiry() const {
   return _internal_has_protectionexpiry();
@@ -20418,12 +20418,12 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityPayload::protectionexpiry() cons
   // @@protoc_insertion_point(field_get:rustplus.AppEntityPayload.protectionExpiry)
   return _internal_protectionexpiry();
 }
-inline void AppEntityPayload::_internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppEntityPayload::_internal_set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  protectionexpiry_ = value;
+  protectionexpiry_ = m_iValue;
 }
-inline void AppEntityPayload::set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_protectionexpiry(value);
+inline void AppEntityPayload::set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_protectionexpiry(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityPayload.protectionExpiry)
 }
 
@@ -20433,8 +20433,8 @@ inline void AppEntityPayload::set_protectionexpiry(::PROTOBUF_NAMESPACE_ID::uint
 
 // required uint64 steamId = 1;
 inline bool AppTeamInfo_Member::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_steamid() const {
   return _internal_has_steamid();
@@ -20450,19 +20450,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamInfo_Member::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.steamId)
   return _internal_steamid();
 }
-inline void AppTeamInfo_Member::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppTeamInfo_Member::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
+inline void AppTeamInfo_Member::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.steamId)
 }
 
 // required string name = 2;
 inline bool AppTeamInfo_Member::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_name() const {
   return _internal_has_name();
@@ -20490,9 +20490,9 @@ inline std::string* AppTeamInfo_Member::mutable_name() {
 inline const std::string& AppTeamInfo_Member::_internal_name() const {
   return name_.Get();
 }
-inline void AppTeamInfo_Member::_internal_set_name(const std::string& value) {
+inline void AppTeamInfo_Member::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppTeamInfo_Member::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -20519,8 +20519,8 @@ inline void AppTeamInfo_Member::set_allocated_name(std::string* name) {
 
 // required float x = 3;
 inline bool AppTeamInfo_Member::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_x() const {
   return _internal_has_x();
@@ -20536,19 +20536,19 @@ inline float AppTeamInfo_Member::x() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.x)
   return _internal_x();
 }
-inline void AppTeamInfo_Member::_internal_set_x(float value) {
+inline void AppTeamInfo_Member::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_x(float value) {
-  _internal_set_x(value);
+inline void AppTeamInfo_Member::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.x)
 }
 
 // required float y = 4;
 inline bool AppTeamInfo_Member::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_y() const {
   return _internal_has_y();
@@ -20564,19 +20564,19 @@ inline float AppTeamInfo_Member::y() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.y)
   return _internal_y();
 }
-inline void AppTeamInfo_Member::_internal_set_y(float value) {
+inline void AppTeamInfo_Member::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_y(float value) {
-  _internal_set_y(value);
+inline void AppTeamInfo_Member::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.y)
 }
 
 // required bool isOnline = 5;
 inline bool AppTeamInfo_Member::_internal_has_isonline() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_isonline() const {
   return _internal_has_isonline();
@@ -20592,19 +20592,19 @@ inline bool AppTeamInfo_Member::isonline() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.isOnline)
   return _internal_isonline();
 }
-inline void AppTeamInfo_Member::_internal_set_isonline(bool value) {
+inline void AppTeamInfo_Member::_internal_set_isonline(bool m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  isonline_ = value;
+  isonline_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_isonline(bool value) {
-  _internal_set_isonline(value);
+inline void AppTeamInfo_Member::set_isonline(bool m_iValue) {
+  _internal_set_isonline(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.isOnline)
 }
 
 // required uint32 spawnTime = 6;
 inline bool AppTeamInfo_Member::_internal_has_spawntime() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_spawntime() const {
   return _internal_has_spawntime();
@@ -20620,19 +20620,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppTeamInfo_Member::spawntime() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.spawnTime)
   return _internal_spawntime();
 }
-inline void AppTeamInfo_Member::_internal_set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppTeamInfo_Member::_internal_set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  spawntime_ = value;
+  spawntime_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_spawntime(value);
+inline void AppTeamInfo_Member::set_spawntime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_spawntime(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.spawnTime)
 }
 
 // required bool isAlive = 7;
 inline bool AppTeamInfo_Member::_internal_has_isalive() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_isalive() const {
   return _internal_has_isalive();
@@ -20648,19 +20648,19 @@ inline bool AppTeamInfo_Member::isalive() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.isAlive)
   return _internal_isalive();
 }
-inline void AppTeamInfo_Member::_internal_set_isalive(bool value) {
+inline void AppTeamInfo_Member::_internal_set_isalive(bool m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  isalive_ = value;
+  isalive_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_isalive(bool value) {
-  _internal_set_isalive(value);
+inline void AppTeamInfo_Member::set_isalive(bool m_iValue) {
+  _internal_set_isalive(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.isAlive)
 }
 
 // required uint32 deathTime = 8;
 inline bool AppTeamInfo_Member::_internal_has_deathtime() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Member::has_deathtime() const {
   return _internal_has_deathtime();
@@ -20676,12 +20676,12 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppTeamInfo_Member::deathtime() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Member.deathTime)
   return _internal_deathtime();
 }
-inline void AppTeamInfo_Member::_internal_set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppTeamInfo_Member::_internal_set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  deathtime_ = value;
+  deathtime_ = m_iValue;
 }
-inline void AppTeamInfo_Member::set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_deathtime(value);
+inline void AppTeamInfo_Member::set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_deathtime(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Member.deathTime)
 }
 
@@ -20691,8 +20691,8 @@ inline void AppTeamInfo_Member::set_deathtime(::PROTOBUF_NAMESPACE_ID::uint32 va
 
 // required int32 type = 2;
 inline bool AppTeamInfo_Note::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Note::has_type() const {
   return _internal_has_type();
@@ -20708,19 +20708,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppTeamInfo_Note::type() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Note.type)
   return _internal_type();
 }
-inline void AppTeamInfo_Note::_internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppTeamInfo_Note::_internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  type_ = value;
+  type_ = m_iValue;
 }
-inline void AppTeamInfo_Note::set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_type(value);
+inline void AppTeamInfo_Note::set_type(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_type(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Note.type)
 }
 
 // required float x = 3;
 inline bool AppTeamInfo_Note::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Note::has_x() const {
   return _internal_has_x();
@@ -20736,19 +20736,19 @@ inline float AppTeamInfo_Note::x() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Note.x)
   return _internal_x();
 }
-inline void AppTeamInfo_Note::_internal_set_x(float value) {
+inline void AppTeamInfo_Note::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void AppTeamInfo_Note::set_x(float value) {
-  _internal_set_x(value);
+inline void AppTeamInfo_Note::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Note.x)
 }
 
 // required float y = 4;
 inline bool AppTeamInfo_Note::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo_Note::has_y() const {
   return _internal_has_y();
@@ -20764,12 +20764,12 @@ inline float AppTeamInfo_Note::y() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.Note.y)
   return _internal_y();
 }
-inline void AppTeamInfo_Note::_internal_set_y(float value) {
+inline void AppTeamInfo_Note::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void AppTeamInfo_Note::set_y(float value) {
-  _internal_set_y(value);
+inline void AppTeamInfo_Note::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.Note.y)
 }
 
@@ -20779,8 +20779,8 @@ inline void AppTeamInfo_Note::set_y(float value) {
 
 // required uint64 leaderSteamId = 1;
 inline bool AppTeamInfo::_internal_has_leadersteamid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamInfo::has_leadersteamid() const {
   return _internal_has_leadersteamid();
@@ -20796,12 +20796,12 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamInfo::leadersteamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamInfo.leaderSteamId)
   return _internal_leadersteamid();
 }
-inline void AppTeamInfo::_internal_set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppTeamInfo::_internal_set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  leadersteamid_ = value;
+  leadersteamid_ = m_iValue;
 }
-inline void AppTeamInfo::set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_leadersteamid(value);
+inline void AppTeamInfo::set_leadersteamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_leadersteamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamInfo.leaderSteamId)
 }
 
@@ -20931,8 +20931,8 @@ AppTeamInfo::leadermapnotes() const {
 
 // required uint64 steamId = 1;
 inline bool AppTeamMessage::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamMessage::has_steamid() const {
   return _internal_has_steamid();
@@ -20948,19 +20948,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamMessage::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.steamId)
   return _internal_steamid();
 }
-inline void AppTeamMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppTeamMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void AppTeamMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
+inline void AppTeamMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.steamId)
 }
 
 // required string name = 2;
 inline bool AppTeamMessage::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamMessage::has_name() const {
   return _internal_has_name();
@@ -20988,9 +20988,9 @@ inline std::string* AppTeamMessage::mutable_name() {
 inline const std::string& AppTeamMessage::_internal_name() const {
   return name_.Get();
 }
-inline void AppTeamMessage::_internal_set_name(const std::string& value) {
+inline void AppTeamMessage::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppTeamMessage::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -21017,8 +21017,8 @@ inline void AppTeamMessage::set_allocated_name(std::string* name) {
 
 // required string message = 3;
 inline bool AppTeamMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamMessage::has_message() const {
   return _internal_has_message();
@@ -21046,9 +21046,9 @@ inline std::string* AppTeamMessage::mutable_message() {
 inline const std::string& AppTeamMessage::_internal_message() const {
   return message_.Get();
 }
-inline void AppTeamMessage::_internal_set_message(const std::string& value) {
+inline void AppTeamMessage::_internal_set_message(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppTeamMessage::_internal_mutable_message() {
   _has_bits_[0] |= 0x00000002u;
@@ -21075,8 +21075,8 @@ inline void AppTeamMessage::set_allocated_message(std::string* message) {
 
 // required string color = 4;
 inline bool AppTeamMessage::_internal_has_color() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamMessage::has_color() const {
   return _internal_has_color();
@@ -21104,9 +21104,9 @@ inline std::string* AppTeamMessage::mutable_color() {
 inline const std::string& AppTeamMessage::_internal_color() const {
   return color_.Get();
 }
-inline void AppTeamMessage::_internal_set_color(const std::string& value) {
+inline void AppTeamMessage::_internal_set_color(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  color_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppTeamMessage::_internal_mutable_color() {
   _has_bits_[0] |= 0x00000004u;
@@ -21133,8 +21133,8 @@ inline void AppTeamMessage::set_allocated_color(std::string* color) {
 
 // required uint32 time = 5;
 inline bool AppTeamMessage::_internal_has_time() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamMessage::has_time() const {
   return _internal_has_time();
@@ -21150,12 +21150,12 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppTeamMessage::time() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamMessage.time)
   return _internal_time();
 }
-inline void AppTeamMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppTeamMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  time_ = value;
+  time_ = m_iValue;
 }
-inline void AppTeamMessage::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_time(value);
+inline void AppTeamMessage::set_time(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_time(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamMessage.time)
 }
 
@@ -21209,8 +21209,8 @@ AppTeamChat::messages() const {
 
 // required int32 itemId = 1;
 inline bool AppMarker_SellOrder::_internal_has_itemid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_itemid() const {
   return _internal_has_itemid();
@@ -21226,19 +21226,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMarker_SellOrder::itemid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemId)
   return _internal_itemid();
 }
-inline void AppMarker_SellOrder::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMarker_SellOrder::_internal_set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  itemid_ = value;
+  itemid_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_itemid(value);
+inline void AppMarker_SellOrder::set_itemid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_itemid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemId)
 }
 
 // required int32 quantity = 2;
 inline bool AppMarker_SellOrder::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_quantity() const {
   return _internal_has_quantity();
@@ -21254,19 +21254,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMarker_SellOrder::quantity() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.quantity)
   return _internal_quantity();
 }
-inline void AppMarker_SellOrder::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMarker_SellOrder::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  quantity_ = value;
+  quantity_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_quantity(value);
+inline void AppMarker_SellOrder::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_quantity(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.quantity)
 }
 
 // required int32 currencyId = 3;
 inline bool AppMarker_SellOrder::_internal_has_currencyid() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_currencyid() const {
   return _internal_has_currencyid();
@@ -21282,19 +21282,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMarker_SellOrder::currencyid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.currencyId)
   return _internal_currencyid();
 }
-inline void AppMarker_SellOrder::_internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMarker_SellOrder::_internal_set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  currencyid_ = value;
+  currencyid_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_currencyid(value);
+inline void AppMarker_SellOrder::set_currencyid(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_currencyid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.currencyId)
 }
 
 // required int32 costPerItem = 4;
 inline bool AppMarker_SellOrder::_internal_has_costperitem() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_costperitem() const {
   return _internal_has_costperitem();
@@ -21310,19 +21310,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMarker_SellOrder::costperitem() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.costPerItem)
   return _internal_costperitem();
 }
-inline void AppMarker_SellOrder::_internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMarker_SellOrder::_internal_set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  costperitem_ = value;
+  costperitem_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_costperitem(value);
+inline void AppMarker_SellOrder::set_costperitem(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_costperitem(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.costPerItem)
 }
 
 // required int32 amountInStock = 5;
 inline bool AppMarker_SellOrder::_internal_has_amountinstock() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_amountinstock() const {
   return _internal_has_amountinstock();
@@ -21338,19 +21338,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppMarker_SellOrder::amountinstock() const
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.amountInStock)
   return _internal_amountinstock();
 }
-inline void AppMarker_SellOrder::_internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppMarker_SellOrder::_internal_set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  amountinstock_ = value;
+  amountinstock_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_amountinstock(value);
+inline void AppMarker_SellOrder::set_amountinstock(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_amountinstock(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.amountInStock)
 }
 
 // required bool itemIsBlueprint = 6;
 inline bool AppMarker_SellOrder::_internal_has_itemisblueprint() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_itemisblueprint() const {
   return _internal_has_itemisblueprint();
@@ -21366,19 +21366,19 @@ inline bool AppMarker_SellOrder::itemisblueprint() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemIsBlueprint)
   return _internal_itemisblueprint();
 }
-inline void AppMarker_SellOrder::_internal_set_itemisblueprint(bool value) {
+inline void AppMarker_SellOrder::_internal_set_itemisblueprint(bool m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  itemisblueprint_ = value;
+  itemisblueprint_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_itemisblueprint(bool value) {
-  _internal_set_itemisblueprint(value);
+inline void AppMarker_SellOrder::set_itemisblueprint(bool m_iValue) {
+  _internal_set_itemisblueprint(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemIsBlueprint)
 }
 
 // required bool currencyIsBlueprint = 7;
 inline bool AppMarker_SellOrder::_internal_has_currencyisblueprint() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_currencyisblueprint() const {
   return _internal_has_currencyisblueprint();
@@ -21394,19 +21394,19 @@ inline bool AppMarker_SellOrder::currencyisblueprint() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.currencyIsBlueprint)
   return _internal_currencyisblueprint();
 }
-inline void AppMarker_SellOrder::_internal_set_currencyisblueprint(bool value) {
+inline void AppMarker_SellOrder::_internal_set_currencyisblueprint(bool m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  currencyisblueprint_ = value;
+  currencyisblueprint_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_currencyisblueprint(bool value) {
-  _internal_set_currencyisblueprint(value);
+inline void AppMarker_SellOrder::set_currencyisblueprint(bool m_iValue) {
+  _internal_set_currencyisblueprint(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.currencyIsBlueprint)
 }
 
 // optional float itemCondition = 8;
 inline bool AppMarker_SellOrder::_internal_has_itemcondition() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_itemcondition() const {
   return _internal_has_itemcondition();
@@ -21422,19 +21422,19 @@ inline float AppMarker_SellOrder::itemcondition() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemCondition)
   return _internal_itemcondition();
 }
-inline void AppMarker_SellOrder::_internal_set_itemcondition(float value) {
+inline void AppMarker_SellOrder::_internal_set_itemcondition(float m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  itemcondition_ = value;
+  itemcondition_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_itemcondition(float value) {
-  _internal_set_itemcondition(value);
+inline void AppMarker_SellOrder::set_itemcondition(float m_iValue) {
+  _internal_set_itemcondition(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemCondition)
 }
 
 // optional float itemConditionMax = 9;
 inline bool AppMarker_SellOrder::_internal_has_itemconditionmax() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker_SellOrder::has_itemconditionmax() const {
   return _internal_has_itemconditionmax();
@@ -21450,12 +21450,12 @@ inline float AppMarker_SellOrder::itemconditionmax() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.SellOrder.itemConditionMax)
   return _internal_itemconditionmax();
 }
-inline void AppMarker_SellOrder::_internal_set_itemconditionmax(float value) {
+inline void AppMarker_SellOrder::_internal_set_itemconditionmax(float m_iValue) {
   _has_bits_[0] |= 0x00000100u;
-  itemconditionmax_ = value;
+  itemconditionmax_ = m_iValue;
 }
-inline void AppMarker_SellOrder::set_itemconditionmax(float value) {
-  _internal_set_itemconditionmax(value);
+inline void AppMarker_SellOrder::set_itemconditionmax(float m_iValue) {
+  _internal_set_itemconditionmax(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.SellOrder.itemConditionMax)
 }
 
@@ -21465,8 +21465,8 @@ inline void AppMarker_SellOrder::set_itemconditionmax(float value) {
 
 // required uint32 id = 1;
 inline bool AppMarker::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_id() const {
   return _internal_has_id();
@@ -21482,19 +21482,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMarker::id() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.id)
   return _internal_id();
 }
-inline void AppMarker::_internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMarker::_internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  id_ = value;
+  id_ = m_iValue;
 }
-inline void AppMarker::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_id(value);
+inline void AppMarker::set_id(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_id(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.id)
 }
 
 // required .rustplus.AppMarkerType type = 2;
 inline bool AppMarker::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_type() const {
   return _internal_has_type();
@@ -21510,20 +21510,20 @@ inline ::rustplus::AppMarkerType AppMarker::type() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.type)
   return _internal_type();
 }
-inline void AppMarker::_internal_set_type(::rustplus::AppMarkerType value) {
-  assert(::rustplus::AppMarkerType_IsValid(value));
+inline void AppMarker::_internal_set_type(::rustplus::AppMarkerType m_iValue) {
+  assert(::rustplus::AppMarkerType_IsValid(m_iValue));
   _has_bits_[0] |= 0x00000010u;
-  type_ = value;
+  type_ = m_iValue;
 }
-inline void AppMarker::set_type(::rustplus::AppMarkerType value) {
-  _internal_set_type(value);
+inline void AppMarker::set_type(::rustplus::AppMarkerType m_iValue) {
+  _internal_set_type(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.type)
 }
 
 // required float x = 3;
 inline bool AppMarker::_internal_has_x() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_x() const {
   return _internal_has_x();
@@ -21539,19 +21539,19 @@ inline float AppMarker::x() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.x)
   return _internal_x();
 }
-inline void AppMarker::_internal_set_x(float value) {
+inline void AppMarker::_internal_set_x(float m_iValue) {
   _has_bits_[0] |= 0x00000020u;
-  x_ = value;
+  x_ = m_iValue;
 }
-inline void AppMarker::set_x(float value) {
-  _internal_set_x(value);
+inline void AppMarker::set_x(float m_iValue) {
+  _internal_set_x(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.x)
 }
 
 // required float y = 4;
 inline bool AppMarker::_internal_has_y() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000040u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_y() const {
   return _internal_has_y();
@@ -21567,19 +21567,19 @@ inline float AppMarker::y() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.y)
   return _internal_y();
 }
-inline void AppMarker::_internal_set_y(float value) {
+inline void AppMarker::_internal_set_y(float m_iValue) {
   _has_bits_[0] |= 0x00000040u;
-  y_ = value;
+  y_ = m_iValue;
 }
-inline void AppMarker::set_y(float value) {
-  _internal_set_y(value);
+inline void AppMarker::set_y(float m_iValue) {
+  _internal_set_y(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.y)
 }
 
 // optional uint64 steamId = 5;
 inline bool AppMarker::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000080u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_steamid() const {
   return _internal_has_steamid();
@@ -21595,19 +21595,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppMarker::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.steamId)
   return _internal_steamid();
 }
-inline void AppMarker::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppMarker::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000080u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void AppMarker::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
+inline void AppMarker::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.steamId)
 }
 
 // optional float rotation = 6;
 inline bool AppMarker::_internal_has_rotation() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000100u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_rotation() const {
   return _internal_has_rotation();
@@ -21623,19 +21623,19 @@ inline float AppMarker::rotation() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.rotation)
   return _internal_rotation();
 }
-inline void AppMarker::_internal_set_rotation(float value) {
+inline void AppMarker::_internal_set_rotation(float m_iValue) {
   _has_bits_[0] |= 0x00000100u;
-  rotation_ = value;
+  rotation_ = m_iValue;
 }
-inline void AppMarker::set_rotation(float value) {
-  _internal_set_rotation(value);
+inline void AppMarker::set_rotation(float m_iValue) {
+  _internal_set_rotation(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.rotation)
 }
 
 // optional float radius = 7;
 inline bool AppMarker::_internal_has_radius() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000200u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_radius() const {
   return _internal_has_radius();
@@ -21651,20 +21651,20 @@ inline float AppMarker::radius() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.radius)
   return _internal_radius();
 }
-inline void AppMarker::_internal_set_radius(float value) {
+inline void AppMarker::_internal_set_radius(float m_iValue) {
   _has_bits_[0] |= 0x00000200u;
-  radius_ = value;
+  radius_ = m_iValue;
 }
-inline void AppMarker::set_radius(float value) {
-  _internal_set_radius(value);
+inline void AppMarker::set_radius(float m_iValue) {
+  _internal_set_radius(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.radius)
 }
 
 // optional .rustplus.Vector4 color1 = 8;
 inline bool AppMarker::_internal_has_color1() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || color1_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || color1_ != nullptr);
+  return m_iValue;
 }
 inline bool AppMarker::has_color1() const {
   return _internal_has_color1();
@@ -21752,9 +21752,9 @@ inline void AppMarker::set_allocated_color1(::rustplus::Vector4* color1) {
 
 // optional .rustplus.Vector4 color2 = 9;
 inline bool AppMarker::_internal_has_color2() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || color2_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || color2_ != nullptr);
+  return m_iValue;
 }
 inline bool AppMarker::has_color2() const {
   return _internal_has_color2();
@@ -21842,8 +21842,8 @@ inline void AppMarker::set_allocated_color2(::rustplus::Vector4* color2) {
 
 // optional float alpha = 10;
 inline bool AppMarker::_internal_has_alpha() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000400u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_alpha() const {
   return _internal_has_alpha();
@@ -21859,19 +21859,19 @@ inline float AppMarker::alpha() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.alpha)
   return _internal_alpha();
 }
-inline void AppMarker::_internal_set_alpha(float value) {
+inline void AppMarker::_internal_set_alpha(float m_iValue) {
   _has_bits_[0] |= 0x00000400u;
-  alpha_ = value;
+  alpha_ = m_iValue;
 }
-inline void AppMarker::set_alpha(float value) {
-  _internal_set_alpha(value);
+inline void AppMarker::set_alpha(float m_iValue) {
+  _internal_set_alpha(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.alpha)
 }
 
 // optional string name = 11;
 inline bool AppMarker::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_name() const {
   return _internal_has_name();
@@ -21899,9 +21899,9 @@ inline std::string* AppMarker::mutable_name() {
 inline const std::string& AppMarker::_internal_name() const {
   return name_.Get();
 }
-inline void AppMarker::_internal_set_name(const std::string& value) {
+inline void AppMarker::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppMarker::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -21928,8 +21928,8 @@ inline void AppMarker::set_allocated_name(std::string* name) {
 
 // optional bool outOfStock = 12;
 inline bool AppMarker::_internal_has_outofstock() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000800u) != 0;
+  return m_iValue;
 }
 inline bool AppMarker::has_outofstock() const {
   return _internal_has_outofstock();
@@ -21945,12 +21945,12 @@ inline bool AppMarker::outofstock() const {
   // @@protoc_insertion_point(field_get:rustplus.AppMarker.outOfStock)
   return _internal_outofstock();
 }
-inline void AppMarker::_internal_set_outofstock(bool value) {
+inline void AppMarker::_internal_set_outofstock(bool m_iValue) {
   _has_bits_[0] |= 0x00000800u;
-  outofstock_ = value;
+  outofstock_ = m_iValue;
 }
-inline void AppMarker::set_outofstock(bool value) {
-  _internal_set_outofstock(value);
+inline void AppMarker::set_outofstock(bool m_iValue) {
+  _internal_set_outofstock(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppMarker.outOfStock)
 }
 
@@ -22044,9 +22044,9 @@ AppMapMarkers::markers() const {
 
 // optional .rustplus.ClanInfo clanInfo = 1;
 inline bool AppClanInfo::_internal_has_claninfo() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || claninfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppClanInfo::has_claninfo() const {
   return _internal_has_claninfo();
@@ -22138,8 +22138,8 @@ inline void AppClanInfo::set_allocated_claninfo(::rustplus::ClanInfo* claninfo) 
 
 // required uint64 steamId = 1;
 inline bool AppClanMessage::_internal_has_steamid() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppClanMessage::has_steamid() const {
   return _internal_has_steamid();
@@ -22155,19 +22155,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppClanMessage::steamid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.steamId)
   return _internal_steamid();
 }
-inline void AppClanMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppClanMessage::_internal_set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  steamid_ = value;
+  steamid_ = m_iValue;
 }
-inline void AppClanMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_steamid(value);
+inline void AppClanMessage::set_steamid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_steamid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.steamId)
 }
 
 // required string name = 2;
 inline bool AppClanMessage::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppClanMessage::has_name() const {
   return _internal_has_name();
@@ -22195,9 +22195,9 @@ inline std::string* AppClanMessage::mutable_name() {
 inline const std::string& AppClanMessage::_internal_name() const {
   return name_.Get();
 }
-inline void AppClanMessage::_internal_set_name(const std::string& value) {
+inline void AppClanMessage::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppClanMessage::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -22224,8 +22224,8 @@ inline void AppClanMessage::set_allocated_name(std::string* name) {
 
 // required string message = 3;
 inline bool AppClanMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppClanMessage::has_message() const {
   return _internal_has_message();
@@ -22253,9 +22253,9 @@ inline std::string* AppClanMessage::mutable_message() {
 inline const std::string& AppClanMessage::_internal_message() const {
   return message_.Get();
 }
-inline void AppClanMessage::_internal_set_message(const std::string& value) {
+inline void AppClanMessage::_internal_set_message(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppClanMessage::_internal_mutable_message() {
   _has_bits_[0] |= 0x00000002u;
@@ -22282,8 +22282,8 @@ inline void AppClanMessage::set_allocated_message(std::string* message) {
 
 // required int64 time = 4;
 inline bool AppClanMessage::_internal_has_time() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppClanMessage::has_time() const {
   return _internal_has_time();
@@ -22299,12 +22299,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 AppClanMessage::time() const {
   // @@protoc_insertion_point(field_get:rustplus.AppClanMessage.time)
   return _internal_time();
 }
-inline void AppClanMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void AppClanMessage::_internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  time_ = value;
+  time_ = m_iValue;
 }
-inline void AppClanMessage::set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_time(value);
+inline void AppClanMessage::set_time(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_time(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppClanMessage.time)
 }
 
@@ -22358,8 +22358,8 @@ AppClanChat::messages() const {
 
 // required string serverId = 1;
 inline bool AppNexusAuth::_internal_has_serverid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppNexusAuth::has_serverid() const {
   return _internal_has_serverid();
@@ -22387,9 +22387,9 @@ inline std::string* AppNexusAuth::mutable_serverid() {
 inline const std::string& AppNexusAuth::_internal_serverid() const {
   return serverid_.Get();
 }
-inline void AppNexusAuth::_internal_set_serverid(const std::string& value) {
+inline void AppNexusAuth::_internal_set_serverid(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  serverid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  serverid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppNexusAuth::_internal_mutable_serverid() {
   _has_bits_[0] |= 0x00000001u;
@@ -22416,8 +22416,8 @@ inline void AppNexusAuth::set_allocated_serverid(std::string* serverid) {
 
 // required int32 playerToken = 2;
 inline bool AppNexusAuth::_internal_has_playertoken() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppNexusAuth::has_playertoken() const {
   return _internal_has_playertoken();
@@ -22433,12 +22433,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppNexusAuth::playertoken() const {
   // @@protoc_insertion_point(field_get:rustplus.AppNexusAuth.playerToken)
   return _internal_playertoken();
 }
-inline void AppNexusAuth::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppNexusAuth::_internal_set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  playertoken_ = value;
+  playertoken_ = m_iValue;
 }
-inline void AppNexusAuth::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_playertoken(value);
+inline void AppNexusAuth::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_playertoken(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppNexusAuth.playerToken)
 }
 
@@ -22448,8 +22448,8 @@ inline void AppNexusAuth::set_playertoken(::PROTOBUF_NAMESPACE_ID::int32 value) 
 
 // required uint64 playerId = 1;
 inline bool AppTeamChanged::_internal_has_playerid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppTeamChanged::has_playerid() const {
   return _internal_has_playerid();
@@ -22465,20 +22465,20 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 AppTeamChanged::playerid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppTeamChanged.playerId)
   return _internal_playerid();
 }
-inline void AppTeamChanged::_internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void AppTeamChanged::_internal_set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  playerid_ = value;
+  playerid_ = m_iValue;
 }
-inline void AppTeamChanged::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_playerid(value);
+inline void AppTeamChanged::set_playerid(::PROTOBUF_NAMESPACE_ID::uint64 m_iValue) {
+  _internal_set_playerid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppTeamChanged.playerId)
 }
 
 // required .rustplus.AppTeamInfo teamInfo = 2;
 inline bool AppTeamChanged::_internal_has_teaminfo() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || teaminfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || teaminfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppTeamChanged::has_teaminfo() const {
   return _internal_has_teaminfo();
@@ -22570,9 +22570,9 @@ inline void AppTeamChanged::set_allocated_teaminfo(::rustplus::AppTeamInfo* team
 
 // required .rustplus.AppTeamMessage message = 1;
 inline bool AppNewTeamMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || message_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || message_ != nullptr);
+  return m_iValue;
 }
 inline bool AppNewTeamMessage::has_message() const {
   return _internal_has_message();
@@ -22664,8 +22664,8 @@ inline void AppNewTeamMessage::set_allocated_message(::rustplus::AppTeamMessage*
 
 // required uint32 entityId = 1;
 inline bool AppEntityChanged::_internal_has_entityid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppEntityChanged::has_entityid() const {
   return _internal_has_entityid();
@@ -22681,20 +22681,20 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppEntityChanged::entityid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppEntityChanged.entityId)
   return _internal_entityid();
 }
-inline void AppEntityChanged::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppEntityChanged::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  entityid_ = value;
+  entityid_ = m_iValue;
 }
-inline void AppEntityChanged::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_entityid(value);
+inline void AppEntityChanged::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_entityid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppEntityChanged.entityId)
 }
 
 // required .rustplus.AppEntityPayload payload = 2;
 inline bool AppEntityChanged::_internal_has_payload() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || payload_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || payload_ != nullptr);
+  return m_iValue;
 }
 inline bool AppEntityChanged::has_payload() const {
   return _internal_has_payload();
@@ -22786,9 +22786,9 @@ inline void AppEntityChanged::set_allocated_payload(::rustplus::AppEntityPayload
 
 // optional .rustplus.ClanInfo clanInfo = 1;
 inline bool AppClanChanged::_internal_has_claninfo() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || claninfo_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || claninfo_ != nullptr);
+  return m_iValue;
 }
 inline bool AppClanChanged::has_claninfo() const {
   return _internal_has_claninfo();
@@ -22880,8 +22880,8 @@ inline void AppClanChanged::set_allocated_claninfo(::rustplus::ClanInfo* claninf
 
 // required int64 clanId = 1;
 inline bool AppNewClanMessage::_internal_has_clanid() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppNewClanMessage::has_clanid() const {
   return _internal_has_clanid();
@@ -22897,20 +22897,20 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 AppNewClanMessage::clanid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppNewClanMessage.clanId)
   return _internal_clanid();
 }
-inline void AppNewClanMessage::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void AppNewClanMessage::_internal_set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  clanid_ = value;
+  clanid_ = m_iValue;
 }
-inline void AppNewClanMessage::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_clanid(value);
+inline void AppNewClanMessage::set_clanid(::PROTOBUF_NAMESPACE_ID::int64 m_iValue) {
+  _internal_set_clanid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppNewClanMessage.clanId)
 }
 
 // required .rustplus.AppClanMessage message = 2;
 inline bool AppNewClanMessage::_internal_has_message() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || message_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || message_ != nullptr);
+  return m_iValue;
 }
 inline bool AppNewClanMessage::has_message() const {
   return _internal_has_message();
@@ -23002,8 +23002,8 @@ inline void AppNewClanMessage::set_allocated_message(::rustplus::AppClanMessage*
 
 // required string cameraId = 1;
 inline bool AppCameraSubscribe::_internal_has_cameraid() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraSubscribe::has_cameraid() const {
   return _internal_has_cameraid();
@@ -23031,9 +23031,9 @@ inline std::string* AppCameraSubscribe::mutable_cameraid() {
 inline const std::string& AppCameraSubscribe::_internal_cameraid() const {
   return cameraid_.Get();
 }
-inline void AppCameraSubscribe::_internal_set_cameraid(const std::string& value) {
+inline void AppCameraSubscribe::_internal_set_cameraid(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  cameraid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  cameraid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppCameraSubscribe::_internal_mutable_cameraid() {
   _has_bits_[0] |= 0x00000001u;
@@ -23064,8 +23064,8 @@ inline void AppCameraSubscribe::set_allocated_cameraid(std::string* cameraid) {
 
 // required int32 buttons = 1;
 inline bool AppCameraInput::_internal_has_buttons() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInput::has_buttons() const {
   return _internal_has_buttons();
@@ -23081,20 +23081,20 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInput::buttons() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInput.buttons)
   return _internal_buttons();
 }
-inline void AppCameraInput::_internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppCameraInput::_internal_set_buttons(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  buttons_ = value;
+  buttons_ = m_iValue;
 }
-inline void AppCameraInput::set_buttons(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_buttons(value);
+inline void AppCameraInput::set_buttons(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_buttons(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInput.buttons)
 }
 
 // required .rustplus.Vector2 mouseDelta = 2;
 inline bool AppCameraInput::_internal_has_mousedelta() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || mousedelta_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || mousedelta_ != nullptr);
+  return m_iValue;
 }
 inline bool AppCameraInput::has_mousedelta() const {
   return _internal_has_mousedelta();
@@ -23186,8 +23186,8 @@ inline void AppCameraInput::set_allocated_mousedelta(::rustplus::Vector2* moused
 
 // required int32 width = 1;
 inline bool AppCameraInfo::_internal_has_width() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInfo::has_width() const {
   return _internal_has_width();
@@ -23203,19 +23203,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::width() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.width)
   return _internal_width();
 }
-inline void AppCameraInfo::_internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppCameraInfo::_internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  width_ = value;
+  width_ = m_iValue;
 }
-inline void AppCameraInfo::set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_width(value);
+inline void AppCameraInfo::set_width(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_width(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.width)
 }
 
 // required int32 height = 2;
 inline bool AppCameraInfo::_internal_has_height() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInfo::has_height() const {
   return _internal_has_height();
@@ -23231,19 +23231,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::height() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.height)
   return _internal_height();
 }
-inline void AppCameraInfo::_internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppCameraInfo::_internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  height_ = value;
+  height_ = m_iValue;
 }
-inline void AppCameraInfo::set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_height(value);
+inline void AppCameraInfo::set_height(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_height(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.height)
 }
 
 // required float nearPlane = 3;
 inline bool AppCameraInfo::_internal_has_nearplane() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInfo::has_nearplane() const {
   return _internal_has_nearplane();
@@ -23259,19 +23259,19 @@ inline float AppCameraInfo::nearplane() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.nearPlane)
   return _internal_nearplane();
 }
-inline void AppCameraInfo::_internal_set_nearplane(float value) {
+inline void AppCameraInfo::_internal_set_nearplane(float m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  nearplane_ = value;
+  nearplane_ = m_iValue;
 }
-inline void AppCameraInfo::set_nearplane(float value) {
-  _internal_set_nearplane(value);
+inline void AppCameraInfo::set_nearplane(float m_iValue) {
+  _internal_set_nearplane(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.nearPlane)
 }
 
 // required float farPlane = 4;
 inline bool AppCameraInfo::_internal_has_farplane() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInfo::has_farplane() const {
   return _internal_has_farplane();
@@ -23287,19 +23287,19 @@ inline float AppCameraInfo::farplane() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.farPlane)
   return _internal_farplane();
 }
-inline void AppCameraInfo::_internal_set_farplane(float value) {
+inline void AppCameraInfo::_internal_set_farplane(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  farplane_ = value;
+  farplane_ = m_iValue;
 }
-inline void AppCameraInfo::set_farplane(float value) {
-  _internal_set_farplane(value);
+inline void AppCameraInfo::set_farplane(float m_iValue) {
+  _internal_set_farplane(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.farPlane)
 }
 
 // required int32 controlFlags = 5;
 inline bool AppCameraInfo::_internal_has_controlflags() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraInfo::has_controlflags() const {
   return _internal_has_controlflags();
@@ -23315,12 +23315,12 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraInfo::controlflags() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraInfo.controlFlags)
   return _internal_controlflags();
 }
-inline void AppCameraInfo::_internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppCameraInfo::_internal_set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  controlflags_ = value;
+  controlflags_ = m_iValue;
 }
-inline void AppCameraInfo::set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_controlflags(value);
+inline void AppCameraInfo::set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_controlflags(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraInfo.controlFlags)
 }
 
@@ -23330,8 +23330,8 @@ inline void AppCameraInfo::set_controlflags(::PROTOBUF_NAMESPACE_ID::int32 value
 
 // required uint32 entityId = 1;
 inline bool AppCameraRays_Entity::_internal_has_entityid() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000010u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_entityid() const {
   return _internal_has_entityid();
@@ -23347,19 +23347,19 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 AppCameraRays_Entity::entityid() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.entityId)
   return _internal_entityid();
 }
-inline void AppCameraRays_Entity::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppCameraRays_Entity::_internal_set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
   _has_bits_[0] |= 0x00000010u;
-  entityid_ = value;
+  entityid_ = m_iValue;
 }
-inline void AppCameraRays_Entity::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_entityid(value);
+inline void AppCameraRays_Entity::set_entityid(::PROTOBUF_NAMESPACE_ID::uint32 m_iValue) {
+  _internal_set_entityid(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.Entity.entityId)
 }
 
 // required .rustplus.AppCameraRays.EntityType type = 2;
 inline bool AppCameraRays_Entity::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000020u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_type() const {
   return _internal_has_type();
@@ -23375,21 +23375,21 @@ inline ::rustplus::AppCameraRays_EntityType AppCameraRays_Entity::type() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.Entity.type)
   return _internal_type();
 }
-inline void AppCameraRays_Entity::_internal_set_type(::rustplus::AppCameraRays_EntityType value) {
-  assert(::rustplus::AppCameraRays_EntityType_IsValid(value));
+inline void AppCameraRays_Entity::_internal_set_type(::rustplus::AppCameraRays_EntityType m_iValue) {
+  assert(::rustplus::AppCameraRays_EntityType_IsValid(m_iValue));
   _has_bits_[0] |= 0x00000020u;
-  type_ = value;
+  type_ = m_iValue;
 }
-inline void AppCameraRays_Entity::set_type(::rustplus::AppCameraRays_EntityType value) {
-  _internal_set_type(value);
+inline void AppCameraRays_Entity::set_type(::rustplus::AppCameraRays_EntityType m_iValue) {
+  _internal_set_type(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.Entity.type)
 }
 
 // required .rustplus.Vector3 position = 3;
 inline bool AppCameraRays_Entity::_internal_has_position() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || position_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || position_ != nullptr);
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_position() const {
   return _internal_has_position();
@@ -23477,9 +23477,9 @@ inline void AppCameraRays_Entity::set_allocated_position(::rustplus::Vector3* po
 
 // required .rustplus.Vector3 rotation = 4;
 inline bool AppCameraRays_Entity::_internal_has_rotation() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || rotation_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || rotation_ != nullptr);
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_rotation() const {
   return _internal_has_rotation();
@@ -23567,9 +23567,9 @@ inline void AppCameraRays_Entity::set_allocated_rotation(::rustplus::Vector3* ro
 
 // required .rustplus.Vector3 size = 5;
 inline bool AppCameraRays_Entity::_internal_has_size() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || size_ != nullptr);
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!m_iValue || size_ != nullptr);
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_size() const {
   return _internal_has_size();
@@ -23657,8 +23657,8 @@ inline void AppCameraRays_Entity::set_allocated_size(::rustplus::Vector3* size) 
 
 // optional string name = 6;
 inline bool AppCameraRays_Entity::_internal_has_name() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays_Entity::has_name() const {
   return _internal_has_name();
@@ -23686,9 +23686,9 @@ inline std::string* AppCameraRays_Entity::mutable_name() {
 inline const std::string& AppCameraRays_Entity::_internal_name() const {
   return name_.Get();
 }
-inline void AppCameraRays_Entity::_internal_set_name(const std::string& value) {
+inline void AppCameraRays_Entity::_internal_set_name(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppCameraRays_Entity::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
@@ -23719,8 +23719,8 @@ inline void AppCameraRays_Entity::set_allocated_name(std::string* name) {
 
 // required float verticalFov = 1;
 inline bool AppCameraRays::_internal_has_verticalfov() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000002u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays::has_verticalfov() const {
   return _internal_has_verticalfov();
@@ -23736,19 +23736,19 @@ inline float AppCameraRays::verticalfov() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.verticalFov)
   return _internal_verticalfov();
 }
-inline void AppCameraRays::_internal_set_verticalfov(float value) {
+inline void AppCameraRays::_internal_set_verticalfov(float m_iValue) {
   _has_bits_[0] |= 0x00000002u;
-  verticalfov_ = value;
+  verticalfov_ = m_iValue;
 }
-inline void AppCameraRays::set_verticalfov(float value) {
-  _internal_set_verticalfov(value);
+inline void AppCameraRays::set_verticalfov(float m_iValue) {
+  _internal_set_verticalfov(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.verticalFov)
 }
 
 // required int32 sampleOffset = 2;
 inline bool AppCameraRays::_internal_has_sampleoffset() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000004u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays::has_sampleoffset() const {
   return _internal_has_sampleoffset();
@@ -23764,19 +23764,19 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 AppCameraRays::sampleoffset() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.sampleOffset)
   return _internal_sampleoffset();
 }
-inline void AppCameraRays::_internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void AppCameraRays::_internal_set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
   _has_bits_[0] |= 0x00000004u;
-  sampleoffset_ = value;
+  sampleoffset_ = m_iValue;
 }
-inline void AppCameraRays::set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_sampleoffset(value);
+inline void AppCameraRays::set_sampleoffset(::PROTOBUF_NAMESPACE_ID::int32 m_iValue) {
+  _internal_set_sampleoffset(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.sampleOffset)
 }
 
 // required bytes rayData = 3;
 inline bool AppCameraRays::_internal_has_raydata() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000001u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays::has_raydata() const {
   return _internal_has_raydata();
@@ -23804,9 +23804,9 @@ inline std::string* AppCameraRays::mutable_raydata() {
 inline const std::string& AppCameraRays::_internal_raydata() const {
   return raydata_.Get();
 }
-inline void AppCameraRays::_internal_set_raydata(const std::string& value) {
+inline void AppCameraRays::_internal_set_raydata(const std::string& m_iValue) {
   _has_bits_[0] |= 0x00000001u;
-  raydata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+  raydata_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, m_iValue, GetArenaForAllocation());
 }
 inline std::string* AppCameraRays::_internal_mutable_raydata() {
   _has_bits_[0] |= 0x00000001u;
@@ -23833,8 +23833,8 @@ inline void AppCameraRays::set_allocated_raydata(std::string* raydata) {
 
 // required float distance = 4;
 inline bool AppCameraRays::_internal_has_distance() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
+  bool m_iValue = (_has_bits_[0] & 0x00000008u) != 0;
+  return m_iValue;
 }
 inline bool AppCameraRays::has_distance() const {
   return _internal_has_distance();
@@ -23850,12 +23850,12 @@ inline float AppCameraRays::distance() const {
   // @@protoc_insertion_point(field_get:rustplus.AppCameraRays.distance)
   return _internal_distance();
 }
-inline void AppCameraRays::_internal_set_distance(float value) {
+inline void AppCameraRays::_internal_set_distance(float m_iValue) {
   _has_bits_[0] |= 0x00000008u;
-  distance_ = value;
+  distance_ = m_iValue;
 }
-inline void AppCameraRays::set_distance(float value) {
-  _internal_set_distance(value);
+inline void AppCameraRays::set_distance(float m_iValue) {
+  _internal_set_distance(m_iValue);
   // @@protoc_insertion_point(field_set:rustplus.AppCameraRays.distance)
 }
 

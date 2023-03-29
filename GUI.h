@@ -45,18 +45,20 @@ class GUIElement
 public:
 	GUIElement() {}
 	~GUIElement() {}
-	virtual void OnClick(std::function<void()> func) { ev = func; };
+	virtual void OnClick(std::function<void()> func) { m_func = func; };
 	virtual void Click()
 	{
-		if (clickable && ev)
-			ev();
+		if (m_bClickable && m_func)
+			m_func();
 	}
+	SDL_Rect orig;
 	SDL_Rect rect;
 	Relativity rel;
-	bool clickable = false;
-	bool enabled = true;
-	std::function<void()> ev;
-	std::string key;
+	bool m_bClickable = false;
+	bool m_bEnabled = true;
+	std::function<void()> m_func;
+	std::string m_sKey;
+	virtual void SetRect() = 0;
 };
 int getIndex(std::vector<GUIElement*> v, std::string K);
 
@@ -73,7 +75,6 @@ public:
 	static void Add(GUIElement* element) { Get().gui.push_back(element); }
 	//static void Remove(std::string _key) { Get().gui.erase(Get().gui.begin() + getIndex(Get().gui, _key)); }
 	static std::vector<GUIElement*>& Elements() { return Get().gui; }
-	SDL_Rect windowRect;
 private:
 	GUI() {}
 	std::vector<GUIElement*> gui;
@@ -83,43 +84,66 @@ class Button : public GUIElement
 {
 public:
 	Button() = delete;
-	Button(std::string _key, std::string _text, TTF_Font* font, SDL_Rect _rect, Relativity _rel, SDL_Color textColor, SDL_Color backgroundColor, bool defaultEnabled);
+	Button(std::string _key, std::string _text, TTF_Font* m_Font, SDL_Rect _rect, Relativity _rel, SDL_Color m_colText, SDL_Color m_colBackground, bool defaultEnabled);
 	~Button();
-	SDL_Texture* texture;
+	SDL_Texture* m_Texture;
+	void SetRect();
 private:
-	std::string text;
+	std::string m_sText;
 };
 
+class TextInput : public GUIElement
+{
+public:
+	TextInput() = delete;
+	TextInput(std::string _key, std::string _text, std::string _textEmpty, TTF_Font* _font, SDL_Rect _rect, Relativity _rel, SDL_Color _textColor, SDL_Color _textColorEmpty, SDL_Color _backgroundColor, bool defaultEnabled);
+	~TextInput();
+	SDL_Texture* m_Texture;
+	std::string m_sText;
+	std::string m_sTextEmpty;
+	void OnClick(std::function<void()> func) { m_func = func; };
+	void Click()
+	{
+		if (m_func)
+			m_func();
+	}
+	void Update();
+	void SetRect();
+private:
+	TTF_Font* m_Font;
+	SDL_Color m_colText, m_colTextEmpty, m_colBackground;
+};
 
 class Checkbox : public GUIElement
 {
 public:
 	Checkbox() = delete;
-	Checkbox(std::string _key, std::string _text, TTF_Font* font, SDL_Rect _rect, Relativity _rel, SDL_Color textColor, SDL_Color backgroundColor, bool defaultState, bool defaultEnabled);
+	Checkbox(std::string _key, std::string _text, TTF_Font* m_Font, SDL_Rect _rect, Relativity _rel, SDL_Color m_colText, SDL_Color m_colBackground, bool defaultState, bool defaultEnabled);
 	~Checkbox();
 	void Click() override
 	{
-		checked ? Uncheck() : Check();
-		checked = !checked;
+		m_bChecked ? Uncheck() : Check();
+		m_bChecked = !m_bChecked;
 	}
 	void Check()
 	{
-		if (ev)
-			ev();
+		if (m_func)
+			m_func();
 	}
 	void Uncheck()
 	{
-		if (ev2)
-			ev2();
+		if (m_func2)
+			m_func2();
 	}
-	void OnCheck(std::function<void()> func) { ev = func; };
-	void OnUncheck(std::function<void()> func) { ev2 = func; };
-	SDL_Texture* textureChecked;
-	SDL_Texture* textureUnchecked;
-	bool checked;
+	void OnCheck(std::function<void()> func) { m_func = func; };
+	void OnUncheck(std::function<void()> func) { m_func2 = func; };
+	void SetRect();
+	SDL_Texture* m_texChecked;
+	SDL_Texture* m_texUnChecked;
+	bool m_bChecked;
 private:
-	std::string text;
-	std::function<void()> ev2;
+	std::string m_sText;
+	std::function<void()> m_func2;
 };
 
 
@@ -127,15 +151,16 @@ class Slider : public GUIElement
 {
 public:
 	Slider() = delete;
-	Slider(std::string _key, std::string _text, TTF_Font* font, SDL_Rect _rect, Relativity _rel, SDL_Color textColor, SDL_Color backgroundColor, int minValue, int maxValue, int defaultValue, bool defaultEnabled);
+	Slider(std::string _key, std::string _text, TTF_Font* m_Font, SDL_Rect _rect, Relativity _rel, SDL_Color m_colText, SDL_Color m_colBackground, int minValue, int maxValue, int defaultValue, bool defaultEnabled);
 	void ChangeValue(int val)
 	{
-		value = val;
+		m_iValue = val;
 	}
-	SDL_Texture* texture;
-	int value;
+	void SetRect();
+	SDL_Texture* m_Texture;
+	int m_iValue;
 private:
-	std::string text;
+	std::string m_sText;
 };
 
 
@@ -143,18 +168,20 @@ class Block : public GUIElement
 {
 public:
 	Block() = delete;
-	Block(std::string _key, SDL_Rect _rect, Relativity _rel, SDL_Color backgroundColor, bool defaultEnabled);
+	Block(std::string _key, SDL_Rect _rect, Relativity _rel, SDL_Color m_colBackground, bool defaultEnabled);
 	~Block();
-	SDL_Texture* texture;
+	void SetRect();
+	SDL_Texture* m_Texture;
 };
 
 class Label : public GUIElement
 {
 public:
 	Label() = delete;
-	Label(std::string _key, std::string _text, TTF_Font* font, SDL_Rect _rect, Relativity _rel, SDL_Color textColor, bool defaultEnabled);
+	Label(std::string _key, std::string _text, TTF_Font* m_Font, SDL_Rect _rect, Relativity _rel, SDL_Color m_colText, bool defaultEnabled);
 	~Label();
-	SDL_Texture* texture;
+	void SetRect();
+	SDL_Texture* m_Texture;
 private:
-	std::string text;
+	std::string m_sText;
 };

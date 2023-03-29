@@ -2,7 +2,7 @@
 #include <tuple>
 #include <array>
 
-void GUIInteraction(const SDL_Event& ev);
+void GUIInteraction(const SDL_Event& m_func);
 void PollEvents();
 void NetLoop();
 bool Connect(std::string serverName);
