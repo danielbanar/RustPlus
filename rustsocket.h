@@ -82,8 +82,9 @@ public:
 	AppCameraInfo Subscribe(const char* camid);
 	void SetSubscription();
 	void CheckSubscription();
-	bool Send(const std::string& message);
-	std::string Receive();
+	bool SendBinary(const std::string& message);
+	std::string receive_binary();
+	std::string receive_binary2();
 
 private:
 	uint32_t iSeq;

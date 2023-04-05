@@ -328,7 +328,7 @@ void NetLoop()
 	NStatus& NSTeamChat = g.NSTeamChat;
 	NStatus& NSTeamInfo = g.NSTeamInfo;
 	AppMessage appMessage;
-	appMessage.ParseFromString(rs->Receive());
+	appMessage.ParseFromString(rs->receive_binary());
 
 	if (appMessage.has_broadcast() && appMessage.broadcast().has_camerarays())
 	{
@@ -393,7 +393,7 @@ void NetLoop()
 			msgType = NMarkers;
 			//std::cout << "Sent TeamInfo!" << std::endl;
 		}
-		rs->Send(request.SerializeAsString());
+		rs->SendBinary(request.SerializeAsString());
 		//Events
 		/*g.vecOrders.clear();
 		for (int i = 0; i < g.appMapMarkers.markers_size(); i++)

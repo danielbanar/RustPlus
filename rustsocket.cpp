@@ -79,19 +79,104 @@ bool VectorContains(std::vector<AppMarker>& vec, AppMarker element)
 	}
 	return false;
 }
-bool RustSocket::Send(const std::string& message)
+bool RustSocket::SendBinary(const std::string& message)
 {
-	if (send(sock, message.data(), message.size(), 0) == SOCKET_ERROR) 
+	int header_size = 2;
+	int frame_size = message.size() + header_size;
+	char* frame = new char[frame_size];
+	frame[0] = 0x82; // FIN bit + opcode for binary frame
+	frame[1] = message.size(); // length byte
+
+	memcpy(frame + header_size, message.data(), message.size());
+
+	int iResult = send(sock, frame, frame_size, 0);
+	delete[] frame;
+
+	if (iResult == SOCKET_ERROR) 
 	{
-		std::cerr << "Error sending data: " << WSAGetLastError() << std::endl;
-		closesocket(sock);
-		WSACleanup();
-		return false;
+		printf("send failed: %d\n", WSAGetLastError());
+		return -1;
 	}
-	return true;
+
+	return iResult;
 }
-std::string RustSocket::Receive()
+
+std::string RustSocket::receive_binary2() 
 {
+	// Receive WebSocket frame header
+	char header[2];
+	int iResult = recv(sock, header, 2, 0);
+	if (iResult == SOCKET_ERROR) {
+		printf("recv failed: %d\n", WSAGetLastError());
+		return "";
+	}
+
+	// Check if this is a binary frame
+	bool is_binary = (header[0] & 0x0F) == 0x02;
+	if (!is_binary) {
+		printf("Received non-binary frame\n");
+		return "";
+	}
+
+	// Get payload length
+	int payload_length = header[1] & 0x7F;
+	if (payload_length == 126) {
+		// If payload_length is 126, the actual payload length is in the next two bytes
+		char length_bytes[2];
+		iResult = recv(sock, length_bytes, 2, 0);
+		if (iResult == SOCKET_ERROR) {
+			printf("recv failed: %d\n", WSAGetLastError());
+			return "";
+		}
+		payload_length = ntohs(*reinterpret_cast<uint16_t*>(length_bytes));
+	}
+	else if (payload_length == 127) {
+		// If payload_length is 127, the actual payload length is in the next eight bytes
+		char length_bytes[8];
+		iResult = recv(sock, length_bytes, 8, 0);
+		if (iResult == SOCKET_ERROR) {
+			printf("recv failed: %d\n", WSAGetLastError());
+			return "";
+		}
+		uint64_t length = ntohll(*reinterpret_cast<uint64_t*>(length_bytes));
+		if (length > INT_MAX) {
+			printf("Payload too large\n");
+			return "";
+		}
+		payload_length = static_cast<int>(length);
+	}
+
+	// Receive payload
+	std::string binary_data;
+	binary_data.resize(payload_length);
+
+	iResult = recv(sock, &binary_data[0], payload_length, 0);
+	if (iResult == SOCKET_ERROR) {
+		printf("recv failed: %d\n", WSAGetLastError());
+		return "";
+	}
+
+	return binary_data;
+}
+struct wsheader_type {
+	unsigned header_size;
+	bool fin;
+	bool mask;
+	enum opcode_type {
+		CONTINUATION = 0x0,
+		TEXT_FRAME = 0x1,
+		BINARY_FRAME = 0x2,
+		CLOSE = 8,
+		PING = 9,
+		PONG = 0xa,
+	} opcode;
+	int N0;
+	uint64_t N;
+	uint8_t masking_key[4];
+};
+std::string RustSocket::receive_binary()
+{
+	std::string rxbuf;
 	std::string receivedData;
 	char buffer[1024];
 	int bytesReceived;
@@ -105,8 +190,92 @@ std::string RustSocket::Receive()
 			WSACleanup();
 			return "";
 		}
-		receivedData.append(buffer, bytesReceived);
+		rxbuf.append(buffer, bytesReceived);
 	} while (bytesReceived == sizeof(buffer));
+	static bool isRxBad = false;
+	if (isRxBad) {
+		return "";
+	}
+	while (true) {
+		wsheader_type ws;
+		if (rxbuf.size() < 2) { return ""; /* Need at least 2 */ }
+		const uint8_t* data = (uint8_t*)&rxbuf[0]; // peek, but don't consume
+		ws.fin = (data[0] & 0x80) == 0x80;
+		ws.opcode = (wsheader_type::opcode_type)(data[0] & 0x0f);
+		ws.mask = (data[1] & 0x80) == 0x80;
+		ws.N0 = (data[1] & 0x7f);
+		ws.header_size = 2 + (ws.N0 == 126 ? 2 : 0) + (ws.N0 == 127 ? 8 : 0) + (ws.mask ? 4 : 0);
+		if (rxbuf.size() < ws.header_size) { return ""; /* Need: ws.header_size - rxbuf.size() */ }
+		int i = 0;
+		if (ws.N0 < 126) {
+			ws.N = ws.N0;
+			i = 2;
+		}
+		else if (ws.N0 == 126) {
+			ws.N = 0;
+			ws.N |= ((uint64_t)data[2]) << 8;
+			ws.N |= ((uint64_t)data[3]) << 0;
+			i = 4;
+		}
+		else if (ws.N0 == 127) {
+			ws.N = 0;
+			ws.N |= ((uint64_t)data[2]) << 56;
+			ws.N |= ((uint64_t)data[3]) << 48;
+			ws.N |= ((uint64_t)data[4]) << 40;
+			ws.N |= ((uint64_t)data[5]) << 32;
+			ws.N |= ((uint64_t)data[6]) << 24;
+			ws.N |= ((uint64_t)data[7]) << 16;
+			ws.N |= ((uint64_t)data[8]) << 8;
+			ws.N |= ((uint64_t)data[9]) << 0;
+			i = 10;
+			if (ws.N & 0x8000000000000000ull) {
+				// https://tools.ietf.org/html/rfc6455 writes the "the most
+				// significant bit MUST be 0."
+				//
+				// We can't drop the frame, because (1) we don't we don't
+				// know how much data to skip over to find the next header,
+				// and (2) this would be an impractically long length, even
+				// if it were valid. So just close() and return immediately
+				// for now.
+				isRxBad = true;
+				fprintf(stderr, "ERROR: Frame has invalid frame length. Closing.\n");
+				return "";
+			}
+		}
+		if (ws.mask) {
+			ws.masking_key[0] = ((uint8_t)data[i + 0]) << 0;
+			ws.masking_key[1] = ((uint8_t)data[i + 1]) << 0;
+			ws.masking_key[2] = ((uint8_t)data[i + 2]) << 0;
+			ws.masking_key[3] = ((uint8_t)data[i + 3]) << 0;
+		}
+		else {
+			ws.masking_key[0] = 0;
+			ws.masking_key[1] = 0;
+			ws.masking_key[2] = 0;
+			ws.masking_key[3] = 0;
+		}
+
+		// Note: The checks above should hopefully ensure this addition
+		//       cannot overflow:
+		if (rxbuf.size() < ws.header_size + ws.N) { return ""; /* Need: ws.header_size+ws.N - rxbuf.size() */ }
+
+		// We got a whole message, now do something with it:
+		if (false) {}
+		else if (
+			ws.opcode == wsheader_type::TEXT_FRAME
+			|| ws.opcode == wsheader_type::BINARY_FRAME
+			|| ws.opcode == wsheader_type::CONTINUATION
+			) {
+			if (ws.mask) { for (size_t i = 0; i != ws.N; ++i) { rxbuf[i + ws.header_size] ^= ws.masking_key[i & 0x3]; } }
+			receivedData.insert(receivedData.end(), rxbuf.begin() + ws.header_size, rxbuf.begin() + ws.header_size + (size_t)ws.N);// just feed
+			if (ws.fin) 
+			{
+				receivedData.erase(receivedData.begin(), receivedData.end());
+			}
+		}
+
+		rxbuf.erase(rxbuf.begin(), rxbuf.begin() + ws.header_size + (size_t)ws.N);
+	}
 	return receivedData;
 }
 RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t token) : iSteamID(steamid), iPlayerToken(token), iSeq(1)
@@ -140,21 +309,20 @@ RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t 
 	else
 		std::cout << "Connected!\n";
 
-	std::string request = "GET /chat HTTP/1.1\r\n"
+	std::string request = "GET / HTTP/1.1\r\n"
 		"Host: " + std::string(ip) + ":" + std::to_string(port) + "\r\n"
 		"Upgrade: websocket\r\n"
 		"Connection: Upgrade\r\n"
 		"Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==\r\n"
 		"Sec-WebSocket-Version: 13\r\n"
-		"Origin: ws://" + std::string(ip) + ":" + std::to_string(port) + "\r\n"
 		"\r\n";
+
 	result = send(sock, request.c_str(), request.size(), 0);
 	if (result == SOCKET_ERROR)
 	{
 		std::cerr << "send failed with error: " << WSAGetLastError() << std::endl;
 		closesocket(sock);
 		WSACleanup();
-		return 1;
 	}
 
 	// Receive the server response to complete the WebSocket handshake
@@ -166,7 +334,10 @@ RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t 
 		closesocket(sock);
 		WSACleanup();
 	}
-
+	int flag = 1;
+	setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, (char*)&flag, sizeof(flag)); // Disable Nagle's algorithm
+	u_long on = 1;
+	ioctlsocket(sock, FIONBIO, &on);
 }
 void RustSocket::SendTeamChatMessage(const char* message)
 {
@@ -174,11 +345,11 @@ void RustSocket::SendTeamChatMessage(const char* message)
 	msg.set_message(message);
 	auto request = initProto();
 	request.mutable_sendteammessage()->CopyFrom(msg);
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SendTeamChatMessage\n\n";
@@ -189,11 +360,11 @@ void RustSocket::SetSubscription()
 	flag.set_value(1);
 	auto request = initProto();
 	request.mutable_setsubscription()->CopyFrom(flag);
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SetSubscription\n\n";
@@ -203,11 +374,11 @@ void RustSocket::CheckSubscription()
 	auto request = initProto();
 	request.mutable_checksubscription()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "CheckSubscription\n\n";
@@ -223,11 +394,11 @@ AppCameraInfo RustSocket::Subscribe(const char* camid)
 	auto request = initProto();
 	//request.mutable_setsubscription()->CopyFrom(flag);
 	request.mutable_camerasubscribe()->CopyFrom(sub);
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!(appMessage.has_response() || appMessage.has_broadcast()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "Subscribe\n\n";
@@ -238,11 +409,11 @@ AppInfo RustSocket::GetInfo()
 	auto request = initProto();
 	request.mutable_getinfo()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response() || !appMessage.response().has_info());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetInfo\n\n";
@@ -255,12 +426,12 @@ AppMap RustSocket::GetMap()
 	auto request = initProto();
 	request.mutable_getmap()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		std::string rec = Receive();
-		std::cout << rec << std::endl;
+		std::string rec = receive_binary();
+		std::cout << rec.size() << std::endl;
 		appMessage.ParseFromString(rec);
 	} while ((!appMessage.has_response() || !appMessage.response().has_map()) && !(appMessage.has_response() && appMessage.response().has_error()));
 	if (appMessage.response().has_error() && !ignoreErrors)
@@ -272,11 +443,11 @@ AppMapMarkers RustSocket::GetMarkers()
 	auto request = initProto();
 	request.mutable_getmapmarkers()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response() || !appMessage.response().has_mapmarkers());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetMarkers\n\n";
@@ -289,11 +460,11 @@ AppTeamChat RustSocket::GetTeamChat()
 	auto request = initProto();
 	request.mutable_getteamchat()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while ((!appMessage.has_response() || !appMessage.response().has_teamchat()) && !(appMessage.has_response() && appMessage.response().has_error()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamChat\n\n";
@@ -333,11 +504,11 @@ AppTime RustSocket::GetTime()
 	auto request = initProto();
 	request.mutable_gettime()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response() || !appMessage.response().has_time());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTime\n\n";
@@ -350,11 +521,11 @@ AppTeamInfo RustSocket::GetTeamInfo()
 	auto request = initProto();
 	request.mutable_getteaminfo()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response() || !appMessage.response().has_teaminfo());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamInfo\n\n";
@@ -370,11 +541,11 @@ void RustSocket::PromoteToTeamLeader(uint64_t steamid)
 	auto request = initProto();
 	request.mutable_promotetoleader()->CopyFrom(leaderPacket);
 	std::string data = request.SerializeAsString();
-	Send(request.SerializeAsString());
+	SendBinary(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		appMessage.ParseFromString(Receive());
+		appMessage.ParseFromString(receive_binary());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "PromoteToTeamLeader\n\n";
