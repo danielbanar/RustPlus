@@ -125,7 +125,7 @@ RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t 
 
 	sockaddr_in serverAddress;
 	memset(&serverAddress, 0, sizeof(serverAddress));
-	serverAddress.sin_family = AF_INET;
+	serverAddress.sin_family = AF_INET; 
 	serverAddress.sin_port = htons(port);
 	inet_pton(AF_INET, ip, &serverAddress.sin_addr);
 
@@ -139,6 +139,34 @@ RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t 
 	}
 	else
 		std::cout << "Connected!\n";
+
+	std::string request = "GET /chat HTTP/1.1\r\n"
+		"Host: " + std::string(ip) + ":" + std::to_string(port) + "\r\n"
+		"Upgrade: websocket\r\n"
+		"Connection: Upgrade\r\n"
+		"Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==\r\n"
+		"Sec-WebSocket-Version: 13\r\n"
+		"Origin: ws://" + std::string(ip) + ":" + std::to_string(port) + "\r\n"
+		"\r\n";
+	result = send(sock, request.c_str(), request.size(), 0);
+	if (result == SOCKET_ERROR)
+	{
+		std::cerr << "send failed with error: " << WSAGetLastError() << std::endl;
+		closesocket(sock);
+		WSACleanup();
+		return 1;
+	}
+
+	// Receive the server response to complete the WebSocket handshake
+	char buffer[1024];
+	result = recv(sock, buffer, sizeof(buffer), 0);
+	if (result == SOCKET_ERROR)
+	{
+		std::cerr << "recv failed with error: " << WSAGetLastError() << std::endl;
+		closesocket(sock);
+		WSACleanup();
+	}
+
 }
 void RustSocket::SendTeamChatMessage(const char* message)
 {
