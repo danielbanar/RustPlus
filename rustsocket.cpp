@@ -79,22 +79,65 @@ bool VectorContains(std::vector<AppMarker>& vec, AppMarker element)
 	}
 	return false;
 }
-
-RustSocket::RustSocket(const char* ip, const char* port, uint64_t steamid, int32_t token) : iSteamID(steamid), iPlayerToken(token), iSeq(1)
+bool RustSocket::Send(const std::string& message)
 {
-#ifdef _WIN32
-	INT rc;
+	if (send(sock, message.data(), message.size(), 0) == SOCKET_ERROR) 
+	{
+		std::cerr << "Error sending data: " << WSAGetLastError() << std::endl;
+		closesocket(sock);
+		WSACleanup();
+		return false;
+	}
+	return true;
+}
+std::string RustSocket::Receive()
+{
+	std::string receivedData;
+	char buffer[1024];
+	int bytesReceived;
+	do 
+	{
+		bytesReceived = recv(sock, buffer, sizeof(buffer), 0);
+		if (bytesReceived < 0) 
+		{
+			std::cerr << "Error receiving data: " << WSAGetLastError() << std::endl;
+			closesocket(sock);
+			WSACleanup();
+			return "";
+		}
+		receivedData.append(buffer, bytesReceived);
+	} while (bytesReceived == sizeof(buffer));
+	return receivedData;
+}
+RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t token) : iSteamID(steamid), iPlayerToken(token), iSeq(1)
+{
 	WSADATA wsaData;
-	rc = WSAStartup(MAKEWORD(2, 2), &wsaData);
-	if (rc)
-		std::cout << "WSAStartup Failed.\n";
-#endif
-	url += ip;
-	url += ':';
-	url += port;
-	std::cout << "Connecting to " << url << "..." << std::endl;
-	ws = WebSocket::from_url(url);
-	if (ws)
+	int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	if (result)
+		std::cerr << "WSAStartup failed: " << result << std::endl;
+
+	sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if (sock == INVALID_SOCKET)
+	{
+		std::cerr << "Error creating socket: " << WSAGetLastError() << std::endl;
+		WSACleanup();
+	}
+
+	sockaddr_in serverAddress;
+	memset(&serverAddress, 0, sizeof(serverAddress));
+	serverAddress.sin_family = AF_INET;
+	serverAddress.sin_port = htons(port);
+	inet_pton(AF_INET, ip, &serverAddress.sin_addr);
+
+	std::cout << "Connecting to " << ip << ':' << port << "..." << std::endl;
+	result = connect(sock, (SOCKADDR*)&serverAddress, sizeof(serverAddress));
+	if (result == SOCKET_ERROR) 
+	{
+		std::cerr << "Error connecting to server: " << WSAGetLastError() << std::endl;
+		closesocket(sock);
+		WSACleanup();
+	}
+	else
 		std::cout << "Connected!\n";
 }
 void RustSocket::SendTeamChatMessage(const char* message)
@@ -103,12 +146,11 @@ void RustSocket::SendTeamChatMessage(const char* message)
 	msg.set_message(message);
 	auto request = initProto();
 	request.mutable_sendteammessage()->CopyFrom(msg);
-	ws->sendBinary(request.SerializeAsString());
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SendTeamChatMessage\n\n";
@@ -119,12 +161,11 @@ void RustSocket::SetSubscription()
 	flag.set_value(1);
 	auto request = initProto();
 	request.mutable_setsubscription()->CopyFrom(flag);
-	ws->sendBinary(request.SerializeAsString());
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "SetSubscription\n\n";
@@ -134,12 +175,11 @@ void RustSocket::CheckSubscription()
 	auto request = initProto();
 	request.mutable_checksubscription()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "CheckSubscription\n\n";
@@ -155,12 +195,11 @@ AppCameraInfo RustSocket::Subscribe(const char* camid)
 	auto request = initProto();
 	//request.mutable_setsubscription()->CopyFrom(flag);
 	request.mutable_camerasubscribe()->CopyFrom(sub);
-	ws->sendBinary(request.SerializeAsString());
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!(appMessage.has_response() || appMessage.has_broadcast()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "Subscribe\n\n";
@@ -171,12 +210,11 @@ AppInfo RustSocket::GetInfo()
 	auto request = initProto();
 	request.mutable_getinfo()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response() || !appMessage.response().has_info());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetInfo\n\n";
@@ -189,12 +227,13 @@ AppMap RustSocket::GetMap()
 	auto request = initProto();
 	request.mutable_getmap()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		std::string rec = Receive();
+		std::cout << rec << std::endl;
+		appMessage.ParseFromString(rec);
 	} while ((!appMessage.has_response() || !appMessage.response().has_map()) && !(appMessage.has_response() && appMessage.response().has_error()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetMap\n\n";
@@ -205,12 +244,11 @@ AppMapMarkers RustSocket::GetMarkers()
 	auto request = initProto();
 	request.mutable_getmapmarkers()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response() || !appMessage.response().has_mapmarkers());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetMarkers\n\n";
@@ -223,12 +261,11 @@ AppTeamChat RustSocket::GetTeamChat()
 	auto request = initProto();
 	request.mutable_getteamchat()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while ((!appMessage.has_response() || !appMessage.response().has_teamchat()) && !(appMessage.has_response() && appMessage.response().has_error()));
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamChat\n\n";
@@ -268,12 +305,11 @@ AppTime RustSocket::GetTime()
 	auto request = initProto();
 	request.mutable_gettime()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response() || !appMessage.response().has_time());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTime\n\n";
@@ -286,12 +322,11 @@ AppTeamInfo RustSocket::GetTeamInfo()
 	auto request = initProto();
 	request.mutable_getteaminfo()->CopyFrom(AppEmpty());
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response() || !appMessage.response().has_teaminfo());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "GetTeamInfo\n\n";
@@ -307,12 +342,11 @@ void RustSocket::PromoteToTeamLeader(uint64_t steamid)
 	auto request = initProto();
 	request.mutable_promotetoleader()->CopyFrom(leaderPacket);
 	std::string data = request.SerializeAsString();
-	ws->sendBinary(data);
+	Send(request.SerializeAsString());
 	AppMessage appMessage;
 	do
 	{
-		ws->poll(-1);
-		ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+		appMessage.ParseFromString(Receive());
 	} while (!appMessage.has_response());
 	if (appMessage.response().has_error() && !ignoreErrors)
 		std::cout << appMessage.response().error().DebugString() << "PromoteToTeamLeader\n\n";

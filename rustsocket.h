@@ -1,24 +1,16 @@
 #pragma once
 #include <iostream>
 #include <fstream>
-#include "easywsclient.hpp"
 #include "rustplus.pb.h"
 #include <map>
-#ifdef _WIN32
-#pragma comment( lib, "ws2_32" )
 #include <WinSock2.h>
+#include <WS2tcpip.h>
+
+#pragma comment( lib, "ws2_32" )
 #include <assert.h>
-#endif
 
-#ifdef __WIN32__
-# include <winsock2.h>
-#else
-# include <sys/types.h>
-#endif
-
-using namespace easywsclient;
 using namespace rustplus;
-//std::vector<char> buffer;
+
 std::string trim(const std::string& str, const std::string& whitespace = " \t");
 struct Time
 {
@@ -74,9 +66,8 @@ bool VectorContains(std::vector<AppMarker>& vec, AppMarker element);
 class RustSocket
 {
 public:
-	WebSocket::pointer ws = nullptr;
-
-	RustSocket(const char* ip, const char* port, uint64_t steamid, int32_t token);
+	SOCKET sock;
+	RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t token);
 	void SendTeamChatMessage(const char* message);
 	AppInfo GetInfo();
 	AppMap GetMap();
@@ -91,8 +82,10 @@ public:
 	AppCameraInfo Subscribe(const char* camid);
 	void SetSubscription();
 	void CheckSubscription();
+	bool Send(const std::string& message);
+	std::string Receive();
+
 private:
-	std::string url = "ws://";
 	uint32_t iSeq;
 	uint64_t iSteamID;
 	int32_t iPlayerToken;

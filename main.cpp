@@ -23,7 +23,7 @@ float& fMapZoom = g.fMapZoom;
 float& fMapX = g.fMapX;
 float& fMapY = g.fMapY;
 
-RustSocket* rs = (RustSocket*)g.socket;
+RustSocket* rs;
 SDL_Renderer* cameraRenderer;
 bool alertCargo = true, alertPatrol = true, alertCrate = true, alertExplosion = true, alertChinook = true;
 TextInput* ti_InFocus = nullptr;
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
 	g.tLastCamera = std::chrono::high_resolution_clock::now();
 	g.activeCamera = cameraTextInput->m_sText;
 	g.appCameraInfo = rs->Subscribe(g.activeCamera.c_str());
-	Render_CameraWindow(); 
+	Render_CameraWindow();
 		});
 
 	Button* registerButton = new Button("button_register", "Sign in", g.fontTahomaBold, { -105, -120, 80, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
@@ -167,8 +167,11 @@ int main(int argc, char* argv[])
 	SDL_DestroyTexture(Icons::myMarker);
 	SDL_DestroyRenderer(g.mainRenderer);
 	SDL_DestroyWindow(g.mainWindow);
-	if (rs)
-		rs->ws->close();
+	if (rs && rs->sock)
+	{
+		closesocket(rs->sock);
+		WSACleanup();
+	}
 	TTF_Quit();
 	SDL_Quit();
 	return 0;
@@ -325,8 +328,7 @@ void NetLoop()
 	NStatus& NSTeamChat = g.NSTeamChat;
 	NStatus& NSTeamInfo = g.NSTeamInfo;
 	AppMessage appMessage;
-	rs->ws->poll();
-	rs->ws->dispatch([&](const std::string& message) { appMessage.ParseFromString(message); });
+	appMessage.ParseFromString(rs->Receive());
 
 	if (appMessage.has_broadcast() && appMessage.broadcast().has_camerarays())
 	{
@@ -391,7 +393,7 @@ void NetLoop()
 			msgType = NMarkers;
 			//std::cout << "Sent TeamInfo!" << std::endl;
 		}
-		rs->ws->sendBinary(request.SerializeAsString());
+		rs->Send(request.SerializeAsString());
 		//Events
 		/*g.vecOrders.clear();
 		for (int i = 0; i < g.appMapMarkers.markers_size(); i++)
@@ -588,7 +590,7 @@ void NetLoop()
 	}
 	if (deltaCamera.count() > 30.f)
 	{
-		if(!g.activeCamera.empty())
+		if (!g.activeCamera.empty())
 			rs->Subscribe(g.activeCamera.c_str());
 		tLastCamera = tNow;
 	}
@@ -613,9 +615,7 @@ bool Connect(std::string serverName)
 	if (json.count("name"))
 		g.connectedServerName = json["name"];
 	LoadMarkersFromJson();
-	rs = new RustSocket(g.jIP.c_str(), g.jPort.c_str(), g.jID, g.jToken);
-	if (!rs->ws || rs->ws->getReadyState() == WebSocket::CLOSED)
-		return 0;
+	rs = new RustSocket(g.jIP.c_str(), std::stoi(g.jPort), g.jID, g.jToken);
 	g.appMap = rs->GetMap();
 	g.appInfo = rs->GetInfo();
 	g.appMapMarkers = rs->GetMarkers();
@@ -644,7 +644,6 @@ void Disconnect()
 	g.fMapY = g.fWindowHeight / 2.f;
 	g.lastX = g.lastY = 0;
 	//((RustSocket*)g.socket)->ws->close();
-	g.socket = nullptr;
 	g.connected = false;
 	//serverbuttons - destroy + create
 	//localplayer - depends on which dc method use i think

@@ -57,7 +57,6 @@ public:
 	rustplus::AppTeamChat lastTeamChat;
 
 	//Networking
-	void* socket;
 	NStatus NSmapMarkers;
 	NStatus NSTeamChat;
 	NStatus NSTeamInfo;
