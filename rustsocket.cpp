@@ -79,85 +79,67 @@ bool VectorContains(std::vector<AppMarker>& vec, AppMarker element)
 	}
 	return false;
 }
+bool useMask = true;
 bool RustSocket::SendBinary(const std::string& message)
 {
-	int header_size = 2;
-	int frame_size = message.size() + header_size;
-	char* frame = new char[frame_size];
-	frame[0] = 0x82; // FIN bit + opcode for binary frame
-	frame[1] = message.size(); // length byte
-
-	memcpy(frame + header_size, message.data(), message.size());
-
-	int iResult = send(sock, frame, frame_size, 0);
-	delete[] frame;
-
-	if (iResult == SOCKET_ERROR) 
-	{
-		printf("send failed: %d\n", WSAGetLastError());
-		return -1;
+	uint8_t type = 2;
+	const uint8_t masking_key[4] = { 0, 0, 0, 0 };
+	std::vector<uint8_t> header;
+	header.assign(2 + (message.size() >= 126 ? 2 : 0) + (message.size() >= 65536 ? 6 : 0) + (useMask ? 4 : 0), 0);
+	header[0] = 0x80 | type;
+	if (false) {}
+	else if (message.size() < 126) {
+		header[1] = (message.size() & 0xff) | (useMask ? 0x80 : 0);
+		if (useMask) {
+			header[2] = masking_key[0];
+			header[3] = masking_key[1];
+			header[4] = masking_key[2];
+			header[5] = masking_key[3];
+		}
 	}
-
-	return iResult;
+	else if (message.size() < 65536) {
+		header[1] = 126 | (useMask ? 0x80 : 0);
+		header[2] = (message.size() >> 8) & 0xff;
+		header[3] = (message.size() >> 0) & 0xff;
+		if (useMask) {
+			header[4] = masking_key[0];
+			header[5] = masking_key[1];
+			header[6] = masking_key[2];
+			header[7] = masking_key[3];
+		}
+	}
+	else { // TODO: run coverage testing here
+		header[1] = 127 | (useMask ? 0x80 : 0);
+		header[2] = (message.size() >> 56) & 0xff;
+		header[3] = (message.size() >> 48) & 0xff;
+		header[4] = (message.size() >> 40) & 0xff;
+		header[5] = (message.size() >> 32) & 0xff;
+		header[6] = (message.size() >> 24) & 0xff;
+		header[7] = (message.size() >> 16) & 0xff;
+		header[8] = (message.size() >> 8) & 0xff;
+		header[9] = (message.size() >> 0) & 0xff;
+		if (useMask) {
+			header[10] = masking_key[0];
+			header[11] = masking_key[1];
+			header[12] = masking_key[2];
+			header[13] = masking_key[3];
+		}
+	}
+	std::vector<uint8_t> txbuf;
+	// N.B. - txbuf will keep growing until it can be transmitted over the socket:
+	txbuf.insert(txbuf.end(), header.begin(), header.end());
+	txbuf.insert(txbuf.end(), message.begin(), message.end());
+	if (useMask) {
+		size_t message_offset = txbuf.size() - message.size();
+		for (size_t i = 0; i != message.size(); ++i) 
+		{
+			txbuf[message_offset + i] ^= masking_key[i & 0x3];
+		}
+	}
+	return send(sock, (char*)txbuf.data(), txbuf.size(), 0);
 }
 
-std::string RustSocket::receive_binary2() 
-{
-	// Receive WebSocket frame header
-	char header[2];
-	int iResult = recv(sock, header, 2, 0);
-	if (iResult == SOCKET_ERROR) {
-		printf("recv failed: %d\n", WSAGetLastError());
-		return "";
-	}
 
-	// Check if this is a binary frame
-	bool is_binary = (header[0] & 0x0F) == 0x02;
-	if (!is_binary) {
-		printf("Received non-binary frame\n");
-		return "";
-	}
-
-	// Get payload length
-	int payload_length = header[1] & 0x7F;
-	if (payload_length == 126) {
-		// If payload_length is 126, the actual payload length is in the next two bytes
-		char length_bytes[2];
-		iResult = recv(sock, length_bytes, 2, 0);
-		if (iResult == SOCKET_ERROR) {
-			printf("recv failed: %d\n", WSAGetLastError());
-			return "";
-		}
-		payload_length = ntohs(*reinterpret_cast<uint16_t*>(length_bytes));
-	}
-	else if (payload_length == 127) {
-		// If payload_length is 127, the actual payload length is in the next eight bytes
-		char length_bytes[8];
-		iResult = recv(sock, length_bytes, 8, 0);
-		if (iResult == SOCKET_ERROR) {
-			printf("recv failed: %d\n", WSAGetLastError());
-			return "";
-		}
-		uint64_t length = ntohll(*reinterpret_cast<uint64_t*>(length_bytes));
-		if (length > INT_MAX) {
-			printf("Payload too large\n");
-			return "";
-		}
-		payload_length = static_cast<int>(length);
-	}
-
-	// Receive payload
-	std::string binary_data;
-	binary_data.resize(payload_length);
-
-	iResult = recv(sock, &binary_data[0], payload_length, 0);
-	if (iResult == SOCKET_ERROR) {
-		printf("recv failed: %d\n", WSAGetLastError());
-		return "";
-	}
-
-	return binary_data;
-}
 struct wsheader_type {
 	unsigned header_size;
 	bool fin;
@@ -174,25 +156,28 @@ struct wsheader_type {
 	uint64_t N;
 	uint8_t masking_key[4];
 };
+bool isRxBad = false;
 std::string RustSocket::receive_binary()
 {
 	std::string rxbuf;
 	std::string receivedData;
 	char buffer[1024];
 	int bytesReceived;
-	do 
-	{
+	do {
 		bytesReceived = recv(sock, buffer, sizeof(buffer), 0);
-		if (bytesReceived < 0) 
-		{
+		if (bytesReceived == 0) {
+			// EOF received, connection closed by server
+			break;
+		}
+		else if (bytesReceived < 0) {
 			std::cerr << "Error receiving data: " << WSAGetLastError() << std::endl;
 			closesocket(sock);
 			WSACleanup();
-			return "";
 		}
+		std::cout << rxbuf.size() << std::endl;
 		rxbuf.append(buffer, bytesReceived);
-	} while (bytesReceived == sizeof(buffer));
-	static bool isRxBad = false;
+	} while (true);
+
 	if (isRxBad) {
 		return "";
 	}
@@ -271,9 +256,9 @@ std::string RustSocket::receive_binary()
 			if (ws.fin) 
 			{
 				receivedData.erase(receivedData.begin(), receivedData.end());
+				std::string().swap(receivedData);// free memory
 			}
 		}
-
 		rxbuf.erase(rxbuf.begin(), rxbuf.begin() + ws.header_size + (size_t)ws.N);
 	}
 	return receivedData;
@@ -336,6 +321,7 @@ RustSocket::RustSocket(const char* ip, uint16_t port, uint64_t steamid, int32_t 
 	}
 	int flag = 1;
 	setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, (char*)&flag, sizeof(flag)); // Disable Nagle's algorithm
+
 	u_long on = 1;
 	ioctlsocket(sock, FIONBIO, &on);
 }

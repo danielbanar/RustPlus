@@ -616,8 +616,8 @@ bool Connect(std::string serverName)
 		g.connectedServerName = json["name"];
 	LoadMarkersFromJson();
 	rs = new RustSocket(g.jIP.c_str(), std::stoi(g.jPort), g.jID, g.jToken);
-	g.appMap = rs->GetMap();
 	g.appInfo = rs->GetInfo();
+	g.appMap = rs->GetMap();
 	g.appMapMarkers = rs->GetMarkers();
 	g.appTeamInfo = rs->GetTeamInfo();
 	g.localPlayer = GetLocalPlayer();
