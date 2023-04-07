@@ -52,9 +52,9 @@ int main(int argc, char* argv[])
 	TTF_SetFontHinting(g.fontTahomaBold, 1);
 
 	Icons::CreateTextures();
-	g.servers = GetServerlist();
+	g.servers = Utils::GetServerlist();
 	if (g.servers.size() == 0)
-		CreateTemplateFile();
+		Utils::CreateTemplateFile();
 
 	//GUI Instancing
 	static bool bSettings = false;
@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
 			ShellExecute(NULL, "runas", "cmd", "/c npx @liamcottle/rustplus.js fcm-listen > C:/listen.temp", NULL, SW_SHOW);
 		});
 	Button* importButton = new Button("button_import", "Import", g.fontTahomaBold, { -15, -85, 170, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
-	importButton->OnClick([&]() { Import(); });
+	importButton->OnClick([&]() { Utils::Import(); });
 
 	Button* disconnectButton = new Button("button_disconnect", "Disconnect", g.fontTahomaBold, { -15, -50, 170, 25 }, BottomRight, GUIColor::White, { 150,40,40,200 }, false);
 	disconnectButton->OnClick([&]() { Disconnect(); });
@@ -137,7 +137,7 @@ int main(int argc, char* argv[])
 
 	SDL_SetRenderDrawColor(g.mainRenderer, 18, 64, 77, 255);
 
-	std::thread second(listen_for_input);
+	std::thread second(Utils::ListenForInput);
 
 	//Main loop
 	while (g.bRunning)
@@ -239,7 +239,7 @@ void PollEvents()
 				int closest = 0;
 				for (size_t i = 0; i < g.vecMyMarkers.size(); i++)
 				{
-					auto screenpos = GetRect(g.vecMyMarkers[i].first, g.vecMyMarkers[i].second, g.appInfo.mapsize(), g.appMap.width(), false, 0, 0);
+					auto screenpos = Utils::GetRect(g.vecMyMarkers[i].first, g.vecMyMarkers[i].second, g.appInfo.mapsize(), g.appMap.width(), false, 0, 0);
 					if (Distance(screenpos.x, screenpos.y, event.button.x, event.button.y) < dist)
 					{
 						dist = Distance(screenpos.x, screenpos.y, event.button.x, event.button.y);
@@ -261,8 +261,8 @@ void PollEvents()
 				else
 				{
 					std::cout << "+ marker" << std::endl;
-					auto worldpos = GetWorldPos(event.button.x, event.button.y, g.appInfo.mapsize(), g.appMap.width(), fMapZoom, fMapX, fMapY);
-					SaveMarkersToJson(worldpos.first, worldpos.second);
+					auto worldpos = Utils::GetWorldPos(event.button.x, event.button.y, g.appInfo.mapsize(), g.appMap.width(), fMapZoom, fMapX, fMapY);
+					Utils::SaveMarkersToJson(worldpos.first, worldpos.second);
 				}
 			}
 			break;
@@ -298,7 +298,7 @@ void PollEvents()
 			if (event.key.keysym.scancode == SDL_SCANCODE_M && !ti_InFocus)
 			{
 				std::cout << "+ marker" << std::endl;
-				SaveMarkersToJson(g.localPlayer.x(), g.localPlayer.y());
+				Utils::SaveMarkersToJson(g.localPlayer.x(), g.localPlayer.y());
 			}
 			break;
 		case SDL_TEXTINPUT:
@@ -612,7 +612,7 @@ bool Connect(std::string serverName)
 	g.jToken = json["token"];
 	if (json.count("name"))
 		g.connectedServerName = json["name"];
-	LoadMarkersFromJson();
+	Utils::LoadMarkersFromJson();
 	rs = new RustSocket(g.jIP.c_str(), g.jPort.c_str(), g.jID, g.jToken);
 	if (!rs->ws || rs->ws->getReadyState() == WebSocket::CLOSED)
 		return 0;
@@ -620,8 +620,8 @@ bool Connect(std::string serverName)
 	g.appInfo = rs->GetInfo();
 	g.appMapMarkers = rs->GetMarkers();
 	g.appTeamInfo = rs->GetTeamInfo();
-	g.localPlayer = GetLocalPlayer();
-	g.mapTexture = CreateMap();
+	g.localPlayer = Utils::GetLocalPlayer();
+	g.mapTexture = Utils::CreateMap();
 	g.lastEvents = rs->GetEvents(g.appMapMarkers);
 	g.lastTeamChat = rs->GetTeamChat();
 	g.bFocus = false;
@@ -669,7 +669,7 @@ void Disconnect()
 	g.appInfo.Clear();
 	g.appMapMarkers.Clear();
 	g.appTeamInfo.Clear();
-	g.servers = GetServerlist();
+	g.servers = Utils::GetServerlist();
 	ResetServerButtons();
 	g.connectedServerFile = "servers\\unconnected";
 	g.connectedServerName = "";
@@ -721,7 +721,7 @@ void ResetServerButtons()
 	els.erase(std::remove(std::begin(els), std::end(els), nullptr),
 		std::end(els));
 
-	g.servers = GetServerlist();
+	g.servers = Utils::GetServerlist();
 	for (int i = 0; i < g.servers.size(); i++)
 	{
 		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 400, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);

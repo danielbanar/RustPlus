@@ -42,6 +42,7 @@ public:
 	std::vector<rustplus::AppMarker> vecVendings;
 	std::vector<rustplus::AppMarker_SellOrder> vecOrders;
 	std::map<std::string, Texture> nametags;
+	std::map<std::string, Texture> nametagsCam;
 	rustplus::AppTeamInfo_Member localPlayer;
 	SDL_Texture* mapTexture;
 	std::vector<std::string> servers;

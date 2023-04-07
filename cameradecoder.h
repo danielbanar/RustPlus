@@ -13,6 +13,7 @@
 #include <cmath>
 #include <cstdint>
 #include <vector>
+#include "utils.h"
 #define FARPLANE 1023
 
 #define WARN(str) "\033[33m" + std::string(str) + "\033[0m"

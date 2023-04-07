@@ -14,17 +14,19 @@
 #include "resources.h"
 #include "global.h"
 
-void listen_for_input();
-std::vector<std::string> Filter(std::string str);
-void Import();
-inline bool file_exists(const std::string& name);
-std::string string_to_hex(const std::string input);
-void set_pixel(SDL_Surface* surface, int x, int y, Uint32 pixel);
-AppTeamInfo_Member GetLocalPlayer();
-std::vector<std::string> GetServerlist();
-SDL_Texture* CreateMap();
-void CreateTemplateFile();
-void LoadMarkersFromJson();
-void SaveMarkersToJson(int x, int y);
-SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h);
-std::pair<float, float> GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my);
+namespace Utils
+{
+	void ListenForInput();
+	std::vector<std::string> Filter(std::string str);
+	void Import();
+	inline bool FileExists(const std::string& name);
+	AppTeamInfo_Member GetLocalPlayer();
+	std::vector<std::string> GetServerlist();
+	SDL_Texture* CreateMap();
+	void CreateTemplateFile();
+	void LoadMarkersFromJson();
+	void SaveMarkersToJson(int x, int y);
+	SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h);
+	std::pair<float, float> GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my);
+	bool CreateNametagTexture(const std::string& name, SDL_Renderer* renderer, std::map<std::string, Texture>& nametags, SDL_Color color);
+}

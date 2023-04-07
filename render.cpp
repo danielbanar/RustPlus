@@ -14,7 +14,7 @@ void Render_CustomMapMarkers()
 {
 	for (auto& myMarker : g.vecMyMarkers)
 	{
-		auto rect = GetRect(myMarker.first, myMarker.second, g.appInfo.mapsize(), g.appMap.width(), false, 40, 40);
+		auto rect = Utils::GetRect(myMarker.first, myMarker.second, g.appInfo.mapsize(), g.appMap.width(), false, 40, 40);
 		SDL_RenderCopy(g.mainRenderer, Icons::myMarker, 0, &rect);
 	}
 }
@@ -27,17 +27,17 @@ void Render_Events()
 		auto& marker = g.appMapMarkers.markers().Get(i);
 		if (marker.type() == Crate)
 		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
+			auto rect = Utils::GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
 			SDL_RenderCopy(g.mainRenderer, Icons::crate, 0, &rect);
 		}
 		else if (marker.type() == Explosion)
 		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
+			auto rect = Utils::GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), false, 32, 32);
 			SDL_RenderCopy(g.mainRenderer, Icons::explosion, 0, &rect);
 		}
 		else if (marker.type() == CargoShip)
 		{
-			auto rect = GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), true, 32, 32);
+			auto rect = Utils::GetRect(marker.x(), marker.y(), g.appInfo.mapsize(), g.appMap.width(), true, 32, 32);
 			SDL_RenderCopyEx(g.mainRenderer, Icons::cargo, 0, &rect, -marker.rotation() - 90.0, 0, SDL_FLIP_NONE);
 		}
 		else if (marker.type() == CH47 || marker.type() == PatrolHelicopter)
@@ -109,6 +109,8 @@ void Render_Markers()
 		SDL_RenderCopy(g.mainRenderer, teamMarker.type() ? Icons::marker : Icons::death, 0, &rectMarker);
 	}
 }
+
+
 void Render_TeamMembers()
 {
 	for (int i = 0; i < g.appTeamInfo.members_size(); i++)
@@ -124,27 +126,14 @@ void Render_TeamMembers()
 			g.fMapX = x;
 			g.fMapY = y;
 		}
-		auto rect = GetRect(member.x(), member.y(), g.appInfo.mapsize(), g.appMap.width(), false, 16, 16);
+		auto rect = Utils::GetRect(member.x(), member.y(), g.appInfo.mapsize(), g.appMap.width(), false, 16, 16);
 		SDL_RenderCopy(g.mainRenderer, member.isalive() ? member.isonline() ? Icons::player : Icons::playerOff : Icons::playerDead, 0, &rect);
 
 		auto nametag = g.nametags.find(member.name());
-		if (nametag == g.nametags.end() && !member.name().empty())//Add to map
+		if (nametag == g.nametags.end() && !member.name().empty()) // tex doesnt exist
 		{
-			TTF_SetFontOutline(g.fontTahoma, 1);
-			auto sOutline = TTF_RenderText_Solid(g.fontTahoma, member.name().c_str(), { 0, 0, 0 });
-			TTF_SetFontOutline(g.fontTahoma, 0);
-			auto sText = TTF_RenderText_Solid(g.fontTahoma, member.name().c_str(), { 170, 255, 0 });
-			if (!ignoreErrors)
-				std::cout << TTF_GetError();
-			SDL_Surface* sName = SDL_CreateRGBSurface(0, sOutline->w, sOutline->h, 32, 0x000000FF, 0x0000FF00, 0x00FF0000, 0xFF000000);
-			SDL_Rect rectName = { 1, 1, sText->w, sText->h };
-			SDL_BlitSurface(sOutline, 0, sName, 0);
-			SDL_BlitSurface(sText, 0, sName, &rectName);
-			SDL_FreeSurface(sOutline);
-			SDL_FreeSurface(sText);
-			g.nametags.emplace(std::make_pair(member.name(), Texture{ SDL_CreateTextureFromSurface(g.mainRenderer, sName), sName->w, sName->h }));
+			Utils::CreateNametagTexture(member.name(),g.mainRenderer,g.nametags, { 170, 255, 0 });
 			nametag = g.nametags.find(member.name());
-			SDL_FreeSurface(sName);
 		}
 		if (nametag == g.nametags.end())
 			return;
@@ -153,7 +142,6 @@ void Render_TeamMembers()
 		rect.w = nametag->second.w;
 		rect.h = nametag->second.h;
 		SDL_RenderCopy(g.mainRenderer, nametag->second.m_Texture, 0, &rect);
-
 	}
 }
 void Render_GUI()

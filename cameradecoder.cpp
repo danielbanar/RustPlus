@@ -12,99 +12,35 @@ uint8_t RayMaterial(int ray)
 {
 	return (uint8_t)ray;
 }
-void printMatrix(double* mat)
+
+struct Vec3 
 {
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			std::cout << mat[4 * j + i] << "\t";
-		}
-		std::cout << std::endl;
-	}
-}
-// Computes the cross product of two 3D vectors
-void cross(const double* a, const double* b, double* result) {
-	result[0] = a[1] * b[2] - a[2] * b[1];
-	result[1] = a[2] * b[0] - a[0] * b[2];
-	result[2] = a[0] * b[1] - a[1] * b[0];
-}
-
-// Normalizes a 3D vector
-void normalize(double* vec) {
-	double norm = sqrt(vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2]);
-	vec[0] /= norm;
-	vec[1] /= norm;
-	vec[2] /= norm;
-}
-
-void projectPoint(double x, double y, double z, double& x_screen, double& y_screen, double width, double height, double fov)
-{
-	// Define the camera position and orientation
-	double cam_pos[3] = { 0, 0, 0 };
-	double cam_dir[3] = { 0, 0, 1 };
-	double cam_up[3] = { 0, 1, 0 };
-
-	// Compute the view matrix
-	double view[16] = { 0 };
-	view[0] = 1.0;
-	view[5] = 1.0;
-	view[10] = 1.0;
-	view[15] = 1.0;
-	printMatrix(view);
-	for (int i = 0; i < 3; i++) {
-		view[4 * i + 3] = -cam_pos[i];
-		for (int j = 0; j < 3; j++) {
-			view[4 * i + j] = (i == j) ? 1.0 : 0.0;
-		}
-	}
-
-	double dir[3] = { cam_dir[0], cam_dir[1], cam_dir[2] };
-	double up[3] = { cam_up[0], cam_up[1], cam_up[2] };
-	double right[3];
-	cross(dir, up, right);
-	normalize(right);
-	cross(right, dir, up);
-	normalize(up);
-	for (int i = 0; i < 3; i++) {
-		view[4 * 0 + i] = right[i];
-		view[4 * 1 + i] = up[i];
-		view[4 * 2 + i] = -dir[i];
-	}
-	// Compute the projection matrix
-	double aspect_ratio = width / height;
-	double nearPlane = 0.1;
-	double farPlane = 1000.0;
-	double proj[16] = { 0 };
-	double f = 1.0 / tan(fov * M_PI / 360.0);
-	proj[0] = f / aspect_ratio;
-	proj[5] = f;
-	proj[10] = (farPlane + nearPlane) / (nearPlane - farPlane);
-	proj[11] = -1.0;
-	proj[14] = 2.0 * farPlane * nearPlane / (nearPlane - farPlane);
-	// Project the point into clip-space coordinates
-	double point[4] = { x, y, z, 1.0 };
-	double clip_coords[4] = { 0 };
-	for (int i = 0; i < 4; i++)
-		for (int j = 0; j < 4; j++)
-			clip_coords[i] += proj[4 * j + i] * view[4 * j + i] * point[j];
-	printf("%lf %lf %lf %lf\n", clip_coords[0], clip_coords[1], clip_coords[2], clip_coords[3]);
-
-	// Convert to normalized device coordinates (NDC)
-	double ndc_coords[3] = { clip_coords[0] / clip_coords[3], clip_coords[1] / clip_coords[3], clip_coords[2] / clip_coords[3] };
-
-	// Map to pixel coordinates on the screen
-	x_screen = (ndc_coords[0] + 1.0) * width / 2.0;
-	y_screen = (1.0 - ndc_coords[1]) * height / 2.0;
-}
-
-struct Vec3 {
 	float x, y, z;
-	void Print()
+
+	void Print() 
 	{
 		printf("%f %f %f\n", x, y, z);
 	}
+
+	float length() const 
+	{
+		return sqrt(x * x + y * y + z * z);
+	}
+
+	void normalize() 
+	{
+		float len = length();
+		if (len > 0) 
+		{
+			x /= len;
+			y /= len;
+			z /= len;
+		}
+	}
 };
 
-struct Vec2 {
+struct Vec2 
+{
 	float x, y;
 	void Print()
 	{
@@ -112,62 +48,34 @@ struct Vec2 {
 	}
 };
 
-struct Camera {
-	Vec3 position;
-	Vec3 forward;
-	float fov;
-};
-
-Vec2 WorldToScreen(float* from, float fov, float aspectRatio, float nearPlane, float farPlane, int screenWidth, int screenHeight) {
+Vec2 WorldToScreen(Vec3 from, float fov, float nearPlane, float farPlane, float screenWidth, float screenHeight) {
 	float viewMatrix[16], projectionMatrix[16], viewProjMatrix[16];
 	float clipCoords[4], ndcCoords[3];
 
-	float camPos[3] = { 0,0,0 };
-	float targetPos[3] = { 0,0,1 };
-	float upVec[3] = { 0,1,0 };
+	Vec3 upVec = { 0,1,0 };
+	Vec3 forwardVec = { 0,0,1 };
+	Vec3 rightVec = { 1,0,0 };
 
-	// Calculate the view matrix
-	float forwardVec[3], rightVec[3], upN[3];
-	forwardVec[0] = targetPos[0] - camPos[0];
-	forwardVec[1] = targetPos[1] - camPos[1];
-	forwardVec[2] = targetPos[2] - camPos[2];
-	float length = sqrt(forwardVec[0] * forwardVec[0] + forwardVec[1] * forwardVec[1] + forwardVec[2] * forwardVec[2]);
-	forwardVec[0] /= length;
-	forwardVec[1] /= length;
-	forwardVec[2] /= length;
-	rightVec[0] = upVec[1] * forwardVec[2] - upVec[2] * forwardVec[1];
-	rightVec[1] = upVec[2] * forwardVec[0] - upVec[0] * forwardVec[2];
-	rightVec[2] = upVec[0] * forwardVec[1] - upVec[1] * forwardVec[0];
-	length = sqrt(rightVec[0] * rightVec[0] + rightVec[1] * rightVec[1] + rightVec[2] * rightVec[2]);
-	rightVec[0] /= length;
-	rightVec[1] /= length;
-	rightVec[2] /= length;
-	upN[0] = forwardVec[1] * rightVec[2] - forwardVec[2] * rightVec[1];
-	upN[1] = forwardVec[2] * rightVec[0] - forwardVec[0] * rightVec[2];
-	upN[2] = forwardVec[0] * rightVec[1] - forwardVec[1] * rightVec[0];
-	length = sqrt(upN[0] * upN[0] + upN[1] * upN[1] + upN[2] * upN[2]);
-	upN[0] /= length;
-	upN[1] /= length;
-	upN[2] /= length;
-	viewMatrix[0] = rightVec[0];
-	viewMatrix[1] = upN[0];
-	viewMatrix[2] = -forwardVec[0];
+	viewMatrix[0] = rightVec.x;
+	viewMatrix[1] = upVec.x;
+	viewMatrix[2] = -forwardVec.x;
 	viewMatrix[3] = 0.0f;
-	viewMatrix[4] = rightVec[1];
-	viewMatrix[5] = upN[1];
-	viewMatrix[6] = -forwardVec[1];
+	viewMatrix[4] = rightVec.y;
+	viewMatrix[5] = upVec.y;
+	viewMatrix[6] = -forwardVec.y;
 	viewMatrix[7] = 0.0f;
-	viewMatrix[8] = rightVec[2];
-	viewMatrix[9] = upN[2];
-	viewMatrix[10] = -forwardVec[2];
+	viewMatrix[8] = rightVec.z;
+	viewMatrix[9] = upVec.z;
+	viewMatrix[10] = -forwardVec.z;
 	viewMatrix[11] = 0.0f;
-	viewMatrix[12] = -camPos[0] * rightVec[0] - camPos[1] * rightVec[1] - camPos[2] * rightVec[2];
-	viewMatrix[13] = -camPos[0] * upN[0] - camPos[1] * upN[1] - camPos[2] * upN[2];
-	viewMatrix[14] = camPos[0] * forwardVec[0] + camPos[1] * forwardVec[1] + camPos[2] * forwardVec[2];
+	viewMatrix[12] = 0.0f;
+	viewMatrix[13] = 0.0f;
+	viewMatrix[14] = 0.0f;
 	viewMatrix[15] = 1.0f;
 
 	// Calculate the projection matrix
 	float f = 1.0f / tan(DEG2RAD(fov) / 2.0f);
+	float aspectRatio = screenWidth / screenHeight;
 	projectionMatrix[0] = f / aspectRatio;
 	projectionMatrix[1] = 0.0f;
 	projectionMatrix[2] = 0.0f;
@@ -199,10 +107,10 @@ Vec2 WorldToScreen(float* from, float fov, float aspectRatio, float nearPlane, f
 	}
 
 	// Calculate the clip coordinates of the point
-	clipCoords[0] = from[0] * viewProjMatrix[0] + from[1] * viewProjMatrix[4] + from[2] * viewProjMatrix[8] + viewProjMatrix[12];
-	clipCoords[1] = from[0] * viewProjMatrix[1] + from[1] * viewProjMatrix[5] + from[2] * viewProjMatrix[9] + viewProjMatrix[13];
-	clipCoords[2] = from[0] * viewProjMatrix[2] + from[1] * viewProjMatrix[6] + from[2] * viewProjMatrix[10] + viewProjMatrix[14];
-	clipCoords[3] = from[0] * viewProjMatrix[3] + from[1] * viewProjMatrix[7] + from[2] * viewProjMatrix[11] + viewProjMatrix[15];
+	clipCoords[0] = from.x * viewProjMatrix[0] + from.y * viewProjMatrix[4] + from.z * viewProjMatrix[8] + viewProjMatrix[12];
+	clipCoords[1] = from.x * viewProjMatrix[1] + from.y * viewProjMatrix[5] + from.z * viewProjMatrix[9] + viewProjMatrix[13];
+	clipCoords[2] = from.x * viewProjMatrix[2] + from.y * viewProjMatrix[6] + from.z * viewProjMatrix[10] + viewProjMatrix[14];
+	clipCoords[3] = from.x * viewProjMatrix[3] + from.y * viewProjMatrix[7] + from.z * viewProjMatrix[11] + viewProjMatrix[15];
 
 	// Perform the perspective divide
 	ndcCoords[0] = clipCoords[0] / clipCoords[3];
@@ -342,27 +250,39 @@ void DecodeCamera(int width, int height, const rustplus::AppCameraRays& data, SD
 
 	for (auto entity : data.entities())
 	{
-		float feetPos[3] = { entity.position().x(), entity.position().y(), entity.position().z() };
-		float headPos[3] = { entity.position().x(), entity.position().y() + 1.8f, entity.position().z() };
-		float screenPos[3];
+		Vec3 feetPos = { entity.position().x(), entity.position().y(), entity.position().z() };
+		Vec3 headPos = { entity.position().x(), entity.position().y() + 1.8f, entity.position().z() };
 
-		Vec2 feet = WorldToScreen(feetPos, 65, 160.f / 90.f, 0, 250, 160, 90);
-		Vec2 head = WorldToScreen(headPos, 65, 160.f / 90.f, 0, 250, 160, 90);
+		Vec2 feet = WorldToScreen(feetPos, 65, 0, 250, 160, 90);
+		Vec2 head = WorldToScreen(headPos, 65, 0, 250, 160, 90);
+
 		SDL_SetRenderDrawColor(cameraRenderer, 255, 0, 0, 255);
 		float h = feet.y - head.y;
 		float w = h / 2.f;
 		SDL_Point points[5] = {
-	{ 2 * (head.x - w / 2.f), 2 * head.y},
-	{  2 * (head.x + w / 2.f), 2 * head.y },
-	{ 2 * (head.x + w / 2.f), 2 * feet.y },
-	{ 2 * (head.x - w / 2.f), 2 * feet.y },
-	{ 2 * (head.x - w / 2.f), 2 * head.y },
+			{ 2 * (head.x - w / 2.f), 2 * head.y },
+			{ 2 * (head.x + w / 2.f), 2 * head.y },
+			{ 2 * (head.x + w / 2.f), 2 * feet.y },
+			{ 2 * (head.x - w / 2.f), 2 * feet.y },
+			{ 2 * (head.x - w / 2.f), 2 * head.y },
 		};
-		//SDL_RenderDrawLine(cameraRenderer, 2 * feet.x, 2 * feet.y, 2 * head.x, 2 * head.y);
 		SDL_RenderDrawLines(cameraRenderer, points, 5);
-
-		//printf("Type=%d\tpos=[%f, %f, %f]\trot=(%f,%f,%f)\n", entity.type(), entity.position().x(), entity.position().y(), entity.position().z(), entity.rotation().x(), entity.rotation().y(), entity.rotation().z());
-		//std::cout << 80 + (int)(80.f*atan2(entity.position().x(), entity.position().z())) << "/" << 45 + (int)(45.f * atan2(-entity.position().y(), entity.position().z())) << std::endl;
+		
+		auto nametag = g.nametagsCam.find(entity.name());
+		if (nametag == g.nametagsCam.end() && !entity.name().empty())
+		{
+			Utils::CreateNametagTexture(entity.name(),cameraRenderer,g.nametagsCam, { 255, 0, 0 });
+			nametag = g.nametagsCam.find(entity.name());
+		}
+		if (nametag == g.nametagsCam.end())
+			return;
+		SDL_Rect rect {
+			2*head.x - nametag->second.w / 2,
+			2*head.y - nametag->second.h,
+			nametag->second.w,
+			nametag->second.h };
+		
+		SDL_RenderCopy(cameraRenderer, nametag->second.m_Texture, nullptr, &rect);
 	}
 
 	// Update the window

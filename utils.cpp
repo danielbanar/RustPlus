@@ -1,6 +1,6 @@
 #include "utils.h"
 
-void listen_for_input()
+void Utils::ListenForInput()
 {
 	while (g.bRunning)
 	{
@@ -14,7 +14,7 @@ void listen_for_input()
 	}
 }
 
-std::vector<std::string> Filter(std::string str)
+std::vector<std::string> Utils::Filter(std::string str)
 {
 	std::vector<std::string> servers;
 	while (str.find('{') != -1 && str.find('}') != -1)
@@ -29,7 +29,7 @@ std::vector<std::string> Filter(std::string str)
 	return servers;
 }
 
-void Import()
+void Utils::Import()
 {
 	std::string data;
 	std::ifstream input;
@@ -69,7 +69,7 @@ void Import()
 		std::string illegals = "/?%*:|\"<>;=";
 		for (char character : illegals)
 			filename.erase(remove(filename.begin(), filename.end(), character), filename.end());
-		if (file_exists(filename))
+		if (FileExists(filename))
 			continue;
 
 		std::ofstream outfile(filename, std::ios::binary);
@@ -90,7 +90,7 @@ void Import()
 	ResetServerButtons();
 }
 
-inline bool file_exists(const std::string& name) 
+inline bool Utils::FileExists(const std::string& name)
 {
 	if (FILE* file = fopen(name.c_str(), "r")) 
 	{
@@ -103,29 +103,8 @@ inline bool file_exists(const std::string& name)
 	}
 }
 
-std::string string_to_hex(const std::string input)
-{
-	static const char hex_digits[] = "0123456789ABCDEF";
 
-	std::string output;
-	output.reserve(input.length() * 2);
-	for (unsigned char c : input)
-	{
-		output.push_back(hex_digits[c >> 4]);
-		output.push_back(hex_digits[c & 15]);
-	}
-	return output;
-}
-
-void set_pixel(SDL_Surface* surface, int x, int y, Uint32 pixel)
-{
-	Uint32* const target_pixel = (Uint32*)((Uint8*)surface->pixels
-		+ y * surface->pitch
-		+ x * surface->format->BytesPerPixel);
-	*target_pixel = pixel;
-}
-
-AppTeamInfo_Member GetLocalPlayer()
+AppTeamInfo_Member Utils::GetLocalPlayer()
 {
 	for (int i = 0; i < g.appTeamInfo.members_size(); i++)
 	{
@@ -133,9 +112,10 @@ AppTeamInfo_Member GetLocalPlayer()
 		if (member.steamid() == g.jID)
 			return member;
 	}
+	return AppTeamInfo_Member();
 }
 
-std::vector<std::string> GetServerlist()
+std::vector<std::string> Utils::GetServerlist()
 {
 	system("dir /b servers\\*.json > files.txt");
 	std::ifstream newfile;
@@ -152,7 +132,7 @@ std::vector<std::string> GetServerlist()
 	return servers;
 }
 
-SDL_Texture* CreateMap()
+SDL_Texture* Utils::CreateMap()
 {
 	SDL_Surface* mapSurf = IMG_LoadTyped_RW(SDL_RWFromMem((void*)g.appMap.jpgimage().data(), g.appMap.jpgimage().capacity()), 1, "JPG");
 	SDL_Surface* trainSurf = IMG_LoadTyped_RW(SDL_RWFromMem(Icons::pngTrain, 7618), 1, "PNG");
@@ -191,7 +171,7 @@ SDL_Texture* CreateMap()
 	return mapTexture;
 }
 
-void CreateTemplateFile()
+void Utils::CreateTemplateFile()
 {
 	std::ofstream outfile("servers\\template.json");
 	g.json["ip"] = "69.69.69.69";
@@ -203,7 +183,7 @@ void CreateTemplateFile()
 	std::cout << "Template file created!" << std::endl;
 }
 
-void LoadMarkersFromJson()
+void Utils::LoadMarkersFromJson()
 {
 	g.vecMyMarkers.clear();
 	for (size_t i = 0; i < g.json["markers"].size(); i++)
@@ -212,7 +192,7 @@ void LoadMarkersFromJson()
 	}
 }
 
-void SaveMarkersToJson(int x, int y)
+void Utils::SaveMarkersToJson(int x, int y)
 {
 	g.vecMyMarkers.push_back({ x, y });
 	g.json["markers"].emplace_back(nlohmann::json::object({ {"x", x}, {"y",  y } }));
@@ -224,7 +204,7 @@ void SaveMarkersToJson(int x, int y)
 	}
 }
 
-SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h)
+SDL_Rect Utils::GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w, float h)
 {
 	float x = (X + 1000.f) * (g.fWindowHeight / 2.f) / mapwidth;
 	float y = (mapsize - Y + 1000.f) * (g.fWindowHeight / 2.f) / mapwidth;
@@ -243,10 +223,30 @@ SDL_Rect GetRect(int X, int Y, int mapsize, int mapwidth, bool relative, float w
 	return { 0 };
 }
 
-std::pair<float, float> GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my)
+std::pair<float, float> Utils::GetWorldPos(float X, float Y, float mapsize, float mapwidth, float zoom, float mx, float my)
 {
 	return
 	{ (g.fWindowWidth /g.fWindowHeight)*(X * mapwidth + mx * zoom * mapwidth - (g.fWindowWidth / 2.f) * mapwidth) / ((g.fWindowWidth / 2.f) * zoom) - 1000.f,
 		-(Y * mapwidth + my * zoom * mapwidth - (g.fWindowHeight / 2.f) * mapwidth + zoom * mapwidth) / (zoom * (g.fWindowHeight / 2.f)) + 1005.f + mapsize
 	};
+}
+bool Utils::CreateNametagTexture(const std::string& name, SDL_Renderer* renderer, std::map<std::string, Texture>& nametags, SDL_Color color)
+{
+	if (name.empty())
+		return 1;
+	TTF_SetFontOutline(g.fontTahoma, 1);
+	auto surfOutline = TTF_RenderText_Solid(g.fontTahoma, name.c_str(), { 0, 0, 0 });
+	TTF_SetFontOutline(g.fontTahoma, 0);
+	auto surfText = TTF_RenderText_Solid(g.fontTahoma, name.c_str(), color);
+	if (!ignoreErrors)
+		std::cerr << TTF_GetError();
+	SDL_Surface* surfName = SDL_CreateRGBSurface(0, surfOutline->w, surfOutline->h, 32, 0x000000FF, 0x0000FF00, 0x00FF0000, 0xFF000000);
+	SDL_Rect rectName = { 1, 1, surfText->w, surfText->h };
+	SDL_BlitSurface(surfOutline, 0, surfName, 0);
+	SDL_BlitSurface(surfText, 0, surfName, &rectName);
+	SDL_FreeSurface(surfOutline);
+	SDL_FreeSurface(surfText);
+	nametags.emplace(std::make_pair(name.c_str(), Texture{ SDL_CreateTextureFromSurface(renderer, surfName), surfName->w, surfName->h }));
+	SDL_FreeSurface(surfName);
+	return 0;
 }
