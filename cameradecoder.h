@@ -56,7 +56,7 @@ public:
 	/*
 	*     1100 0000 1111 1111 1100 0000
 	*      |       |           |       |
-	*  unk    mat    distance  alignment
+	* type    mat    distance  alignment
 	*  0-2 |  2-8  |   8-18    | 18-24 |
 	*    2     6        10         6
 	*/

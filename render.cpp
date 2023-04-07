@@ -128,7 +128,7 @@ void Render_TeamMembers()
 		SDL_RenderCopy(g.mainRenderer, member.isalive() ? member.isonline() ? Icons::player : Icons::playerOff : Icons::playerDead, 0, &rect);
 
 		auto nametag = g.nametags.find(member.name());
-		if (nametag == g.nametags.end())//Add to map
+		if (nametag == g.nametags.end() && !member.name().empty())//Add to map
 		{
 			TTF_SetFontOutline(g.fontTahoma, 1);
 			auto sOutline = TTF_RenderText_Solid(g.fontTahoma, member.name().c_str(), { 0, 0, 0 });
@@ -146,6 +146,8 @@ void Render_TeamMembers()
 			nametag = g.nametags.find(member.name());
 			SDL_FreeSurface(sName);
 		}
+		if (nametag == g.nametags.end())
+			return;
 		rect.x -= nametag->second.w / 2 - 8;
 		rect.y -= nametag->second.h;
 		rect.w = nametag->second.w;

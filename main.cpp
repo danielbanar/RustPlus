@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 
 	Block* settingsBlock = new Block("block_settings", { -200, 0, 200, 1000 }, TopRight, { 0,0,0,200 }, false);
 
-	TextInput* cameraTextInput = new TextInput("textinput_camera", "text", "Camera ID", g.fontTahomaBold, { -15, -215, 170, 25 }, BottomRight, GUIColor::White, { 150,150,150,200 }, { 30,30,30,200 }, false);
+	TextInput* cameraTextInput = new TextInput("textinput_camera", "", "Camera ID", g.fontTahomaBold, { -15, -215, 170, 25 }, BottomRight, GUIColor::White, { 150,150,150,200 }, { 30,30,30,200 }, false);
 	cameraTextInput->OnClick([&]() { ti_InFocus = cameraTextInput; });
 
 	Button* cameraSubButton = new Button("button_camera_subscribe", "Subscribe", g.fontTahomaBold, { -15, -180, 170, 25 }, BottomRight, GUIColor::White, { 115,140,69,200 }, false);
@@ -724,7 +724,7 @@ void ResetServerButtons()
 	g.servers = GetServerlist();
 	for (int i = 0; i < g.servers.size(); i++)
 	{
-		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 250, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
+		Button* serverButton = new Button(std::string("button_serverconnect") + std::to_string(i), g.servers[i], g.fontTahomaBold, { 10, 10 + (i * 40), 400, 30 }, TopLeft, GUIColor::White, GUIColor::Gray, true);
 		serverButton->OnClick([i]() { g.connected = Connect(g.servers[i]); });
 	}
 	g.skipRender = true;

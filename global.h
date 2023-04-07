@@ -10,6 +10,7 @@
 #include "GUI.h"
 #define MAX_FPS 60
 #define DEG2RAD(deg) ((deg) * 0.01745329238474369049072265625f)
+#define RAD2DEG(x) ((x) * 180.0 / M_PI)
 #define PIXEL_SIZE 2
 class GlobalVars
 {
