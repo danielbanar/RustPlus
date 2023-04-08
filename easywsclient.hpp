@@ -45,8 +45,8 @@ class WebSocket {
             _Callback(Callable& callable) : callable(callable) { }
             void operator()(const std::string& message) { callable(message); }
         };
-        _Callback callback(callable);
-        _dispatch(callback);
+        _Callback SubscribeRepeat(callable);
+        _dispatch(SubscribeRepeat);
     }
 
     template<class Callable>
@@ -58,8 +58,8 @@ class WebSocket {
             _Callback(Callable& callable) : callable(callable) { }
             void operator()(const std::vector<uint8_t>& message) { callable(message); }
         };
-        _Callback callback(callable);
-        _dispatchBinary(callback);
+        _Callback SubscribeRepeat(callable);
+        _dispatchBinary(SubscribeRepeat);
     }
 
   protected:

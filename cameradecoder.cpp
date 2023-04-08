@@ -1,5 +1,10 @@
 #include "cameradecoder.h"
+#define DEG2RAD(deg) ((deg) * 0.01745329238474369049072265625f)
+#define RAD2DEG(x) ((x) * 180.0 / M_PI)
+#define PIXEL_SIZE 2
+extern bool ignoreErrors;
 
+std::map<std::string, Texture> nametags;
 uint16_t RayDistance(int ray)
 {
 	return (uint16_t)(ray >> 16);
@@ -268,13 +273,13 @@ void DecodeCamera(int width, int height, const rustplus::AppCameraRays& data, SD
 		};
 		SDL_RenderDrawLines(cameraRenderer, points, 5);
 		
-		auto nametag = g.nametagsCam.find(entity.name());
-		if (nametag == g.nametagsCam.end() && !entity.name().empty())
+		auto nametag = nametags.find(entity.name());
+		if (nametag == nametags.end() && !entity.name().empty())
 		{
-			Utils::CreateNametagTexture(entity.name(),cameraRenderer,g.nametagsCam, { 255, 0, 0 });
-			nametag = g.nametagsCam.find(entity.name());
+			CreateNametagTexture(entity.name(),cameraRenderer,nametags, { 255, 0, 0 });
+			nametag = nametags.find(entity.name());
 		}
-		if (nametag == g.nametagsCam.end())
+		if (nametag == nametags.end())
 			return;
 		SDL_Rect rect {
 			2*head.x - nametag->second.w / 2,
@@ -352,4 +357,28 @@ This example sets each pixel's color based on its x and y coordinates. Note that
 
 		*/
 	}
+}
+
+bool CreateNametagTexture(const std::string& name, SDL_Renderer* renderer, std::map<std::string, Texture>& nametags, SDL_Color color)
+{
+	if (name.empty())
+		return 1;
+	static auto fontTahoma = TTF_OpenFont("C:\\Windows\\Fonts\\Tahoma.ttf", 11);
+	TTF_SetFontStyle(fontTahoma, TTF_STYLE_BOLD);
+	TTF_SetFontHinting(fontTahoma, TTF_HINTING_MONO);
+	TTF_SetFontOutline(fontTahoma, 1);
+	auto surfOutline = TTF_RenderText_Solid(fontTahoma, name.c_str(), { 0, 0, 0 });
+	TTF_SetFontOutline(fontTahoma, 0);
+	auto surfText = TTF_RenderText_Solid(fontTahoma, name.c_str(), color);
+	if (!ignoreErrors)
+		std::cerr << TTF_GetError();
+	SDL_Surface* surfName = SDL_CreateRGBSurface(0, surfOutline->w, surfOutline->h, 32, 0x000000FF, 0x0000FF00, 0x00FF0000, 0xFF000000);
+	SDL_Rect rectName = { 1, 1, surfText->w, surfText->h };
+	SDL_BlitSurface(surfOutline, 0, surfName, 0);
+	SDL_BlitSurface(surfText, 0, surfName, &rectName);
+	SDL_FreeSurface(surfOutline);
+	SDL_FreeSurface(surfText);
+	nametags.emplace(std::make_pair(name.c_str(), Texture{ SDL_CreateTextureFromSurface(renderer, surfName), surfName->w, surfName->h }));
+	SDL_FreeSurface(surfName);
+	return 0;
 }

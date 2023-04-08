@@ -2,7 +2,6 @@
 #include <vector>
 #include <memory>
 #include "rustplus.pb.h"
-#include "global.h"
 #include <SDL.h>
 #include <iostream>
 #include <fstream>
@@ -13,7 +12,9 @@
 #include <cmath>
 #include <cstdint>
 #include <vector>
-#include "utils.h"
+#include <SDL.h>
+#include <SDL_ttf.h>
+#include <SDL_image.h>
 #define FARPLANE 1023
 
 #define WARN(str) "\033[33m" + std::string(str) + "\033[0m"
@@ -26,6 +27,12 @@
 // Debug build - define DEBUG as usual
 #define DEBUG(str) std::cout << ("\33[36m" + std::string(str) + "\033[0m") << std::endl;
 #endif
+
+struct Texture
+{
+	SDL_Texture* m_Texture;
+	int w, h;
+};
 
 class Random
 {
@@ -92,3 +99,4 @@ byte2* SetupBuffers(int width, int height);
 uint16_t RayDistance(int ray);
 uint8_t RayAlignment(int ray);
 uint8_t RayMaterial(int ray);
+bool CreateNametagTexture(const std::string& name, SDL_Renderer* renderer, std::map<std::string, Texture>& nametags, SDL_Color color);
