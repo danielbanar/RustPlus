@@ -17,4 +17,3 @@
 #include <SDL_ttf.h>
 
 RustSocket* rs;
-Uint32 SubscribeRepeat(Uint32 interval, void* name);

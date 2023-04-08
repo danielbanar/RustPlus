@@ -33,8 +33,6 @@ int main(int argc, char* argv[])
 	if (!rs->ws || rs->ws->getReadyState() == WebSocket::CLOSED)
 		return 0;
 
-	SDL_TimerID timer = SDL_AddTimer(0, SubscribeRepeat, const_cast<char*>(camera.c_str()));
-
 	// Clear the renderer to black
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_RenderClear(renderer);
@@ -42,6 +40,9 @@ int main(int argc, char* argv[])
 
 	//Main loop
 	bool bRunning = true;
+	auto tNow = std::chrono::high_resolution_clock::now();
+	auto tLast = std::chrono::high_resolution_clock::now();
+	rs->Subscribe(camera.c_str());
 	while (bRunning)
 	{
 		SDL_Event event;
@@ -63,7 +64,13 @@ int main(int argc, char* argv[])
 		{
 			DecodeCamera(160, 90, appMessage.broadcast().camerarays(), renderer);
 		}
-
+		std::chrono::duration<float> deltaTime = tNow - tLast;
+		if (deltaTime.count() > 30.f)
+		{
+			rs->Subscribe(camera.c_str());
+			tLast = tNow;
+		}
+		tNow = std::chrono::high_resolution_clock::now();
 		Sleep(1000.f / (float)MAX_FPS);
 	}
 
@@ -74,11 +81,4 @@ int main(int argc, char* argv[])
 	TTF_Quit();
 	SDL_Quit();
 	return 0;
-}
-
-Uint32 SubscribeRepeat(Uint32 interval, void* name)
-{
-	rs->Subscribe(static_cast<char*>(name));
-	std::cout << "sub\n";
-	return 30000;
 }
