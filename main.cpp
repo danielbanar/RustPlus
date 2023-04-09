@@ -18,11 +18,11 @@ int main(int argc, char* argv[])
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1 && !ignoreErrors)
 		std::cerr << "Init error: " << SDL_GetError();
 
-	SDL_Window* window = SDL_CreateWindow(camera.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 2 * 160, 2 * 80, SDL_WINDOW_SHOWN);
+	SDL_Window* window = SDL_CreateWindow(camera.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 2 * 160, 2 * 90, SDL_WINDOW_SHOWN);
 	if (!window && !ignoreErrors)
 		std::cerr << "Window error: " << SDL_GetError();
 
-	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
+	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 	if (!renderer && !ignoreErrors)
 		std::cerr << "Renderer error: " << SDL_GetError();
 
