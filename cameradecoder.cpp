@@ -367,9 +367,9 @@ bool CreateNametagTexture(const std::string& name, SDL_Renderer* renderer, std::
 	TTF_SetFontStyle(fontTahoma, TTF_STYLE_BOLD);
 	TTF_SetFontHinting(fontTahoma, TTF_HINTING_MONO);
 	TTF_SetFontOutline(fontTahoma, 1);
-	auto surfOutline = TTF_RenderText_Solid(fontTahoma, name.c_str(), { 0, 0, 0 });
+	auto surfOutline = TTF_RenderUTF8_Solid(fontTahoma, name.c_str(), { 0, 0, 0 });
 	TTF_SetFontOutline(fontTahoma, 0);
-	auto surfText = TTF_RenderText_Solid(fontTahoma, name.c_str(), color);
+	auto surfText = TTF_RenderUTF8_Solid(fontTahoma, name.c_str(), color);
 	if (!ignoreErrors)
 		std::cerr << TTF_GetError();
 	SDL_Surface* surfName = SDL_CreateRGBSurface(0, surfOutline->w, surfOutline->h, 32, 0x000000FF, 0x0000FF00, 0x00FF0000, 0xFF000000);
