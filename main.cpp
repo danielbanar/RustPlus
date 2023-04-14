@@ -1,6 +1,6 @@
 #pragma once
 #include "main.h"
-#define MAX_FPS 60
+#define MAX_FPS 30
 extern bool ignoreErrors;
 int main(int argc, char* argv[])
 {
@@ -27,23 +27,20 @@ int main(int argc, char* argv[])
 		std::cerr << "Renderer error: " << SDL_GetError();
 
 	TTF_Init();
-	//Font init
 
 	rs = new RustSocket(ip.c_str(), port.c_str(), steamID64, token);
-	if (!rs->ws || rs->ws->getReadyState() == WebSocket::CLOSED)
+	if (!rs->ws || rs->ws->getReadyState() != WebSocket::OPEN)
 		return 0;
 
-	// Clear the renderer to black
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_RenderClear(renderer);
 	SDL_RenderPresent(renderer);
 
-	//Main loop
 	bool bRunning = true;
 	auto tNow = std::chrono::high_resolution_clock::now();
 	auto tLast = std::chrono::high_resolution_clock::now();
 	rs->Subscribe(camera.c_str());
-	while (bRunning)
+	while (bRunning && rs->ws && rs->ws->getReadyState() == WebSocket::OPEN)
 	{
 		SDL_Event event;
 		while (SDL_PollEvent(&event) != 0)
@@ -65,7 +62,7 @@ int main(int argc, char* argv[])
 			DecodeCamera(160, 90, appMessage.broadcast().camerarays(), renderer);
 		}
 		std::chrono::duration<float> deltaTime = tNow - tLast;
-		if (deltaTime.count() > 30.f)
+		if (deltaTime.count() > 29.5f)
 		{
 			rs->Subscribe(camera.c_str());
 			tLast = tNow;
